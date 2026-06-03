@@ -38,13 +38,14 @@ def run_alpaca(subcommand, *args):
 def parse_eod_snapshots(trade_log: str):
     """Extract daily equity values from EOD snapshot lines for the sparkline."""
     snapshots = []
+    current_date = None
     for line in trade_log.splitlines():
         # Match: "## 2026-06-02 — EOD Snapshot" or "## 2026-06-02 — Day 0 Baseline"
         date_match = re.match(r"^## (\d{4}-\d{2}-\d{2})", line)
         if date_match:
             current_date = date_match.group(1)
         equity_match = re.search(r"Equity:\s*\$([0-9,]+\.?\d*)", line)
-        if equity_match and "current_date" in dir():
+        if equity_match and current_date:
             snapshots.append({
                 "date": current_date,
                 "equity": float(equity_match.group(1).replace(",", ""))

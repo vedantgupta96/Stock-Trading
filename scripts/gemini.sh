@@ -30,6 +30,6 @@ RESPONSE=$(curl -sf -X POST \
   -d "$PAYLOAD" \
   "$ENDPOINT")
 
-# Extract text from response; fall back to raw response if jq parse fails
-echo "$RESPONSE" | jq -r '.candidates[0].content.parts[0].text // .candidates[0].content.parts[0].text' 2>/dev/null \
+# Extract text from response; fall back to raw response if jq parse fails or text is null
+echo "$RESPONSE" | jq -e -r '.candidates[0].content.parts[0].text' 2>/dev/null \
   || echo "$RESPONSE"
