@@ -1,0 +1,6 @@
+[
+  { "id": "ord-aapl-stop",    "symbol": "AAPL", "qty": "10", "side": "sell", "type": "trailing_stop", "status": "accepted" },
+  { "id": "ord-goog-partial", "symbol": "GOOG", "qty": "4",  "side": "sell", "type": "trailing_stop", "status": "accepted" },
+  { "id": "ord-msft-buy",     "symbol": "MSFT", "qty": "5",  "side": "buy",  "type": "limit",         "status": "accepted" },
+  { "id": "ord-nvda-dead",    "symbol": "NVDA", "qty": "8",  "side": "sell", "type": "trailing_stop", "status": "canceled" }
+]

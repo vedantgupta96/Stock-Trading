@@ -36,6 +36,7 @@ Each runs as a Claude Code cloud routine on a cron (America/Chicago):
 | [midday](routines/midday.md) | `0 12 * * 1-5` | Scan positions, cut losers, tighten winners |
 | [daily-summary](routines/daily-summary.md) | `0 15 * * 1-5` | EOD snapshot + Discord recap (always sends) |
 | [weekly-review](routines/weekly-review.md) | `0 16 * * 5` | Weekly stats, letter grade, strategy review |
+| [stop-watchdog](routines/stop-watchdog.md) | every 30 min, market hours | Verifies every position has a full-size stop; re-places missing ones, closes anything unprotected past −8% |
 
 ## Repository layout
 
@@ -44,7 +45,8 @@ Each runs as a Claude Code cloud routine on a cron (America/Chicago):
 ├── CLAUDE.md              # Auto-loaded project context + hard rules
 ├── env.template           # Copy to .env for local runs (gitignored)
 ├── scripts/               # All external API calls flow through here
-│   ├── alpaca.sh          #   Trading: account, positions, orders, buy, sell, trailing_stop
+│   ├── alpaca.sh          #   Trading: account, positions, orders, buy, sell, trailing_stop, limit_sell, cancel, close
+│   ├── stop_watchdog.sh   #   Safety: ensures every position keeps a full-size protective stop
 │   ├── gemini.sh          #   Research: Gemini 3.1 Pro with Google Search grounding
 │   └── discord.sh         #   Notifications: Discord webhook (graceful fallback)
 ├── memory/                # All bot state — committed markdown
