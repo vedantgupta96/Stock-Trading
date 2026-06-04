@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
 
-app = Flask(__name__, static_folder=".")
+app = Flask(__name__, static_folder="dist", static_url_path="")
 
 BASE_DIR = Path(__file__).parent.parent
 MEMORY_DIR = BASE_DIR / "memory"
@@ -294,8 +294,13 @@ def extract_idea_tickers(research: dict):
     return found[:6]
 
 
-@app.route("/")
-def index():
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def index(path: str):
+    # Serve the React SPA; fall back to index.html for client-side routes.
+    full = Path(app.static_folder) / path  # type: ignore[arg-type]
+    if path and full.exists():
+        return send_from_directory(app.static_folder, path)
     return send_from_directory(app.static_folder, "index.html")
 
 
