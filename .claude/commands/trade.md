@@ -94,6 +94,7 @@ Append to `memory/TRADE-LOG.md`:
 - Target: $[fill × 1.24] (3:1 R/R)
 - Catalyst: [from research log]
 - Thesis: [brief summary]
+- Sector: [the sector you analyzed for --sector-count, e.g. Technology]
 - Time stop: [date]
 ```
 

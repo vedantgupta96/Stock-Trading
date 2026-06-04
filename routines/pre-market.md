@@ -66,6 +66,8 @@ Append a new section with:
 - **Sector momentum**: which sectors are leading, which are lagging
 - **Earnings watch**: any held positions with earnings in next 10 days (flag for exit)
 - **2–3 trade ideas** — only if market regime is ON. For each idea:
+  - **Write the symbol as `$SYMBOL`** (dollar-sign prefix, e.g. `$NVDA`) — the dashboard
+    news widget uses this convention to surface headlines for idea tickers automatically.
   - Symbol, catalyst, breakout date, pullback % from high
   - Breakout volume vs 20-day average (must be ≥ 1.5x)
   - Entry price, stop (entry × 0.92), target (entry × 1.24 minimum)
@@ -73,7 +75,7 @@ Append a new section with:
   - Next earnings date (must be > 10 trading days away)
   - All 11 buy-gate checks: PASS or FAIL with reason
 - **Risk factors**: 2–3 bullets on what could go wrong today
-- **Decision**: HOLD | TRADE [SYMBOL] — one-sentence reason. Default is HOLD.
+- **Decision**: HOLD | TRADE `$SYMBOL` — one-sentence reason. Default is HOLD.
 
 ## STEP 5 — Notifications
 

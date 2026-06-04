@@ -82,6 +82,66 @@
 
   </div>
 
+  <!-- Performance analytics -->
+  <div class="flex items-center justify-between mb-3">
+    <h2 class="text-sm font-semibold text-white">Performance Analytics</h2>
+    <span class="text-xs neutral" id="analytics-note">From closed trades in memory/TRADE-LOG.md</span>
+  </div>
+
+  <!-- Analytics stat cards -->
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+    <div class="card p-4">
+      <div class="text-xs neutral mb-1">Win Rate</div>
+      <div class="text-2xl font-bold text-white" id="stat-winrate">—</div>
+      <div class="text-xs neutral mt-1" id="stat-winrate-sub"></div>
+    </div>
+    <div class="card p-4">
+      <div class="text-xs neutral mb-1">Max Drawdown</div>
+      <div class="text-2xl font-bold negative" id="stat-maxdd">—</div>
+      <div class="text-xs neutral mt-1" id="stat-curdd-sub"></div>
+    </div>
+    <div class="card p-4">
+      <div class="text-xs neutral mb-1">Profit Factor</div>
+      <div class="text-2xl font-bold text-white" id="stat-pf">—</div>
+      <div class="text-xs neutral mt-1" id="stat-netpnl-sub"></div>
+    </div>
+    <div class="card p-4">
+      <div class="text-xs neutral mb-1">Total Trades</div>
+      <div class="text-2xl font-bold text-white" id="stat-trades">—</div>
+      <div class="text-xs neutral mt-1" id="stat-wl-sub"></div>
+    </div>
+    <div class="card p-4">
+      <div class="text-xs neutral mb-1">Avg R-Multiple</div>
+      <div class="text-2xl font-bold text-white" id="stat-avgr">—</div>
+      <div class="text-xs neutral mt-1">per 8%-stop risk</div>
+    </div>
+  </div>
+
+  <!-- Charts: sector P&L + R-multiple distribution -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+    <div class="card p-5">
+      <h2 class="text-sm font-semibold text-white mb-4">Per-Sector P&L</h2>
+      <canvas id="sector-chart" height="160"></canvas>
+      <p class="text-xs neutral mt-2 hidden" id="sector-empty">No closed trades yet — sector P&L appears once positions are realized.</p>
+    </div>
+    <div class="card p-5">
+      <h2 class="text-sm font-semibold text-white mb-4">R-Multiple Distribution</h2>
+      <canvas id="rmultiple-chart" height="160"></canvas>
+      <p class="text-xs neutral mt-2 hidden" id="rmultiple-empty">No closed trades yet — R-multiples appear once positions are realized.</p>
+    </div>
+  </div>
+
+  <!-- News widget -->
+  <div class="card p-5 mb-6">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-sm font-semibold text-white">Latest Market News</h2>
+      <span class="text-xs neutral" id="news-symbols">—</span>
+    </div>
+    <div id="news-list" class="space-y-3">
+      <p class="neutral text-sm">Loading headlines...</p>
+    </div>
+  </div>
+
   <!-- Positions table -->
   <div class="card p-5 mb-6">
     <div class="flex items-center justify-between mb-4">
@@ -122,12 +182,16 @@ const fmtPct = (n) => n == null ? '—' : `${(parseFloat(n)*100).toFixed(2)}%`;
 const colorClass = (n) => n >= 0 ? 'positive' : 'negative';
 
 let equityChart = null;
+let sectorChart = null;
+let rmultipleChart = null;
 
 function renderChart(snapshots) {
   const ctx = document.getElementById('equity-chart').getContext('2d');
   const labels = snapshots.map(s => s.date);
   const data = snapshots.map(s => s.equity);
-  const baseline = 10000;
+  // Baseline = starting equity (first EOD snapshot), not a hardcoded $10k —
+  // the live paper account may differ.
+  const baseline = snapshots.length ? snapshots[0].equity : 0;
 
   if (equityChart) equityChart.destroy();
 
@@ -283,6 +347,179 @@ function renderTradeEntries(trades) {
     '</div>';
 }
 
+function renderAnalyticsStats(a) {
+  const s = a.stats || {};
+  const dd = a.drawdown || {};
+  const r = a.r_multiples || {};
+
+  const winrate = document.getElementById('stat-winrate');
+  winrate.textContent = s.win_rate == null ? '—' : `${(s.win_rate * 100).toFixed(0)}%`;
+  document.getElementById('stat-winrate-sub').textContent =
+    s.total_trades ? `${s.wins}W / ${s.losses}L` : 'no closed trades';
+
+  const maxdd = document.getElementById('stat-maxdd');
+  maxdd.textContent = `${(dd.max_drawdown ?? 0).toFixed(2)}%`;
+  maxdd.className = `text-2xl font-bold ${(dd.max_drawdown ?? 0) < 0 ? 'negative' : 'neutral'}`;
+  document.getElementById('stat-curdd-sub').textContent =
+    `current ${(dd.current_drawdown ?? 0).toFixed(2)}%`;
+
+  const pf = document.getElementById('stat-pf');
+  pf.textContent = s.profit_factor == null ? '—'
+    : (s.profit_factor === null ? '—' : (isFinite(s.profit_factor) ? s.profit_factor.toFixed(2) : '∞'));
+  const net = s.net_pnl ?? 0;
+  const netEl = document.getElementById('stat-netpnl-sub');
+  netEl.textContent = s.total_trades ? `net ${net >= 0 ? '+' : ''}${fmt(net)}` : '';
+  netEl.className = `text-xs mt-1 ${s.total_trades ? colorClass(net) : 'neutral'}`;
+
+  document.getElementById('stat-trades').textContent = s.total_trades ?? 0;
+  document.getElementById('stat-wl-sub').textContent =
+    s.total_trades ? `${s.wins} win / ${s.losses} loss` : 'none yet';
+
+  const avgr = document.getElementById('stat-avgr');
+  avgr.textContent = r.avg_r == null ? '—' : `${r.avg_r >= 0 ? '+' : ''}${r.avg_r.toFixed(2)}R`;
+  avgr.className = `text-2xl font-bold ${r.avg_r == null ? 'neutral' : colorClass(r.avg_r)}`;
+}
+
+function renderSectorChart(sectorPnl) {
+  const ctx = document.getElementById('sector-chart').getContext('2d');
+  const sectors = Object.keys(sectorPnl || {});
+  const empty = document.getElementById('sector-empty');
+
+  if (sectorChart) sectorChart.destroy();
+
+  if (sectors.length === 0) {
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+
+  const values = sectors.map(s => sectorPnl[s].pnl);
+  sectorChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sectors,
+      datasets: [{
+        data: values,
+        backgroundColor: values.map(v => v >= 0 ? 'rgba(72,187,120,0.7)' : 'rgba(252,129,129,0.7)'),
+        borderColor: values.map(v => v >= 0 ? '#48bb78' : '#fc8181'),
+        borderWidth: 1,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: {
+        callbacks: { label: ctx => `${fmt(ctx.raw)} (${sectorPnl[ctx.label].count} trades)` }
+      }},
+      scales: {
+        x: { ticks: { color: '#718096', font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { color: '#718096', font: { size: 10 }, callback: v => fmt(v, 0) }, grid: { color: '#1e2534' } }
+      }
+    }
+  });
+}
+
+function renderRMultipleChart(rm) {
+  const ctx = document.getElementById('rmultiple-chart').getContext('2d');
+  const buckets = (rm && rm.buckets) || [];
+  const empty = document.getElementById('rmultiple-empty');
+
+  if (rmultipleChart) rmultipleChart.destroy();
+
+  const total = buckets.reduce((sum, b) => sum + b.count, 0);
+  if (total === 0) {
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+
+  rmultipleChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: buckets.map(b => b.label),
+      datasets: [{
+        data: buckets.map(b => b.count),
+        // Buckets are ordered worst->best; the first two are losing trades (< 0R).
+        backgroundColor: buckets.map((b, i) => i < 2
+          ? 'rgba(252,129,129,0.7)' : 'rgba(72,187,120,0.7)'),
+        borderWidth: 0,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: {
+        callbacks: { label: ctx => `${ctx.raw} trade${ctx.raw !== 1 ? 's' : ''}` }
+      }},
+      scales: {
+        x: { ticks: { color: '#718096', font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { color: '#718096', font: { size: 10 }, precision: 0, stepSize: 1 }, grid: { color: '#1e2534' }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+async function loadAnalytics() {
+  try {
+    const res = await fetch('/api/analytics');
+    const data = await res.json();
+    if (data.error) {
+      document.getElementById('analytics-note').textContent = 'Error: ' + data.error;
+      return;
+    }
+    renderAnalyticsStats(data);
+    renderSectorChart(data.sector_pnl);
+    renderRMultipleChart(data.r_multiples);
+    if (!data.closed_count) {
+      document.getElementById('analytics-note').textContent =
+        'No closed trades yet — metrics populate as positions are realized.';
+    }
+  } catch (e) {
+    document.getElementById('analytics-note').textContent = 'Failed to load analytics: ' + e.message;
+  }
+}
+
+function relativeTime(iso) {
+  if (!iso) return '';
+  const then = new Date(iso);
+  if (isNaN(then)) return '';
+  const secs = Math.floor((Date.now() - then) / 1000);
+  if (secs < 60) return 'just now';
+  if (secs < 3600) return `${Math.floor(secs / 60)}m ago`;
+  if (secs < 86400) return `${Math.floor(secs / 3600)}h ago`;
+  return `${Math.floor(secs / 86400)}d ago`;
+}
+
+async function loadNews() {
+  const list = document.getElementById('news-list');
+  try {
+    const res = await fetch('/api/news');
+    const data = await res.json();
+
+    document.getElementById('news-symbols').textContent =
+      (data.symbols || []).slice(0, 8).join(' · ');
+
+    const headlines = data.headlines || [];
+    if (headlines.length === 0) {
+      list.innerHTML = `<p class="neutral text-sm">No recent headlines${data.error ? ' (' + data.error + ')' : ''}.</p>`;
+      return;
+    }
+
+    list.innerHTML = headlines.map(h => `
+      <div class="pb-3" style="border-bottom:1px solid #1e2534">
+        <a href="${h.url || '#'}" target="_blank" rel="noopener"
+           class="text-sm text-white hover:text-blue-300 font-medium block">${h.headline}</a>
+        <div class="flex items-center gap-2 mt-1 text-xs neutral">
+          <span>${h.source || ''}</span>
+          <span>·</span>
+          <span>${relativeTime(h.created_at)}</span>
+          <span class="flex gap-1">${(h.symbols || []).slice(0, 4).map(s =>
+            `<span class="badge" style="background:#1e2534;color:#63b3ed;padding:1px 6px">${s}</span>`).join('')}</span>
+        </div>
+      </div>`).join('');
+  } catch (e) {
+    list.innerHTML = `<p class="neutral text-sm">Failed to load news: ${e.message}</p>`;
+  }
+}
+
 async function loadSnapshot() {
   try {
     const res = await fetch('/api/snapshot');
@@ -371,8 +608,10 @@ async function refreshLive() {
   }
 }
 
-// Load snapshot on page open
+// Load snapshot + analytics + news on page open
 loadSnapshot();
+loadAnalytics();
+loadNews();
 </script>
 </body>
 </html>

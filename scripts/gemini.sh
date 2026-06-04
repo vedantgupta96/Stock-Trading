@@ -24,7 +24,7 @@ PAYLOAD=$(jq -n \
   '{
     contents: [{parts: [{text: $q}]}],
     tools: [{google_search: {}}],
-    generationConfig: {maxOutputTokens: 1024}
+    generationConfig: {maxOutputTokens: 4096}
   }')
 
 # Capture HTTP status separately so any API failure (404 bad model, 429 quota,

@@ -79,10 +79,14 @@ Run inside Claude Code with credentials from your local `.env`:
 
 A local Flask web app showing portfolio value, open positions, an equity sparkline, market context from the latest research log, and recent trades. It loads instantly from the memory files (snapshot) and has a **Refresh Live** button that pulls fresh data from Alpaca.
 
+It also includes a **Performance Analytics** section — win rate, max drawdown, profit factor, average R-multiple, a per-sector P&L bar chart, and an R-multiple distribution histogram — all computed from closed trades in `memory/TRADE-LOG.md` (these populate as positions are realized; they show clean empty-states until then). A **Latest Market News** widget pulls headlines from the Alpaca News API for your held positions plus a default mega-cap watchlist.
+
 ```bash
 cd dashboard && ./run.sh
 # then open http://localhost:5050
 ```
+
+> Per-sector P&L relies on the `Sector:` field captured on each trade entry (added automatically by the market-open routine and `/trade`). Run the analytics unit tests with `python3 tests/analytics_test.py`.
 
 ## Setup
 

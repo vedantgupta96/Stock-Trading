@@ -104,6 +104,7 @@ If Alpaca rejects the trailing stop due to PDT rules:
 - Target: $X.XX (3:1 R/R)
 - Catalyst: [one sentence]
 - Thesis: [2–3 sentences — breakout date, pullback %, volume, sector momentum]
+- Sector: [the sector you analyzed for --sector-count, e.g. Technology]
 - Earnings next: [date]
 - Time stop: [date 15 trading days from now]
 ```

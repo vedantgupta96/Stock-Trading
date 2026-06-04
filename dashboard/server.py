@@ -110,6 +110,160 @@ def parse_latest_research(research_log: str):
     return result
 
 
+# Risk basis per the strategy: the protective stop sits 8% below entry, so the
+# dollars at risk on a position = entry * 0.08 * shares. R-multiple normalizes a
+# trade's realized P&L by this risk so wins/losses are comparable across sizes.
+STOP_RISK_PCT = 0.08
+
+# Default tickers always worth a news headline, even with an empty book.
+DEFAULT_WATCHLIST = ["SPY", "QQQ", "NVDA", "AAPL", "MSFT", "AMZN", "META", "GOOGL", "TSLA", "AMD"]
+
+# R-multiple histogram buckets (label, lower-inclusive, upper-exclusive).
+R_BUCKETS = [
+    ("< -1R", float("-inf"), -1.0),
+    ("-1–0R", -1.0, 0.0),
+    ("0–1R", 0.0, 1.0),
+    ("1–2R", 1.0, 2.0),
+    ("2–3R", 2.0, 3.0),
+    ("3R+", 3.0, float("inf")),
+]
+
+
+def _money(s: str):
+    """Parse '$1,234.56', '-$50.00', '+$3.10' -> float. None if unparseable."""
+    if s is None:
+        return None
+    m = re.search(r"([+\-]?)\s*\$?\s*([0-9,]+\.?\d*)", s)
+    if not m:
+        return None
+    val = float(m.group(2).replace(",", ""))
+    return -val if m.group(1) == "-" else val
+
+
+def parse_closed_trades(trade_log: str):
+    """Extract closed trade entries (with realized P&L, sector, reason) for analytics."""
+    trades = []
+    # Split on trade-entry headers; the format-doc example block uses [DATE] so it
+    # never matches the real-date header regex and is harmless.
+    blocks = re.split(r"(?=^### \d{4}-\d{2}-\d{2} (?:BUY|SELL) )", trade_log, flags=re.MULTILINE)
+    for block in blocks:
+        header = re.match(r"^### (\d{4}-\d{2}-\d{2}) (BUY|SELL) (\w+) — (open|closed)", block)
+        if not header or header.group(4) != "closed":
+            continue
+        t = {"date": header.group(1), "side": header.group(2), "symbol": header.group(3)}
+
+        shares_m = re.search(r"- Shares:\s*([0-9,]+)", block)
+        entry_m = re.search(r"- Entry price:\s*(.+)", block)
+        exit_m = re.search(r"- Exit price:\s*(.+)", block)
+        pnl_m = re.search(r"- Realized P&L:\s*([^/\n]+?)\s*/\s*([+\-]?[0-9.]+)\s*%", block)
+        reason_m = re.search(r"- Exit reason:\s*(.+)", block)
+        sector_m = re.search(r"- Sector:\s*(.+)", block)
+
+        t["shares"] = int(shares_m.group(1).replace(",", "")) if shares_m else 0
+        t["entry_price"] = _money(entry_m.group(1)) if entry_m else None
+        t["exit_price"] = _money(exit_m.group(1)) if exit_m else None
+        t["realized_pnl"] = _money(pnl_m.group(1)) if pnl_m else None
+        t["realized_pct"] = float(pnl_m.group(2)) if pnl_m else None
+        t["exit_reason"] = reason_m.group(1).strip() if reason_m else ""
+        sector = sector_m.group(1).strip() if sector_m else ""
+        t["sector"] = sector if sector else "Unknown"
+        trades.append(t)
+    return trades
+
+
+def compute_trade_stats(closed):
+    """Win rate, profit factor, and win/loss counts from closed trades with P&L."""
+    pnls = [t["realized_pnl"] for t in closed if t.get("realized_pnl") is not None]
+    wins = [p for p in pnls if p > 0]
+    losses = [p for p in pnls if p < 0]
+    gross_win = sum(wins)
+    gross_loss = abs(sum(losses))
+    total = len(pnls)
+    return {
+        "total_trades": total,
+        "wins": len(wins),
+        "losses": len(losses),
+        "win_rate": (len(wins) / total) if total else None,
+        "profit_factor": (gross_win / gross_loss) if gross_loss else (None if not wins else float("inf")),
+        "net_pnl": sum(pnls),
+        "gross_win": gross_win,
+        "gross_loss": gross_loss,
+    }
+
+
+def compute_drawdown(equity_history):
+    """Running peak -> max drawdown % and current drawdown % from EOD equity."""
+    peak = None
+    max_dd = 0.0
+    cur_dd = 0.0
+    series = []
+    for snap in equity_history:
+        eq = snap["equity"]
+        if peak is None or eq > peak:
+            peak = eq
+        dd = ((eq - peak) / peak * 100) if peak else 0.0
+        cur_dd = dd
+        if dd < max_dd:
+            max_dd = dd
+        series.append({"date": snap["date"], "drawdown": round(dd, 2)})
+    return {"max_drawdown": round(max_dd, 2), "current_drawdown": round(cur_dd, 2), "series": series}
+
+
+def compute_r_multiples(closed):
+    """R = realized_$ / (entry * 0.08 * shares). Returns per-trade Rs, buckets, avg R."""
+    rs = []
+    for t in closed:
+        entry = t.get("entry_price")
+        shares = t.get("shares") or 0
+        pnl = t.get("realized_pnl")
+        if entry and shares and pnl is not None:
+            risk = entry * STOP_RISK_PCT * shares
+            if risk > 0:
+                rs.append({"symbol": t["symbol"], "date": t["date"], "r": round(pnl / risk, 2)})
+    buckets = []
+    for label, lo, hi in R_BUCKETS:
+        count = sum(1 for x in rs if lo <= x["r"] < hi)
+        buckets.append({"label": label, "count": count})
+    avg_r = (sum(x["r"] for x in rs) / len(rs)) if rs else None
+    return {
+        "trades": rs,
+        "buckets": buckets,
+        "avg_r": round(avg_r, 2) if avg_r is not None else None,
+        "count": len(rs),
+    }
+
+
+def compute_sector_pnl(closed):
+    """Aggregate realized P&L and trade count by sector."""
+    sectors = {}
+    for t in closed:
+        if t.get("realized_pnl") is None:
+            continue
+        sec = t.get("sector", "Unknown")
+        bucket = sectors.setdefault(sec, {"pnl": 0.0, "count": 0})
+        bucket["pnl"] += t["realized_pnl"]
+        bucket["count"] += 1
+    for sec in sectors:
+        sectors[sec]["pnl"] = round(sectors[sec]["pnl"], 2)
+    return sectors
+
+
+def extract_idea_tickers(research: dict):
+    """Pull $-prefixed tickers from the latest research entry.
+
+    Research logs cite tickers in freeform prose (including penny names the bot
+    is explicitly *avoiding*), so bare-caps extraction is too noisy/misleading.
+    We only honor the unambiguous `$TICKER` convention — an intentional signal.
+    Held positions + the default watchlist cover the important names anyway.
+    """
+    raw = research.get("raw", "") if isinstance(research, dict) else ""
+    found = []
+    for sym in re.findall(r"\$([A-Z]{1,5})\b", raw):
+        if sym not in found:
+            found.append(sym)
+    return found[:6]
+
+
 @app.route("/")
 def index():
     return send_from_directory(app.static_folder, "index.html")
@@ -197,6 +351,79 @@ def live():
         "positions": enriched_positions,
         "orders": orders if isinstance(orders, list) else [],
     })
+
+
+@app.route("/api/analytics")
+def analytics():
+    """Performance analytics parsed purely from memory files — no API calls."""
+    try:
+        trade_log = (MEMORY_DIR / "TRADE-LOG.md").read_text()
+    except FileNotFoundError as e:
+        return jsonify({"error": f"Memory file not found: {e}"}), 500
+
+    equity_history = parse_eod_snapshots(trade_log)
+    closed = parse_closed_trades(trade_log)
+
+    return jsonify({
+        "equity_history": equity_history,
+        "drawdown": compute_drawdown(equity_history),
+        "stats": compute_trade_stats(closed),
+        "r_multiples": compute_r_multiples(closed),
+        "sector_pnl": compute_sector_pnl(closed),
+        "closed_count": len(closed),
+    })
+
+
+@app.route("/api/news")
+def news():
+    """Latest headlines for held positions + research ideas + a default watchlist."""
+    load_env()
+
+    symbols = []
+
+    positions, _ = run_alpaca("positions")
+    if isinstance(positions, list):
+        for p in positions:
+            sym = p.get("symbol")
+            if sym and sym not in symbols:
+                symbols.append(sym)
+
+    try:
+        research_log = (MEMORY_DIR / "RESEARCH-LOG.md").read_text()
+        ideas = extract_idea_tickers(parse_latest_research(research_log))
+        for sym in ideas:
+            if sym not in symbols:
+                symbols.append(sym)
+    except FileNotFoundError:
+        pass
+
+    for sym in DEFAULT_WATCHLIST:
+        if sym not in symbols:
+            symbols.append(sym)
+
+    symbols = symbols[:10]
+
+    data, err = run_alpaca("news", ",".join(symbols), "20")
+    if err or not isinstance(data, dict):
+        return jsonify({"symbols": symbols, "headlines": [], "error": err or "no news data"})
+
+    headlines = []
+    seen = set()
+    for item in data.get("news", []):
+        title = item.get("headline", "")
+        if not title or title in seen:
+            continue
+        seen.add(title)
+        headlines.append({
+            "headline": title,
+            "source": item.get("source", ""),
+            "created_at": item.get("created_at", ""),
+            "url": item.get("url", ""),
+            "symbols": item.get("symbols", []),
+        })
+    headlines = headlines[:15]
+
+    return jsonify({"symbols": symbols, "headlines": headlines})
 
 
 if __name__ == "__main__":
