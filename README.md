@@ -101,7 +101,7 @@ cd dashboard && ./run.sh
 | `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` | alpaca.sh | Paper keys to start |
 | `ALPACA_ENDPOINT` | alpaca.sh | `https://paper-api.alpaca.markets` |
 | `ALPACA_DATA_ENDPOINT` | alpaca.sh | `https://data.alpaca.markets` |
-| `GEMINI_API_KEY` / `GEMINI_MODEL` | gemini.sh | `gemini-3.1-pro` |
+| `GEMINI_API_KEY` / `GEMINI_MODEL` | gemini.sh | `gemini-2.5-flash` (Pro/3.x need a paid Gemini tier) |
 | `DISCORD_WEBHOOK_URL` | discord.sh | Falls back to a local log if unset |
 
 > **Cloud rule:** never create a `.env` file in a cloud routine. The wrapper scripts read directly from the process environment. A committed `.env` leaks secrets.
