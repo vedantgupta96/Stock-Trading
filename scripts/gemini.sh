@@ -12,7 +12,9 @@ if [[ -z "${GEMINI_API_KEY:-}" ]]; then
   exit 3
 fi
 
-MODEL="${GEMINI_MODEL:-gemini-3.1-pro}"
+# Default to a model available on the free tier. NOTE: gemini-*-pro and the
+# 3.x models are NOT granted on the free tier (they return HTTP 429 "limit: 0").
+MODEL="${GEMINI_MODEL:-gemini-2.5-flash}"
 QUERY="${1:?Usage: gemini.sh \"<query>\"}"
 
 ENDPOINT="https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GEMINI_API_KEY}"
@@ -25,11 +27,24 @@ PAYLOAD=$(jq -n \
     generationConfig: {maxOutputTokens: 1024}
   }')
 
-RESPONSE=$(curl -sf -X POST \
+# Capture HTTP status separately so any API failure (404 bad model, 429 quota,
+# 5xx) exits 3 — the documented "fall back to WebSearch" code — instead of
+# letting `set -e` kill the script with curl's opaque exit code.
+RESP_FILE="$(mktemp)"
+trap 'rm -f "$RESP_FILE"' EXIT
+
+HTTP_CODE=$(curl -s -o "$RESP_FILE" -w '%{http_code}' -X POST \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" \
-  "$ENDPOINT")
+  "$ENDPOINT") || true
 
-# Extract text from response; fall back to raw response if jq parse fails or text is null
-echo "$RESPONSE" | jq -e -r '.candidates[0].content.parts[0].text' 2>/dev/null \
-  || echo "$RESPONSE"
+if [[ "$HTTP_CODE" != "200" ]]; then
+  echo "gemini.sh: model '$MODEL' returned HTTP $HTTP_CODE — caller should fall back to WebSearch" >&2
+  jq -r '.error.message // empty' "$RESP_FILE" 2>/dev/null >&2 || true
+  exit 3
+fi
+
+# Join all text parts (grounded responses can split text across parts);
+# fall back to the raw response if the shape is unexpected.
+jq -e -r '[.candidates[0].content.parts[]?.text] | join("\n")' "$RESP_FILE" 2>/dev/null \
+  || cat "$RESP_FILE"
