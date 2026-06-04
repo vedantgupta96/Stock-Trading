@@ -46,6 +46,19 @@ case "$CMD" in
     _get "$DATA_ENDPOINT/v2/stocks/${SYMBOL}/quotes/latest"
     ;;
 
+  bars)
+    SYMBOL="${1:?Usage: alpaca.sh bars SYMBOL [LOOKBACK_DAYS]}"
+    LOOKBACK="${2:-120}"
+    # IEX feed needs an explicit start date to return history (free tier).
+    START=$(date -u -v-"${LOOKBACK}"d +%Y-%m-%d 2>/dev/null || date -u -d "${LOOKBACK} days ago" +%Y-%m-%d)
+    _get "$DATA_ENDPOINT/v2/stocks/${SYMBOL}/bars?timeframe=1Day&start=${START}&limit=200&feed=iex&adjustment=split"
+    ;;
+
+  asset)
+    SYMBOL="${1:?Usage: alpaca.sh asset SYMBOL}"
+    _get "$ENDPOINT/v2/assets/${SYMBOL}"
+    ;;
+
   buy)
     SYMBOL="${1:?Usage: alpaca.sh buy SYMBOL QTY}"
     QTY="${2:?Usage: alpaca.sh buy SYMBOL QTY}"
@@ -89,7 +102,7 @@ case "$CMD" in
     ;;
 
   *)
-    echo "Usage: alpaca.sh <account|positions|orders|quote|buy|sell|trailing_stop|limit_sell|cancel|close> [args]" >&2
+    echo "Usage: alpaca.sh <account|positions|orders|quote|bars|asset|buy|sell|trailing_stop|limit_sell|cancel|close> [args]" >&2
     exit 1
     ;;
 esac

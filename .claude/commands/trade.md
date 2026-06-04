@@ -26,23 +26,19 @@ bash scripts/alpaca.sh orders
 bash scripts/alpaca.sh quote $SYMBOL
 ```
 
-## STEP 3 — Run all 11 buy-gate checks
+## STEP 3 — Run the buy-gate
 
-For each check, print PASS or FAIL with the data:
+Run the deterministic gate (it computes regime, positions, sizing, PDT, breakout, volume, and is-stock from Alpaca; you supply the research inputs):
 
-1. Market regime: S&P above 20-day SMA? (check research log from today)
-2. Open positions after fill ≤ 5
-3. Same-sector positions after fill ≤ 2
-4. Trades this week ≤ 3 (count entries in TRADE-LOG.md since Monday)
-5. Position cost ≤ available cash
-6. PDT day-trade count < 3
-7. No earnings within 10 trading days (check via Gemini if needed)
-8. Catalyst documented in today's research log
-9. Breakout within last 5 trading days
-10. Breakout volume ≥ 1.5x 20-day average
-11. Instrument is a stock
+```bash
+bash scripts/buy_gate.sh $SYMBOL \
+  --sector-count <existing positions in this stock's sector> \
+  --trades-this-week <buy trades since Monday, from TRADE-LOG.md> \
+  --earnings-days <trading days to next earnings, or "none"> \
+  --catalyst yes
+```
 
-If ANY gate fails: print the failure clearly and abort. Do not place the order.
+Print its full output (all 11 checks + sizing). **If it does not print `GATE: PASS` (exit 0), abort — do not place the order.** Use the `Shares:` it recommends as the order quantity (if the user passed a different $SHARES, flag the discrepancy and prefer the gate's risk-based size).
 
 ## STEP 4 — Show order plan
 

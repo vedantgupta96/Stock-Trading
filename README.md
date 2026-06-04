@@ -45,7 +45,8 @@ Each runs as a Claude Code cloud routine on a cron (America/Chicago):
 ├── CLAUDE.md              # Auto-loaded project context + hard rules
 ├── env.template           # Copy to .env for local runs (gitignored)
 ├── scripts/               # All external API calls flow through here
-│   ├── alpaca.sh          #   Trading: account, positions, orders, buy, sell, trailing_stop, limit_sell, cancel, close
+│   ├── alpaca.sh          #   Trading: account, positions, orders, quote, bars, asset, buy, sell, trailing_stop, limit_sell, cancel, close
+│   ├── buy_gate.sh        #   Decision: runs the 11-check buy-gate + risk-based sizing (deterministic)
 │   ├── stop_watchdog.sh   #   Safety: ensures every position keeps a full-size protective stop
 │   ├── gemini.sh          #   Research: Gemini 3.1 Pro with Google Search grounding
 │   └── discord.sh         #   Notifications: Discord webhook (graceful fallback)
