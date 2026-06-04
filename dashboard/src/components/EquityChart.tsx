@@ -2,6 +2,11 @@ import { useState } from 'react'
 import { AreaChart, Tab, TabGroup, TabList } from '@tremor/react'
 import type { DrawdownData, EODSnapshot } from '../types'
 
+const shortK = (v: number) =>
+  v >= 1_000_000 ? `${(v / 1_000_000).toFixed(1)}M` :
+  v >= 1_000     ? `${(v / 1_000).toFixed(0)}K`     :
+                   v.toFixed(0)
+
 interface Props {
   equityHistory: EODSnapshot[]
   drawdown: DrawdownData | undefined
@@ -33,7 +38,7 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
             index="date"
             categories={['Equity']}
             colors={['blue']}
-            valueFormatter={v => v >= 1_000_000 ? `$${(v/1_000_000).toFixed(2)}M` : v >= 1_000 ? `$${(v/1_000).toFixed(1)}K` : `$${v.toFixed(2)}`}
+            valueFormatter={v => `$${shortK(v)}`}
             showLegend={false}
             showGridLines={false}
             className="h-40 mt-2"
