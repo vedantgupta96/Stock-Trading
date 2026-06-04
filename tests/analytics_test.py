@@ -148,6 +148,19 @@ check("Technology count", sec["Technology"]["count"], 2)
 check("Energy pnl", sec["Energy"]["pnl"], 400.0)
 check("Unknown sector pnl (GOOG)", sec["Unknown"]["pnl"], 75.0)
 
+print("== compute_streaks ==")
+# Sequence: AAPL win, NVDA loss, XOM win, GOOG win → tail is 2W
+st = server.compute_streaks(closed)
+check("current streak count = 2", st["current_streak"], 2)
+check("current streak type = W", st["current_type"], "W")
+check("best win streak = 2", st["best_win_streak"], 2)
+
+print("== parse_open_trades sector field ==")
+open_trades = server.parse_open_trades(SAMPLE_LOG)
+by_open = {t["symbol"]: t for t in open_trades}
+check("MSFT open trade present", "MSFT" in by_open, True)
+check("MSFT sector parsed", by_open["MSFT"]["sector"], "Technology")
+
 print("== empty-state (no closed trades) ==")
 empty = server.parse_closed_trades("# Trade Log\n\nNo trades yet.\n")
 check("no closed trades", len(empty), 0)
@@ -159,6 +172,9 @@ check("empty avg_r is None", erm["avg_r"], None)
 check("empty sector pnl", server.compute_sector_pnl(empty), {})
 edd = server.compute_drawdown([])
 check("empty drawdown max", edd["max_drawdown"], 0.0)
+est = server.compute_streaks([])
+check("empty streak type None", est["current_type"], None)
+check("empty best streak 0", est["best_win_streak"], 0)
 
 print()
 print(f"RESULTS: {PASS} passed, {FAIL} failed")

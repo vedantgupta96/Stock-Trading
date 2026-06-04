@@ -2,8 +2,9 @@ import os
 import re
 import subprocess
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder=".")
 
@@ -75,6 +76,7 @@ def parse_open_trades(trade_log: str):
                 ("stop_level", r"- Stop level:\s*(.+)"),
                 ("target", r"- Target:\s*(.+)"),
                 ("catalyst", r"- Catalyst:\s*(.+)"),
+                ("sector", r"- Sector:\s*(.+)"),
                 ("time_stop", r"- Time stop:\s*(.+)"),
             ]:
                 fm = re.match(pattern, line.strip())
@@ -169,6 +171,34 @@ def parse_closed_trades(trade_log: str):
         t["sector"] = sector if sector else "Unknown"
         trades.append(t)
     return trades
+
+
+def compute_streaks(closed):
+    """Current W/L streak at the tail + best historical win streak."""
+    pnls = [(t["date"], t.get("realized_pnl")) for t in sorted(closed, key=lambda x: x["date"])
+            if t.get("realized_pnl") is not None]
+    if not pnls:
+        return {"current_streak": 0, "current_type": None, "best_win_streak": 0}
+
+    current = 1
+    current_type = "W" if pnls[-1][1] > 0 else "L"
+    for _, pnl in reversed(pnls[:-1]):
+        t = "W" if pnl > 0 else "L"
+        if t == current_type:
+            current += 1
+        else:
+            break
+
+    best = 0
+    run = 0
+    for _, pnl in pnls:
+        if pnl > 0:
+            run += 1
+            best = max(best, run)
+        else:
+            run = 0
+
+    return {"current_streak": current, "current_type": current_type, "best_win_streak": best}
 
 
 def compute_trade_stats(closed):
@@ -325,10 +355,20 @@ def live():
             if o.get("type") == "trailing_stop" and o.get("status") == "accepted":
                 stop_symbols.add(o.get("symbol", ""))
 
+    # Cross-reference trade log for stop/target/sector (memory read, no extra API call).
+    try:
+        trade_log_ctx = {
+            t["symbol"]: t
+            for t in parse_open_trades((MEMORY_DIR / "TRADE-LOG.md").read_text())
+        }
+    except Exception:
+        trade_log_ctx = {}
+
     enriched_positions = []
     if isinstance(positions, list):
         for p in positions:
             sym = p.get("symbol", "")
+            ctx = trade_log_ctx.get(sym, {})
             enriched_positions.append({
                 "symbol": sym,
                 "qty": p.get("qty"),
@@ -337,6 +377,11 @@ def live():
                 "unrealized_pl": p.get("unrealized_pl"),
                 "unrealized_plpc": p.get("unrealized_plpc"),
                 "has_stop": sym in stop_symbols,
+                "stop_level": ctx.get("stop_level"),
+                "target": ctx.get("target"),
+                "sector": ctx.get("sector", ""),
+                "time_stop": ctx.get("time_stop"),
+                "entry_date": ctx.get("date"),
             })
 
     equity = float(account.get("equity", 0)) if isinstance(account, dict) else 0
@@ -364,12 +409,16 @@ def analytics():
     equity_history = parse_eod_snapshots(trade_log)
     closed = parse_closed_trades(trade_log)
 
+    open_trades = parse_open_trades(trade_log)
+
     return jsonify({
         "equity_history": equity_history,
         "drawdown": compute_drawdown(equity_history),
         "stats": compute_trade_stats(closed),
         "r_multiples": compute_r_multiples(closed),
         "sector_pnl": compute_sector_pnl(closed),
+        "streaks": compute_streaks(closed),
+        "open_trades": open_trades,
         "closed_count": len(closed),
     })
 
@@ -424,6 +473,36 @@ def news():
     headlines = headlines[:15]
 
     return jsonify({"symbols": symbols, "headlines": headlines})
+
+
+@app.route("/api/sparklines")
+def sparklines():
+    """30-day daily closes for up to 5 symbols, fetched in parallel via alpaca.sh bars."""
+    load_env()
+    raw_symbols = request.args.get("symbols", "")
+    days = min(int(request.args.get("days", "30")), 60)
+    symbols = [s.strip().upper() for s in raw_symbols.split(",") if s.strip()][:5]
+    if not symbols:
+        return jsonify({})
+
+    def fetch_bars(sym):
+        data, err = run_alpaca("bars", sym, str(days))
+        if err or not isinstance(data, dict):
+            return sym, []
+        bars = data.get("bars", [])
+        return sym, [
+            {"date": b["t"][:10], "close": b["c"]}
+            for b in bars if "t" in b and "c" in b
+        ]
+
+    result = {}
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        futures = {pool.submit(fetch_bars, sym): sym for sym in symbols}
+        for future in as_completed(futures, timeout=12):
+            sym, series = future.result()
+            result[sym] = series
+
+    return jsonify(result)
 
 
 if __name__ == "__main__":
