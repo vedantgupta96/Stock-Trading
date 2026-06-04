@@ -19,9 +19,10 @@ export function Header({ research, lastUpdated, onRefresh, isFetching, autoRefre
     setTimeout(() => setSpinning(false), 1200)
   }
 
-  const note = (research?.regime_note ?? research?.decision ?? '').toLowerCase()
-  const regimeOn = note.includes('above') || note.includes(' on ') || note.includes('trade')
-  const regimeOff = note.includes('below') || note.includes(' off') || note.includes('hold')
+  const allText = [research?.regime_note, research?.decision, research?.raw]
+    .filter(Boolean).join(' ').toLowerCase()
+  const regimeOn  = /regime[:\s]+on\b|s&p.{0,30}above|regime filter on/.test(allText)
+  const regimeOff = /regime[:\s]+off\b|s&p.{0,30}below|regime filter off/.test(allText)
 
   return (
     <div className="flex items-center justify-between flex-wrap gap-3 mb-6">

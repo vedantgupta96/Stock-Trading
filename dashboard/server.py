@@ -322,9 +322,14 @@ def snapshot():
     week_match = re.search(r"Week return[|\s]+([+\-$0-9.,% ]+)", weekly_review)
     week_return = week_match.group(1).strip() if week_match else "N/A"
 
-    # Phase P&L from last EOD
-    phase_match = re.search(r"Phase P&L:\s*([+\-$0-9.,% ]+)", trade_log)
-    phase_pnl = phase_match.group(1).strip() if phase_match else "N/A"
+    # Phase P&L from the last real EOD snapshot (skip the format-doc template line
+    # which contains "+/-" and would match only "+").
+    phase_pnl = "N/A"
+    for line in reversed(trade_log.splitlines()):
+        m = re.search(r"Phase P&L:\s*([+\-]?\$[0-9,]+\.?\d*\s*\([^)]+\))", line)
+        if m:
+            phase_pnl = m.group(1).strip()
+            break
 
     return jsonify({
         "source": "snapshot",
@@ -353,11 +358,15 @@ def live():
     if err:
         orders = []
 
-    # Build enhanced position list with stop order cross-reference
+    # Build enhanced position list with stop order cross-reference.
+    # Alpaca uses several active statuses beyond "accepted" (e.g. "new" for fresh orders).
+    _ACTIVE = {"new", "accepted", "held", "partially_filled", "pending_new",
+               "replaced", "calculated", "accepted_for_bidding"}
+    _STOP_TYPES = {"trailing_stop", "stop", "stop_limit"}
     stop_symbols = set()
     if isinstance(orders, list):
         for o in orders:
-            if o.get("type") == "trailing_stop" and o.get("status") == "accepted":
+            if o.get("type") in _STOP_TYPES and o.get("status") in _ACTIVE:
                 stop_symbols.add(o.get("symbol", ""))
 
     # Cross-reference trade log for stop/target/sector (memory read, no extra API call).
