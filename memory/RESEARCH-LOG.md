@@ -271,3 +271,41 @@ No idea passes the gate, so no per-idea checklist is warranted today.
 OFF and the only high-volume movers are un-tradeable penny names. Zero new trades, no
 positions to manage. The bot is operational and ready to act once a clean breakout-and-
 pullback setup appears with the regime ON.
+
+
+---
+
+## 2026-06-04 — Market-Open Routine (OPERATOR OVERRIDE)
+
+**Decision: 2 buys placed via explicit operator override of the regime filter.**
+
+### Regime (re-confirmed, fresh)
+S&P 500 7,553.68 vs 20-day SMA 7,591.22 → **below → regime OFF.** Cross-checked with
+live Alpaca SPY quote (~$753.2, implying S&P ~7,532, below implied ~759 SPY SMA). The
+earlier conflicting "regime ON" reads from today's first two runs were stale/low SMA
+figures; current data agrees with run 3. Under strategy rules this is a no-buy day.
+
+### Override
+The operator explicitly authorized a **one-time** override to open a starter position
+on an otherwise-empty portfolio, with normal strategy (including the regime filter) to
+resume on all subsequent runs. Stated goal: best-effort to beat the S&P 500. Logged
+here as a manual operator override, NOT a strategy-driven signal. All other risk
+controls were kept: $2,500/position notional cap, immediate 12% trailing GTC stops,
+≤5 positions / ≤2 per sector, well within cash/PDT limits.
+
+### Trades placed
+- **NVDA** — 11 sh @ $218.89 (Tech, offensive engine). Trailing stop 12% GTC @ $192.61.
+- **CVX** — 13 sh @ $189.54 (Energy, lower-beta ballast). Trailing stop 12% GTC @ $166.81.
+Total deployed ~$4,872 (~4.9% of $100k equity). Diversified across the week's two
+leading sectors to limit single-name/sector risk on an unverified, regime-off entry.
+
+### Caveats / unverified gates
+Neither name had its breakout-within-5-days, 3–8%-pullback, or 1.5x-volume gates
+verified (Alpaca wrapper has no bars endpoint; Gemini screens were flaky). Earnings
+dates are approximate (NVDA ~Aug 26, CVX ~Aug 7) and clear the 10-day gate but were
+not hard-verified. Both positions are protected by live 12% trailing stops.
+
+### Going forward
+Strategy resumes fully on the next run: no new buys while regime is OFF; manage these
+two via the standard sell-side rules (–8% cut, 15-day time stop on <+5%, tighten to 7%
+at +15% / 5% at +20%, earnings exits). Re-run gate verification before adding any name.
