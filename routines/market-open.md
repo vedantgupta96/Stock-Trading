@@ -58,21 +58,21 @@ Check:
 
 ## STEP 4 — Run the full buy-gate on each planned order
 
-For each validated trade idea, check all 11 gates from TRADING-STRATEGY.md:
+The 11-check gate is enforced by `scripts/buy_gate.sh` — **do not re-derive the checks by hand.** It computes regime (#1), positions (#2), cost/sizing (#5), PDT (#6), breakout (#9), volume (#10), and is-stock (#11) deterministically from Alpaca; you supply the research-derived inputs (#3 sector, #4 trades-this-week, #7 earnings, #8 catalyst) from today's research log and TRADE-LOG.
 
-1. Market regime ON
-2. Total positions after fill ≤ 5
-3. Same-sector positions after fill ≤ 2
-4. Trades this week ≤ 3 (including this one)
-5. Position cost ≤ available cash
-6. PDT day-trade count < 3
-7. No earnings within 10 trading days
-8. Catalyst documented in today's research log
-9. Breakout within last 5 trading days
-10. Breakout volume ≥ 1.5x 20-day average
-11. Instrument is a stock
+For each validated trade idea:
 
-If any gate fails: skip this trade, log the specific failing gate and reason.
+```bash
+bash scripts/buy_gate.sh SYMBOL \
+  --sector-count <existing positions in this stock's sector> \
+  --trades-this-week <buy trades placed since Monday> \
+  --earnings-days <trading days to next earnings, or "none"> \
+  --catalyst yes
+```
+
+- **Proceed only if the script prints `GATE: PASS` (exit code 0).** Use the `Shares:` it computes as the order quantity.
+- If it prints `GATE: FAIL — <checks>` (exit 2): skip this trade and log the specific failing check(s) and reason in the research log.
+- The research inputs FAIL CLOSED — if you can't substantiate the catalyst, sector count, trades-this-week, or earnings date, the gate will (correctly) fail.
 
 ## STEP 5 — Place approved trades
 

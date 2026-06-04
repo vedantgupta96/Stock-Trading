@@ -9,21 +9,25 @@ Before every run, read `memory/TRADING-STRATEGY.md`. It is the authoritative rul
 ## Hard rules (never break these)
 
 1. Stocks only. No options, no crypto, no ETFs unless strategy doc says otherwise.
-2. Maximum 6 open positions at a time.
-3. Maximum 20% of equity ($2,000 on a $10,000 account) per position.
+2. Maximum 5 open positions at a time; maximum 2 in the same sector.
+3. Risk-based sizing: size each position so hitting its stop costs ~1.5% of equity, hard-capped at **$200 risk per trade**. Recalculate on live equity (the live paper account may differ from the $10,000 example).
 4. Maximum 3 new trades per week.
-5. Every buy immediately gets a 10% trailing stop GTC order on Alpaca. No mental stops.
-6. Cut any losing position at -7% from entry. No averaging down. No hoping.
+5. Every buy immediately gets a **12% trailing stop** GTC order on Alpaca. No mental stops.
+6. Cut any losing position at **-8%** from entry. No averaging down. No hoping.
 7. Patience beats activity. Zero trades can be the right answer.
 
 ## Buy-side gate (all must pass before any order)
 
-- Total open positions after fill ≤ 6
+The 11-check gate is enforced by `scripts/buy_gate.sh` — it computes regime, positions, cost/sizing, PDT, breakout, volume, and is-stock from Alpaca; you pass the research-derived inputs (`--sector-count`, `--trades-this-week`, `--earnings-days`, `--catalyst`). Proceed only on `GATE: PASS`. The checks:
+
+- Market regime ON (S&P 500 / SPY above its 20-day SMA)
+- Total open positions after fill ≤ 5; same-sector after fill ≤ 2
 - Trades this week (including this one) ≤ 3
-- Position cost ≤ 20% of account equity
-- Position cost ≤ available cash
+- Position cost ≤ available cash, and risk within the $200 cap
 - PDT day-trade count leaves room (under 3 on a sub-$25k account)
+- No earnings within the next 10 trading days
 - Specific catalyst is documented in today's research log entry
+- Breakout (3-month / 52-week high) within the last 5 trading days, on ≥ 1.5x 20-day average volume
 - Instrument is a stock (not an option or anything else)
 
 ## Wrapper scripts
@@ -59,6 +63,6 @@ All credentials are in `.env` (local) or injected as process env vars (cloud rou
 ## Account
 
 - Paper trading on Alpaca (`paper-api.alpaca.markets`)
-- Starting capital: $10,000
+- Starting capital: $10,000 (illustrative — the live paper account may differ; always size off the **live equity** Alpaca reports)
 - Timezone: US Central (CT)
 - Notifications: Discord webhook
