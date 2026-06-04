@@ -119,3 +119,80 @@ up with no qualifying pullback — chasing them violates entry-timing discipline
 Zero trades is the right answer today. Wait for a 3–8% pullback in a confirmed
 tech/semis breakout with earnings >10 days out before committing capital.
 
+---
+
+## 2026-06-04 — Pre-Market Research (updated re-run)
+
+### Research source note
+Re-run of today's pre-market after the Gemini wrapper fix (now `gemini-2.5-flash`).
+The earlier 2026-06-04 entry above was produced when Gemini was returning HTTP 404
+and was done entirely on WebSearch fallback. Gemini now works: queries Q1–Q6
+returned cleanly; Q7 (economic calendar) hit HTTP 429 (rate limit, exit 3) so it
+fell back to native WebSearch as the routine directs. Not editing the prior entry
+(append-only); this entry supersedes it with live state.
+
+### Account Snapshot — MATERIAL CHANGE
+Equity: **$0.00** | Cash: **$0.00** | Buying power: **$0.00** | Day trades used: 0/3 | PDT flagged: no
+- The Alpaca paper account was **recreated again** (created 2026-06-04T03:52Z,
+  acct PA38LG589EST) and is currently **unfunded — $0 across equity, cash, and
+  buying power**. Multiplier 1 (cash account, no margin). No open positions, no
+  open orders.
+- This differs from BOTH the strategy doc's $10,000 baseline AND the $100,000 noted
+  in the earlier 2026-06-04 entry. The account has zero capital right now.
+- **Consequence: the buy gate is hard-closed on cash/buying-power.** No order of any
+  size can fill. No trades are possible until the account is funded. Nothing to
+  manage on the sell side (no positions).
+
+### Market Regime Status
+**ON.** S&P 500 ≈ 7,541 vs 20-day SMA ≈ 7,489 → index is **above** its 20-day SMA.
+No regime flip vs the earlier entry (was ON, still ON). Regime check passes, but it
+is moot today because the account is unfunded.
+
+### Market Context
+- S&P 500: ~7,541, holding above its 20-day MA; broadly risk-on.
+- VIX: ~16.0–16.4, up ~2–3% on the day from 15.77 — a modest uptick but still a
+  low/calm absolute level.
+- Oil (WTI): ~$94.5–95.2, **down ~1.6%** on the day on Israel–Lebanon ceasefire
+  hopes and falling US crude inventories — the geopolitical risk premium is easing
+  vs the earlier "third straight up session" read.
+- Economic releases: weekly initial jobless claims (standard Thursday print); an
+  inflation update plus Fed speakers are on the docket this week. Exact June-4
+  release specifics were not resolvable via WebSearch — watch for inflation-print /
+  Fed-speak volatility.
+
+### Sector Momentum
+- Gemini's day-level sector answer returned Indian Nifty indices (noise — ignored).
+- US-relevant read: month-to-date strength in **Industrials, Consumer Cyclical, and
+  Technology**; 2026 YTD leadership in Energy, Industrials, Consumer Defensive.
+- Healthcare, Financials and Materials cited as favored on a 6–12 month outlook.
+
+### Earnings Watch
+No open positions → nothing to flag for an earnings exit. For future setups, note a
+heavy reporting calendar in the next 10 trading days: LULU, DOCU, RBRK, NOW (6/4);
+GME, ASO (6/9); ORCL (6/10); ADBE, LEN, RH (6/11). Any future buy must clear the
+>10-trading-day earnings gate (#7) against this list.
+
+### Trade Ideas
+**None.** Two independent blockers:
+1. **Account unfunded ($0 cash / $0 buying power)** → buy gate check #5 (cost ≤
+   available cash) and #6 fail for any order. Hard stop.
+2. Even ignoring funding, today's high-volume pre-market movers are all low-quality
+   micro-caps / penny names (SBEV $0.41, CXAI $0.24, XOS, STI, SDOT, etc.) — not
+   liquid multi-month-high breakout candidates, and none present a clean 3–8%
+   pullback setup. They fail the breakout/quality intent of the strategy.
+
+No idea passes the gate, so no per-idea entry checklist is warranted today.
+
+### Risk Factors
+- Account is unfunded — the bot is currently **non-operational for trading**; this
+  needs human action (fund the paper account) before any routine can place orders.
+- Inflation data / Fed speakers this week → potential intraday whipsaw if/when funded.
+- VIX ticking up modestly; calm but not complacent.
+
+### Decision
+**HOLD (forced).** Regime is ON, but the paper account is unfunded ($0 cash /
+buying power), so no trade is possible regardless of setup — and no quality pullback
+setups exist anyway. Zero trades. **Action item for the operator: fund the Alpaca
+paper account** so the strategy can resume. Sending a Discord alert flagging the
+unfunded account, as it blocks all operation.
+
