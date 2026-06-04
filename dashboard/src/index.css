@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card-glass {
+    @apply bg-slate-900/80 backdrop-blur-md border border-slate-700/40 rounded-2xl
+           shadow-[0_4px_24px_rgba(0,0,0,0.4),0_0_0_1px_rgba(99,179,237,0.04)]
+           transition-[box-shadow,border-color] duration-200;
+  }
+  .card-glass:hover {
+    @apply border-slate-600/60 shadow-[0_4px_32px_rgba(0,0,0,0.5),0_0_18px_rgba(99,179,237,0.07)];
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
