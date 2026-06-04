@@ -59,6 +59,12 @@ case "$CMD" in
     _get "$ENDPOINT/v2/assets/${SYMBOL}"
     ;;
 
+  news)
+    SYMBOLS="${1:?Usage: alpaca.sh news SYMBOLS [LIMIT]}"
+    LIMIT="${2:-15}"
+    _get "$DATA_ENDPOINT/v1beta1/news?symbols=${SYMBOLS}&limit=${LIMIT}&sort=desc"
+    ;;
+
   buy)
     SYMBOL="${1:?Usage: alpaca.sh buy SYMBOL QTY}"
     QTY="${2:?Usage: alpaca.sh buy SYMBOL QTY}"
@@ -102,7 +108,7 @@ case "$CMD" in
     ;;
 
   *)
-    echo "Usage: alpaca.sh <account|positions|orders|quote|bars|asset|buy|sell|trailing_stop|limit_sell|cancel|close> [args]" >&2
+    echo "Usage: alpaca.sh <account|positions|orders|quote|bars|asset|news|buy|sell|trailing_stop|limit_sell|cancel|close> [args]" >&2
     exit 1
     ;;
 esac

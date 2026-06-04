@@ -15,6 +15,7 @@
 - Target: $X.XX (X:1 R/R)
 - Catalyst: [one sentence]
 - Thesis: [2-3 sentences]
+- Sector: [sector — e.g. Technology, Healthcare, Energy]
 - Exit price: $X.XX (if closed)
 - Realized P&L: $X.XX / X% (if closed)
 - Exit reason: (if closed)
