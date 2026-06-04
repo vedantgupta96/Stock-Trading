@@ -33,7 +33,7 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
             index="date"
             categories={['Equity']}
             colors={['blue']}
-            valueFormatter={v => `$${v.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
+            valueFormatter={v => v >= 1_000_000 ? `$${(v/1_000_000).toFixed(2)}M` : v >= 1_000 ? `$${(v/1_000).toFixed(1)}K` : `$${v.toFixed(2)}`}
             showLegend={false}
             showGridLines={false}
             className="h-40 mt-2"
