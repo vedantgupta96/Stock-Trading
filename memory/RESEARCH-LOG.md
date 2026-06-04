@@ -196,3 +196,78 @@ setups exist anyway. Zero trades. **Action item for the operator: fund the Alpac
 paper account** so the strategy can resume. Sending a Discord alert flagging the
 unfunded account, as it blocks all operation.
 
+
+---
+
+## 2026-06-04 — Pre-Market Research (run 3 — account now FUNDED)
+
+*Third run today. Material change since the prior two entries: the Alpaca paper account is now funded. Earlier entries today recorded it as unfunded ($0); the live account now shows $100,000 equity. Account created 2026-06-04 12:02 UTC.*
+
+### Account Snapshot
+Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 (4x) | Day trades used: 0/3 | PDT: false
+- Live Alpaca read (paper). Account number PA3HSZYWDFS7, status ACTIVE.
+- **Open positions: 0. Open orders: 0.** Nothing to manage on the sell side.
+- Note: equity is $100,000, not the $10,000 baseline in the strategy doc. Position
+  sizing recalculated on live equity below.
+
+### Market Regime Status
+**OFF (borderline / conflicted reads).** Today's Gemini read: S&P 500 closed 7,553.68
+on Jun 3 vs a 20-day SMA of 7,591.22 → index is **below** its 20-day SMA → regime
+filter is OFF, no new buys today.
+- ⚠️ Conflict with earlier-today entries, which read S&P ~7,541 **above** a 20-day SMA
+  of ~7,489 (regime ON). The two SMA figures (~7,489 vs ~7,591) are mutually
+  inconsistent and cannot both be correct for the same week. Today's read is more
+  specific (dated close + exact SMA), and the strategy's tie-breaker is conservatism:
+  "When the regime filter is off, the right answer is almost always cash."
+- **Practical impact: none for the action.** With zero positions and only low-quality
+  penny-stock movers available, the decision is HOLD regardless of how the regime
+  ambiguity resolves. Treating regime as OFF → buy gate check #1 FAILS today.
+
+### Market Context
+- S&P 500: ~7,553.68 (Jun 3 close), sitting just below its 20-day SMA (~7,591). Mild
+  pullback / consolidation, not a breakdown.
+- VIX: ~16.0–16.1, up ~1.8% from 15.77; ~15% below its long-term avg (18.55). Calm
+  but with a noted divergence — single-stock (constituent) vol trending higher even as
+  index VIX stays low. Watch for stock-specific turbulence.
+- Oil (WTI): ~$93.6–95.5 intraday (July contract settled $96.02 on Jun 3); soft/choppy.
+- Notable releases today (Jun 4, via WebSearch fallback — Gemini Q7 hit HTTP 429):
+  Initial Jobless Claims 8:30 ET (fcst 211K, prev 215K), Continuing Claims (fcst
+  1,780K), Nonfarm Productivity (fcst 0.8%), and **FOMC's Mary Daly speaks 12:10 ET.**
+
+### Sector Momentum
+- Week ending Jun 3: leaders **Information Technology (+3.75%)** and **Energy (+3.17%)**.
+- Laggards: Communication Services, Consumer Discretionary, Consumer Staples (declines).
+- Materials (+0.43%) and Industrials (+0.01%) roughly flat.
+
+### Earnings Watch
+No open positions → nothing to flag for an earnings exit. For future setups, heavy
+reporting in the next ~10 trading days (carried from earlier entries): LULU, DOCU,
+RBRK, NOW (6/4); GME, ASO (6/9); ORCL (6/10); ADBE, LEN, RH (6/11). Gemini's earnings
+query was truncated/empty this run and WebSearch returned only calendar sources, not a
+clean list — any future buy must still clear the >10-trading-day earnings gate (#7).
+
+### Position Sizing (recalculated on live equity)
+- Equity $100,000 → 1.5% risk = $1,500, but strategy hard-caps risk at **$200/trade**.
+- Max notional = $200 / 8% stop = **$2,500 per position** (≈ the binding cap; the
+  CLAUDE.md 20%-of-equity cap = $20,000 is far looser and does not bind here).
+
+### Trade Ideas
+**None.** Two independent blockers:
+1. **Regime filter OFF** (S&P below 20-day SMA) → buy gate check #1 FAILS. No new longs.
+2. Even ignoring the regime, today's high-volume movers are all low-float penny / micro-cap
+   names (SBEV, CXAI, STI, FOXX, AUUD on the upside; HUBC, SNBR, ADCT on the downside) —
+   not liquid multi-month-high breakouts with a clean 3–8% pullback. They fail the
+   breakout-quality intent of the strategy (gate checks #9–#10).
+No idea passes the gate, so no per-idea checklist is warranted today.
+
+### Risk Factors
+- Regime reads are conflicting day-to-day; data quality is shaky. Lean conservative (cash).
+- Fed speaker (Daly, 12:10 ET) + jobless claims → potential intraday whipsaw.
+- VIX/constituent-vol divergence: index calm but individual names can gap. Penny-stock
+  movers are pure noise — do not chase.
+
+### Decision
+**HOLD.** Account is now funded ($100k, fully operational), but the regime filter reads
+OFF and the only high-volume movers are un-tradeable penny names. Zero new trades, no
+positions to manage. The bot is operational and ready to act once a clean breakout-and-
+pullback setup appears with the regime ON.
