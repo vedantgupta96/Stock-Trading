@@ -11,7 +11,6 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
   const [tab, setTab] = useState(0)
 
   const equityData = equityHistory.map(s => ({ date: s.date, Equity: s.equity }))
-  const baseline = equityHistory.length ? equityHistory[0].equity : 0
 
   const drawdownData = (drawdown?.series ?? []).map(s => ({ date: s.date, Drawdown: s.drawdown }))
 
@@ -30,14 +29,11 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
       {tab === 0 && (
         equityData.length > 0 ? (
           <AreaChart
-            data={[...equityData, { date: 'Baseline', Equity: baseline }].slice(0, -1).map((_, i) => ({
-              ...equityData[i],
-              Baseline: baseline,
-            }))}
+            data={equityData}
             index="date"
-            categories={['Equity', 'Baseline']}
-            colors={['blue', 'slate']}
-            valueFormatter={v => `$${v.toLocaleString()}`}
+            categories={['Equity']}
+            colors={['blue']}
+            valueFormatter={v => `$${v.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
             showLegend={false}
             showGridLines={false}
             className="h-40 mt-2"
