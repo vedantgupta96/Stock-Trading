@@ -71,3 +71,16 @@ Notes: Day 0 baseline. Paper account funded at $10,000. No positions. Bot goes l
 - Thesis: Lower-beta, tight-spread (0.05%) energy name added as ballast to diversify away from tech-correlated drawdown in the starter pair. NOTE: discretionary OPERATOR-OVERRIDE entry — placed with the market-regime filter OFF and WITHOUT verifying the breakout/pullback/volume gates. Not a strategy-qualified setup.
 - Earnings next: ~2026-08-07 (est., unverified — clears the 10-trading-day gate)
 - Time stop: 2026-06-25 (15 trading days)
+
+---
+
+## 2026-06-04 — EOD Snapshot
+Equity: $99,976.39 | Cash: $95,128.19 | Day P&L: -$23.61 (-0.02%) | Phase P&L: -$23.61 (-0.02%)
+Trades today: 2 | Trades this week: 2/3 | Regime: OFF
+
+| Symbol | Shares | Entry    | Current  | Unreal. P&L      | Stop type        |
+|--------|--------|----------|----------|------------------|------------------|
+| NVDA   | 11     | $218.89  | $218.15  | -$8.14 (-0.34%)  | 12% trailing GTC |
+| CVX    | 13     | $189.54  | $188.35  | -$15.47 (-0.63%) | 12% trailing GTC |
+
+Notes: First live trading day on the $100k paper account. Operator-authorized one-time override opened a diversified starter pair (NVDA tech, CVX energy) despite the regime filter being OFF (S&P below its 20-day SMA). Both positions closed marginally red on the day but are well within normal noise and each is protected by a live 12% trailing-stop GTC order. Equity essentially flat at -0.02%. Regime remains OFF, so no new buys until S&P reclaims its 20-day SMA; manage the two open names via standard sell-side rules. Phase/day P&L computed off the live $100k base, not the illustrative $10k.
