@@ -68,14 +68,14 @@ interface Props {
   posCount: number
 }
 
+function parsePhasePnl(raw: string): { dollars: string; pct: number } | null {
+  const m = raw.match(/([+\-]?\$[\d,]+\.?\d*)\s*\(([+\-]?[\d.]+)%\)/)
+  if (!m) return null
+  return { dollars: m[1], pct: parseFloat(m[2]) }
+}
+
 export function PortfolioCards({ equity, cash, dayPnl, dayPnlPct, phasePnl, weekReturn, posCount }: Props) {
-  // Parse "-$23.61 (-0.02%)" → { dollars: "-$23.61", pct: -0.02 }
-  const phase = (() => {
-    if (!phasePnl || phasePnl === 'N/A') return null
-    const m = phasePnl.match(/([+\-]?\$[\d,]+\.?\d*)\s*\(([+\-]?[\d.]+)%\)/)
-    if (!m) return null
-    return { dollars: m[1], pct: parseFloat(m[2]) }
-  })()
+  const phase = phasePnl && phasePnl !== 'N/A' ? parsePhasePnl(phasePnl) : null
   const phaseUp = (phase?.pct ?? 0) >= 0
   const hasWeek = weekReturn && weekReturn !== 'N/A'
 
@@ -102,7 +102,7 @@ export function PortfolioCards({ equity, cash, dayPnl, dayPnlPct, phasePnl, week
           ? <AnimatedNumber value={dayPnlPct} sign format={v => Math.abs(v).toFixed(2) + '%'} className={clsPL(dayPnlPct)} />
           : <span className="muted">—</span>}
         sub={dayPnl != null ? <AnimatedNumber value={dayPnl} sign className={clsPL(dayPnl)} /> : ''}
-        subClass={clsPL(dayPnl ?? 0)}
+        subClass={clsPL(dayPnlPct ?? 0)}
       />
       <StatCard
         label="Phase P&L" icon={<ActivityIcon />} delay={180}
