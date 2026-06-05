@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react'
 import type { SparklineBar } from '../types'
 
-interface Props { series: SparklineBar[]; entryPrice: number; h?: number; animate?: boolean }
+interface Props { series: SparklineBar[]; entryPrice: number; symbol?: string; h?: number; animate?: boolean }
 
-export function PositionSparkline({ series, entryPrice, h = 52, animate = true }: Props) {
+export function PositionSparkline({ series, entryPrice, symbol, h = 52, animate = true }: Props) {
   const lineRef = useRef<SVGPathElement>(null)
   const W = 300
 
@@ -28,7 +28,7 @@ export function PositionSparkline({ series, entryPrice, h = 52, animate = true }
   const lastClose = closes[closes.length - 1]
   const isUp = lastClose >= entryPrice
   const color = isUp ? 'var(--up)' : 'var(--down)'
-  const gid = `sp_${Math.round(closes[0] * 100)}`
+  const gid = symbol ? `sp_${symbol}` : `sp_${Math.round(closes[0] * 100)}`
 
   useEffect(() => {
     const el = lineRef.current
