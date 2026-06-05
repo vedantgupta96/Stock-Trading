@@ -66,8 +66,16 @@ interface Props {
   posCount: number
 }
 
+function parsePhasePnl(raw: string): { dollars: string; pct: number } | null {
+  const m = raw.match(/([+\-]?\$[\d,]+\.?\d*)\s*\(([+\-]?[\d.]+)%\)/)
+  if (!m) return null
+  return { dollars: m[1], pct: parseFloat(m[2]) }
+}
+
 export function PortfolioCards({ equity, cash, dayPnl, phasePnl, posCount }: Props) {
-  const phaseUp = !phasePnl.startsWith('-') && phasePnl !== 'N/A'
+  const dayPnlPct = dayPnl != null && equity ? (dayPnl / equity) * 100 : null
+  const phase = parsePhasePnl(phasePnl)
+  const phaseUp = phase ? phase.pct >= 0 : !phasePnl.startsWith('-') && phasePnl !== 'N/A'
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 16 }}>
@@ -86,19 +94,23 @@ export function PortfolioCards({ equity, cash, dayPnl, phasePnl, posCount }: Pro
       />
       <StatCard
         label="Day P&L" delay={120}
-        icon={dayPnl != null && dayPnl >= 0 ? <TrendUpIcon /> : <TrendDownIcon />}
-        accent={dayPnl != null ? (dayPnl >= 0 ? '--up' : '--down') : undefined}
-        value={dayPnl != null
-          ? <AnimatedNumber value={dayPnl} sign format={v => Math.abs(v).toFixed(2) + '%'} className={clsPL(dayPnl)} />
+        icon={dayPnlPct != null && dayPnlPct >= 0 ? <TrendUpIcon /> : <TrendDownIcon />}
+        accent={dayPnlPct != null ? (dayPnlPct >= 0 ? '--up' : '--down') : undefined}
+        value={dayPnlPct != null
+          ? <AnimatedNumber value={dayPnlPct} sign format={v => Math.abs(v).toFixed(2) + '%'} className={clsPL(dayPnlPct)} />
           : <span className="muted">—</span>}
         sub={dayPnl != null ? <AnimatedNumber value={dayPnl} sign className={clsPL(dayPnl)} /> : ''}
-        subClass={clsPL(dayPnl ?? 0)}
+        subClass={clsPL(dayPnlPct ?? 0)}
       />
       <StatCard
         label="Phase P&L" icon={<ActivityIcon />} delay={180}
         accent={phaseUp ? '--up' : '--down'}
-        value={<span className={phaseUp ? 'up' : 'down'}>{phasePnl && phasePnl !== 'N/A' ? phasePnl : '—'}</span>}
-        sub={phasePnl && phasePnl !== 'N/A' ? <span className={phaseUp ? 'up' : 'down'}>since inception</span> : ''}
+        value={phase
+          ? <span className={phaseUp ? 'up' : 'down'}>{phase.pct >= 0 ? '+' : ''}{phase.pct.toFixed(2)}%</span>
+          : <span className={phaseUp ? 'up' : 'down'}>{phasePnl !== 'N/A' ? phasePnl : '—'}</span>}
+        sub={phase
+          ? <span className={phaseUp ? 'up' : 'down'}>{phase.dollars} since inception</span>
+          : (phasePnl !== 'N/A' ? <span className={phaseUp ? 'up' : 'down'}>since inception</span> : '')}
         subClass={phaseUp ? 'up' : 'down'}
       />
     </div>

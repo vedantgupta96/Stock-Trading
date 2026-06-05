@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useSnapshot } from './hooks/useSnapshot'
 import { useAnalytics } from './hooks/useAnalytics'
 import { useLive } from './hooks/useLive'
@@ -24,7 +24,7 @@ export default function App() {
   const [autoRefresh, setAutoRefresh] = useState(0)
   const [isLive, setIsLive]           = useState(false)
   const [lastUpdated, setLastUpdated] = useState('Loading snapshot…')
-  const [warnedSyms]                  = useState(new Set<string>())
+  const warnedSyms                    = useRef(new Set<string>())
 
   const { showToast } = useToast()
 
@@ -33,11 +33,13 @@ export default function App() {
   const { data: news, isLoading: newsL } = useNews()
   const liveQuery                        = useLive(autoRefresh)
   const livePositions                    = liveQuery.data?.positions ?? []
-  const { data: sparklines }             = useSparklines(isLive ? livePositions.map(p => p.symbol) : [])
 
   const equityHist  = snapshot?.equity_history ?? []
   const openTrades  = snapshot?.open_trades ?? []
   const analyticsOT = analytics?.open_trades ?? openTrades
+
+  const sparklineSymbols = isLive ? livePositions.map(p => p.symbol) : openTrades.map(t => t.symbol)
+  const { data: sparklines } = useSparklines(sparklineSymbols)
 
   const lastSnap = equityHist[equityHist.length - 1]
   const prevSnap = equityHist[equityHist.length - 2]
@@ -46,10 +48,11 @@ export default function App() {
   const cash   = isLive ? (liveQuery.data?.cash ?? null)     : null
   const dayPnl = isLive ? (liveQuery.data?.day_pnl ?? null)  : (lastSnap && prevSnap ? lastSnap.equity - prevSnap.equity : null)
 
-  // update label once on first snapshot
-  if (snapshot && lastUpdated === 'Loading snapshot…') {
-    setLastUpdated(`${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}`)
-  }
+  useEffect(() => {
+    if (snapshot) {
+      setLastUpdated(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }))
+    }
+  }, [snapshot])
 
   const handleRefresh = async () => {
     const result = await liveQuery.refetch()
@@ -59,13 +62,13 @@ export default function App() {
     const data = result.data
     data.positions.forEach(p => {
       const plpc = parseFloat(p.unrealized_plpc ?? '0') * 100
-      if (!p.has_stop && !warnedSyms.has(p.symbol + '_nostop')) {
+      if (!p.has_stop && !warnedSyms.current.has(p.symbol + '_nostop')) {
         showToast(`${p.symbol}: no protective stop found`, 'error', 7000)
-        warnedSyms.add(p.symbol + '_nostop')
+        warnedSyms.current.add(p.symbol + '_nostop')
       }
-      if (plpc <= -6 && !warnedSyms.has(p.symbol + '_near')) {
+      if (plpc <= -6 && !warnedSyms.current.has(p.symbol + '_near')) {
         showToast(`${p.symbol}: ${plpc.toFixed(1)}% — near −8% hard stop`, 'warn', 7000)
-        warnedSyms.add(p.symbol + '_near')
+        warnedSyms.current.add(p.symbol + '_near')
       }
     })
     showToast(`Updated · ${data.positions.length} position${data.positions.length !== 1 ? 's' : ''} synced`, 'success', 3400)
@@ -106,7 +109,8 @@ export default function App() {
           </div>
           <PositionsSummary
             positions={openTrades}
-            onSelect={() => {}}
+            livePositions={isLive ? livePositions : undefined}
+            sparklines={sparklines}
             onViewAll={() => setTab('positions')}
           />
         </div>

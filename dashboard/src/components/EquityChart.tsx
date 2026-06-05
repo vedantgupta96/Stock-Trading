@@ -20,8 +20,13 @@ function AreaChart({ series, color, fmtVal, fmtAxis, negative }: AreaChartProps)
 
   const vals = series.map(s => s.value)
   const rawMin = Math.min(...vals), rawMax = Math.max(...vals)
-  const min = negative ? Math.min(rawMin, 0) : rawMin
-  const max = negative ? Math.max(rawMax, 0) : rawMax
+  const mean = (rawMin + rawMax) / 2 || 1
+  const dataRng = rawMax - rawMin
+  const minPad = Math.max(dataRng, Math.abs(mean) * 0.01) - dataRng
+  const paddedMin = rawMin - minPad / 2
+  const paddedMax = rawMax + minPad / 2
+  const min = negative ? Math.min(paddedMin, 0) : paddedMin
+  const max = negative ? Math.max(paddedMax, 0) : paddedMax
   const rng = max - min || 1
 
   const X = (i: number) => padL + (i / Math.max(series.length - 1, 1)) * plotW
