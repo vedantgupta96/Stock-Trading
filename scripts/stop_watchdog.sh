@@ -54,36 +54,67 @@ fi
 
 POS_COUNT="$(jq 'map(select((.qty|tonumber) > 0)) | length' <<<"$POSITIONS")"
 
-# --- Build the action plan: one object per unprotected long position ---
+# --- Build the action plan: one object per inadequately-protected long position ---
+#
+# "Adequate protection" = a covering sell order whose trigger is at or above the
+# -8%-from-entry floor (entry*0.92). A 12% trailing stop placed early sits BELOW
+# that floor until the position is up ~+4.55% (12% trail clears -8% only when
+# (1+pnl)*0.88 >= 0.92), so an underwater position protected only by a trailing
+# stop is NOT adequately protected against the hard -8% cut. We heal that gap with
+# a fixed -8% stop, then UPGRADE to a trailing stop once the position can support
+# one above the floor. A trailing stop with no stop_price yet (just submitted) is
+# given the benefit of the doubt.
+UPGRADE_PNL="0.0454545"   # pnl at which a 12% trailing stop's trigger reaches the -8% floor
 PLAN="$(jq -nc \
   --argjson positions "$POSITIONS" \
   --argjson orders "$ORDERS" \
   --argjson active "$ACTIVE_STATUSES" \
-  --argjson protypes "$PROTECTIVE_TYPES" '
-  [ $positions[]
+  --argjson protypes "$PROTECTIVE_TYPES" \
+  --arg upgrade "$UPGRADE_PNL" '
+  ($upgrade|tonumber) as $UP
+  | [ $positions[]
     | select((.qty|tonumber) > 0)
     | . as $p
     | ($p.symbol) as $sym
     | ($p.qty|tonumber) as $q
     | ($p.unrealized_plpc|tonumber) as $pnl
+    | ($p.avg_entry_price|tonumber) as $entry
+    | ($entry*0.92) as $floor
     | ( [ $orders[]
           | select(.side=="sell"
               and (.symbol==$sym)
               and (.type as $t | $protypes | index($t))
               and (.status as $s | $active | index($s))) ] ) as $prot
     | ( ($prot | map(.qty|tonumber) | add) // 0 ) as $covered
-    | if $covered >= $q then empty
+    # Effective trigger per order; a trailing_stop not yet priced is treated as high.
+    | ( [ $prot[]
+          | if (.type=="trailing_stop" and ((.stop_price // null) == null))
+            then 1e15
+            else ((.stop_price // .limit_price // 0)|tonumber) end ] ) as $trigs
+    | ( ($trigs | max) // 0 ) as $best_trig
+    | ( ([ $prot[] | select(.type=="trailing_stop") ] | length) > 0 ) as $has_trailing
+    | (($covered >= $q) and ($best_trig >= $floor)) as $protected_now
+    | (if $pnl <= -0.08 then
+         { action: "close", trail_pct: null, stop_price: null }
+       elif ($protected_now and ($has_trailing or $pnl < $UP)) then
+         null                                   # adequately protected — nothing to do
+       elif $pnl >= $UP then
+         { action: "place_trailing",
+           trail_pct: (if $pnl >= 0.20 then 5.0 elif $pnl >= 0.15 then 7.0 else 12.0 end),
+           stop_price: null }
+       else
+         { action: "place_stop", trail_pct: null, stop_price: (($floor*100|round)/100) }
+       end) as $decision
+    | if $decision == null then empty
       else
         { symbol: $sym,
           qty: $q,
           pnl_pct: (($pnl*10000|round)/100),
-          entry: ($p.avg_entry_price|tonumber),
+          entry: $entry,
           cancel_ids: [ $prot[].id ],
-          action: (if $pnl <= -0.08 then "close" else "place_trailing" end),
-          trail_pct: (if $pnl <= -0.08 then null
-                      elif $pnl >= 0.20 then 5.0
-                      elif $pnl >= 0.15 then 7.0
-                      else 12.0 end) }
+          action: $decision.action,
+          trail_pct: $decision.trail_pct,
+          stop_price: $decision.stop_price }
       end ]')"
 
 UNPROTECTED_COUNT="$(jq 'length' <<<"$PLAN")"
@@ -99,6 +130,7 @@ while IFS= read -r item; do
   action="$(jq -r '.action' <<<"$item")"
   entry="$(jq -r '.entry' <<<"$item")"
   trail="$(jq -r '.trail_pct // empty' <<<"$item")"
+  stopp="$(jq -r '.stop_price // empty' <<<"$item")"
   cancel_ids=()
   while IFS= read -r _cid; do
     [[ -n "$_cid" ]] && cancel_ids+=("$_cid")
@@ -107,7 +139,7 @@ while IFS= read -r item; do
   result="planned"
 
   if [[ "$FIX" -eq 1 ]]; then
-    # Clear any partial/leftover protective orders first.
+    # Clear any partial/leftover/under-floor protective orders first.
     if [[ ${#cancel_ids[@]} -gt 0 ]]; then
       for oid in "${cancel_ids[@]}"; do
         bash "$ALPACA" cancel "$oid" >/dev/null 2>&1 || true
@@ -119,6 +151,17 @@ while IFS= read -r item; do
         result="closed"; ACTIONS_TAKEN=$((ACTIONS_TAKEN+1))
       else
         result="close_failed"
+      fi
+    elif [[ "$action" == "place_stop" ]]; then
+      if bash "$ALPACA" stop "$sym" "$qty" "$stopp" >/dev/null 2>&1; then
+        result="stop_${stopp}"; ACTIONS_TAKEN=$((ACTIONS_TAKEN+1))
+      else
+        # Fallback: fixed limit sell at the same -8% floor.
+        if bash "$ALPACA" limit_sell "$sym" "$qty" "$stopp" >/dev/null 2>&1; then
+          result="limit_fallback_${stopp}"; ACTIONS_TAKEN=$((ACTIONS_TAKEN+1))
+        else
+          result="queued"
+        fi
       fi
     else
       if bash "$ALPACA" trailing_stop "$sym" "$qty" "$trail" >/dev/null 2>&1; then
@@ -135,11 +178,11 @@ while IFS= read -r item; do
     fi
   fi
 
-  if [[ "$action" == "close" ]]; then
-    detail="hard_stop_-8%"
-  else
-    detail="trail_${trail}%"
-  fi
+  case "$action" in
+    close)          detail="hard_stop_-8%" ;;
+    place_stop)     detail="fixed_-8%_@${stopp}" ;;
+    *)              detail="trail_${trail}%" ;;
+  esac
   echo "ACTION ${sym} qty=${qty} pnl=${pnl}% action=${action} detail=${detail} result=${result}"
 done < <(jq -c '.[]' <<<"$PLAN")
 

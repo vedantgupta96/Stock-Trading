@@ -21,6 +21,9 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ALPACA="${BUYGATE_ALPACA:-$SCRIPT_DIR/alpaca.sh}"
 
 SYMBOL=""; ENTRY=""; SECTOR_COUNT=""; TRADES_WEEK=""; EARNINGS=""; CATALYST=""; JSON=0
+# Entry-timing band for the SHADOW c12 pullback check (advisory only — does NOT
+# affect the gate verdict). See memory/STRATEGY-PROPOSALS.md (2026-06-05).
+PMIN="3"; PMAX="12"
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --entry)            ENTRY="${2:?}"; shift 2 ;;
@@ -28,6 +31,8 @@ while [[ $# -gt 0 ]]; do
     --trades-this-week) TRADES_WEEK="${2:?}"; shift 2 ;;
     --earnings-days)    EARNINGS="${2:?}"; shift 2 ;;
     --catalyst)         CATALYST="${2:?}"; shift 2 ;;
+    --pullback-min)     PMIN="${2:?}"; shift 2 ;;
+    --pullback-max)     PMAX="${2:?}"; shift 2 ;;
     --json)             JSON=1; shift ;;
     -*)                 echo "buy_gate: unknown flag $1" >&2; exit 1 ;;
     *)                  SYMBOL="$1"; shift ;;
@@ -69,7 +74,9 @@ R="$(jq -nc \
   --arg sector "$SECTOR_COUNT" \
   --arg trades "$TRADES_WEEK" \
   --arg earnings "$EARNINGS" \
-  --arg catalyst "$CATALYST" '
+  --arg catalyst "$CATALYST" \
+  --arg pmin "$PMIN" \
+  --arg pmax "$PMAX" '
   ($account.cash|tonumber) as $cash
   | ($account.equity|tonumber) as $equity
   | (($account.daytrade_count // 0)|tonumber) as $dtc
@@ -96,6 +103,7 @@ R="$(jq -nc \
   | ($shares*$entry) as $cost
   | (($entry*0.92*100|round)/100) as $stop
   | (($entry*1.24*100|round)/100) as $target
+  | (if ($last5_high>0 and $entry>0) then (($last5_high-$entry)/$last5_high*100) else -1 end) as $pullback
   | {
       symbol: $sym, entry: $entry, equity: $equity, cash: $cash, daytrade_count: $dtc,
       pos_count: $pos_count, already_held: $already,
@@ -106,6 +114,8 @@ R="$(jq -nc \
       cost: ($cost|round), stop: $stop, target: $target,
       sector_count: ($sector|tonumber), trades_week: ($trades|tonumber),
       earnings: $earnings, catalyst: $catalyst,
+      pullback_pct: (($pullback*10|round)/10), pullback_min: ($pmin|tonumber), pullback_max: ($pmax|tonumber),
+      shadow_c12_pullback: ($pullback >= ($pmin|tonumber) and $pullback <= ($pmax|tonumber)),
       checks: {
         c1_regime:   ($have_spy and $spy_close > $spy_sma20),
         c2_positions:(($pos_count + (if $already then 0 else 1 end)) <= 5),
@@ -144,6 +154,9 @@ else
   echo " 9. 3-month high in last 5d     $(pf c9_breakout)   [last5 high $(get '.last5_high') vs prior $(get '.prior_high'), $(get '.bars_n') bars]"
   echo "10. Volume ≥ 1.5x 20d avg       $(pf c10_volume)   [last5 maxvol $(get '.last5_vol_max') vs threshold $(get '.vol_threshold') (1.5x avg $(get '.avg20_vol'))]"
   echo "11. Instrument is a stock       $(pf c11_stock)"
+  C12="$([[ "$(get '.shadow_c12_pullback')" == "true" ]] && echo PASS || echo FAIL)"
+  echo "--- Shadow (advisory only — does NOT affect verdict) ---"
+  echo "c12. Pullback in band           $C12   [pullback $(get '.pullback_pct')% vs band $(get '.pullback_min')–$(get '.pullback_max')%]"
   echo "--- Sizing ---"
   echo "Entry ~\$$ENTRYV | Risk \$$(get '.risk') (1.5% eq capped \$200) | Notional \$$(get '.notional')"
   echo "Shares: $SHARES | Cost ~\$$(get '.cost') | Stop \$$(get '.stop') (-8%) | Target \$$(get '.target') (+24%)"
