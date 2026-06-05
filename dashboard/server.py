@@ -54,6 +54,18 @@ def parse_eod_snapshots(trade_log: str):
     return snapshots
 
 
+# Canonical field patterns shared by open and closed trade parsers.
+_TRADE_FIELD_RE: dict[str, str] = {
+    "shares":      r"- Shares:\s*(.+)",
+    "entry_price": r"- Entry price:\s*(.+)",
+    "stop_level":  r"- Stop level:\s*(.+)",
+    "target":      r"- Target:\s*(.+)",
+    "catalyst":    r"- Catalyst:\s*(.+)",
+    "sector":      r"- Sector:\s*(.+)",
+    "time_stop":   r"- Time stop:\s*(.+)",
+}
+
+
 def parse_open_trades(trade_log: str):
     """Extract open trade entries from the trade log."""
     trades = []
@@ -70,15 +82,7 @@ def parse_open_trades(trade_log: str):
                 "status": m.group(4),
             }
         if current:
-            for field, pattern in [
-                ("shares", r"- Shares:\s*(.+)"),
-                ("entry_price", r"- Entry price:\s*(.+)"),
-                ("stop_level", r"- Stop level:\s*(.+)"),
-                ("target", r"- Target:\s*(.+)"),
-                ("catalyst", r"- Catalyst:\s*(.+)"),
-                ("sector", r"- Sector:\s*(.+)"),
-                ("time_stop", r"- Time stop:\s*(.+)"),
-            ]:
+            for field, pattern in _TRADE_FIELD_RE.items():
                 fm = re.match(pattern, line.strip())
                 if fm:
                     current[field] = fm.group(1).strip()
@@ -155,11 +159,11 @@ def parse_closed_trades(trade_log: str):
         t = {"date": header.group(1), "side": header.group(2), "symbol": header.group(3)}
 
         shares_m = re.search(r"- Shares:\s*([0-9,]+)", block)
-        entry_m = re.search(r"- Entry price:\s*(.+)", block)
-        exit_m = re.search(r"- Exit price:\s*(.+)", block)
-        pnl_m = re.search(r"- Realized P&L:\s*([^/\n]+?)\s*/\s*([+\-]?[0-9.]+)\s*%", block)
+        entry_m  = re.search(_TRADE_FIELD_RE["entry_price"], block)
+        exit_m   = re.search(r"- Exit price:\s*(.+)", block)
+        pnl_m    = re.search(r"- Realized P&L:\s*([^/\n]+?)\s*/\s*([+\-]?[0-9.]+)\s*%", block)
         reason_m = re.search(r"- Exit reason:\s*(.+)", block)
-        sector_m = re.search(r"- Sector:\s*(.+)", block)
+        sector_m = re.search(_TRADE_FIELD_RE["sector"], block)
 
         t["shares"] = int(shares_m.group(1).replace(",", "")) if shares_m else 0
         t["entry_price"] = _money(entry_m.group(1)) if entry_m else None
@@ -308,11 +312,14 @@ def index(path: str):
 def snapshot():
     """Returns data parsed from memory files — no API calls."""
     try:
-        trade_log = (MEMORY_DIR / "TRADE-LOG.md").read_text()
+        trade_log    = (MEMORY_DIR / "TRADE-LOG.md").read_text()
         research_log = (MEMORY_DIR / "RESEARCH-LOG.md").read_text()
-        weekly_review = (MEMORY_DIR / "WEEKLY-REVIEW.md").read_text()
     except FileNotFoundError as e:
         return jsonify({"error": f"Memory file not found: {e}"}), 500
+    try:
+        weekly_review = (MEMORY_DIR / "WEEKLY-REVIEW.md").read_text()
+    except FileNotFoundError:
+        weekly_review = ""
 
     snapshots = parse_eod_snapshots(trade_log)
     open_trades = parse_open_trades(trade_log)
