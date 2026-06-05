@@ -1,50 +1,49 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
+import { signed, sectorVar } from '../utils'
 import type { SectorPnl } from '../types'
 
-function SectorTooltip({ active, payload, label }: any) {
-  if (!active || !payload?.length) return null
-  const v: number = payload[0]?.value ?? 0
-  return (
-    <div className="chart-tooltip">
-      <p className="text-[0.65rem] text-slate-500 mb-1">{label}</p>
-      <p className={`metric text-sm ${v >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-        {v >= 0 ? '+' : ''}${v.toFixed(2)}
-      </p>
-      <p className="text-[0.6rem] text-slate-600 mt-0.5">{payload[0]?.payload?.count} trades</p>
-    </div>
-  )
-}
-
 export function SectorPnlChart({ sectorPnl }: { sectorPnl?: SectorPnl }) {
-  const sectors = Object.keys(sectorPnl ?? {})
+  const rows = Object.entries(sectorPnl ?? {}).map(([sector, d]) => ({ sector, ...d }))
+  const max = Math.max(...rows.map(r => Math.abs(r.pnl)), 1)
 
   return (
-    <div className="card-glass p-5">
-      <p className="section-label mb-1">Per-Sector P&L</p>
-      <p className="text-xs text-slate-500 mb-4">Realized gains/losses by sector</p>
+    <div className="v-card v-card-pad rise">
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+        <span className="v-card-title">Sector P&L</span>
+        <span className="mono muted" style={{ fontSize: 11 }}>realized</span>
+      </div>
 
-      {sectors.length === 0 ? (
-        <div className="h-40 flex items-center justify-center">
-          <p className="text-xs text-slate-600 text-center">
+      {rows.length === 0 ? (
+        <div style={{ height: 120, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ color: 'var(--fg-4)', fontSize: 13, textAlign: 'center', lineHeight: 1.5 }}>
             No closed trades yet.<br />Sector P&L populates as positions are realized.
           </p>
         </div>
       ) : (
-        <ResponsiveContainer width="100%" height={160}>
-          <BarChart data={sectors.map(s => ({ sector: s, pnl: sectorPnl![s].pnl, count: sectorPnl![s].count }))}
-            margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
-            <XAxis dataKey="sector" tick={{ fill: '#475569', fontSize: 10 }} axisLine={false} tickLine={false} />
-            <YAxis tickFormatter={v => `$${v}`} tick={{ fill: '#475569', fontSize: 10 }} axisLine={false} tickLine={false} width={44} />
-            <Tooltip content={<SectorTooltip />} />
-            <Bar dataKey="pnl" radius={[4, 4, 0, 0]}>
-              {sectors.map((s, i) => (
-                <Cell key={i}
-                  fill={sectorPnl![s].pnl >= 0 ? 'rgba(16,185,129,0.7)' : 'rgba(244,63,94,0.7)'}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
+          {rows.map((r, i) => {
+            const w = (Math.abs(r.pnl) / max) * 100
+            const pos = r.pnl >= 0
+            const cv = sectorVar(r.sector)
+            const color = pos ? `var(${cv})` : 'var(--down)'
+            return (
+              <div key={r.sector} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ width: 92, fontSize: 12, color: 'var(--fg-2)', flexShrink: 0 }}>{r.sector}</span>
+                <div style={{ flex: 1, height: 22, background: 'var(--ink-850)', borderRadius: 6, overflow: 'hidden', position: 'relative' }}>
+                  <div style={{
+                    position: 'absolute', top: 0, bottom: 0, left: 0, width: `${w}%`,
+                    background: color, borderRadius: 6,
+                    boxShadow: `0 0 16px color-mix(in srgb, ${color} 55%, transparent)`,
+                    animation: `growX 800ms cubic-bezier(0.22,1,0.36,1) ${i * 70}ms both`,
+                    transformOrigin: 'left',
+                  }} />
+                </div>
+                <span className={`mono ${pos ? 'up' : 'down'}`} style={{ width: 64, textAlign: 'right', fontSize: 12.5, fontWeight: 600, flexShrink: 0 }}>
+                  {signed(r.pnl, 0)}
+                </span>
+              </div>
+            )
+          })}
+        </div>
       )}
     </div>
   )

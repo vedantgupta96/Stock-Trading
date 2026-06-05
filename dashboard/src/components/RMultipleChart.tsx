@@ -1,58 +1,46 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 import type { RMultiplesData } from '../types'
 
-function RTooltip({ active, payload, label }: any) {
-  if (!active || !payload?.length) return null
-  const count: number = payload[0]?.value ?? 0
-  return (
-    <div className="chart-tooltip">
-      <p className="text-[0.65rem] text-slate-500 mb-1">{label}</p>
-      <p className="metric text-sm text-slate-200">{count} trade{count !== 1 ? 's' : ''}</p>
-    </div>
-  )
-}
-
 export function RMultipleChart({ rm }: { rm?: RMultiplesData }) {
-  const total = rm?.buckets?.reduce((s, b) => s + b.count, 0) ?? 0
+  const buckets = rm?.buckets ?? []
+  const max = Math.max(...buckets.map(b => b.count), 1)
+  const total = buckets.reduce((s, b) => s + b.count, 0)
 
   return (
-    <div className="card-glass p-5">
-      <div className="flex items-start justify-between mb-4">
-        <div>
-          <p className="section-label mb-1">R-Multiple Distribution</p>
-          <p className="text-xs text-slate-500">Risk-normalized trade outcomes</p>
-        </div>
-        {rm?.avg_r != null && (
-          <div className="text-right">
-            <p className="section-label mb-1">Avg R</p>
-            <p className={`metric text-lg ${rm.avg_r >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-              {rm.avg_r >= 0 ? '+' : ''}{rm.avg_r.toFixed(2)}R
-            </p>
-          </div>
-        )}
+    <div className="v-card v-card-pad rise">
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+        <span className="v-card-title">R-Multiple Distribution</span>
+        <span className="mono muted" style={{ fontSize: 11 }}>
+          {total > 0 ? `${total} trades` : 'no closed trades'}
+        </span>
       </div>
 
       {total === 0 ? (
-        <div className="h-40 flex items-center justify-center">
-          <p className="text-xs text-slate-600 text-center">
+        <div style={{ height: 132, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ color: 'var(--fg-4)', fontSize: 13, textAlign: 'center', lineHeight: 1.5 }}>
             No closed trades yet.<br />R-multiples appear once positions are realized.
           </p>
         </div>
       ) : (
-        <ResponsiveContainer width="100%" height={140}>
-          <BarChart data={rm?.buckets ?? []} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
-            <XAxis dataKey="label" tick={{ fill: '#475569', fontSize: 9 }} axisLine={false} tickLine={false} />
-            <YAxis allowDecimals={false} tick={{ fill: '#475569', fontSize: 10 }} axisLine={false} tickLine={false} width={24} />
-            <Tooltip content={<RTooltip />} />
-            <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-              {(rm?.buckets ?? []).map((_b, i) => (
-                <Cell key={i}
-                  fill={i < 2 ? 'rgba(244,63,94,0.65)' : 'rgba(16,185,129,0.65)'}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8, height: 132 }}>
+          {buckets.map((b, i) => {
+            const neg = b.label.startsWith('<') || b.label.startsWith('-')
+            const col = neg ? 'var(--down)' : 'var(--up)'
+            const h = (b.count / max) * 100
+            return (
+              <div key={b.label} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 7, height: '100%', justifyContent: 'flex-end' }}>
+                {b.count > 0 && <span className="mono" style={{ fontSize: 11, color: 'var(--fg-2)' }}>{b.count}</span>}
+                <div style={{
+                  width: '100%', height: `${Math.max(h, b.count > 0 ? 4 : 0)}%`, minHeight: b.count > 0 ? 4 : 0,
+                  background: col, borderRadius: '5px 5px 2px 2px',
+                  boxShadow: `0 0 14px color-mix(in srgb, ${col} 50%, transparent)`,
+                  animation: `growUp 700ms cubic-bezier(0.22,1,0.36,1) ${i * 55}ms both`,
+                  transformOrigin: 'bottom',
+                }} />
+                <span className="mono" style={{ fontSize: 9.5, color: 'var(--fg-4)' }}>{b.label}</span>
+              </div>
+            )
+          })}
+        </div>
       )}
     </div>
   )

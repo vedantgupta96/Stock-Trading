@@ -2,41 +2,31 @@ import { SectorBadge } from './SectorBadge'
 import type { OpenTrade } from '../types'
 
 export function TradeEntries({ trades }: { trades: OpenTrade[] }) {
-  if (!trades.length) {
-    return (
-      <div className="card-glass p-5">
-        <h2 className="text-sm font-semibold text-white mb-4">Open Trade Entries (from log)</h2>
-        <p className="text-sm text-slate-500">No open trade entries in log.</p>
-      </div>
-    )
-  }
   return (
-    <div className="card-glass p-5">
-      <h2 className="text-sm font-semibold text-white mb-4">Open Trade Entries (from log)</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {trades.map(t => (
-          <div
-            key={t.symbol}
-            className="p-3 rounded-xl text-xs bg-slate-900/80 border border-slate-800/60"
-          >
-            <div className="flex justify-between items-center mb-1.5">
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-white">{t.symbol}</span>
-                <SectorBadge sector={t.sector} />
+    <div className="v-card v-card-pad rise">
+      <span className="v-card-title" style={{ display: 'block', marginBottom: 16 }}>Open Trade Entries (from log)</span>
+      {trades.length === 0 ? (
+        <p style={{ color: 'var(--fg-4)', fontSize: 13 }}>No open trade entries in log.</p>
+      ) : (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+          {trades.map(t => (
+            <div key={t.symbol} style={{ padding: '13px 14px', background: 'var(--ink-850)',
+              border: '1px solid var(--line)', borderRadius: 'var(--r-md)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 15 }}>{t.symbol}</span>
+                  <SectorBadge sector={t.sector} />
+                </div>
+                <span className="mono muted" style={{ fontSize: 11 }}>{t.date}</span>
               </div>
-              <span className="text-slate-500">{t.date}</span>
+              <div className="mono" style={{ fontSize: 12, color: 'var(--fg-3)' }}>{t.shares ?? '—'} shares @ {t.entry_price ?? '—'}</div>
+              <div className="mono" style={{ fontSize: 12, color: 'var(--fg-3)' }}>Stop: {t.stop_level ?? '—'} · Target: {t.target ?? '—'}</div>
+              {t.catalyst && <p style={{ fontSize: 12, color: 'var(--volt)', margin: '6px 0 0', lineHeight: 1.4 }}>{t.catalyst.slice(0, 100)}</p>}
+              {t.time_stop && <p style={{ fontSize: 11, color: 'var(--warn)', margin: '5px 0 0', fontFamily: 'var(--font-mono)' }}>⏰ {t.time_stop}</p>}
             </div>
-            <p className="text-slate-400">{t.shares ?? '—'} shares @ {t.entry_price ?? '—'}</p>
-            <p className="text-slate-500">Stop: {t.stop_level ?? '—'} · Target: {t.target ?? '—'}</p>
-            {t.catalyst && (
-              <p className="mt-1 text-blue-400">{t.catalyst.slice(0, 100)}</p>
-            )}
-            {t.time_stop && (
-              <p className="mt-1 text-amber-400">⏰ {t.time_stop}</p>
-            )}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
