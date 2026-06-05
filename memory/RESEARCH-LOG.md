@@ -309,3 +309,75 @@ not hard-verified. Both positions are protected by live 12% trailing stops.
 Strategy resumes fully on the next run: no new buys while regime is OFF; manage these
 two via the standard sell-side rules (–8% cut, 15-day time stop on <+5%, tighten to 7%
 at +15% / 5% at +20%, earnings exits). Re-run gate verification before adding any name.
+
+
+---
+
+## 2026-06-05 (Fri) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime is ON, but no name clears the buy gate
+(all candidates fail volume and/or breakout + lack a documented catalyst). Existing
+NVDA and CVX positions left to the standard sell-side rules / midday scan; both are
+within tolerance and protected by live 12% trailing-stop GTC orders.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,919.90 | Cash: $95,128.18 | Buying power: $390,096 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now ~$213.26, **-2.6%**), **CVX** 13 sh
+  @ $189.54 (now ~$188.16, **-0.7%**). Neither near the -8% cut.
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop ~$195.01, hwm $221.60); CVX trailing
+  stop 12% GTC (stop ~$166.90, hwm $189.66). Both stops live and intact.
+- Position sizing (recalc on live equity): 1.5% of $99,920 = $1,499, but hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Regime Status
+**ON.** S&P 500 ~7,540 intraday Jun 5 (Dow at a record closing high; majors at/near
+all-time highs), trading well above its 20-day MA (~7,398). Cross-checked with the buy
+gate's live SPY read: **SPY 751.59 vs 20-day SMA 746.95 → above → regime ON.** This is a
+cleaner, less ambiguous read than yesterday's borderline-OFF figures; gate check #1 PASSES.
+
+### Market Context
+- S&P 500 ~7,540 (Jun 5 intraday, -0.58% on day but near record); Dow record closing high.
+- VIX ~15.40, **down ~4%** on the day — calm, low-fear tape.
+- Oil (WTI): **dropped ~10%** on Iran peace hopes — a headwind for energy/CVX thesis,
+  though CVX is holding (-0.7% today). Falling oil + falling yields = bullish equity backdrop.
+- **May jobs report (released pre-open today): +172K vs ~85K forecast** (prior revised to
+  +179K); unemployment ~4.3%, AHE +0.3% m/m. Strong print; market absorbed it well (no
+  hawkish shock — majors at highs).
+- Note: Kevin Warsh's first FOMC meeting as Fed chair begins Sat Jun 6 — no decision today.
+
+### Sector Momentum
+- Rotation in progress: **Healthcare and Financials leading** (Dow led by UNH +5.4%,
+  GS +5.0%, MRK +4.9%); **Information Technology selling off** Thursday, dragging the Nasdaq.
+- iShares Software ETF (IGV) breaking above its 200-day SMA (ETF — not tradeable per rules).
+
+### Earnings Watch (held names)
+- NVDA next earnings ~late Aug 2026; CVX ~early Aug 2026. Both clear the >10-trading-day
+  gate. No earnings exit triggered for either open position.
+
+### Trade Ideas — tested, none qualify
+Candidates surfaced from momentum/breakout screens: **MTLS, LXFR, ARKO**. Ran each through
+`scripts/buy_gate.sh` (deterministic breakout/volume from Alpaca; honest inputs:
+sector-count 0, trades-this-week 2, catalyst=no — no specific documented catalyst for these):
+- **MTLS** — GATE FAIL: c10 volume (last-5 max 8,059 vs 17,415 = 1.5x avg), c8 catalyst.
+  Breakout (c9) passes but on weak volume → low conviction.
+- **LXFR** — GATE FAIL: c10 volume (10,715 vs 10,888 threshold — narrowly short), c8 catalyst.
+- **ARKO** — GATE FAIL: c9 no 3-month high in last 5d, c10 volume, c8 catalyst.
+None has volume confirmation (the 1.5x conviction filter), none has a documented catalyst,
+and none presents a clean 3–8% pullback entry. Buy gate correctly rejects all three.
+Leadership names (UNH/GS/MRK) are at record highs — extended, not in a pullback buy zone;
+chasing them violates entry timing. Tech is rotating out → wrong moment to add tech.
+
+### Trades this week
+2 placed Mon–Fri this week (NVDA, CVX on 6/4 via operator override). Room for 1 more under
+the 3/week cap — but no qualifying setup to use it on.
+
+### Risk Factors
+- Sector rotation out of tech (hits NVDA) and a 10% oil drop (hits CVX thesis) — both
+  positions face mild thesis pressure but are well above -8% and stop-protected. Re-evaluate
+  at midday: if CVX's energy thesis is breaking on the oil move, consider a discretionary exit.
+- New Fed chair's first FOMC begins tomorrow → potential weekend headline risk.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON but no name clears the gate (volume + catalyst fail
+across all candidates). Patience beats activity. No Discord alert (no trade placed). No
+commit per the market-open routine (commit only when trades fire).
