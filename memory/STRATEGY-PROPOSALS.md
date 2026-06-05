@@ -5,6 +5,26 @@ moved into `TRADING-STRATEGY.md` on a Friday review with a logged rationale,
 per the strategy doc's change-control rule (a rule must "prove out for 2+ weeks
 or fail badly" before it changes).
 
+## Issue tracker (status — honest)
+| # | Issue identified | Status |
+|---|---|---|
+| 1 | Entry timing never enforced in code (buy on a dip) | **DONE (shadow)** — `c12` advisory in `buy_gate.sh`, collecting data |
+| 2 | Goal/deployment mismatch — can't beat S&P at ~12% invested | **PROPOSED** — "deployment overhaul" below; owner chose aggressive; needs backtest |
+| 3 | Stop-logic gap: −8% hard cut sits ABOVE the 12% trailing stop → −8% must be enforced by hand (e.g. NVDA now) | **OPEN — not fixed.** Proposed fix drafted below; affects a live (paper) position, prioritize |
+| 4 | Data reliability — flaky Gemini (503/429), conflicting day-to-day regime reads | **OPEN — not fixed.** Engineering hardening, not a strategy rule; can do without a Friday review |
+| 5 | Relative-strength ranking — only buy the strongest leaders, not any qualifier | **OPEN — idea only**, not drafted |
+
+---
+
+## 2026-06-05 — Stop-logic reconciliation (Issue #3)
+**Status:** PROPOSED. Today the initial −8% cut is a *manual* rule while the only live
+order is a 12% trailing stop, whose trigger sits ~4% BELOW the −8% line. Between those two
+prices nothing fires automatically — a real protection gap (NVDA sits in it right now).
+**Proposed fix:** on every buy, place a real **−8% stop-loss order at entry**; once the
+position is up enough that a 12% trailing stop would sit ABOVE the −8% line (i.e. in
+profit), cancel the −8% stop and replace it with the 12% trailing stop. One automated
+ladder, no manual gap. Low-risk, high-value; can be validated quickly in paper.
+
 ---
 
 ## 2026-06-05 — Reorient the strategy to BEAT the S&P 500 (deployment overhaul)
@@ -57,11 +77,23 @@ rule #1 ("stocks only, no ETFs"). Park this until the simpler deployment fix is 
   around regime-OFF periods (crashes we sit out).
 - Most active strategies fail to beat the index. This is a genuine attempt, not a promise.
 
-### DECISION NEEDED FROM OWNER
-**Max drawdown tolerance?** This sets how aggressive sizing/leverage gets:
-- *Conservative* (~10–15% max drawdown): risk ~1% equity/trade, ~60% max deployment.
-- *Moderate* (~15–25% max drawdown): risk ~1.5%/trade, ~80% deployment. ← proposal default
-- *Aggressive* (~25–35%+): risk ~2%/trade, allow modest leverage. NOT recommended.
+### DECISION (owner, 2026-06-05): AGGRESSIVE
+Owner chose **aggressive** — rationale: conservative/moderate money already lives in
+their Roth IRA, HSA, and 401(k); this (paper) account is the designated aggressive sleeve.
+- Parameters: risk **~2% of equity per trade**, deployment up to ~100% when regime ON,
+  modest leverage permitted.
+- **Honest guardrails I'm recommending even at "aggressive" (until the backtest proves more):**
+  - Cap leverage at **~1.3×** initially (not the full 4× the paper account allows). Momentum
+    strategies suffer "momentum crashes" — sharp reversals — and leverage + overnight gaps can
+    blow through trailing stops. Prove it on history before pushing leverage higher.
+  - No single position > **20% of equity**, even aggressive. One bad gap shouldn't be fatal.
+  - Keep the −8% cut and trailing stops non-negotiable. Aggressive sizing + no stops = ruin.
+- These guardrails are themselves revisitable at a Friday review once the backtest is in.
+
+### (superseded) DECISION-NEEDED menu, for reference
+- *Conservative* (~10–15% DD): risk ~1% equity/trade, ~60% max deployment.
+- *Moderate* (~15–25% DD): risk ~1.5%/trade, ~80% deployment.
+- *Aggressive* (~25–35%+ DD): risk ~2%/trade, modest leverage. ← CHOSEN
 
 ### Validation plan (MANDATORY before anything goes live)
 1. **Backtest 2018–2026** (must include the 2020 crash, 2022 bear, 2025–26 action):
