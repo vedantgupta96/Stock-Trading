@@ -39,7 +39,7 @@ Notes: [plain-english summary of the day]
 
 ## 2026-06-02 — Day 0 Baseline
 
-Equity: $10,000.00 | Cash: $10,000.00 | Day P&L: $0.00 (0.00%) | Phase P&L: $0.00 (0.00%)
+Equity: $100,000.00 | Cash: $100,000.00 | Day P&L: $0.00 (0.00%) | Phase P&L: $0.00 (0.00%)
 Trades this week: 0/3
 
 | Symbol | Shares | Entry | Current | Unreal. P&L | Stop |

@@ -6,6 +6,32 @@ import { PositionSparkline } from './PositionSparkline'
 import type { OpenTrade, Position, SparklineData } from '../types'
 
 // ── Snapshot table ──────────────────────────────────────────────────────────
+function daysRemaining(raw?: string | null): string {
+  if (!raw) return '—'
+  const m = raw.match(/(\d{4}-\d{2}-\d{2})/)
+  if (!m) return '—'
+  const diff = Math.ceil((new Date(m[1]).getTime() - Date.now()) / 86_400_000)
+  if (diff <= 0) return 'due'
+  return `${diff}d`
+}
+
+function ProtectionCell({ stopLevel }: { stopLevel?: string | null }) {
+  if (stopLevel) {
+    return (
+      <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--up)', fontFamily: 'var(--font-display)', fontWeight: 600 }}>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Stop set
+      </span>
+    )
+  }
+  return (
+    <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'var(--down)', fontFamily: 'var(--font-display)', fontWeight: 600 }}>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      No stop
+    </span>
+  )
+}
+
 function SnapshotTable({ trades, onSelect }: { trades: OpenTrade[]; onSelect: (t: OpenTrade) => void }) {
   if (!trades.length)
     return <p style={{ color: 'var(--fg-4)', fontSize: 13, padding: '24px 0', textAlign: 'center' }}>No open positions in trade log.</p>
@@ -23,14 +49,11 @@ function SnapshotTable({ trades, onSelect }: { trades: OpenTrade[]; onSelect: (t
             <td><SectorBadge sector={t.sector} /></td>
             <td className="mono">{t.shares ?? '—'}</td>
             <td className="mono">{t.entry_price ?? '—'}</td>
-            <td className="mono" style={{ color: 'var(--fg-3)', fontSize: 12 }}>{t.stop_level ?? '—'} → {t.target ?? '—'}</td>
-            <td className="mono warn" style={{ fontSize: 12 }}>{t.time_stop ?? '—'}</td>
-            <td>
-              <span style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 12,
-                color: 'var(--fg-3)' }}>
-                — <span style={{ opacity: 0.5, fontSize: 10 }}>(Refresh)</span>
-              </span>
+            <td className="mono" style={{ color: 'var(--fg-3)', fontSize: 12 }}>
+              {parseStopDollar(t.stop_level)} → {parseStopDollar(t.target)}
             </td>
+            <td className="mono warn" style={{ fontSize: 12 }}>{daysRemaining(t.time_stop)}</td>
+            <td><ProtectionCell stopLevel={t.stop_level} /></td>
             <td><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></td>
           </tr>
         ))}
@@ -103,7 +126,7 @@ function PositionCard({ p, sparklines, onSelect }: { p: Position; sparklines?: S
 }
 
 // ── Detail drawer (slide in on position click) ──────────────────────────────
-function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null; onClose: () => void }) {
+function PositionDrawer({ p, onClose, sparklines }: { p: Position | OpenTrade | null; onClose: () => void; sparklines?: SparklineData }) {
   if (!p) return null
   const isLive = 'unrealized_plpc' in p
   const plpc = isLive ? parseFloat((p as Position).unrealized_plpc ?? '0') * 100 : null
@@ -148,6 +171,17 @@ function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null; onClos
         </div>
 
         <div style={{ padding: 24, display: 'flex', flexDirection: 'column', gap: 20 }}>
+          {/* sparkline */}
+          {sparklines?.[p.symbol]?.length ? (
+            <div style={{ borderRadius: 'var(--r-sm)', overflow: 'hidden', background: 'rgba(0,0,0,0.3)', marginBottom: -4 }}>
+              <PositionSparkline
+                series={sparklines[p.symbol]}
+                entryPrice={entry || 0}
+                h={72}
+              />
+            </div>
+          ) : null}
+
           {/* no-stop alarm */}
           {isLive && !(p as Position).has_stop && (
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '12px 14px',
@@ -161,10 +195,10 @@ function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null; onClos
           <div>
             <div className="v-card-title" style={{ marginBottom: 10 }}>Trade Ladder</div>
             {[
-              { label: 'Target', value: ('target' in p ? (p as OpenTrade).target : null) ?? (p as Position).target, color: 'var(--up)' },
+              { label: 'Target', value: parseStopDollar(('target' in p ? (p as OpenTrade).target : null) ?? (p as Position).target), color: 'var(--up)' },
               { label: 'Current', value: cur != null ? fmt(cur) : '— (refresh)', color: dir },
               { label: 'Entry', value: entry ? fmt(entry) : ('entry_price' in p ? (p as OpenTrade).entry_price : null) ?? '—', color: 'var(--fg-2)' },
-              { label: 'Stop', value: ('stop_level' in p ? (p as OpenTrade).stop_level : null) ?? (p as Position).stop_level ?? '—', color: 'var(--down)' },
+              { label: 'Stop', value: parseStopDollar(('stop_level' in p ? (p as OpenTrade).stop_level : null) ?? (p as Position).stop_level), color: 'var(--down)' },
             ].map(row => (
               <div key={row.label} style={{ display: 'flex', justifyContent: 'space-between', padding: '11px 0', borderBottom: '1px solid var(--line)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -199,13 +233,36 @@ function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null; onClos
 }
 
 // ── Summary strip for overview tab ─────────────────────────────────────────
-export function PositionsSummary({ positions, onSelect, onViewAll }: {
-  positions: OpenTrade[]; onSelect: (p: OpenTrade) => void; onViewAll: () => void
+function parseStopDollar(raw?: string | null): string {
+  if (!raw) return '—'
+  const m = raw.match(/\$[\d,]+\.?\d*/)
+  return m ? m[0] : raw.split('(')[0].trim()
+}
+
+const WarnTriangle = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--warn)" strokeWidth="2.5" style={{ flexShrink: 0 }}>
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+    <line x1="12" y1="9" x2="12" y2="13"/>
+    <line x1="12" y1="17" x2="12.01" y2="17"/>
+  </svg>
+)
+
+export function PositionsSummary({ positions, livePositions, sparklines, onSelect, onViewAll }: {
+  positions: OpenTrade[]
+  livePositions?: Position[]
+  sparklines?: SparklineData
+  onSelect: (p: OpenTrade) => void
+  onViewAll: () => void
 }) {
+  const liveMap = new Map((livePositions ?? []).map(p => [p.symbol, p]))
+
   return (
     <div className="v-card v-card-pad rise">
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'center' }}>
-        <span className="v-card-title">Open Positions</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span className="v-card-title">Open Positions</span>
+          <span className="mono muted" style={{ fontSize: 11 }}>held + watchlist</span>
+        </div>
         <button onClick={onViewAll} style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 12,
           color: 'var(--fg-3)', background: 'none', border: 'none', cursor: 'pointer',
           display: 'flex', alignItems: 'center', gap: 5, transition: 'color var(--dur-fast)' }}
@@ -215,30 +272,71 @@ export function PositionsSummary({ positions, onSelect, onViewAll }: {
         </button>
       </div>
       {positions.length === 0 ? (
-        <p style={{ color: 'var(--fg-4)', fontSize: 13 }}>No open positions.</p>
+        <p style={{ color: 'var(--fg-4)', fontSize: 13, padding: '16px 0' }}>No open positions.</p>
       ) : (
         <div>
-          {positions.map((t, i) => (
-            <div key={t.symbol} onClick={() => onSelect(t)} style={{
-              display: 'grid', gridTemplateColumns: '100px 1fr 80px 20px',
-              alignItems: 'center', gap: 14, padding: '11px 8px', cursor: 'pointer',
-              borderBottom: i < positions.length - 1 ? '1px solid var(--line)' : 'none',
-              borderRadius: 'var(--r-sm)', transition: 'background var(--dur-fast)',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = 'rgba(204,255,0,0.04)')}
-            onMouseLeave={e => (e.currentTarget.style.background = '')}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                <span style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</span>
+          {positions.map((t, i) => {
+            const live = liveMap.get(t.symbol)
+            const plpc = live ? parseFloat(live.unrealized_plpc ?? '0') * 100 : null
+            const cur = live ? parseFloat(live.current_price ?? '0') : null
+            const entry = parseFloat((t.entry_price ?? '0').replace(/[^0-9.]/g, '') || '0')
+            const series = sparklines?.[t.symbol] ?? []
+
+            // If no live data, approximate P&L from last sparkline close vs entry
+            const approxPlpc = plpc == null && series.length > 0 && entry > 0
+              ? ((series[series.length - 1].close - entry) / entry) * 100
+              : null
+            const displayPct = plpc ?? approxPlpc
+            const displayPrice = cur ?? (series.length > 0 ? series[series.length - 1].close : null)
+
+            const noStop = live ? !live.has_stop : false
+            const nearStop = plpc != null && plpc <= -6
+            const warn = noStop || nearStop
+
+            return (
+              <div key={t.symbol} onClick={() => onSelect(t)} style={{
+                display: 'grid', gridTemplateColumns: '80px 1fr auto auto 18px',
+                alignItems: 'center', gap: 12, padding: '6px 0', cursor: 'pointer',
+                borderBottom: i < positions.length - 1 ? '1px solid var(--line)' : 'none',
+                borderRadius: 'var(--r-sm)', transition: 'background var(--dur-fast)',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = 'rgba(204,255,0,0.03)')}
+              onMouseLeave={e => (e.currentTarget.style.background = '')}>
+
+                {/* symbol + warn */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <span style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</span>
+                  {warn && <WarnTriangle />}
+                </div>
+
+                {/* sparkline */}
+                <div style={{ height: 44, minWidth: 0, borderRadius: 4, overflow: 'hidden' }}>
+                  {series.length > 1
+                    ? <PositionSparkline series={series} entryPrice={entry} h={44} animate={false} />
+                    : <div style={{ height: 44, display: 'flex', alignItems: 'center' }}>
+                        <div style={{ flex: 1, height: 1, background: 'var(--line)' }} />
+                      </div>}
+                </div>
+
+                {/* price */}
+                <span className="mono" style={{ fontSize: 13, color: 'var(--fg-2)', textAlign: 'right', minWidth: 72 }}>
+                  {displayPrice != null ? fmt(displayPrice) : '—'}
+                </span>
+
+                {/* pnl% */}
+                <span className="mono" style={{
+                  fontSize: 13, fontWeight: 700, textAlign: 'right', minWidth: 64,
+                  color: displayPct == null ? 'var(--fg-4)' : displayPct >= 0 ? 'var(--up)' : 'var(--down)',
+                }}>
+                  {displayPct == null ? '—' : (displayPct >= 0 ? '+' : '') + displayPct.toFixed(2) + '%'}
+                </span>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2">
+                  <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+                </svg>
               </div>
-              <div style={{ fontSize: 12, color: 'var(--fg-3)', fontFamily: 'var(--font-mono)' }}>
-                {t.shares} sh @ {t.entry_price}
-              </div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-3)', textAlign: 'right' }}>
-                {t.stop_level ?? '—'}
-              </span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-            </div>
-          ))}
+            )
+          })}
         </div>
       )}
     </div>
@@ -279,7 +377,7 @@ export function OpenPositions({ snapshotTrades, livePositions, sparklines, isLiv
         )}
       </div>
 
-      <PositionDrawer p={selected} onClose={() => setSelected(null)} />
+      <PositionDrawer p={selected} onClose={() => setSelected(null)} sparklines={sparklines} />
     </>
   )
 }

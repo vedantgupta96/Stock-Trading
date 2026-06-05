@@ -62,12 +62,22 @@ interface Props {
   equity: number | null
   cash: number | null
   dayPnl: number | null
+  dayPnlPct: number | null
   phasePnl: string
+  weekReturn: string
   posCount: number
 }
 
-export function PortfolioCards({ equity, cash, dayPnl, phasePnl, posCount }: Props) {
-  const phaseUp = !phasePnl.startsWith('-') && phasePnl !== 'N/A'
+export function PortfolioCards({ equity, cash, dayPnl, dayPnlPct, phasePnl, weekReturn, posCount }: Props) {
+  // Parse "-$23.61 (-0.02%)" → { dollars: "-$23.61", pct: -0.02 }
+  const phase = (() => {
+    if (!phasePnl || phasePnl === 'N/A') return null
+    const m = phasePnl.match(/([+\-]?\$[\d,]+\.?\d*)\s*\(([+\-]?[\d.]+)%\)/)
+    if (!m) return null
+    return { dollars: m[1], pct: parseFloat(m[2]) }
+  })()
+  const phaseUp = (phase?.pct ?? 0) >= 0
+  const hasWeek = weekReturn && weekReturn !== 'N/A'
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 16 }}>
@@ -88,17 +98,25 @@ export function PortfolioCards({ equity, cash, dayPnl, phasePnl, posCount }: Pro
         label="Day P&L" delay={120}
         icon={dayPnl != null && dayPnl >= 0 ? <TrendUpIcon /> : <TrendDownIcon />}
         accent={dayPnl != null ? (dayPnl >= 0 ? '--up' : '--down') : undefined}
-        value={dayPnl != null
-          ? <AnimatedNumber value={dayPnl} sign format={v => Math.abs(v).toFixed(2) + '%'} className={clsPL(dayPnl)} />
+        value={dayPnlPct != null
+          ? <AnimatedNumber value={dayPnlPct} sign format={v => Math.abs(v).toFixed(2) + '%'} className={clsPL(dayPnlPct)} />
           : <span className="muted">—</span>}
         sub={dayPnl != null ? <AnimatedNumber value={dayPnl} sign className={clsPL(dayPnl)} /> : ''}
         subClass={clsPL(dayPnl ?? 0)}
       />
       <StatCard
         label="Phase P&L" icon={<ActivityIcon />} delay={180}
-        accent={phaseUp ? '--up' : '--down'}
-        value={<span className={phaseUp ? 'up' : 'down'}>{phasePnl && phasePnl !== 'N/A' ? phasePnl : '—'}</span>}
-        sub={phasePnl && phasePnl !== 'N/A' ? <span className={phaseUp ? 'up' : 'down'}>since inception</span> : ''}
+        accent={phase ? (phaseUp ? '--up' : '--down') : undefined}
+        value={phase != null
+          ? <span className={phaseUp ? 'up' : 'down'}>
+              {phase.pct >= 0 ? '+' : ''}{phase.pct.toFixed(2)}%
+            </span>
+          : <span className="muted">—</span>}
+        sub={hasWeek
+          ? <span style={{ color: 'var(--fg-3)' }}>{weekReturn} this week</span>
+          : phase != null
+            ? <span className={phaseUp ? 'up' : 'down'}>{phase.dollars} since inception</span>
+            : ''}
         subClass={phaseUp ? 'up' : 'down'}
       />
     </div>
