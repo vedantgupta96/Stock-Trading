@@ -6,6 +6,30 @@ import { PositionCard } from './PositionCard'
 import { PositionDrawer } from './PositionDrawer'
 import type { OpenTrade, Position, SparklineData } from '../types'
 
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function daysRemaining(raw?: string | null): string {
+  if (!raw) return '—'
+  const m = raw.match(/(\d{4}-\d{2}-\d{2})/)
+  if (!m) return '—'
+  const diff = Math.ceil((new Date(m[1]).getTime() - Date.now()) / 86_400_000)
+  if (diff <= 0) return 'due'
+  return `${diff}d`
+}
+
+function parseStopDollar(raw?: string | null): string {
+  if (!raw) return '—'
+  const m = raw.match(/\$[\d,]+\.?\d*/)
+  return m ? m[0] : raw.split('(')[0].trim()
+}
+
+const WarnTriangle = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--warn)" strokeWidth="2.5" style={{ flexShrink: 0 }}>
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+    <line x1="12" y1="9" x2="12" y2="13"/>
+    <line x1="12" y1="17" x2="12.01" y2="17"/>
+  </svg>
+)
+
 // ── Snapshot table ──────────────────────────────────────────────────────────
 function SnapshotTable({ trades, onSelect }: { trades: OpenTrade[]; onSelect: (t: OpenTrade) => void }) {
   if (!trades.length)
@@ -24,8 +48,8 @@ function SnapshotTable({ trades, onSelect }: { trades: OpenTrade[]; onSelect: (t
             <td><SectorBadge sector={t.sector} /></td>
             <td className="mono">{t.shares ?? '—'}</td>
             <td className="mono">{t.entry_price ?? '—'}</td>
-            <td className="mono" style={{ color: 'var(--fg-3)', fontSize: 12 }}>{t.stop_level ?? '—'} → {t.target ?? '—'}</td>
-            <td className="mono warn" style={{ fontSize: 12 }}>{t.time_stop ?? '—'}</td>
+            <td className="mono" style={{ color: 'var(--fg-3)', fontSize: 12 }}>{parseStopDollar(t.stop_level)} → {parseStopDollar(t.target)}</td>
+            <td className="mono warn" style={{ fontSize: 12 }}>{daysRemaining(t.time_stop)}</td>
             <td><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></td>
           </tr>
         ))}
@@ -41,10 +65,15 @@ export function PositionsSummary({ positions, livePositions, sparklines, onViewA
   sparklines?: SparklineData
   onViewAll: () => void
 }) {
+  const liveMap = new Map((livePositions ?? []).map(p => [p.symbol, p]))
+
   return (
     <div className="v-card v-card-pad rise">
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 14, alignItems: 'center' }}>
-        <span className="v-card-title">Open Positions</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, alignItems: 'center' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span className="v-card-title">Open Positions</span>
+          <span className="mono muted" style={{ fontSize: 11 }}>held + watchlist</span>
+        </div>
         <button onClick={onViewAll} style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 12,
           color: 'var(--fg-3)', background: 'none', border: 'none', cursor: 'pointer',
           display: 'flex', alignItems: 'center', gap: 5, transition: 'color var(--dur-fast)' }}
@@ -54,54 +83,67 @@ export function PositionsSummary({ positions, livePositions, sparklines, onViewA
         </button>
       </div>
       {positions.length === 0 ? (
-        <p style={{ color: 'var(--fg-4)', fontSize: 13 }}>No open positions.</p>
+        <p style={{ color: 'var(--fg-4)', fontSize: 13, padding: '16px 0' }}>No open positions.</p>
       ) : (
         <div>
           {positions.map((t, i) => {
-            const livePos = livePositions?.find(p => p.symbol === t.symbol)
+            const live = liveMap.get(t.symbol)
+            const plpc = live ? parseFloat(live.unrealized_plpc ?? '0') * 100 : null
+            const cur = live ? parseFloat(live.current_price ?? '0') : null
+            const entry = parseFloat((t.entry_price ?? '0').replace(/[^0-9.]/g, '') || '0')
             const series = sparklines?.[t.symbol] ?? []
-            const entryNum = parseFloat(t.entry_price?.replace(/[^0-9.]/g, '') ?? '0')
-            const lastClose = series.length ? series[series.length - 1].close : null
-            const plpc = livePos
-              ? parseFloat(livePos.unrealized_plpc ?? '0') * 100
-              : lastClose && entryNum ? ((lastClose - entryNum) / entryNum) * 100 : null
-            const curPrice = livePos
-              ? parseFloat(livePos.current_price ?? '0')
-              : lastClose
-            const up = plpc != null ? plpc >= 0 : true
+
+            const approxPlpc = plpc == null && series.length > 0 && entry > 0
+              ? ((series[series.length - 1].close - entry) / entry) * 100
+              : null
+            const displayPct = plpc ?? approxPlpc
+            const displayPrice = cur ?? (series.length > 0 ? series[series.length - 1].close : null)
+
+            const noStop = live ? !live.has_stop : false
+            const nearStop = plpc != null && plpc <= -6
+            const warn = noStop || nearStop
 
             return (
               <div key={t.symbol} onClick={onViewAll} style={{
-                display: 'grid', gridTemplateColumns: '80px 1fr auto auto 20px',
-                alignItems: 'center', gap: 12, padding: '10px 8px', cursor: 'pointer',
+                display: 'grid', gridTemplateColumns: '80px 1fr auto auto 18px',
+                alignItems: 'center', gap: 12, padding: '6px 0', cursor: 'pointer',
                 borderBottom: i < positions.length - 1 ? '1px solid var(--line)' : 'none',
                 borderRadius: 'var(--r-sm)', transition: 'background var(--dur-fast)',
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = 'rgba(204,255,0,0.04)')}
+              onMouseEnter={e => (e.currentTarget.style.background = 'rgba(204,255,0,0.03)')}
               onMouseLeave={e => (e.currentTarget.style.background = '')}>
-                <div>
-                  <div style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</div>
-                  <div style={{ fontSize: 10, color: 'var(--fg-4)', fontFamily: 'var(--font-mono)', marginTop: 2 }}>{t.shares} sh</div>
+
+                {/* symbol + warn */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <span style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</span>
+                  {warn && <WarnTriangle />}
                 </div>
-                <div style={{ height: 36, borderRadius: 4, overflow: 'hidden', background: 'rgba(0,0,0,0.2)' }}>
+
+                {/* sparkline */}
+                <div style={{ height: 44, minWidth: 0, borderRadius: 4, overflow: 'hidden' }}>
                   {series.length > 1
-                    ? <PositionSparkline series={series} entryPrice={entryNum} h={36} animate={false} />
-                    : <div style={{ height: 36, display: 'flex', alignItems: 'center', paddingLeft: 8 }}>
-                        <span style={{ fontSize: 10, color: 'var(--fg-4)' }}>loading…</span>
+                    ? <PositionSparkline series={series} entryPrice={entry} h={44} animate={false} />
+                    : <div style={{ height: 44, display: 'flex', alignItems: 'center' }}>
+                        <div style={{ flex: 1, height: 1, background: 'var(--line)' }} />
                       </div>}
                 </div>
-                <div style={{ textAlign: 'right' }}>
-                  <div className="mono" style={{ fontSize: 13, fontWeight: 700 }}>
-                    {curPrice ? fmt(curPrice) : t.entry_price ?? '—'}
-                  </div>
-                  <div className="mono" style={{ fontSize: 10, color: 'var(--fg-4)', marginTop: 1 }}>
-                    entry {t.entry_price ?? '—'}
-                  </div>
-                </div>
-                <div className="mono" style={{ fontSize: 13, fontWeight: 700, color: up ? 'var(--up)' : 'var(--down)', textAlign: 'right', minWidth: 56 }}>
-                  {plpc != null ? `${up ? '+' : ''}${plpc.toFixed(2)}%` : '—'}
-                </div>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+
+                {/* price */}
+                <span className="mono" style={{ fontSize: 13, color: 'var(--fg-2)', textAlign: 'right', minWidth: 72 }}>
+                  {displayPrice != null ? fmt(displayPrice) : '—'}
+                </span>
+
+                {/* pnl% */}
+                <span className="mono" style={{
+                  fontSize: 13, fontWeight: 700, textAlign: 'right', minWidth: 64,
+                  color: displayPct == null ? 'var(--fg-4)' : displayPct >= 0 ? 'var(--up)' : 'var(--down)',
+                }}>
+                  {displayPct == null ? '—' : (displayPct >= 0 ? '+' : '') + displayPct.toFixed(2) + '%'}
+                </span>
+
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--fg-4)" strokeWidth="2">
+                  <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+                </svg>
               </div>
             )
           })}
@@ -145,7 +187,7 @@ export function OpenPositions({ snapshotTrades, livePositions, sparklines, isLiv
         )}
       </div>
 
-      <PositionDrawer p={selected} onClose={() => setSelected(null)} />
+      <PositionDrawer p={selected} onClose={() => setSelected(null)} sparklines={sparklines} />
     </>
   )
 }

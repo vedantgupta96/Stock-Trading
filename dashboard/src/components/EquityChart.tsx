@@ -21,6 +21,7 @@ function AreaChart({ series, color, fmtVal, fmtAxis, negative }: AreaChartProps)
   const vals = series.map(s => s.value)
   const rawMin = Math.min(...vals), rawMax = Math.max(...vals)
   const mean = (rawMin + rawMax) / 2 || 1
+  // Ensure at least 1% of mean is visible so small moves don't look catastrophic
   const dataRng = rawMax - rawMin
   const minPad = Math.max(dataRng, Math.abs(mean) * 0.01) - dataRng
   const paddedMin = rawMin - minPad / 2
@@ -121,6 +122,14 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
   const equitySeries = equityHistory.map(s => ({ date: s.date, value: s.equity }))
   const ddSeries = (drawdown?.series ?? []).map(s => ({ date: s.date, value: s.drawdown }))
 
+  // Smarter axis formatter: use more decimal places when the equity range is narrow
+  const eqVals = equitySeries.map(s => s.value)
+  const eqRange = eqVals.length > 1 ? Math.max(...eqVals) - Math.min(...eqVals) : 0
+  const eqMean = eqVals.length ? eqVals.reduce((a, b) => a + b, 0) / eqVals.length : 1
+  const eqFmtAxis = eqRange / eqMean < 0.005
+    ? (v: number) => '$' + (v / 1000).toFixed(2) + 'k'
+    : (v: number) => '$' + (v / 1000).toFixed(1) + 'k'
+
   return (
     <div className="v-card v-card-pad rise" style={{ gridColumn: 'span 2', animationDelay: '80ms' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
@@ -140,7 +149,7 @@ export function EquityChart({ equityHistory, drawdown }: Props) {
 
       {tab === 'equity'
         ? <AreaChart series={equitySeries} color="var(--volt)"
-            fmtVal={v => fmt(v)} fmtAxis={v => '$' + (v / 1000).toFixed(1) + 'k'} />
+            fmtVal={v => fmt(v)} fmtAxis={eqFmtAxis} />
         : <AreaChart series={ddSeries} color="var(--down)" negative
             fmtVal={v => v.toFixed(2) + '%'} fmtAxis={v => v.toFixed(0) + '%'} />}
     </div>

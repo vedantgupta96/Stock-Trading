@@ -88,6 +88,15 @@ case "$CMD" in
       "{\"symbol\":\"${SYMBOL}\",\"qty\":\"${QTY}\",\"side\":\"sell\",\"type\":\"trailing_stop\",\"time_in_force\":\"gtc\",\"trail_percent\":${TRAIL_PCT}}"
     ;;
 
+  stop)
+    SYMBOL="${1:?Usage: alpaca.sh stop SYMBOL QTY STOP_PRICE}"
+    QTY="${2:?Usage: alpaca.sh stop SYMBOL QTY STOP_PRICE}"
+    STOP_PRICE="${3:?Usage: alpaca.sh stop SYMBOL QTY STOP_PRICE}"
+    # Fixed stop-loss (market-on-trigger). stop_price must be a float, not a string.
+    _post "$ENDPOINT/v2/orders" \
+      "{\"symbol\":\"${SYMBOL}\",\"qty\":\"${QTY}\",\"side\":\"sell\",\"type\":\"stop\",\"time_in_force\":\"gtc\",\"stop_price\":${STOP_PRICE}}"
+    ;;
+
   limit_sell)
     SYMBOL="${1:?Usage: alpaca.sh limit_sell SYMBOL QTY LIMIT_PRICE}"
     QTY="${2:?Usage: alpaca.sh limit_sell SYMBOL QTY LIMIT_PRICE}"
@@ -108,7 +117,7 @@ case "$CMD" in
     ;;
 
   *)
-    echo "Usage: alpaca.sh <account|positions|orders|quote|bars|asset|news|buy|sell|trailing_stop|limit_sell|cancel|close> [args]" >&2
+    echo "Usage: alpaca.sh <account|positions|orders|quote|bars|asset|news|buy|sell|trailing_stop|stop|limit_sell|cancel|close> [args]" >&2
     exit 1
     ;;
 esac

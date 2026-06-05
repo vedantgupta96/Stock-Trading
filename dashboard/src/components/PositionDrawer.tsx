@@ -1,6 +1,7 @@
 import { fmt, pct, signed } from '../utils'
 import { SectorBadge } from './SectorBadge'
-import type { OpenTrade, Position } from '../types'
+import { PositionSparkline } from './PositionSparkline'
+import type { OpenTrade, Position, SparklineData } from '../types'
 
 // Both Position and OpenTrade share these fields, so we can access them directly
 // on the union type without casts. Only live-specific fields need narrowing.
@@ -17,7 +18,7 @@ function buildLadderRows(p: Position | OpenTrade, isLivePos: boolean, cur: numbe
   ]
 }
 
-export function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null; onClose: () => void }) {
+export function PositionDrawer({ p, onClose, sparklines }: { p: Position | OpenTrade | null; onClose: () => void; sparklines?: SparklineData }) {
   if (!p) return null
   const isLivePos = 'unrealized_plpc' in p
   const plpc = isLivePos ? parseFloat((p as Position).unrealized_plpc ?? '0') * 100 : null
@@ -25,6 +26,8 @@ export function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null;
   const cur  = isLivePos ? parseFloat((p as Position).current_price ?? '0') : null
   const dir  = plpc != null ? (plpc >= 0 ? 'var(--up)' : 'var(--down)') : 'var(--fg-2)'
   const rows = buildLadderRows(p, isLivePos, cur, dir)
+  const entryStr = isLivePos ? (p as Position).avg_entry_price : (p as OpenTrade).entry_price ?? '0'
+  const entry = parseFloat(entryStr.replace(/[^0-9.]/g, '') || '0')
 
   return (
     <>
@@ -61,6 +64,12 @@ export function PositionDrawer({ p, onClose }: { p: Position | OpenTrade | null;
         </div>
 
         <div style={{ padding: 24, display: 'flex', flexDirection: 'column', gap: 20 }}>
+          {sparklines?.[p.symbol]?.length ? (
+            <div style={{ borderRadius: 'var(--r-sm)', overflow: 'hidden', background: 'rgba(0,0,0,0.3)', marginBottom: -4 }}>
+              <PositionSparkline series={sparklines[p.symbol]} entryPrice={entry || 0} h={72} />
+            </div>
+          ) : null}
+
           {isLivePos && !(p as Position).has_stop && (
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '12px 14px',
               background: 'var(--down-100)', border: '1px solid var(--down)', borderRadius: 'var(--r-sm)', boxShadow: 'var(--glow-down)' }}>
