@@ -309,3 +309,98 @@ not hard-verified. Both positions are protected by live 12% trailing stops.
 Strategy resumes fully on the next run: no new buys while regime is OFF; manage these
 two via the standard sell-side rules (–8% cut, 15-day time stop on <+5%, tighten to 7%
 at +15% / 5% at +20%, earnings exits). Re-run gate verification before adding any name.
+
+
+---
+
+## 2026-06-05 — Pre-Market Routine
+
+**Decision: HOLD.** Regime flipped OFF→ON (cross-confirmed), but no name offers a
+clean 3–8% pullback entry and the breakout/volume gates can't be hard-verified. Manage
+the two open positions; no new buys today.
+
+### Market Regime Status — **ON** (flipped OFF→ON)
+- Gemini: S&P 500 ~7,584 vs 20-day SMA ~7,477 → **above → ON**.
+- WebSearch cross-check: S&P 500 close 7,609.78 (Jun 2); 20-day EMA ~7,398; 50-day MA
+  ~7,100; 200-day MA ~6,842 — price well above all. Live Alpaca SPY bid $756.96
+  (Jun 4 close) implies S&P ~7,570, above any SMA estimate.
+- This **flips the filter from yesterday's OFF to ON**. Yesterday's OFF read used a
+  20-day SMA of 7,591 that now looks like a stale/bad data point — three independent
+  sources today agree price is comfortably above the 20-day MA. Buy gate check #1 PASSES.
+  (Discord flip alert sent per routine STEP 5.)
+
+### Account Snapshot
+- Equity **$99,958.00** | Cash **$95,128.18** | Buying power $390,172.36
+- Long market value $4,829.82 | Day P&L -$23.99 (-0.02%) vs last equity $99,981.99
+- Day-trade count **0** | PDT **false** — full PDT room
+- Trades this week: **2/3** (NVDA + CVX on 6/04) → 1 slot remaining
+
+### Open Positions (both protected by live 12% trailing GTC stops)
+| Symbol | Sh | Entry    | Current  | Unreal. P&L      | Trailing-stop trigger |
+|--------|----|----------|----------|------------------|-----------------------|
+| NVDA   | 11 | $218.89  | $215.90  | -$32.89 (-1.37%) | $195.008 (hwm $221.60)|
+| CVX    | 13 | $189.54  | $188.84  | -$9.10  (-0.37%) | $166.90  (hwm $189.66)|
+Neither near -8%; neither has earnings in the next 10 trading days. Time stop 2026-06-25.
+
+### Market Context
+- **VIX ~15.40**, down 4.1% on the day, below its 18.55 long-term avg → calm tape.
+- **WTI crude ~$92–93/bbl**, soft/choppy (down from ~$96 earlier in the week).
+- **Economic calendar**: Gemini Q7 hit HTTP 429 (no clean release list this run). Note
+  **NVDA-specific event risk: Sen. Banking Committee hearing Jun 11** — Jensen Huang
+  invited to testify on China/export controls (headline risk, not an earnings event).
+- S&P futures broadly firm; market at/near highs led by AI/semis.
+
+### Sector Momentum
+- **Information Technology** continues to lead (AI/semis; IT earnings growth +54.3%,
+  NVDA/MU-driven). Healthcare, Industrials, Basic Materials firm in early June.
+- Laggards: Utilities, Energy (down in May, though Energy +26.7% YTD), Financials,
+  Comm Services. (Note: this softens the CVX thesis vs the 6/04 entry, but CVX is green
+  intraday and not near any sell trigger — hold and let the trailing stop work.)
+
+### Earnings Watch
+- **No open position** has earnings within the next 10 trading days: NVDA next ~late Aug
+  2026 (reported late May), CVX next ~late July 2026 (reported late Apr). Both clear gate #7.
+- Gemini earnings query (Q5) returned HTTP 503; WebSearch fallback returned only calendar
+  aggregators, no clean per-name list. Any future buy must still hard-clear the >10-day
+  earnings gate before an order.
+
+### Position Sizing (recalculated on live equity)
+- Equity $99,958 → 1.5% risk = $1,499, but strategy hard-caps risk at **$200/trade**.
+- Binding cap: max notional = $200 / 8% stop = **$2,500 per position**.
+
+### Trade Ideas (regime ON, so surfaced — but none is a buy today)
+The legitimate strength is in names already at or near *all-time* highs (per breadth
+data: AVGO, CRWD, DELL, IBM, HPE, FDX at ATHs; MTLS/LXFR/ARKO breakouts). The strategy
+buys the **first 3–8% pullback after a breakout, not the breakout itself** — these names
+have not pulled back, so they fail the entry-timing gate today. The only high-volume
+pre-market movers (BGMS, STI, SMTK, HKIT, MRLN, MTVA, RMSG, CXAI, ZCMD, PMI) are
+low-float penny/micro-caps — un-tradeable noise that fails the breakout-quality intent.
+
+- **$AVGO** (Broadcom, Tech) — Catalyst: AI/semis leadership, trading at all-time highs.
+  Gate status: #1 ON ✅ · #2 positions-after-fill 3 ✅ · #3 **sector FAIL-risk** (NVDA
+  already in Tech; this would be 2/2 Tech — allowed but maxes the sector) · #4 trades 3/3 ✅
+  · #5 cost ≤ cash ✅ · #6 PDT room ✅ · #7 earnings clear (next ~Sep) ✅ · #8 catalyst ✅
+  · **#9/#10 breakout-within-5-days & 1.5x-volume UNVERIFIED** (no bars endpoint) ·
+  #11 stock ✅ · **Entry timing FAIL — at the high, no 3–8% pullback.** → **NO BUY, watch.**
+- **$DELL** (Dell, Tech) — Catalyst: +10.7% on NVIDIA chip halo, at all-time highs.
+  Same blockers: would be 2nd Tech name, breakout/volume unverified, **no pullback yet.**
+  → **NO BUY, watch for a 3–8% pullback that holds the breakout pivot.**
+
+No idea clears the full gate (entry-timing + unverifiable volume/breakout), and I'm
+already 2/3 trades this week with only 1 Tech slot left — so no per-name order today.
+
+### Risk Factors
+- **Data quality remains shaky** — regime SMA figures swung materially day-over-day.
+  Today's ON read is cross-confirmed by 3 sources, but lean conservative on new entries.
+- **NVDA Senate hearing Jun 11** could drive a headline-driven gap; the 12% trailing
+  stop is the only protection (overnight gaps can bypass it).
+- **Energy weak in May/early June** — CVX is the laggard-sector holding; watch the stop.
+- Market at/near highs with low VIX → complacency; chasing extended breakouts is the
+  classic late-cycle mistake. Wait for pullbacks.
+
+### Decision
+**HOLD.** The regime filter flipped back ON (cross-confirmed), which re-opens the buy
+window, but no candidate offers a disciplined 3–8% pullback entry and the breakout/
+volume gates can't be hard-verified with current tooling — and only 1 trade slot / 1 Tech
+slot remains this week. Hold NVDA and CVX under standard sell-side rules; watch AVGO/DELL
+(and other AI/semis leaders) for a clean pullback-and-hold setup on the next run.
