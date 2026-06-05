@@ -7,6 +7,73 @@ or fail badly" before it changes).
 
 ---
 
+## 2026-06-05 — Reorient the strategy to BEAT the S&P 500 (deployment overhaul)
+
+**Author:** trading agent · **Status:** PROPOSED, awaiting Friday review + backtest
+**Owner directive:** the objective is to **beat the S&P 500 total return**, not just
+preserve capital. The current rules are tuned for preservation and structurally cannot
+beat a 100%-invested index — this proposal fixes that, honestly and with eyes open.
+
+### The core problem (why we can't beat the index today)
+- Flat **$200 risk cap** → ~$2,500 max per position.
+- Max **5 positions** → **~12.5% of equity ever invested**; ~87% sits in cash.
+- The S&P is 100% in stocks. You cannot out-return it holding 87% cash, even if every
+  trade wins. We currently get the downside protection (regime filter → cash in crashes)
+  but almost none of the upside. Worst of both worlds.
+
+### The thesis (the sane way to beat the index)
+Beat it by **NOT LOSING**, not by leverage: roughly **match** the index when the market
+is healthy, and go to **cash during crashes** (the regime filter already does this).
+Over a full cycle, sidestepping the −30%/−50% bear drawdowns is the edge — even if we
+lag slightly in raging bull runs. To make this work we must fix the upside half:
+**when regime is ON, be ~70–90% invested, not ~12%.**
+
+### Proposed changes (all gated by the regime filter staying ON)
+1. **Sizing — biggest lever.** Replace the flat $200 risk cap with **risk = 1.5% of live
+   equity per trade** (so it scales with the account). On $100k → ~$1,500 risk → ~$18.75k
+   notional/position at an 8% stop. Optional sanity ceiling: no single position > 25% of equity.
+2. **Concurrency.** Raise max concurrent positions **5 → 8**. Keep sector cap but loosen
+   **≤2 → ≤3 per sector** to allow fuller deployment without over-concentrating.
+3. **Trade cadence.** Lift/raise the **3 trades/week** cap (→ ~6) so the book can actually
+   be built when setups appear. Activity still gated by the buy gate, not forced.
+4. **Target deployment.** When regime ON, aim for **70–90% invested**; when OFF, cash
+   (unchanged). This is the whole point.
+5. **KEEP all protective rules:** regime filter, −8% hard cut, 12% trailing stop (and the
+   +15%/+20% tightening), earnings avoidance, breakout+volume gate. These are what make the
+   "win by not losing" thesis work.
+
+### Optional, bigger philosophical change (flagged, not yet recommended)
+**Core-satellite.** Hold an S&P proxy as a 50–70% "core" (guarantees we track the index)
+and run the momentum strategy on the rest as the alpha "satellite." This makes
+"don't badly lag the index" almost automatic. BUT it requires lifting CLAUDE.md hard
+rule #1 ("stocks only, no ETFs"). Park this until the simpler deployment fix is validated.
+
+### The honest risk disclosure
+- ~80% invested vs ~12% means a bad week hurts **~6–7× more**. Expect double-digit
+  drawdowns at times. The regime filter aims to pull us to cash before the *catastrophic*
+  drops, but it will NOT dodge every selloff (e.g., today's chip rout would sting more).
+- In a sustained low-volatility bull market, a 100% index may still beat us without
+  leverage — our outperformance is expected to come **over a full cycle**, concentrated
+  around regime-OFF periods (crashes we sit out).
+- Most active strategies fail to beat the index. This is a genuine attempt, not a promise.
+
+### DECISION NEEDED FROM OWNER
+**Max drawdown tolerance?** This sets how aggressive sizing/leverage gets:
+- *Conservative* (~10–15% max drawdown): risk ~1% equity/trade, ~60% max deployment.
+- *Moderate* (~15–25% max drawdown): risk ~1.5%/trade, ~80% deployment. ← proposal default
+- *Aggressive* (~25–35%+): risk ~2%/trade, allow modest leverage. NOT recommended.
+
+### Validation plan (MANDATORY before anything goes live)
+1. **Backtest 2018–2026** (must include the 2020 crash, 2022 bear, 2025–26 action):
+   compare this ruleset vs **SPY buy-and-hold** on BOTH total return AND max drawdown.
+   Adopt only if it beats SPY on the agreed risk-adjusted metric (e.g., higher return at
+   ≤ comparable drawdown, or materially smaller drawdown at comparable return).
+2. **Paper-shadow 2+ weeks** alongside current rules before flipping live.
+3. Promote to `TRADING-STRATEGY.md` only at a Friday review, with the backtest numbers
+   cited. The account is days old — we optimize on YEARS of history, not 2 days of noise.
+
+---
+
 ## 2026-06-05 — Regime-respecting "quality dip" buying
 
 **Author:** trading agent · **Status:** PROPOSED, awaiting Friday review
