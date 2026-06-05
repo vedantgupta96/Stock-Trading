@@ -10,20 +10,49 @@ or fail badly" before it changes).
 |---|---|---|
 | 1 | Entry timing never enforced in code (buy on a dip) | **DONE (shadow)** — `c12` advisory in `buy_gate.sh`, collecting data |
 | 2 | Goal/deployment mismatch — can't beat S&P at ~12% invested | **PROPOSED** — "deployment overhaul" below; owner chose aggressive; needs backtest |
-| 3 | Stop-logic gap: −8% hard cut sits ABOVE the 12% trailing stop → −8% must be enforced by hand (e.g. NVDA now) | **OPEN — not fixed.** Proposed fix drafted below; affects a live (paper) position, prioritize |
+| 3 | Stop-logic gap: −8% hard cut sits ABOVE the 12% trailing stop → −8% must be enforced by hand (e.g. NVDA now) | **BUILT + TESTED on branch (39/39 green), NOT activated.** Needs sign-off — see below |
 | 4 | Data reliability — flaky Gemini (503/429), conflicting day-to-day regime reads | **OPEN — not fixed.** Engineering hardening, not a strategy rule; can do without a Friday review |
 | 5 | Relative-strength ranking — only buy the strongest leaders, not any qualifier | **OPEN — idea only**, not drafted |
 
 ---
 
 ## 2026-06-05 — Stop-logic reconciliation (Issue #3)
-**Status:** PROPOSED. Today the initial −8% cut is a *manual* rule while the only live
-order is a 12% trailing stop, whose trigger sits ~4% BELOW the −8% line. Between those two
-prices nothing fires automatically — a real protection gap (NVDA sits in it right now).
-**Proposed fix:** on every buy, place a real **−8% stop-loss order at entry**; once the
-position is up enough that a 12% trailing stop would sit ABOVE the −8% line (i.e. in
-profit), cancel the −8% stop and replace it with the 12% trailing stop. One automated
-ladder, no manual gap. Low-risk, high-value; can be validated quickly in paper.
+**Status:** BUILT + TESTED on branch `main-qV8dx`, **NOT activated** (live bot runs from
+`main`). Awaiting two owner/Friday decisions below before merge.
+
+**The gap:** the −8% cut was a *manual* rule while the only resting order was a 12% trailing
+stop, whose trigger sits ~4% BELOW the −8% line until the position is up ~+4.55%. Between
+those prices nothing fired automatically (NVDA sits in that gap right now).
+
+**What was built (all on the inert branch):**
+- `scripts/alpaca.sh`: new `stop` subcommand (fixed stop-loss, GTC, float `stop_price`).
+- `scripts/stop_watchdog.sh`: now **floor-aware**. Per long position, given floor = entry×0.92:
+  - pnl ≤ −8% → **close** (hard cut), even if a (necessarily sub-floor) trailing stop exists.
+  - covered by a stop/trailing whose trigger ≥ floor → adequately protected, leave alone
+    (a not-yet-priced trailing stop gets the benefit of the doubt).
+  - up ≥ +4.55% (a 12% trail now clears the floor) → place/upgrade to a **trailing stop**
+    at the right tier (5%/7%/12%).
+  - otherwise (young/underwater, or only a sub-floor stop) → place a **fixed −8% stop** at
+    the floor; cancel the under-floor order first.
+  - +4.55% threshold derived from (1+pnl)×0.88 ≥ 0.92.
+- `tests/stop_watchdog_test.sh`: extended to 39 assertions, all green, incl. the below-floor
+  trailing → fixed-stop heal, fixed-stop → trailing upgrade, and stop/PDT fallbacks.
+
+**Live dry-run (read-only, placed nothing) on 2026-06-05 confirms behavior:**
+```
+ACTION CVX  qty=13 pnl=-0.9%  action=place_stop detail=fixed_-8%_@174.38
+ACTION NVDA qty=11 pnl=-5.98% action=place_stop detail=fixed_-8%_@201.38
+```
+
+**DECISIONS NEEDED before merge to `main`:**
+1. **Hard rule #5 change.** CLAUDE.md says "every buy immediately gets a 12% trailing stop."
+   This proposal makes the *initial* order a fixed −8% stop, upgrading to trailing once in
+   profit. That is a hard-rule edit → Friday review.
+2. **Grandfather the two live positions?** Activating would cancel NVDA's & CVX's current
+   trailing stops and set fixed −8% stops (NVDA $201.38 — the action the owner declined on
+   2026-06-05; CVX $174.38). Decide per-position: leave on current trailing, or bring under
+   the new rule. (Owner already said "no" to tightening NVDA — default is to grandfather it
+   unless changed.)
 
 ---
 
