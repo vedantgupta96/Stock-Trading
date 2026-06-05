@@ -33,10 +33,12 @@ export default function App() {
   const { data: news, isLoading: newsL } = useNews()
   const liveQuery                        = useLive(autoRefresh)
   const livePositions                    = liveQuery.data?.positions ?? []
-  const { data: sparklines }             = useSparklines(isLive ? livePositions.map(p => p.symbol) : [])
 
   const equityHist  = snapshot?.equity_history ?? []
   const openTrades  = snapshot?.open_trades ?? []
+
+  const sparklineSymbols = isLive ? livePositions.map(p => p.symbol) : openTrades.map(t => t.symbol)
+  const { data: sparklines }             = useSparklines(sparklineSymbols)
   const analyticsOT = analytics?.open_trades ?? openTrades
 
   const lastSnap = equityHist[equityHist.length - 1]
@@ -45,6 +47,7 @@ export default function App() {
   const equity = isLive ? (liveQuery.data?.equity ?? null)   : (lastSnap?.equity ?? null)
   const cash   = isLive ? (liveQuery.data?.cash ?? null)     : null
   const dayPnl = isLive ? (liveQuery.data?.day_pnl ?? null)  : (lastSnap && prevSnap ? lastSnap.equity - prevSnap.equity : null)
+  const dayPnlPct = dayPnl != null && equity != null && equity > 0 ? (dayPnl / equity) * 100 : null
 
   // update label once on first snapshot
   if (snapshot && lastUpdated === 'Loading snapshot…') {
@@ -90,7 +93,9 @@ export default function App() {
         equity={equity}
         cash={cash}
         dayPnl={dayPnl}
+        dayPnlPct={dayPnlPct}
         phasePnl={snapshot?.phase_pnl ?? 'N/A'}
+        weekReturn={snapshot?.week_return ?? 'N/A'}
         posCount={isLive ? livePositions.length : openTrades.length}
       />
 
@@ -106,7 +111,9 @@ export default function App() {
           </div>
           <PositionsSummary
             positions={openTrades}
-            onSelect={() => {}}
+            livePositions={isLive ? livePositions : undefined}
+            sparklines={sparklines}
+            onSelect={() => setTab('positions')}
             onViewAll={() => setTab('positions')}
           />
         </div>
