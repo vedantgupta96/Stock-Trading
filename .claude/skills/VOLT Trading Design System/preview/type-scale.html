@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Type Scale" subtitle="Heading → micro semantic scale" viewport="700x300" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 700px; min-height: 300px;
+    background: var(--ink-850);
+    color: var(--fg-1);
+    font-family: var(--font-body);
+    padding: 22px 26px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .col { display: flex; flex-direction: column; }
+  .lbl { font: var(--micro); text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-3); }
+  .mono { font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="col" style="gap:11px">
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">h1 · 32</span><span style="font:var(--h1)">Portfolio</span></div>
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">h2 · 24</span><span style="font:var(--h2)">Open positions</span></div>
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">h3 · 18</span><span style="font:var(--h3)">Market context</span></div>
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">body · 15</span><span style="font:var(--body);color:var(--fg-2)">Momentum-breakout swing trading, stocks only.</span></div>
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">small · 13</span><span style="font:var(--small);color:var(--fg-2)">Snapshot · 9:32:14 AM</span></div>
+  <div class="row" style="gap:14px;align-items:baseline"><span class="lbl" style="width:62px">micro</span><span class="t-micro">REGIME FILTER · ACTIVE</span></div>
+</div></body></html>

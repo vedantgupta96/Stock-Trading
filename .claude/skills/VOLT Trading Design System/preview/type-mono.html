@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Numeric / Mono Type" subtitle="JetBrains Mono tabular figures" viewport="700x170" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 700px; min-height: 230px;
+    background:
+      radial-gradient(420px 200px at 22% 38%, rgba(204,255,0,0.10), transparent 70%),
+      var(--ink-900);
+    color: var(--fg-1);
+    font-family: var(--font-body);
+    padding: 20px 24px;
+    display: flex; flex-direction: column; justify-content: center; gap: 16px;
+    overflow: hidden;
+  }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .col { display: flex; flex-direction: column; }
+  .lbl { font: var(--micro); text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-3); }
+  .mono { font-family: var(--font-mono); font-feature-settings: "tnum" 1; }
+  /* ticker tape */
+  .tape { position: relative; overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+          background: var(--ink-850); padding: 9px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .tape-track { display: inline-flex; gap: 30px; white-space: nowrap; animation: slideTape 16s linear infinite; padding-left: 30px; }
+  .tk { font-family: var(--font-mono); font-size: 13px; font-weight: 600; display: inline-flex; gap: 8px; align-items: center; }
+  .tk b { color: var(--fg-1); font-weight: 700; }
+  @keyframes slideTape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes flick { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+  @media (prefers-reduced-motion: reduce) { .tape-track { animation: none; } }
+</style>
+</head>
+<body>
+<div class="row" style="gap:30px;align-items:flex-end;justify-content:space-between">
+  <div class="col" style="gap:6px">
+    <span class="lbl">JetBrains Mono · the data voice</span>
+    <span class="mono" style="font-size:52px;font-weight:700;letter-spacing:-0.03em;line-height:0.92;color:var(--volt);text-shadow:0 0 26px var(--volt-glow), 0 0 60px var(--volt-glow);animation:flick 3s ease-in-out infinite">$24,318<span style="color:rgba(204,255,0,0.55)">.07</span></span>
+  </div>
+  <div class="col" style="gap:9px;align-items:flex-end">
+    <span class="mono" style="font-size:20px;font-weight:700;color:var(--up);text-shadow:0 0 18px var(--up-glow);display:inline-flex;align-items:center;gap:7px"><span style="font-size:15px">▲</span>+$612.40</span>
+    <span class="mono" style="font-size:20px;font-weight:700;color:var(--down);text-shadow:0 0 18px var(--down-glow);display:inline-flex;align-items:center;gap:7px"><span style="font-size:15px">▼</span>−1.27%</span>
+  </div>
+</div>
+
+<div class="tape">
+  <div class="tape-track">
+    <span class="tk"><b>NVDA</b><span style="color:var(--up)">135.95 ▲2.4%</span></span>
+    <span class="tk"><b>AVGO</b><span style="color:var(--up)">181.40 ▲1.1%</span></span>
+    <span class="tk"><b>LLY</b><span style="color:var(--down)">705.30 ▼4.9%</span></span>
+    <span class="tk"><b>XOM</b><span style="color:var(--up)">118.65 ▲0.8%</span></span>
+    <span class="tk"><b>JPM</b><span style="color:var(--up)">221.10 ▲0.5%</span></span>
+    <span class="tk"><b>VIX</b><span style="color:var(--fg-2)">14.20</span></span>
+    <span class="tk"><b>NVDA</b><span style="color:var(--up)">135.95 ▲2.4%</span></span>
+    <span class="tk"><b>AVGO</b><span style="color:var(--up)">181.40 ▲1.1%</span></span>
+    <span class="tk"><b>LLY</b><span style="color:var(--down)">705.30 ▼4.9%</span></span>
+    <span class="tk"><b>XOM</b><span style="color:var(--up)">118.65 ▲0.8%</span></span>
+    <span class="tk"><b>JPM</b><span style="color:var(--up)">221.10 ▲0.5%</span></span>
+    <span class="tk"><b>VIX</b><span style="color:var(--fg-2)">14.20</span></span>
+  </div>
+</div>
+
+<div class="row" style="gap:24px;align-items:center">
+  <div class="row" style="gap:12px">
+    <span class="lbl">Weights</span>
+    <span class="mono" style="font-size:15px;font-weight:400;color:var(--fg-3)">400</span>
+    <span class="mono" style="font-size:15px;font-weight:500;color:var(--fg-2)">500</span>
+    <span class="mono" style="font-size:15px;font-weight:600">600</span>
+    <span class="mono" style="font-size:15px;font-weight:700">700</span>
+  </div>
+  <div style="width:1px;height:22px;background:var(--line)"></div>
+  <span class="mono" style="font-size:14px;color:var(--fg-3);letter-spacing:0.04em">0123456789 &nbsp; $ + − % R →</span>
+</div>
+</body></html>

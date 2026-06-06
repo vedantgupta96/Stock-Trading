@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Spacing" name="Corner Radii" subtitle="xs → pill radius scale" viewport="700x150" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 700px; min-height: 150px;
+    background: var(--ink-850);
+    color: var(--fg-1);
+    font-family: var(--font-body);
+    padding: 22px 26px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .col { display: flex; flex-direction: column; }
+  .lbl { font: var(--micro); text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-3); }
+  .mono { font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="row" style="gap:18px">
+  
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:68px;height:60px;border-radius:var(--r-xs);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">xs</span>
+  </div>
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:68px;height:60px;border-radius:var(--r-sm);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">sm</span>
+  </div>
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:68px;height:60px;border-radius:var(--r-md);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">md</span>
+  </div>
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:68px;height:60px;border-radius:var(--r-lg);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">lg</span>
+  </div>
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:68px;height:60px;border-radius:var(--r-xl);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">xl</span>
+  </div>
+  <div class="col" style="gap:8px;align-items:center">
+    <div style="width:88px;height:60px;border-radius:var(--r-pill);background:var(--ink-700);border:1.5px solid var(--volt)"></div>
+    <span class="mono" style="font-size:11px;color:var(--fg-2)">pill</span>
+  </div>
+</div></body></html>
