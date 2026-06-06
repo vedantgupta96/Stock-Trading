@@ -1,0 +1,5 @@
+<svg width="360" height="120" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VOLT logo lockup">
+  <rect x="8" y="34" width="52" height="52" rx="13" fill="#CCFF00"></rect>
+  <path d="M37 45 21 67h11l-2 16 16-22h-9z" fill="#0A0A05"></path>
+  <text x="76" y="78" font-family="&#39;Space Grotesk&#39;, system-ui, sans-serif" font-weight="700" font-size="48" letter-spacing="-1" fill="#F4F4FA">VOLT</text>
+</svg>

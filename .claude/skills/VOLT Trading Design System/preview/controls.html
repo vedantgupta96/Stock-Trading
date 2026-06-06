@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Controls & Toggles" subtitle="Segmented tabs, live dot, switches" viewport="700x160" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 700px; min-height: 160px;
+    background: var(--ink-850);
+    color: var(--fg-1);
+    font-family: var(--font-body);
+    padding: 22px 26px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .col { display: flex; flex-direction: column; }
+  .lbl { font: var(--micro); text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-3); }
+  .mono { font-family: var(--font-mono); }
+  .btn { font-family: var(--font-display); font-weight:600; font-size:13.5px; border:none; cursor:pointer; border-radius: var(--r-sm); padding: 10px 18px; display:inline-flex; align-items:center; gap:8px; }
+  .badge { font-family: var(--font-display); font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; border-radius: var(--r-pill); padding: 5px 11px; display:inline-flex; align-items:center; gap:6px; }
+  .bolt { fill: var(--volt); }
+</style>
+</head>
+<body>
+<div class="col" style="gap:16px">
+  <div class="row" style="gap:14px">
+    <div class="row" style="gap:0;background:var(--ink-800);border:1px solid var(--line);border-radius:var(--r-sm);padding:3px">
+      <span class="btn" style="background:var(--volt);color:var(--fg-on-volt);padding:7px 16px;border-radius:6px;font-size:12.5px">Equity</span>
+      <span class="btn" style="background:transparent;color:var(--fg-2);padding:7px 16px;font-size:12.5px">Drawdown</span>
+    </div>
+    <div class="row" style="gap:8px">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 8px var(--up)"></span>
+      <span class="mono" style="font-size:12px;color:var(--fg-2)">Auto · 30s</span>
+    </div>
+  </div>
+  <div class="row" style="gap:14px">
+    <div style="display:inline-flex;align-items:center;width:46px;height:26px;background:var(--volt);border-radius:99px;padding:3px;justify-content:flex-end"><span style="width:20px;height:20px;border-radius:50%;background:var(--ink-900)"></span></div>
+    <span class="mono" style="font-size:12px;color:var(--fg-2)">Live mode</span>
+    <div style="display:inline-flex;align-items:center;width:46px;height:26px;background:var(--ink-700);border-radius:99px;padding:3px"><span style="width:20px;height:20px;border-radius:50%;background:var(--fg-3)"></span></div>
+    <span class="mono" style="font-size:12px;color:var(--fg-3)">Snapshot</span>
+  </div>
+</div></body></html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Type" name="Display Type" subtitle="Space Grotesk display specimen" viewport="700x190" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 700px; min-height: 190px;
+    background: var(--ink-850);
+    color: var(--fg-1);
+    font-family: var(--font-body);
+    padding: 22px 26px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .col { display: flex; flex-direction: column; }
+  .lbl { font: var(--micro); text-transform: uppercase; letter-spacing: 0.14em; color: var(--fg-3); }
+  .mono { font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="row" style="gap:24px;align-items:center">
+  <div style="font:var(--display-xl);letter-spacing:-0.03em;color:var(--fg-1)">Aa</div>
+  <div class="col" style="gap:6px">
+    <span class="lbl">Display / Space Grotesk · 700</span>
+    <span style="font:var(--display);letter-spacing:-0.025em">Buy strength.</span>
+    <span style="font:var(--h2);color:var(--fg-2)">Sell weakness, fast.</span>
+    <span class="mono" style="font-size:12px;color:var(--fg-3);margin-top:4px">ABCDEFG abcdefg 0123456789 $+−%</span>
+  </div>
+</div></body></html>

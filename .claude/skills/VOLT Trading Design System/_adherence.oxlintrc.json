@@ -1,0 +1,221 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/dashboard/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Space Grotesk|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Space Grotesk, JetBrains Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--body",
+      "--body-lg",
+      "--cat-comm",
+      "--cat-consumer",
+      "--cat-energy",
+      "--cat-fin",
+      "--cat-health",
+      "--cat-indust",
+      "--cat-material",
+      "--cat-tech",
+      "--display",
+      "--display-xl",
+      "--down",
+      "--down-100",
+      "--down-deep",
+      "--down-glow",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-out",
+      "--ease-spring",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-4",
+      "--fg-on-volt",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--glow-down",
+      "--glow-up",
+      "--glow-volt",
+      "--h1",
+      "--h2",
+      "--h3",
+      "--ink-600",
+      "--ink-650",
+      "--ink-700",
+      "--ink-750",
+      "--ink-800",
+      "--ink-850",
+      "--ink-900",
+      "--line",
+      "--line-strong",
+      "--micro",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--r-xs",
+      "--s-1",
+      "--s-10",
+      "--s-12",
+      "--s-16",
+      "--s-2",
+      "--s-3",
+      "--s-4",
+      "--s-5",
+      "--s-6",
+      "--s-8",
+      "--shadow-card",
+      "--shadow-pop",
+      "--small",
+      "--stat",
+      "--stat-sm",
+      "--stat-xl",
+      "--tick",
+      "--up",
+      "--up-100",
+      "--up-deep",
+      "--up-glow",
+      "--volt",
+      "--volt-100",
+      "--volt-bri",
+      "--volt-dim",
+      "--volt-glow",
+      "--warn",
+      "--warn-100"
+    ],
+    "tokenKinds": {
+      "--ink-900": "color",
+      "--ink-850": "color",
+      "--ink-800": "color",
+      "--ink-750": "color",
+      "--ink-700": "color",
+      "--ink-650": "color",
+      "--ink-600": "color",
+      "--line": "color",
+      "--line-strong": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-4": "color",
+      "--fg-on-volt": "color",
+      "--volt": "color",
+      "--volt-bri": "color",
+      "--volt-dim": "color",
+      "--volt-100": "color",
+      "--volt-glow": "color",
+      "--up": "color",
+      "--up-deep": "color",
+      "--up-100": "color",
+      "--up-glow": "color",
+      "--down": "color",
+      "--down-deep": "color",
+      "--down-100": "color",
+      "--down-glow": "color",
+      "--warn": "color",
+      "--warn-100": "color",
+      "--cat-tech": "color",
+      "--cat-energy": "color",
+      "--cat-health": "color",
+      "--cat-fin": "color",
+      "--cat-consumer": "color",
+      "--cat-indust": "color",
+      "--cat-material": "color",
+      "--cat-comm": "color",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--s-1": "spacing",
+      "--s-2": "spacing",
+      "--s-3": "spacing",
+      "--s-4": "spacing",
+      "--s-5": "spacing",
+      "--s-6": "spacing",
+      "--s-8": "spacing",
+      "--s-10": "spacing",
+      "--s-12": "spacing",
+      "--s-16": "spacing",
+      "--shadow-card": "shadow",
+      "--shadow-pop": "shadow",
+      "--glow-volt": "shadow",
+      "--glow-up": "shadow",
+      "--glow-down": "shadow",
+      "--ease-out": "other",
+      "--ease-spring": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--display-xl": "color",
+      "--display": "color",
+      "--h1": "color",
+      "--h2": "color",
+      "--h3": "color",
+      "--body-lg": "color",
+      "--body": "color",
+      "--small": "color",
+      "--micro": "color",
+      "--stat-xl": "color",
+      "--stat": "color",
+      "--stat-sm": "color",
+      "--tick": "color"
+    },
+    "fontFamilies": [
+      "JetBrains Mono",
+      "Space Grotesk"
+    ]
+  }
+}
