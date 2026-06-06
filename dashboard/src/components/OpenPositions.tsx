@@ -105,19 +105,27 @@ export function PositionsSummary({ positions, livePositions, sparklines, onViewA
 
             return (
               <div key={t.symbol} onClick={onViewAll} style={{
-                display: 'grid', gridTemplateColumns: '80px 1fr auto auto 18px',
-                alignItems: 'center', gap: 12, padding: '6px 0', cursor: 'pointer',
+                display: 'grid', gridTemplateColumns: '90px auto 1fr auto auto 18px',
+                alignItems: 'center', gap: 10, padding: '8px 0', cursor: 'pointer',
                 borderBottom: i < positions.length - 1 ? '1px solid var(--line)' : 'none',
                 borderRadius: 'var(--r-sm)', transition: 'background var(--dur-fast)',
               }}
               onMouseEnter={e => (e.currentTarget.style.background = 'rgba(204,255,0,0.03)')}
               onMouseLeave={e => (e.currentTarget.style.background = '')}>
 
-                {/* symbol + warn */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                  <span style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</span>
-                  {warn && <WarnTriangle />}
+                {/* symbol + warn + shares/entry sub */}
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                    <span style={{ fontWeight: 700, fontFamily: 'var(--font-display)', fontSize: 14 }}>{t.symbol}</span>
+                    {warn && <WarnTriangle />}
+                  </div>
+                  <div className="mono" style={{ fontSize: 10, color: 'var(--fg-4)', marginTop: 2 }}>
+                    {[t.shares, t.entry_price].filter(Boolean).join(' · ')}
+                  </div>
                 </div>
+
+                {/* sector badge */}
+                <SectorBadge sector={t.sector} />
 
                 {/* sparkline */}
                 <div style={{ height: 44, minWidth: 0, borderRadius: 4, overflow: 'hidden' }}>
