@@ -84,3 +84,16 @@ Trades today: 2 | Trades this week: 2/3 | Regime: OFF
 | CVX    | 13     | $189.54  | $188.35  | -$15.47 (-0.63%) | 12% trailing GTC |
 
 Notes: First live trading day on the $100k paper account. Operator-authorized one-time override opened a diversified starter pair (NVDA tech, CVX energy) despite the regime filter being OFF (S&P below its 20-day SMA). Both positions closed marginally red on the day but are well within normal noise and each is protected by a live 12% trailing-stop GTC order. Equity essentially flat at -0.02%. Regime remains OFF, so no new buys until S&P reclaims its 20-day SMA; manage the two open names via standard sell-side rules. Phase/day P&L computed off the live $100k base, not the illustrative $10k.
+
+---
+
+## 2026-06-08 — EOD Snapshot
+Equity: $99,883.89 | Cash: $95,128.18 | Day P&L: -$92.50 (-0.09%) | Phase P&L: -$116.11 (-0.12%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON
+
+| Symbol | Shares | Entry    | Current  | Unreal. P&L       | Stop type        |
+|--------|--------|----------|----------|-------------------|------------------|
+| CVX    | 13     | $189.54  | $189.24  | -$3.90 (-0.16%)   | 12% trailing GTC |
+| NVDA   | 11     | $218.89  | $208.69  | -$112.20 (-4.66%) | 12% trailing GTC |
+
+Notes: Quiet Monday — no trades (new week, 0/3). Regime ON per the most recent (6/5) research read; no fresh 6/8 pre-market run, so that status is carried forward. Both positions held and protected by live 12% trailing-stop GTC orders (CVX stop $168.11 / hwm $191.03; NVDA stop $195.01 / hwm $221.60); neither is near the -8% cut (NVDA -4.66%, CVX -0.16%). Caveat on Day P&L: Friday 6/5's EOD snapshot was never appended, so this figure is measured against the 6/4 snapshot ($99,976.39) and effectively spans two trading days; against Alpaca's actual prior close ($99,819.31) the account is +$64.58 (+0.06%) on the day alone. Equity essentially flat. Outlook: hold both names and manage by standard sell-side rules — keep an eye on CVX given the ~10% oil drop and NVDA given tech rotation. Phase/day P&L computed off the live $100k base, not the illustrative $10k.
