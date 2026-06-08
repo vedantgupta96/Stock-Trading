@@ -381,3 +381,66 @@ the 3/week cap — but no qualifying setup to use it on.
 **HOLD. Zero new trades.** Regime ON but no name clears the gate (volume + catalyst fail
 across all candidates). Patience beats activity. No Discord alert (no trade placed). No
 commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-08 (Mon) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter reads **OFF** (S&P below its 20-day
+SMA) on two independent sources — the highest-priority rule. No new buys today. The two
+existing positions (NVDA, CVX) are within tolerance, stop-protected, and left to the
+standard sell-side rules / midday scan.
+
+### Market Regime Status — OFF (no-buy day)
+- **Gemini:** S&P 500 7,460.69 vs 20-day SMA 7,504.43 → **below → OFF.**
+- **Alpaca (deterministic, via buy_gate):** SPY 742.03 vs SMA20 746.47 → **FAIL → OFF.**
+Both agree — a clean, unambiguous regime-OFF read. Per strategy, the right answer on a
+regime-off day is cash. Buy gate check #1 FAILS for any candidate today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,885.83 | Cash: $95,128.18 | Buying power: $393,834 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now ~$208.33, **-4.83%**), **CVX** 13 sh
+  @ $189.54 (now ~$189.78, **+0.13%**). Neither near the -8% cut.
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop ~$195.01, hwm $221.60); CVX trailing
+  stop 12% GTC (stop ~$167.20, hwm $190.00). Both stops live and intact.
+- Position sizing (recalc on live equity): 1.5% of $99,886 = $1,498, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- VIX ~19.90, **down ~7.5%** on the day (prior close 21.51) — fear easing but still
+  above its ~18.5 long-run average; tape unsettled.
+- Oil (WTI): **rebounding to ~$91–94, +1.6% to +4%** on Israel–Iran military escalation
+  (Israel reportedly struck a petrochemical plant in SW Iran), reversing Friday's ~10%
+  ceasefire-hope drop. Supportive for CVX's energy thesis.
+- Broad **chip-stock selloff today** — Philadelphia Semiconductor Index shed >$1T in value
+  on AI-spend reassessment + strong jobs data reviving rate-hike worries. NVDA -6.2% intraday.
+
+### Sector Momentum
+- Risk-off rotation **out of semiconductors / tech** (NVDA, AMD, MU, MRVL all down hard).
+  Wrong moment to add tech. Energy firmer on the oil rebound.
+
+### Earnings Watch (held names)
+- **NVDA** next earnings **Aug 26, 2026** (confirmed, after Q1 FY27 beat on May 20). Clears
+  the >10-trading-day gate. No earnings exit.
+- **CVX** next earnings **late Jul–early Aug 2026** (est. Jul 23–Aug 7). Clears the gate.
+  No earnings exit.
+
+### Held-position review (sell-side rules — none triggered)
+- **NVDA -4.83%** from entry: above the -8% cut; not +15/+20% (no stop tighten); entered
+  6/4, ~2 trading days elapsed (far from 15-day time stop); earnings Aug 26 (clear).
+  Headwind from tech rotation, but well above stop ($195.01). **Hold; reassess at midday.**
+- **CVX +0.13%:** oil rebound supports thesis; no rule triggered. **Hold.**
+
+### Trade Ideas — N/A
+Regime is OFF → no buy candidates evaluated. Buy gate #1 fails for everything today.
+Penny/low-quality movers ignored per standing policy.
+
+### Risk Factors
+- Semiconductor rotation pressures NVDA; geopolitical oil spike is two-sided for CVX
+  (supports near-term price, but a sudden ceasefire could reverse it). Both stop-protected.
+- VIX still elevated (~20) — choppy tape; another reason cash is the right default today.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
+trade placed). No commit per the market-open routine (commit only when trades fire).
