@@ -381,3 +381,75 @@ the 3/week cap — but no qualifying setup to use it on.
 **HOLD. Zero new trades.** Regime ON but no name clears the gate (volume + catalyst fail
 across all candidates). Patience beats activity. No Discord alert (no trade placed). No
 commit per the market-open routine (commit only when trades fire).
+
+---
+
+## 2026-06-08 (Mon) — Pre-Market Research
+
+**Decision: HOLD — zero new trades.** Market-regime filter flipped **ON → OFF** over the
+weekend (Friday's tech/semi selloff dragged the S&P below its 20-day SMA). When the regime
+is OFF the right answer is cash: no new buys today. Buy gate fails check #1 by construction.
+Existing NVDA and CVX left to the standard sell-side rules / midday scan — both within
+tolerance and protected by live 12% trailing-stop GTC orders.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,885.71 | Cash: $95,128.18 | Buying power: $393,834 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now $208.56, **-4.7%**), **CVX** 13 sh
+  @ $189.54 (now $189.49, **~flat / -0.0%**). Neither at the -8% cut.
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop $195.01, hwm $221.60); CVX trailing
+  stop 12% GTC (stop $166.90, hwm $189.66). Both stops live and intact.
+- New trading week → trades-this-week resets to **0/3**.
+- Position sizing (recalc on live equity): 1.5% of $99,886 = $1,498, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap). Moot
+  today — regime OFF.
+
+### Market Regime Status
+**OFF — regime filter flipped ON → OFF.** Deterministic buy-gate read off Alpaca:
+**SPY 737.45 vs 20-day SMA 746.25 → below → regime OFF** (Friday was SPY 751.59 vs 746.95,
+ON). Corroborated by Gemini: S&P 500 closed **7,383.74 vs its 20-day SMA 7,479.51** (~1.3%
+below). Buy gate check #1 FAILS today → no new long entries.
+
+### Market Context
+- S&P 500 ~7,384, below the 20-day MA after Friday's tech-led drop.
+- **VIX ~21.5, up ~40%** — sharp jump in fear, consistent with the regime flip (a calm
+  ~15 tape a week ago has repriced to defensive).
+- **WTI crude ~$94, +~2% on the day** — oil rebounded sharply off last week's slide; a
+  tailwind for the CVX energy thesis (reversing the prior week's headwind).
+- Driver: Friday's strong May jobs print (+172K) pushed out near-term rate-cut bets and
+  stoked rate-HIKE fears; a Senate hearing on China chip sales plus Broadcom's results
+  rattled the AI trade.
+- Econ watch this week: CPI is the marquee release — a hot print would extend the
+  rate-fear selloff; a cool print could let the S&P reclaim its 20-day MA.
+
+### Sector Momentum
+- **Semiconductors / Information Technology leading the decline** — NVDA fell ~6.2% Friday
+  (slipped below a $5T cap); MU/AMD/QCOM each off 9%+. The AI/tech complex is the epicenter
+  of the drawdown.
+- **Energy relatively favored** on the oil rebound — the one pocket of resilience and the
+  reason CVX is holding flat while NVDA bleeds.
+- Defensives (staples/utilities) the typical beneficiaries in a VIX-up tape; nothing here
+  is in a clean 3–8% pullback-after-breakout buy zone.
+
+### Earnings Watch (held names)
+- **NVDA** next earnings ~late Aug 2026; **CVX** ~early Aug 2026. Neither appears in this
+  week's / next-10-trading-day earnings calendar. **No earnings exit triggered** for either.
+
+### Trade Ideas
+**None.** Regime is OFF, so no idea can clear the buy gate (check #1 fails before volume,
+breakout, or catalyst are even reached). Per the rulebook, when the regime filter is off
+the right answer is almost always cash — so no candidates were vetted for entry today.
+
+### Risk Factors
+- **Rate-fear / AI-trade unwind**: if Friday's selloff extends, NVDA (-4.7% and our weakest
+  name) is most exposed — watch the $195.01 trailing stop. Re-evaluate at midday; cut at
+  -8% from entry ($201.38) if hit before the trail.
+- **Volatility regime shift**: VIX +40% means wider intraday swings and gap risk; stops can
+  be jumped on overnight gaps. No action beyond the live trailing stops.
+- **CVX two-way oil risk**: the $94 rebound helps the thesis, but oil is headline-driven
+  (Iran/OPEC) and can reverse fast; CVX flat, well above its stop — hold.
+
+### Decision
+**HOLD. Zero new trades.** Regime filter OFF (S&P below 20-day SMA) → buy gate fails check
+#1; cash is the correct posture. Manage NVDA and CVX via standard sell-side rules at the
+midday scan. Urgent Discord alert sent for the ON → OFF regime flip per the pre-market
+routine.
