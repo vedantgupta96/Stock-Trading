@@ -444,3 +444,78 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-09 (Tue) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter reads **OFF** (S&P 500 below its
+20-day SMA) on two independent sources — the highest-priority rule. No new buys today.
+The two existing positions (NVDA, CVX) are within tolerance, stop-protected, and left to
+the standard sell-side rules / midday scan.
+
+### Market Regime Status — OFF (no-buy day)
+- **Gemini:** S&P 500 7,437 vs 20-day SMA ~7,482 → **below → OFF.**
+- **Alpaca (deterministic, via buy_gate):** SPY 743.75 vs SMA20 746.56 → **FAIL → OFF.**
+Both agree — a clean, unambiguous regime-OFF read. Per strategy, the right answer on a
+regime-off day is cash. Buy gate check #1 FAILS for any candidate today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,888.02 | Cash: $95,128.18 | Buying power: $393,840 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now ~$209.81, **-4.15%**), **CVX** 13 sh
+  @ $189.54 (now ~$188.61, **-0.49%**). Neither near the -8% cut.
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop $195.01, hwm $221.60); CVX trailing
+  stop 12% GTC (stop $168.11, hwm $191.03). Both stops live and intact.
+- Position sizing (recalc on live equity): 1.5% of $99,888 = $1,498, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- VIX ~18.04, **down ~4.7%** on the day (prior close 18.92) — fear normalizing off
+  Friday's >20 spike, but term structure slopes up (VIX9D 19.69) — market positioning
+  for upcoming **CPI and FOMC** events this week. Still slightly above the ~18.5 average.
+- Oil (WTI): ~$89.3–89.4, **down ~2%** today after Monday's geopolitical bump; **-8.9%
+  over the past month**. Trump hinted at a "very good" Iran deal within days → ceasefire
+  hopes pressuring crude → mild headwind for CVX's energy thesis (but CVX is holding).
+- US equity futures up Tuesday (S&P/Nasdaq/Dow) on Iran-deal optimism, recovering from
+  Monday's mixed close, but the cash index remains under its 20-day SMA.
+
+### Sector Momentum
+- Week ending Jun 5: **Energy +2.46%, Health Care +2.31%, Real Estate +1.52%,
+  Financials +1.31%** leading; **Technology -5.6% and Consumer Discretionary -6.20%**
+  the laggards (AI/large-cap-growth selloff drove the S&P's first weekly decline after a
+  nine-week run). Wrong moment to add tech; leadership names are extended, not in pullback
+  buy zones.
+
+### Earnings Watch (held names)
+- **NVDA** next earnings **~Aug 26, 2026** — clears the >10-trading-day gate. No earnings exit.
+- **CVX** next earnings **late Jul–early Aug 2026** — clears the gate. No earnings exit.
+
+### Held-position review (sell-side rules — none triggered)
+- **NVDA -4.15%** from entry: above the -8% cut; not +15/+20% (no stop tighten); entered
+  6/4, ~3 trading days elapsed (far from 15-day time stop); earnings Aug 26 (clear).
+  News flow constructive — Jensen Huang in Korea locking down HBM from SK Hynix & Samsung
+  for next-gen Rubin chips; SK Hynix partnership announced. Stop $195.01 intact. **Hold.**
+- **CVX -0.49%:** oil softening on Iran-deal hopes is a mild thesis headwind, but well
+  above -8% and stop-protected ($168.11). No rule triggered. **Hold; reassess at midday
+  if the energy thesis is breaking on the oil move.**
+
+### Trade Ideas — N/A
+Regime is OFF → no buy candidates evaluated. Buy gate #1 fails for everything today.
+Tech is selling off (wrong moment to add); energy/health/financials leaders are extended
+at/near highs (not a 3–8% pullback entry). Penny/low-quality movers ignored per policy.
+
+### Risk Factors
+- Macro event risk this week: **CPI and a FOMC decision** (Warsh's tenure) — VIX term
+  structure pricing event risk; another reason cash is the right default on a regime-OFF day.
+- CVX faces a two-sided oil tape (Iran ceasefire hopes vs. lingering Mideast tension);
+  NVDA carries tech-rotation risk. Both stop-protected and above the -8% cut.
+
+### Trades this week
+2 placed this week (NVDA, CVX on 6/4). Room for 1 more under the 3/week cap — but no
+qualifying setup, and regime is OFF, so the cap is moot today.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord trade alert
+beyond the standard decision summary. No commit per the market-open routine (commit only
+when trades fire).
