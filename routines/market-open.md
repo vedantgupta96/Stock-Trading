@@ -109,15 +109,46 @@ If Alpaca rejects the trailing stop due to PDT rules:
 - Time stop: [date 15 trading days from now]
 ```
 
-## STEP 6 — Notifications
+## STEP 6 — Notifications (ALWAYS send a detailed decision summary)
 
-Send a Discord message **only if at least one trade was placed**:
+Send **one** Discord message every run — on both trade and no-trade days — explaining
+**what was considered and why we did or did not buy.** Never go silent; "we looked and
+chose not to act, here's why" is exactly what we want surfaced.
 
-```bash
-bash scripts/discord.sh "Bought [SYMBOL] $[SHARES] shares @ $[PRICE] | Stop: $[STOP] | Target: $[TARGET]" --embed 3066993
+The message is a single multi-line summary (the embed description renders markdown and
+newlines). Pick the embed color by outcome:
+- **3066993 (green)** — at least one buy placed
+- **3447003 (blue)** — HOLD, regime ON but nothing cleared the gate
+- **15844367 (amber)** — HOLD because the regime filter is OFF (no-buy day)
+- **15158332 (red)** — an error/abort (e.g., missing env var, data unavailable)
+
+Build the body with these sections (omit a line only if truly N/A):
+
+```
+📊 Market-Open $DATE — DECISION: <BUY $SYM ×N | HOLD>
+
+Regime: <ON/OFF> — S&P <level> vs 20d SMA <sma> (<above/below>); SPY gate read <spy> vs <sma>
+Account: equity $<eq> | cash $<cash> | day-trades <n>/3 | open positions <n>/5
+VIX <v> (<chg>) · WTI $<oil> (<chg>) · backdrop: <one phrase>
+
+Considered:
+• $<SYM> — <PASS/FAIL>: <the deciding check(s) + one-line reason>
+• $<SYM> — <PASS/FAIL>: <...>
+(if regime OFF: "Regime filter OFF → buy gate #1 fails for everything; no candidates evaluated.")
+
+Held: $<SYM> <+/-x%> (stop $<s>), $<SYM> <+/-x%> (stop $<s>) — <any sell rule triggered? else "within tolerance">
+
+Decision & reasoning: <2–3 sentences — the actual logic, e.g. why patience/cash, or why this name earned the buy>
 ```
 
-One message per trade. No message if no trades fired.
+Then send it:
+
+```bash
+bash scripts/discord.sh "$SUMMARY" --embed <color>
+```
+
+If a buy was placed, the summary's "Decision" section must name each trade with
+shares, fill price, stop, and target. Keep the whole body under ~3500 characters.
 
 ## STEP 7 — COMMIT AND PUSH (only if trades were placed)
 

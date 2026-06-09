@@ -2,6 +2,8 @@
 
 *Last updated: 2026-06-02. Only update on Fridays if a rule has proven out for 2+ weeks or failed badly. Call out the change in the weekly review.*
 
+*2026-06-08 (operator-directed, non-rule): added research query #9 (congressional/STOCK-Act disclosures) as an idea-generation input only. No hard rules, gates, sizing, or risk controls changed — surfaced names must still clear the full 11-check buy gate.*
+
 ## What this is
 
 Momentum-breakout swing trading, stocks only. We buy stocks that have just broken out to multi-month highs on strong volume, then enter on the first meaningful pullback. We only trade when the broad market is in an uptrend. Discipline and patience are the edge.
@@ -104,6 +106,11 @@ Use `bash scripts/gemini.sh` for each:
 6. "WTI crude oil price and trend"
 7. "Economic calendar today — CPI, FOMC, jobs data, other releases"
 8. News on each currently-held ticker
+9. "Recent notable US congressional / senator stock purchase disclosures (STOCK Act) in the last 2 weeks — which stocks, who, filing date"
+   - **Idea-generation only — never a buy reason.** Disclosures lag the trade by up to
+     ~45 days, hide size/exits, and are frequently options (which we never trade). Any
+     name surfaced this way is just a watchlist candidate and must independently pass all
+     11 buy-gate checks like any other idea. If it doesn't clear the gate, drop it.
 
 ## Alpaca implementation notes
 
