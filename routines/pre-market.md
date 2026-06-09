@@ -55,6 +55,13 @@ Queries to run:
 6. `"WTI crude oil price today $DATE"`
 7. `"Economic calendar today $DATE — CPI PPI FOMC jobs data any major releases"`
 8. For each currently-held position: `"Latest news on [SYMBOL] stock today $DATE"`
+9. `"Recent notable US congressional / senator stock purchase disclosures (STOCK Act filings) in the last 2 weeks as of $DATE — which stocks, who, and filing date"`
+   - **Idea-generation only.** A political disclosure is NOT a buy reason and NEVER
+     bypasses any gate. Disclosures lag the actual trade by up to ~45 days, omit
+     position size and exits, and are often options (which we don't trade). Treat any
+     surfaced name purely as a watchlist candidate: it must independently clear all 11
+     buy-gate checks (regime, breakout-on-volume, present-tense catalyst, earnings, etc.)
+     exactly like any other idea. If it can't, drop it.
 
 ## STEP 4 — Write dated entry to memory/RESEARCH-LOG.md
 
