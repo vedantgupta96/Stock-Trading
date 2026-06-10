@@ -444,3 +444,72 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-10 (Wed) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter reads **OFF** (S&P below its 20-day
+SMA) on two independent sources — the highest-priority rule. No new buys today. The two
+existing positions (NVDA, CVX) are within tolerance, stop-protected, and left to the
+standard sell-side rules / midday scan.
+
+### Market Regime Status — OFF (no-buy day)
+- **Alpaca (deterministic, via SPY bars):** SPY latest close 731.84 (live quote ~732.5)
+  vs 20-day SMA 745.91 → **below → OFF.**
+- **Gemini:** S&P 500 7,386.65 (Jun 9 close) vs 20-day SMA 7,412.16 → **below → OFF.**
+Both agree — a clean, unambiguous regime-OFF read. Per strategy, the right answer on a
+regime-off day is cash. Buy gate check #1 FAILS for any candidate today, so no candidates
+were run through the full gate.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,855.99 | Cash: $95,128.18 | Buying power: $393,750 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now ~$205.70, **-6.03%**), **CVX** 13 sh
+  @ $189.54 (now ~$189.59, **+0.03%**). Neither at the -8% cut.
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop $195.01, hwm $221.60); CVX trailing
+  stop 12% GTC (stop $168.11, hwm $191.03). Both stops live and intact.
+- Position sizing (recalc on live equity): 1.5% of $99,856 = $1,498, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- VIX ~20.45, **up ~8%** on Jun 9 (prior close 18.92) — fear ticking up; above the
+  ~18.5 long-run average. Choppy, risk-off-leaning tape.
+- Oil (WTI): **~$87.67, down from ~$91.30** prior close on renewed Iran–Israel ceasefire
+  hopes — a headwind for CVX's energy thesis (though CVX is holding flat today).
+- **FOMC June 16–17 next week** (Kevin Warsh's first meeting as Fed chair; dot-plot/SEP
+  due). Consensus = pause. Event risk into next week argues for keeping powder dry.
+
+### Sector Momentum
+- Mixed/rotational: Tech firmer (+~2.2% Jun 10) and Energy (+~1.1%); YTD leaders Energy
+  (+~22%) and Tech (+~17%). Healthcare/Financials names (UNH, LLY, ELV, HUM, CNC) at
+  52-week highs — **extended, not in a 3–8% pullback buy zone** → chasing them violates
+  entry timing. No clean pullback-after-breakout setup with a documented catalyst today.
+
+### Earnings Watch (held names)
+- **NVDA** next earnings **Aug 26, 2026** — clears the >10-trading-day gate. No earnings exit.
+- **CVX** next earnings **late Jul–early Aug 2026** — clears the gate. No earnings exit.
+
+### Held-position review (sell-side rules — none triggered)
+- **NVDA -6.03%** from entry: above the -8% cut (but the closest of the two — watch at
+  midday); not +15/+20% (no stop tighten); entered 6/4, ~4 trading days elapsed (far from
+  15-day time stop); earnings Aug 26 (clear). Stop $195.01 live. **Hold; reassess midday.**
+- **CVX +0.03%:** flat; oil down ~$88 is a mild thesis headwind but no rule triggered; stop
+  $168.11 live. **Hold; watch the oil move at midday.**
+
+### Trade Ideas — N/A
+Regime is OFF → no buy candidates evaluated through the full gate. Buy gate #1 fails for
+everything today. Leadership names are extended (no pullback entry); penny/low-quality
+movers ignored per standing policy.
+
+### Trades this week
+2 placed Mon–Fri this week (NVDA, CVX on 6/4). Room for 1 more under the 3/week cap — but
+no qualifying setup, and regime OFF forecloses buys regardless.
+
+### Risk Factors
+- VIX rising (~20.5) + FOMC next week + two-sided oil (ceasefire-driven drop pressures CVX)
+  → choppy backdrop; cash is the right default. Both positions stop-protected and above -8%.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** Discord decision summary
+sent (amber). No commit per the market-open routine (commit only when trades fire).
