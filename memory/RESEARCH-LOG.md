@@ -444,3 +444,79 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-10 (Wed) — Pre-Market Routine
+
+**Decision: HOLD — zero new trades.** Market-regime filter reads **OFF** (S&P 500 below its
+20-day SMA) — the highest-priority rule, so buy-gate check #1 fails for every candidate today.
+No new buys. The two open positions (NVDA, CVX) are managed under standard sell-side rules;
+**NVDA is on close watch at -7.2%**, just above the -8% hard cut.
+
+### Market Regime Status — OFF (no-buy day)
+- **Gemini:** S&P 500 7,386.65 vs 20-day SMA ~7,412.16 → **below → OFF.** (Reports from 6/9
+  also confirm S&P remained below its 20-day MA.)
+- Regime has now been OFF continuously since the 6/4 override entry. Per strategy, the right
+  answer on a regime-off day is cash. Buy gate #1 FAILS for any candidate today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,798.05 | Cash: $95,128.18 | Buying power: $393,588 | Day trades: 0/3 | PDT: false
+- Open positions: 2
+  - **NVDA** 11 sh @ $218.89, now ~$203.12 → **-7.21%** (cut level $201.38; trailing stop
+    $195.01, hwm $221.60). Above the -8% cut but close — **watch at open.**
+  - **CVX** 13 sh @ $189.54, now ~$187.35 → **-1.16%** (trailing stop $168.11, hwm $191.03).
+- Open orders: 2 — both 12% trailing-stop GTC, live and intact (NVDA $195.01 / CVX $168.11).
+- Position sizing (recalc on live equity): 1.5% of $99,798 = $1,497, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap). N/A today (regime off).
+
+### Market Context
+- **CPI (May 2026) releases TODAY at 8:30 ET / 7:30 CT** — the dominant event. Market in
+  wait-and-see; an upside inflation surprise reignites rate-hike worries.
+- **VIX ~21.1, up ~11.6%** on the day (Google Finance; intraday high 23.34), bid up ahead of
+  CPI. Elevated and rising — fear premium, choppy tape. Another reason cash is the default.
+- **Oil (WTI) ~$87–89**, soft/mixed (one source flags a 5th consecutive daily decline)
+  despite ongoing Iran tensions — market pricing a possible negotiated de-escalation. Mildly
+  two-sided for CVX.
+
+### Sector Momentum
+- Leadership this week in **Basic Materials, Energy, Industrials** (Gemini); tech/semis softer
+  after the recent rotation. Energy leadership is mildly supportive for CVX. Regime-off, so no
+  new sector exposure added regardless.
+
+### Earnings Watch (held names — none trigger an exit)
+- **NVDA** next earnings **Aug 26, 2026** (confirmed post-Q1 beat). Clears the >10-day gate.
+- **CVX** Q1 FY26 **already reported** (early June; production +24% on Hess, EPS -35% YoY,
+  $6B returned). Next report Q2, ~late July. Clears the >10-day gate. No earnings exit.
+
+### Held-position review (sell-side rules)
+- **NVDA -7.21%:** above the -8% cut ($201.38) but only ~0.9% of headroom — **close watch at
+  the open; cut immediately if it breaches $201.38.** Not +15/+20% (no tighten). Entered 6/4,
+  ~4 trading days elapsed (far from 15-day time stop). Earnings Aug 26 (clear). Recent news is
+  constructive (Apple AI client win, South Korea partnerships, Computex RTX Spark; analyst
+  Strong Buy, $298 mean target) but price still pressured by the semi rotation. Trailing stop
+  $195.01 is the backstop. **Hold; reassess at midday / on any -8% breach.**
+- **CVX -1.16%:** no rule triggered; energy leadership + firm-ish oil support the thesis.
+  Analyst Buy, $216 target. **Hold.**
+
+### Congressional disclosures (idea-generation only)
+- Query surfaced only aggregator portals (CongressStock, Quiver, Trendlyne), no specific
+  actionable named purchases. Idea-generation only and, with regime OFF, any surfaced name
+  would fail buy-gate #1 anyway. **No watchlist additions.**
+
+### Trade Ideas — N/A
+Regime is OFF → buy gate #1 fails for everything; no candidates evaluated. Low-quality
+pre-market movers ignored per standing policy.
+
+### Risk Factors
+- **CPI surprise (8:30 ET)** could spike the VIX and drag the tape — directly pressures NVDA,
+  which is already a hair above its -8% cut.
+- Semiconductor rotation keeps NVDA soft; a gap-down through $201.38 forces an exit.
+- Oil's soft drift (5th down day) is a mild headwind to CVX's energy thesis; geopolitics keep
+  it two-sided. Both names remain stop-protected.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** Patience beats activity.
+Manage NVDA tightly at the open (cut on any -8% breach). No urgent Discord (no position below
+-8% in pre-market, no earnings within 3 days, no regime flip).
