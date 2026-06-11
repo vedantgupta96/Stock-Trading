@@ -110,3 +110,24 @@ Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh 
 | CVX    | 13     | $189.54 | $189.85  | +$4.03 (+0.16%)   | 12% trailing GTC ($169.56) |
 
 Notes: No trades. Equity $99,799.31, down -$51.03 (-0.05%) vs the last committed EOD (6/09, $99,850.34); essentially flat (Alpaca last_equity $99,846.15 → true session move ≈ -$46.84, -0.05%). ⚠️ ACTION REQUIRED: NVDA closed at -8.52% from entry ($200.25 vs $218.89), breaching the hard -8% cut rule for the first time. This daily-summary routine is EOD reporting only and places no orders; NVDA remains stop-protected by its live 12% trailing GTC at $195.01 (hwm $221.60), but the -8% discipline rule says cut it — flagged for action at the next pre-market/midday scan: cut NVDA at the open unless regime/thesis materially changed. CVX recovered to +0.16% on firmer oil (hwm $192.69, stop $169.56), no rule triggered. Regime last read OFF (6/08); standing posture remains cash, no new buys. Outlook: execute the NVDA -8% cut next session; continue holding CVX under standard sell-side rules; reassess regime at next pre-market.
+
+---
+
+### 2026-06-11 SELL NVDA — closed (hard stop -8%)
+- Side: sell (close)
+- Shares: 11
+- Exit price: $200.32 (actual fill, avg $200.324545)
+- Entry price: $218.89 (opened 2026-06-04)
+- Realized P&L: -$204.22 (-8.48%)
+- Reason: hard stop — position breached the -8% cut (closed 6/10 at -8.52%; executed at this midday scan per the standing flag). No averaging down, no hoping.
+- Stop handling: canceled the live 12% trailing GTC (id bee1cff1…, stop $195.01) before the market-sell close. Not a day trade (held 5 trading days); daytrade_count remains 0/3.
+- Held days: 6/4 → 6/11 (~5 trading days). Sector: tech/semis — 1 closed loss this month (not 2 consecutive; no sector exit triggered).
+
+## 2026-06-11 — Midday Scan
+Equity: $99,798.24 | Cash: $97,331.75 | Trades today: 1 (1 exit) | Trades this week: 0 new buys/3 | Regime: OFF (last read 6/08; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| CVX    | 13     | $189.54 | $189.80  | +$3.32 (+0.13%)  | 12% trailing GTC ($169.56) |
+
+Notes: Midday position scan. Executed the flagged NVDA -8% hard-stop cut — sold 11 sh @ $200.32 (entry $218.89) for -$204.22 (-8.48%); canceled its trailing stop first to free the reserved shares. Cash freed to $97,331.75; only CVX remains open. CVX +0.13% (current $189.80, hwm $192.69, live 12% trailing GTC stop $169.56) — above the -8% cut, not at +15/+20% (no stop tighten), ~5 trading days in (far from the 15-day time stop), earnings late Jul–early Aug (clears 10-day gate). Thesis check via WebSearch (Gemini 503): CVX trading firm (~$190, +0.35% intraday), analyst consensus "Buy" w/ $216 PT, no negative catalyst — thesis intact, hold. Sector-failure check: tech has 1 loss this month (NVDA), not 2 consecutive — no sector exit. Regime last read OFF; standing posture remains cash, no new buys. Discord exit alert sent. Outlook: hold CVX under standard sell-side rules; reassess regime at next pre-market.
