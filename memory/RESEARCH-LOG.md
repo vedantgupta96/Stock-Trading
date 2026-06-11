@@ -444,3 +444,77 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-11 (Thu) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter reads **OFF** (S&P 500 below its
+20-day SMA) on two independent sources — the highest-priority rule. No new buys today.
+The two existing positions (NVDA, CVX) are reviewed below; both left to the standard
+sell-side rules / midday scan. NVDA is close to the -8% line (-7.85%) — flagged for the
+midday scan.
+
+### Market Regime Status — OFF (no-buy day)
+- **Gemini:** S&P 500 ~7,324 vs 20-day SMA 7,367.73 → **below → OFF.**
+- **Alpaca (deterministic, via buy_gate):** SPY 727.315 vs SMA20 744.84 → **FAIL → OFF.**
+Both agree — clean, unambiguous regime-OFF read. Per strategy, the right answer on a
+regime-off day is cash. Buy gate check #1 FAILS for any candidate today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,835.43 | Cash: $95,128.18 | Buying power: $393,693 | Day trades: 0/3 | PDT: false
+- Open positions: 2 — **NVDA** 11 sh @ $218.89 (now $201.71, **-7.85%**), **CVX** 13 sh
+  @ $189.54 (now $191.40, **+0.98%**).
+- Open orders: 2 — NVDA trailing stop 12% GTC (stop $195.008, hwm $221.60); CVX trailing
+  stop 12% GTC (stop $169.5628, hwm $192.685). Both stops live and intact.
+- Position sizing (recalc on live equity): 1.5% of $99,835 = $1,498, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- VIX ~20.76, **+4.48%** on the day — fear rising, tape unsettled (above its ~18.5
+  long-run average). Another reason cash is the right default today.
+- Oil (WTI): ~$89, choppy around $88–94 on US–Iran headlines and a bullish EIA inventory
+  draw; two-sided for CVX (supports price near-term, but a de-escalation could reverse).
+- **Econ calendar:** May **PPI** released today 8:30 ET; May **CPI** landed yesterday
+  (6/10). No FOMC today — next **FOMC decision Wed Jun 17**. Pre-FOMC week → headline risk.
+
+### Sector Momentum
+- Leadership in **Utilities** (AEE +3.1% on data-center buildout), **Real Estate** (XLRE
+  +2.1% 6/10), **Materials** (XLB +1.6%), **Healthcare** (XLV +1.3%); Energy/Industrials
+  firm month-to-date. Semis bouncing today (INTC +4.8%, AMAT/LRCX +4.6%, MU +3%) but it's
+  a reflex bounce, not a clean pullback-after-breakout setup; tech remains choppy.
+
+### Earnings Watch (held names)
+- **NVDA** next earnings **Aug 26, 2026** (confirmed). Clears the >10-trading-day gate.
+- **CVX** next earnings **Jul 31, 2026** (some sources Aug 7). Clears the gate.
+No earnings exit triggered for either open position.
+
+### Held-position review (sell-side rules)
+- **NVDA -7.85%** from entry: **above the -8% cut but only ~0.15% from it** — flagged for
+  the midday scan; not +15/+20% (no stop tighten); entered 6/4, ~5 trading days elapsed
+  (far from 15-day time stop); earnings Aug 26 (clear). Stop-protected at $195.008. If it
+  breaches -8% intraday the -8% rule fires; for now, no rule triggered at the open.
+- **CVX +0.98%:** oil firm, thesis intact; no rule triggered. **Hold.**
+
+### Trade Ideas — N/A (regime OFF) / tested
+Regime is OFF → no buy candidates qualify; buy gate #1 fails for everything today. For the
+record, today's movers were screened: **ORCL -9.56%** (AI-capex/debt-raise shock — a
+gap-down, not a buy). **AMAT** ran through `scripts/buy_gate.sh` as a representative semi
+mover → **GATE FAIL: c1_regime, c8_catalyst** (also shadow pullback 1.2% — extended, not a
+3–8% pullback entry). Penny/low-quality movers (GLXG/PPCB/CCHH/QH) ignored per policy.
+
+### Trades this week
+0 new trades placed this week (week of Mon 6/8). Both open positions (NVDA, CVX) were
+opened 6/4 last week. Room under the 3/week cap remains, but no qualifying setup exists and
+regime is OFF.
+
+### Risk Factors
+- Pre-FOMC week (decision 6/17) + VIX rising + S&P under its 20-day = defensive backdrop;
+  cash is the correct default. NVDA pinned near the -8% line on semi softness — watch at
+  midday. CVX two-sided on volatile oil. Both stop-protected.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** Discord decision summary
+sent (no-buy / regime-off = amber). No commit per the market-open routine (commit only when
+trades fire).
