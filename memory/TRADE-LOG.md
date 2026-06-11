@@ -110,3 +110,26 @@ Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh 
 | CVX    | 13     | $189.54 | $189.85  | +$4.03 (+0.16%)   | 12% trailing GTC ($169.56) |
 
 Notes: No trades. Equity $99,799.31, down -$51.03 (-0.05%) vs the last committed EOD (6/09, $99,850.34); essentially flat (Alpaca last_equity $99,846.15 → true session move ≈ -$46.84, -0.05%). ⚠️ ACTION REQUIRED: NVDA closed at -8.52% from entry ($200.25 vs $218.89), breaching the hard -8% cut rule for the first time. This daily-summary routine is EOD reporting only and places no orders; NVDA remains stop-protected by its live 12% trailing GTC at $195.01 (hwm $221.60), but the -8% discipline rule says cut it — flagged for action at the next pre-market/midday scan: cut NVDA at the open unless regime/thesis materially changed. CVX recovered to +0.16% on firmer oil (hwm $192.69, stop $169.56), no rule triggered. Regime last read OFF (6/08); standing posture remains cash, no new buys. Outlook: execute the NVDA -8% cut next session; continue holding CVX under standard sell-side rules; reassess regime at next pre-market.
+
+---
+
+### 2026-06-11 SELL NVDA — closed (-8% discipline cut)
+- Side: sell (sell_to_close, 11 sh)
+- Entry price: $218.89 (2026-06-04)
+- Exit price: ~$200.32 (cash-derived: proceeds $2,203.57 / 11 sh; entry-day intraday near 6/10 close $200.25)
+- Realized P&L: -$204.22 / -8.48%
+- Exit reason: Hard -8% cut rule. NVDA closed 6/10 at -8.52% from entry (first breach); the standing 6/10 flag said cut next session, executed this session. Its 12% trailing GTC ($195.01, hwm $221.60) is no longer open, confirming the exit.
+- Sector: Technology
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit.
+
+---
+
+## 2026-06-11 — EOD Snapshot
+Equity: $99,747.15 | Cash: $97,331.75 | Day P&L: -$52.16 (-0.05%) | Phase P&L: -$252.85 (-0.25%)
+Trades today: 1 (NVDA exit) | Trades this week: 0/3 new | Regime: OFF (last read 6/08; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| CVX    | 13     | $189.54 | $185.80  | -$48.62 (-1.97%) | 12% trailing GTC ($169.56) |
+
+Notes: The NVDA -8% discipline cut flagged on 6/10 was executed today — 11 sh sold at ~$200.32 for a realized -$204.22 (-8.48%), and its trailing-stop GTC is gone, confirming the exit; the rule breach is now cleared. Equity $99,747.15, down -$52.16 (-0.05%) vs the last committed EOD (6/10, $99,799.31); true single-session move vs Alpaca last_equity ($99,800.20) ≈ -$53.05 (-0.05%) — essentially flat, since NVDA's exit (~$200.32 vs its 6/10 close $200.25) was a wash and the realized loss was already carried as unrealized. CVX is now the lone position at -1.97% (current $185.80, stop $169.56, hwm $192.69) — above the -8% cut, no sell-side rule triggered, fully stop-protected. Regime last read OFF (6/08, S&P below its 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture remains cash — no new buys until the S&P reclaims its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: hold CVX under standard sell-side rules and reassess regime at the next pre-market.
