@@ -133,3 +133,15 @@ Trades today: 1 (NVDA exit) | Trades this week: 0/3 new | Regime: OFF (last read
 | CVX    | 13     | $189.54 | $185.80  | -$48.62 (-1.97%) | 12% trailing GTC ($169.56) |
 
 Notes: The NVDA -8% discipline cut flagged on 6/10 was executed today — 11 sh sold at ~$200.32 for a realized -$204.22 (-8.48%), and its trailing-stop GTC is gone, confirming the exit; the rule breach is now cleared. Equity $99,747.15, down -$52.16 (-0.05%) vs the last committed EOD (6/10, $99,799.31); true single-session move vs Alpaca last_equity ($99,800.20) ≈ -$53.05 (-0.05%) — essentially flat, since NVDA's exit (~$200.32 vs its 6/10 close $200.25) was a wash and the realized loss was already carried as unrealized. CVX is now the lone position at -1.97% (current $185.80, stop $169.56, hwm $192.69) — above the -8% cut, no sell-side rule triggered, fully stop-protected. Regime last read OFF (6/08, S&P below its 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture remains cash — no new buys until the S&P reclaims its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: hold CVX under standard sell-side rules and reassess regime at the next pre-market.
+
+---
+
+## 2026-06-12 — EOD Snapshot
+Equity: $99,765.59 | Cash: $97,331.73 | Day P&L: +$18.44 (+0.02%) | Phase P&L: -$234.41 (-0.23%)
+Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| CVX    | 13     | $189.54 | $187.22  | -$30.16 (-1.22%) | 12% trailing GTC ($169.56) |
+
+Notes: Quiet hold day — no trades. Equity $99,765.59, up +$18.44 (+0.02%) vs the last committed EOD (6/11, $99,747.15); true single-session move vs Alpaca last_equity ($99,747.39) ≈ +$18.20 (+0.02%) — essentially flat and marginally green. CVX is the lone position, recovering intraday (+0.75% on the day) to -1.22% from entry (current $187.22, stop $169.56, hwm $192.685) — above the -8% cut and not at +15/+20%, so no sell-side rule triggered; fully protected by its live 12% trailing-stop GTC. Entered 6/4, ~6 trading days elapsed — well short of the 15-day time stop; CVX earnings est. late Jul–early Aug, clears the 10-day gate. Day-trade count 0/3, PDT false. Regime last read OFF (6/08, S&P below its 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture remains cash — no new buys until the S&P reclaims its 20-day SMA. Outlook: hold CVX under standard sell-side rules and reassess regime at the next pre-market.
