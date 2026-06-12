@@ -444,3 +444,74 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+---
+
+## 2026-06-12 (Fri) — Pre-Market Research
+
+**Decision: HOLD — zero new trades.** Market-regime filter reads **OFF** (S&P 500 below
+its 20-day SMA) on the deterministic Alpaca read — the highest-priority rule — so buy-gate
+check #1 fails for every candidate today. The lone open position (CVX) is within tolerance,
+stop-protected, and left to the standard sell-side rules / midday scan. Gemini was down
+(HTTP 503 on every query) → research ran on native WebSearch fallback (noted per routine).
+
+### Market Regime Status — OFF (no-buy day)
+- **Alpaca (deterministic, via buy_gate):** SPY close **737.67** vs 20-day SMA **745.36**
+  → **below → FAIL → regime OFF.** (83 bars; clean, unambiguous read.)
+- **WebSearch corroboration:** S&P 500 cash index closed **7,394.30** on 6/11, sitting
+  below its 20-day SMA (~7,480 area). Both sources agree: regime OFF.
+- No regime flip vs the last read (6/08 OFF) → no urgent notification. The right answer on a
+  regime-off day is cash. **No new buys until the S&P reclaims its 20-day SMA.**
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,730.23** | Cash: **$97,331.73** | Buying power: $396,042.72 | Day trades: 0/3 | PDT: false
+- Open positions: 1 — **CVX** 13 sh @ $189.54 (now ~$184.50, **-2.66%**). Not near the -8% cut.
+- Open orders: 1 — CVX 12% trailing-stop GTC, stop **$169.56** (hwm $192.685). Live and intact.
+- NVDA was cut 6/11 on the -8% discipline rule (realized -$204.22 / -8.48%); that breach is cleared.
+- Trades this week: **0/3 new** (room for 3, but no qualifying setup — regime OFF).
+- Position sizing (recalc on live equity): 1.5% of $99,730 = $1,496, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap). Moot today.
+
+### Market Context
+- **VIX ~21.4, up ~34% on the week** (intraday range 20.06–22.66; opened 20.10) — fear
+  rising, well above its ~18.5 long-run average. Unsettled, risk-off tape — reinforces cash.
+- **Oil (WTI): dropped below ~$86/bbl Friday, a ~2-month low**, after President Trump said a
+  U.S.–Iran peace agreement could be reached as early as this weekend. Big reversal of the
+  recent geopolitical premium (~$91 → ~$86). **Headwind for CVX's energy thesis** — flag for
+  midday re-evaluation: if energy is rolling over on a confirmed de-escalation, consider a
+  discretionary exit even above -8%.
+- **Econ calendar:** Univ. of Michigan preliminary June Consumer Sentiment due today (prior
+  May print 44.8 — a record low, hurt by gasoline prices). May PPI landed 6/11; May CPI
+  earlier this week. Sentiment + de-escalation headlines = potential weekend gap risk.
+
+### Sector Momentum
+- Latest reads: **Technology** the recent monthly leader; **Energy** a laggard / now under
+  fresh pressure from the oil drop. Leadership remains narrow (AI + energy), and energy's
+  geopolitical bid is unwinding today. Wrong tape to be adding risk into.
+
+### Earnings Watch (held names)
+- **CVX** next earnings **July 31, 2026** (confirmed; Q1 already reported, production +24% on
+  Hess, $6B returned). ~34 trading days out → clears the >10-trading-day gate. No earnings exit.
+
+### Held-position review (sell-side rules — none triggered)
+- **CVX -2.66%** from entry ($184.50 vs $189.54): above the -8% cut; not +15/+20% (no stop
+  tighten); entered 6/4, ~6 trading days elapsed (time stop 6/25, not yet); earnings 7/31
+  (clear). Thesis under pressure from the oil pullback but stop-protected at $169.56.
+  **Hold; reassess at midday** — cut discretionarily if the energy thesis confirms broken.
+
+### Trade Ideas — N/A
+Regime is OFF → buy-gate #1 fails for everything; no buy candidates evaluated. Congressional
+/ STOCK-Act disclosure scan (query #9) is idea-generation only and is moot under regime-OFF —
+any surfaced name would still have to clear all 11 gate checks, starting with regime. Deferred.
+
+### Risk Factors
+- **Oil reversal (de-escalation headlines)** directly pressures CVX's energy thesis; a
+  confirmed U.S.–Iran deal this weekend could gap energy names down Monday.
+- **VIX rising ~34% on the week (~21+)** and a record-low consumer-sentiment backdrop →
+  choppy, headline-driven tape; cash is the right default.
+- **Weekend headline/gap risk** from the Iran-deal narrative and Friday's sentiment print.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** Manage CVX under standard
+sell-side rules; watch the oil/energy thesis at midday. No Discord alert (nothing urgent: CVX
+above -8%, no earnings within 3 days, no regime flip). Gemini down → WebSearch fallback used.
