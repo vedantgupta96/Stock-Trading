@@ -133,3 +133,23 @@ Trades today: 1 (NVDA exit) | Trades this week: 0/3 new | Regime: OFF (last read
 | CVX    | 13     | $189.54 | $185.80  | -$48.62 (-1.97%) | 12% trailing GTC ($169.56) |
 
 Notes: The NVDA -8% discipline cut flagged on 6/10 was executed today — 11 sh sold at ~$200.32 for a realized -$204.22 (-8.48%), and its trailing-stop GTC is gone, confirming the exit; the rule breach is now cleared. Equity $99,747.15, down -$52.16 (-0.05%) vs the last committed EOD (6/10, $99,799.31); true single-session move vs Alpaca last_equity ($99,800.20) ≈ -$53.05 (-0.05%) — essentially flat, since NVDA's exit (~$200.32 vs its 6/10 close $200.25) was a wash and the realized loss was already carried as unrealized. CVX is now the lone position at -1.97% (current $185.80, stop $169.56, hwm $192.69) — above the -8% cut, no sell-side rule triggered, fully stop-protected. Regime last read OFF (6/08, S&P below its 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture remains cash — no new buys until the S&P reclaims its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: hold CVX under standard sell-side rules and reassess regime at the next pre-market.
+
+---
+
+### 2026-06-15 SELL CVX — closed (thesis broken — oil collapse / energy sector roll-over)
+- Side: sell (sell_to_close, 13 sh, market order)
+- Entry price: $189.54 (2026-06-04)
+- Exit price: ~$180.77 (cash-derived: proceeds $2,350.01 / 13 sh; live current at scan $180.82, -3.42% on the day)
+- Realized P&L: -$114.01 / -4.63%
+- Exit reason: Thesis broken (catalyst invalidated + sector rolling over) per midday STEP 3d / sell-side rules — closed before the -8% cut. CVX's entry thesis was energy-sector momentum carried by a geopolitical oil premium (Israel–Iran escalation). That premium fully inverted over the weekend: a US–Iran peace deal, the Strait of Hormuz set to reopen, WTI down >5% to a ~3-month low (~$80), and the energy sector sharply rolling over. The reason for the position is gone, so it was cut on rule rather than waiting for the stop.
+- Sector: Energy
+- Mechanics: cancelled the live 12% trailing-stop GTC (order 90a7dcbc, stop $169.56, hwm $192.685) first to free the shares (qty_available was 0), then submitted the market close — filled, 0 positions / 0 open orders remaining.
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit. Bought 6/04, sold 6/15 → not a day trade; daytrade_count 0/3, PDT false.
+
+---
+
+## 2026-06-15 — Midday Scan Snapshot
+Equity: $99,681.74 | Cash: $99,681.74 | Regime: OFF (last read 6/08; no fresh regime research this scan)
+Action: Closed CVX (thesis broken). Open positions: 0 | Open orders: 0 | Trades this week: 0/3 new | Day trades: 0/3 | PDT: false
+
+Notes: Midday position scan closed the last open position, CVX, on a thesis break (oil-premium catalyst inverted on the US–Iran peace deal; WTI to a ~3-month low; energy rolling over) for a realized -$114.01 (-4.63%) — cut on rule ahead of the -8% stop. Its 12% trailing GTC was cancelled to free the shares before the market close filled. Sector-failure check: this month Technology has 1 closed loss (NVDA 6/11, -8.48%) and Energy now 1 (CVX 6/15, -4.63%); no sector at 2 consecutive losses, so no sector-wide exit. Account is now fully in cash at $99,681.74 with no positions and no open orders. Standing posture remains cash — regime last read OFF (6/08), no new buys until the S&P reclaims its 20-day SMA; reassess at the next pre-market.
