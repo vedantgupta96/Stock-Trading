@@ -444,3 +444,75 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+---
+
+## 2026-06-15 (Mon) — Pre-Market Routine
+
+**Decision: HOLD — zero new trades.** Market-regime filter reads **OFF** (S&P below its
+20-day SMA) on the deterministic Alpaca read — the highest-priority rule. No new buys today.
+Lone position (CVX) is above its -8% cut and stop-protected; left to the midday scan / standard
+sell-side rules, but flagged for oil-thesis pressure (see below).
+
+### Market Regime Status — OFF (no-buy day)
+- **Alpaca (deterministic, via buy_gate):** SPY 741.67 vs 20-day SMA 745.04 → **FAIL → OFF.**
+- **Gemini:** could not return real-time S&P/SMA data (no live-data access) → relied on the
+  Alpaca deterministic read, which is authoritative for this check anyway.
+- No regime flip vs the last read (6/08 was also OFF), so no flip alert. Buy-gate check #1
+  FAILS for any candidate today; the right answer on a regime-off day is cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,704.23 | Cash: $97,331.73 | Buying power: $395,969.92 | Day trades: 0/3 | PDT: false
+- Open positions: 1 — **CVX** 13 sh @ $189.54, now $182.50 (**-3.71%**, unreal. -$91.52).
+- Open orders: 1 — CVX trailing stop 12% GTC, stop $169.56, hwm $192.685. Live and intact.
+- New week: trades this week **0/3**.
+- Position sizing (recalc on live equity): 1.5% of $99,704 = $1,496, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- **VIX 17.68** (close 6/12), down ~9% on the day, below its ~18.56 long-run average —
+  fear easing into a risk-on tone on Iran-truce optimism.
+- **WTI crude ~$80.14, down ~5.6%** on the day — sliding below $85 on reports the US and Iran
+  reached a deal to reopen the Strait of Hormuz (signing ceremony pending in Switzerland).
+  The geopolitical oil premium that supported the energy trade is unwinding fast.
+- **FOMC June 16–17** — Kevin Warsh's first meeting as Fed chair; rate hold expected, dot plot
+  in focus. **May CPI ran hot: 4.2% headline / 2.9% core**, keeping the Fed hawkish — real
+  midweek event risk. Today's data: Empire State Mfg, Industrial Production (May).
+
+### Sector Momentum
+- Oil & Gas had led the week on the conflict premium but is **reversing today** on the oil
+  drop — wrong moment to add energy. Metals & Mining firm on industrial-policy / AI-buildout
+  demand. Risk-on tone broadly, but the regime filter is still OFF.
+
+### Earnings Watch (held names)
+- **CVX** next earnings **~early Aug 2026** (Q2; Q1 reported with a $1.41 adj-EPS beat vs
+  $0.95 est). Clears the >10-trading-day gate → no earnings exit.
+
+### Held-position review (sell-side rules — none triggered)
+- **CVX -3.71%** from entry ($182.50 vs $189.54): above the -8% cut; not +15/+20% (no stop
+  tighten); entered 6/4, ~8 trading days elapsed (time stop ~6/25, not yet); earnings early
+  Aug (clear). **⚠️ Thesis pressure:** the original energy catalyst leaned on the geopolitical
+  oil premium, and WTI is down ~5.6% on Hormuz-deal hopes — CVX has slid from +0.16% (6/10)
+  to -3.71% now. Not a clean break yet (CVX fundamentals/dividend intact, well above stop
+  $169.56), but **flagged for the midday scan**: if oil keeps falling and CVX breaks down
+  further, consider a discretionary exit even above -8%. **Hold for now; reassess at midday.**
+
+### Trade Ideas — N/A
+Regime is OFF → no buy candidates evaluated. Buy-gate #1 fails for everything today.
+
+### Risk Factors
+- **FOMC midweek into a hot 4.2% CPI print** — a hawkish dot plot / Warsh surprise could
+  jolt the tape; another reason cash is the right default with regime OFF.
+- **Oil reversal** on the Hormuz deal directly pressures CVX's energy thesis (two-sided: a
+  deal collapse could snap oil back, but base case is continued unwind).
+- Regime OFF + choppy positioning ahead of the Fed — no edge in adding risk today.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
+trade placed; no urgent threshold hit — CVX above -8%, no earnings within 3 days, no regime
+flip). CVX flagged for the midday scan on oil-thesis pressure.
+
+### Notes
+- Gemini fallback: SPY/SMA query had no live-data access (used the authoritative Alpaca
+  deterministic regime read); sectors / oil / econ-calendar queries returned HTTP 503 →
+  fell back to native WebSearch, as the routine prescribes.
