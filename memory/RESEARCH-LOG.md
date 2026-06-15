@@ -444,3 +444,81 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-15 (Mon) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter reads **ON** (S&P above its 20-day
+SMA on both Gemini and the deterministic Alpaca/buy-gate read), but no candidate clears
+the 11-check gate — no documented catalyst, no fresh breakout, no 1.5x volume, no clean
+pullback. FOMC Tue–Wed adds mid-week event risk. Patience; cash is the right default.
+Discord decision summary sent. No commit per routine (commit only when trades fire).
+
+### Market Regime Status — ON
+- **Gemini:** S&P 500 ~7,524 vs 20-day SMA ~7,466 → **above → ON.**
+- **Alpaca (deterministic, via buy_gate):** SPY 753.125 vs SMA20 745.74 → **PASS → ON.**
+Both agree. Buy gate check #1 PASSES.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,650.80 | Cash: $97,331.73 | Buying power: $395,820 | Day trades: 0/3 | PDT: false
+- Open positions: **1 — CVX** 13 sh @ $189.54 (now $178.25, **-5.96%**). **NVDA is no
+  longer held** — position closed since the 6/08 run (likely trailing-stop / discretionary
+  exit on the tech rotation); only CVX remains.
+- Open orders: 1 — CVX trailing stop 12% GTC (stop $169.5628, hwm $192.685). Live/intact.
+- Position sizing (recalc on live equity): 1.5% of $99,651 = $1,495, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- S&P 500 ~7,524, above 20d SMA ~7,466 — majors firm.
+- VIX ~16.77, **down ~13.7%** on the day (from 19.44) — calm, low-fear tape.
+- Oil (WTI): **~$79.73, down ~6%** — lowest since early March on a potential interim
+  US–Iran peace deal (Strait of Hormuz reopening, end of blockade on Iranian exports).
+  Direct **headwind for CVX's energy thesis**; energy lagging -2.49% pre-market.
+- **FOMC Tue–Wed Jun 16–17**, decision + dot plot Wed 2:00 PM ET, presser 2:30 — new Fed
+  chair Warsh's meeting. No CPI this week (May CPI was 6/10; next 7/14). NY Empire State
+  Mfg + Industrial Production today; ADP (Tue), jobless claims (Thu).
+
+### Sector Momentum
+- Week ending 6/12: **Materials / Basic Materials** led (Morningstar +2.91%, MacroMicro
+  +4.34%), Consumer Defensives/Staples and Real Estate strong — defensive tilt. **Energy
+  lagging** today (-2.49%) on the oil slide. Pre-market 6/15: Info Tech firmer (+2.66%).
+
+### Earnings Watch (held names)
+- **CVX** next earnings ~late Jul–early Aug 2026 (Q1 reported 5/1, EPS $1.41 vs $1.00 est).
+  Clears the >10-trading-day gate. No earnings exit.
+
+### Held-position review (sell-side rules — none triggered at open)
+- **CVX -5.96%** from entry: above the -8% cut ($174.38) but **closing in on it**; stop
+  $169.56 below that. Not +15/+20% (no tighten); entered 6/4, ~7 trading days elapsed
+  (far from 15-day time stop); earnings clear. **Thesis under real pressure** — oil at a
+  ~3-month low on Iran peace hopes weakens the energy long. No hard sell rule fires at
+  open, but **flag for midday scan**: if oil/energy keeps rolling over, a discretionary
+  thesis-broken exit is on the table before -8%.
+
+### Trade Ideas — tested, none qualify
+- Movers/breakout screen (Gemini) returned **no actionable 3-mo/52-wk-high names with a
+  documented catalyst + clean 3–8% pullback**. Earnings-calendar query returned no usable
+  list. Congressional/STOCK-Act disclosures (idea-generation only): aggregate most-bought
+  politician names MSFT, AAPL, HD, SPGI, ACI, CART — none with a documented breakout
+  catalyst, all just watchlist candidates; must clear the gate independently and don't.
+- **SPGI** run through buy_gate for diligence — **GATE FAIL:** c8 catalyst (none
+  documented), c9 breakout (last-5 high 430.08 < prior 456.205, no 3-mo high in 5d),
+  c10 volume (last-5 max 128,923 < 176,365 threshold). Shadow pullback 2.1% (< band).
+  Confirms: no clean momentum-breakout setup available today.
+
+### Trades this week
+0 placed so far this week (new week starting Mon 6/15). Full 3/week budget available — but
+no qualifying setup to use it on.
+
+### Risk Factors
+- FOMC Wed under a new Fed chair → genuine mid-week headline/volatility risk; a reason to
+  keep powder dry into the decision rather than open fresh risk today.
+- CVX energy thesis weakening on the oil slide; stop-protected but watch at midday.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON but nothing clears the gate (no catalyst, no fresh
+breakout, no 1.5x volume, no clean pullback) and FOMC Wed argues for patience. Cash is the
+right default. Discord decision summary sent. No commit per routine (commit only when
+trades fire).
