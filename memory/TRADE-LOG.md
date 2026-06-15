@@ -133,3 +133,26 @@ Trades today: 1 (NVDA exit) | Trades this week: 0/3 new | Regime: OFF (last read
 | CVX    | 13     | $189.54 | $185.80  | -$48.62 (-1.97%) | 12% trailing GTC ($169.56) |
 
 Notes: The NVDA -8% discipline cut flagged on 6/10 was executed today — 11 sh sold at ~$200.32 for a realized -$204.22 (-8.48%), and its trailing-stop GTC is gone, confirming the exit; the rule breach is now cleared. Equity $99,747.15, down -$52.16 (-0.05%) vs the last committed EOD (6/10, $99,799.31); true single-session move vs Alpaca last_equity ($99,800.20) ≈ -$53.05 (-0.05%) — essentially flat, since NVDA's exit (~$200.32 vs its 6/10 close $200.25) was a wash and the realized loss was already carried as unrealized. CVX is now the lone position at -1.97% (current $185.80, stop $169.56, hwm $192.69) — above the -8% cut, no sell-side rule triggered, fully stop-protected. Regime last read OFF (6/08, S&P below its 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture remains cash — no new buys until the S&P reclaims its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: hold CVX under standard sell-side rules and reassess regime at the next pre-market.
+
+---
+
+### 2026-06-12 SELL CVX — closed (exit recorded retroactively; no committed log entry)
+- Side: sell (sell_to_close, 13 sh)
+- Entry price: $189.54 (2026-06-04)
+- Exit price: ~$180.77 (cash-derived: proceeds $2,349.99 / 13 sh; not independently confirmed via activities)
+- Realized P&L: ~-$114.03 / -4.63%
+- Exit reason: UNCERTAIN — no committed research/trade-log entry documents this exit. The position and its 12% trailing-stop GTC ($169.56, hwm $192.69) are both gone as of 6/15. The derived exit (~$180.77) is well above the $169.56 trailing stop, so this was NOT a trailing-stop fill — it was a discretionary/manual close (most likely the energy-thesis exit flagged in the 6/08 research log after the ~10% oil drop) executed on a session (probably Fri 6/12) whose snapshot was missed. Flagged for operator confirmation.
+- Sector: Energy
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit.
+
+---
+
+## 2026-06-15 — EOD Snapshot
+Equity: $99,681.74 | Cash: $99,681.74 | Day P&L: -$65.41 (-0.07%) | Phase P&L: -$318.26 (-0.32%)
+Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh research today)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now 100% cash for the first time since going live: zero open positions and zero open orders. CVX (the lone remaining position on 6/11) was closed sometime after the 6/11 snapshot with NO committed research/trade-log record; reconstructing from cash ($97,331.75 → $99,681.74, +$2,349.99 / 13 sh) implies an exit near $180.77 (~-4.63%, realized ~-$114.03). That price sits well above CVX's $169.56 trailing stop, so it was a discretionary/manual close — not a stop fill — and its trailing-stop GTC is gone too. ⚠️ This exit is undocumented and unconfirmed; operator should verify the actual fill and reason. Equity $99,681.74, down -$65.41 (-0.07%) vs the last committed EOD (6/11, $99,747.15); true single-session move vs Alpaca last_equity ($99,765.59, Fri 6/12 close) ≈ -$83.85 (-0.08%). Phase P&L -$318.26 (-0.32%) off the live $100k base. Regime last read OFF (6/08, S&P below 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture is cash — no new buys until a pre-market confirms the S&P has reclaimed its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: fully in cash; run a fresh pre-market regime/research check before any new entries.
