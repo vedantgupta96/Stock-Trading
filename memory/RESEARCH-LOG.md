@@ -444,3 +444,70 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+
+---
+
+## 2026-06-16 (Tue) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime filter is **ON**, but no candidate clears the
+11-check buy gate: none has a documented specific catalyst (c8 fails closed), and the two
+names that pass breakout+volume (STX, RL) are pinned at their highs — chasing them violates
+entry timing. Account is 100% cash after both prior positions (NVDA, CVX) closed since the
+6/8 run. FOMC decision lands tomorrow (6/17) — Warsh's first meeting — adding event risk to
+any fresh swing entry. Patience is the right answer.
+
+### Market Regime Status — ON
+- **Gemini:** S&P 500 7,554.29 (Mon 6/16, +1.7%) vs 20-day SMA ~7,502.84 → **above → ON.**
+- **Alpaca (deterministic, via buy_gate):** SPY 755.22 vs SMA20 746.66 → **PASS → ON.**
+Both agree, clean read. Buy gate check #1 PASSES.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** — both NVDA and CVX have closed since the 6/8 run (stops/exits);
+  long market value $0. Account is 100% cash.
+- Open orders: **0**.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- VIX ~16.20, **down ~8.4%** on the day — calm, low-fear tape.
+- Oil (WTI): ~$79–81, **bearish** this week (~-6.6% last week, extending lower) as the
+  market prices out the Middle East risk premium on US–Iran peace hopes.
+- Economic calendar: housing starts + trade price indexes today; no CPI/jobs. **FOMC
+  decision tomorrow 6/17** (Warsh's first meeting as chair) — the week's main event.
+
+### Sector Momentum
+- Materials, Energy, Communication Services leading on the week; Tech/Industrials strong
+  over the trailing year. Energy leadership is at odds with the falling-oil tape — quality
+  energy breakouts on a pullback would be the cleanest setups, but none surfaced today.
+
+### Trade Ideas — tested via buy_gate, none qualify
+Plausible real-stock movers from the pre-market screen (penny/low-float names ignored):
+- **WDC** — GATE FAIL: c8 catalyst (none documented), c10 volume (last5 max 264,377 vs
+  309,460 threshold). Also extended — 0.1% pullback, sitting on its high.
+- **STX** — GATE FAIL: c8 catalyst. Breakout (c9) + volume (c10) PASS, but pullback only
+  1.1% → extended at the high, not a 3–8% pullback buy zone. Chasing violates entry timing.
+- **RL** — GATE FAIL: c8 catalyst. Breakout + volume PASS, but pullback 1.4% → extended.
+- **RXT** — GATE FAIL: c9 breakout (no 3-month high) + c8 catalyst. Sub-$7 low-quality name.
+No name pairs a documented catalyst with a clean 3–8% pullback entry. Buy gate correctly
+rejects all four.
+
+### Earnings Watch (held names)
+- N/A — no open positions.
+
+### Trades this week
+**0** placed this week (week of Mon 6/15). Last trades were 6/4 (NVDA, CVX). Room for 3
+under the weekly cap — but no qualifying setup to use it on.
+
+### Risk Factors
+- FOMC tomorrow (new chair's first meeting) is a genuine two-sided event; opening a fresh
+  swing the day before invites overnight headline gap risk for no edge.
+- Falling oil undercuts the otherwise-leading Energy sector — be wary of energy "breakouts"
+  that are really short-covering.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON but nothing clears the gate (no documented catalyst;
+breakout-confirmed names are extended, not in a pullback buy zone). 100% cash, which is fine
+ahead of tomorrow's FOMC. Discord decision summary sent. No commit per the market-open
+routine (commit only when trades fire).
