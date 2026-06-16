@@ -444,3 +444,78 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+---
+
+## 2026-06-16 (Tue) — Pre-Market Routine
+
+**Decision: HOLD — zero new trades.** The market-regime filter has **flipped from OFF
+(last read 6/08) to ON** — S&P 500 is back above its 20-day SMA on both sources. That
+re-opens the buy window, but no candidate clears the full 11-check gate today, so the
+right answer remains cash. Watchlist building begins; look for pullback entries in
+coming sessions.
+
+### Market Regime Status — ON (regime FLIPPED OFF→ON)
+- **Gemini:** SPX 7,554.29 vs 20-day SMA 7,473.14 → **above → ON.**
+- **Alpaca (deterministic, via buy_gate):** SPY 754.75 vs SMA20 745.82 → **PASS → ON.**
+Both agree. This is a genuine OFF→ON transition vs the standing 6/08 regime-OFF read
+(SPY 742.03 < SMA20 746.47). Buy gate check #1 now PASSES; new buys are permitted IF a
+name also clears checks #2–#11 and entry-timing (3–8% pullback).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash). Open orders: 0.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at
+  **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (binding cap).
+
+### Market Context
+- **S&P 500:** ~7,554 (SPY 754.75), above the 20-day SMA — regime ON.
+- **VIX:** ~16.1 (WebSearch fallback; Gemini VIX query returned HTTP 503 → fell back to
+  native WebSearch). Down into the mid-16s from the ~20 reading on 6/08 — fear easing,
+  calmer tape, supportive of risk-on.
+- **Oil (WTI):** ~$79–81, mixed-to-soft on the day (sources spread $79.14–$81.12) — well
+  off the early-June geopolitical spike; no energy position to manage.
+- **Econ calendar today:** FOMC two-day meeting **begins today**; **policy decision lands
+  tomorrow 6/17** — event risk overhangs the session. Also import/export prices, housing
+  starts/permits, Empire Manufacturing, industrial production. CPI (6/10) and PPI (6/11)
+  already out last week.
+
+### Sector Momentum
+- Weekly leaders: **Materials +3.00%, Consumer Staples +2.59%, Financials +2.01%**, Real
+  Estate, Industrials. Information Technology positive but modest (+0.53% wk), though
+  showing a strong single-day bid today (NVDA +3.5%, Western Digital +16.1% on data-center
+  storage upgrade). Breadth broadening beyond mega-cap tech — healthy.
+
+### Earnings Watch (held names)
+- None — portfolio is flat/cash. (Next-10-day reporters of note: CarMax 6/17, Accenture &
+  Kroger 6/18, FedEx 6/23, Micron 6/24 — relevant only as watchlist-screening inputs.)
+
+### Trade Ideas (regime ON — evaluated, none qualify)
+1. **$WDC** (Western Digital — Tech/storage). Catalyst: +16.1% today on a positive
+   data-center storage demand analyst upgrade; tagged a fresh 3-month high.
+   - Gate: #9 breakout **PASS** (last-5d high 658.72 > prior 602.37), but **#10 volume
+     FAIL** (last-5d max vol 264,377 vs 325,856 = 1.5x threshold) and the move is a
+     same-day +16% spike — pullback only 0.8% vs the 3–8% entry band (chasing, not a
+     pullback entry). **GATE: FAIL — c10_volume.** Watchlist for a controlled pullback.
+2. **$NVDA** (Nvidia — Tech). Catalyst: +3.5% today, sector bid returning.
+   - Gate: **#9 breakout FAIL** (last-5d high 212.71 well below the prior 236.54 3-mo
+     high — still in the post-rotation downdraft that stopped us out 6/11) and **#10
+     volume FAIL**. **GATE: FAIL — c9_breakout, c10_volume.** Not a high; no setup.
+3. **STOCK Act idea-gen screen:** recent disclosures (Rep. Taylor → GOOGL $1k–15k filed
+   6/15, txn 6/5; Begich → a private LP, not tradable). Idea-generation only and not a buy
+   reason; GOOGL would still need to independently clear the full gate — not evaluated as a
+   qualifying setup today.
+
+### Risk Factors
+- **FOMC decision tomorrow (6/17):** entering a new position the day before a rate
+  decision invites a binary overnight gap — reinforces patience today even with regime ON.
+- Today's tech leaders (WDC, NVDA, SpaceX) are **extended/spiking**, not pulling back —
+  chasing them violates entry timing and the volume filter.
+- Regime just flipped ON after an extended OFF stretch; one day above the SMA can whipsaw.
+  Confirm the regime holds before deploying capital.
+
+### Decision
+**HOLD. Zero new trades.** Regime flipped OFF→ON (buy window re-opened), but no name clears
+the full gate (volume + entry-timing fail across candidates) and FOMC lands tomorrow.
+Build the watchlist ($WDC for a clean pullback on volume); wait for a 3–8% pullback entry
+on a name that passes all 11 checks. Patience beats activity.
