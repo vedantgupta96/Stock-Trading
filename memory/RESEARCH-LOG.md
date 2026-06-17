@@ -444,3 +444,71 @@ Penny/low-quality movers ignored per standing policy.
 ### Decision
 **HOLD. Zero new trades. Regime filter OFF — no new buys today.** No Discord alert (no
 trade placed). No commit per the market-open routine (commit only when trades fire).
+
+---
+
+## 2026-06-17 (Wed) — Pre-Market Routine
+
+**Decision: HOLD — zero new trades.** Regime filter has **flipped ON** (S&P back above its
+20-day SMA, confirmed on two independent sources), but no candidate clears the 11-check buy
+gate — every breakout name surfaced today FAILS the volume confirmation, and all are extended
+at the highs (0–1.6% pullback, outside the 3–8% entry band) rather than offering a disciplined
+pullback entry. Layered on top is **FOMC decision day** (2:00 PM ET), a major two-sided event.
+The disciplined posture is to stay in cash and wait for a clean pullback setup on ≥1.5x volume.
+
+### Market Regime Status — ON (flip from OFF)
+- **Alpaca (deterministic, via buy_gate):** SPY 750.58 vs SMA20 746.43 → **PASS → ON.**
+- **Gemini:** S&P 500 7,511.35 vs 20-day SMA 7,478.56 → **above → ON.**
+Both agree. This is a regime **flip from OFF → ON** (last read OFF on 6/08: SPY 742.03 < 746.47).
+Buy gate check #1 now PASSES; new entries are *permitted* — but only if a candidate clears all
+11 checks. Discord alert sent (regime flip is a STEP 5 notification trigger).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash since CVX's undocumented ~6/12 exit). Open orders: 0.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16.41** (+1.3% on the day) — low/calm, well below its long-run ~18.5 average.
+- **FOMC TODAY** — rate decision 2:00 PM ET, presser 2:30 PM ET (first under new Chair Kevin
+  Warsh). Consensus: hold at 3.50–3.75%; focus on the dot plot and Warsh's tone. Major event
+  risk — a poor day to initiate a position ahead of the print.
+- **Oil (WTI) ~$75–78**, roughly flat-to-down (~-0.6%). No fresh energy momentum catalyst.
+- No CPI/PPI/jobs today (CPI was 6/10, PPI 6/11, jobs 6/05). Next CPI 7/14.
+
+### Sector Momentum
+- Gemini sector/mover queries returned HTTP 503 → fell back to native WebSearch (noted). The
+  WebSearch sector data was low-quality/garbled (nonsensical % figures, wrong weekday) so it is
+  treated as directional only: Industrials, Energy, Basic Materials and Tech cited as leaders.
+- Surfaced "breakout" names (CAT, DE, JPM) were each run through the deterministic gate below.
+
+### Earnings Watch (held names)
+- None — portfolio is 100% cash. No earnings exposure.
+
+### Trade Ideas — evaluated, all FAIL the gate (no qualifying setup)
+Regime is ON, so candidates were screened. Deterministic buy_gate results (live Alpaca bars):
+- **$CAT** (Industrials) — c9 breakout PASS (3-mo high 960.98 in last 5d), but **c10 volume
+  FAIL** (last5 maxvol 163,397 vs 165,089 threshold) and pullback only 1.6% (extended).
+  GATE: **FAIL — c10_volume.**
+- **$DE** (Industrials) — **c9 breakout FAIL** (last5 high 592.59 < prior 673.87 — NOT a
+  3-month high; the WebSearch "$335 / +11%" figure was garbage, caught by deterministic check)
+  and **c10 volume FAIL.** GATE: **FAIL — c9_breakout, c10_volume.**
+- **$JPM** (Financials) — c9 breakout PASS (3-mo high 331.72 in last 5d), but **c10 volume
+  FAIL** (last5 maxvol 368,620 vs 397,399 threshold) and pullback 0.2% (right at the high).
+  GATE: **FAIL — c10_volume.**
+- Congressional/STOCK-Act query (idea-gen only): mostly *sales* (PTON, ECL, NVDA), no clean
+  buy candidate; nothing pursued — would still need to clear the full gate independently.
+
+### Risk Factors
+- **FOMC at 2:00 PM ET** can whipsaw the tape both ways; entering beforehand risks an immediate
+  adverse gap. Wait for the dust to settle.
+- Breakout candidates are extended at the highs with sub-1.5x volume — chasing here invites a
+  poor entry and a quick stop-out; the strategy explicitly demands a 3–8% pullback first.
+- Regime only just flipped ON after a multi-week OFF stretch; early-uptrend whipsaw risk is
+  elevated. No need to force the first trade.
+
+### Decision
+**HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
+fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
+disciplined pullback-on-volume setup at the next pre-market / midday scan.
