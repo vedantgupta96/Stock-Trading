@@ -512,3 +512,64 @@ Regime is ON, so candidates were screened. Deterministic buy_gate results (live 
 **HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
 fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
 disciplined pullback-on-volume setup at the next pre-market / midday scan.
+
+---
+
+## 2026-06-18 (Thu) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** The regime filter has **flipped back OFF** just one
+day after turning ON: the hawkish FOMC outcome (6/17) knocked the S&P 1.2% lower, back below
+its 20-day SMA on both independent sources. Per strategy, the right answer on a regime-OFF day
+is cash. Portfolio is already 100% cash (0 positions / 0 orders), so there is nothing to do on
+either the buy or sell side. Buy gate check #1 FAILS for every candidate today → no names
+evaluated.
+
+### Market Regime Status — OFF (flip back from ON)
+- **Alpaca (deterministic, via buy_gate):** SPY 745.92 vs SMA20 747.02 → **FAIL → OFF.**
+- **Gemini:** S&P 500 7,420.10 vs 20-day SMA 7,481.88 → **below → OFF.**
+Both agree. This is a regime **flip ON → OFF** (6/17 read ON: SPY 750.58 > 746.43). The S&P's
+1.2% drop to 7,420.10 on the hawkish FOMC pushed it back under the 20-day. Buy gate #1 now
+FAILS for everything; no new entries permitted today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash). Open orders: **0**. Nothing to review on the sell side.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **FOMC (concluded 6/17):** held at 3.50–3.75% under Chair Warsh, but the projections turned
+  hawkish — dot plot signaling possible future hikes, growth forecasts trimmed, inflation
+  outlook raised. The S&P fell **1.2% to 7,420.10**, dropping back below its 20-day SMA and
+  flipping the regime OFF.
+- **VIX ~16–18** (sources split between ~16.9 and ~18.4) — calm, near/just below its ~18.6
+  long-run average. Not a fear spike; the regime-OFF is a trend read, not a panic read.
+- **Oil (WTI) ~$75**, fresh three-month lows, on track for a ~10% weekly drop on the US–Iran
+  ceasefire (expected reopening of the Strait of Hormuz → more supply). Bearish energy backdrop.
+- S&P futures were up ~0.5% premarket 6/18 on the ceasefire news, but the close-based regime
+  read governs and it is OFF.
+
+### Sector Momentum — N/A
+Regime is OFF → no buy candidates screened. Energy backdrop is bearish (oil at 3-mo lows);
+no sector edge worth chasing into a regime-off tape.
+
+### Earnings Watch (held names) — N/A
+Portfolio is 100% cash. No earnings exposure.
+
+### Held-position review — N/A
+Zero open positions. No sell-side rule can trigger.
+
+### Trade Ideas — N/A
+Regime is OFF → buy gate #1 fails for everything; no candidates evaluated. Penny/low-quality
+movers ignored per standing policy.
+
+### Risk Factors
+- Regime is whipsawing (OFF 6/08 → ON 6/17 → OFF 6/18) around a flat-ish 20-day SMA; early in
+  an attempted turn, this is exactly the chop the regime filter is designed to keep us out of.
+- Hawkish Fed (possible future hikes, higher inflation outlook) is a fresh headwind for risk
+  assets. Cash is the correct default until the S&P decisively reclaims its 20-day SMA.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF — no new buys today.** Already 100% cash, so no
+action on the sell side either. Discord no-buy summary sent (amber). No commit per the
+market-open routine (commit only when a trade fires). Re-check regime at the next pre-market.
