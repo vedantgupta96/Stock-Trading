@@ -156,3 +156,15 @@ Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now 100% cash for the first time since going live: zero open positions and zero open orders. CVX (the lone remaining position on 6/11) was closed sometime after the 6/11 snapshot with NO committed research/trade-log record; reconstructing from cash ($97,331.75 → $99,681.74, +$2,349.99 / 13 sh) implies an exit near $180.77 (~-4.63%, realized ~-$114.03). That price sits well above CVX's $169.56 trailing stop, so it was a discretionary/manual close — not a stop fill — and its trailing-stop GTC is gone too. ⚠️ This exit is undocumented and unconfirmed; operator should verify the actual fill and reason. Equity $99,681.74, down -$65.41 (-0.07%) vs the last committed EOD (6/11, $99,747.15); true single-session move vs Alpaca last_equity ($99,765.59, Fri 6/12 close) ≈ -$83.85 (-0.08%). Phase P&L -$318.26 (-0.32%) off the live $100k base. Regime last read OFF (6/08, S&P below 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture is cash — no new buys until a pre-market confirms the S&P has reclaimed its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: fully in cash; run a fresh pre-market regime/research check before any new entries.
+
+---
+
+## 2026-06-18 — EOD Snapshot
+Equity: $99,681.72 | Cash: $99,681.72 | Day P&L: -$0.02 (-0.00%) | Phase P&L: -$318.28 (-0.32%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/17; no fresh research today)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Flat, no-trade day for this EOD-only routine; the account remains 100% cash — zero open positions, zero open orders, day-trade count 0/3, PDT false. Equity $99,681.72 is unchanged (-$0.02) from the last committed EOD (6/15, $99,681.74); Alpaca last_equity $99,681.72 (balance as of 6/17) confirms no movement since the portfolio went all-cash. The 6/16 and 6/17 daily-summary snapshots were missed, but with no positions held there was no equity drift to reconstruct. Phase P&L -$318.28 (-0.32%) off the live $100k base. Regime last read ON in the 6/17 pre-market research (S&P reclaimed its 20-day SMA after a multi-week OFF stretch), but no candidate cleared the 11-check buy gate (all failed the 1.5x volume check; none in the 3–8% pullback band) so the standing posture stayed cash through FOMC. Outlook: regime is constructive but early-uptrend whipsaw risk is elevated — run a fresh pre-market regime/research check and only enter on a disciplined pullback-on-volume setup that clears the full gate; no need to force the first trade.
