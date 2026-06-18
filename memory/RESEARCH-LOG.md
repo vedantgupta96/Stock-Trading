@@ -512,3 +512,63 @@ Regime is ON, so candidates were screened. Deterministic buy_gate results (live 
 **HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
 fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
 disciplined pullback-on-volume setup at the next pre-market / midday scan.
+
+---
+
+## 2026-06-18 (Thu) — Pre-Market Routine
+
+### Market Regime Status — OFF (flip from ON)
+- **Alpaca (deterministic):** SPY latest close (6/17) **741.02** vs 20-day SMA **746.79** → **below → OFF.**
+- **Gemini:** S&P 500 **7,420.10** vs 20-day SMA **7,481.88** → **below → OFF.**
+Both agree. This is a regime **flip ON → OFF**, reversing yesterday's 6/17 ON read after just one
+session (SPY rolled back under its 20-day SMA). **Buy gate check #1 FAILS — no new buys today.**
+Discord alert sent (regime flip is a STEP 5 notification trigger). Note: the latest available
+daily bar is 6/17's close (today's 6/18 bar does not exist yet pre-market) — this is the normal
+pre-market read.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,681.72** | Cash: **$99,681.72** | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash since CVX's ~6/12 exit). Open orders: **0.**
+- Trades this week: 0/3. No earnings exposure (no held names).
+- Position sizing (for reference; recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped
+  at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** ($200 cap binding).
+
+### Market Context
+- **VIX ~17–18.4** (rising, +~4–12% on the day) — still near its long-run ~18.5 average; modest
+  uptick in near-term hedging demand, not outright fear.
+- **No FOMC today** — the meeting concluded **yesterday (6/17)**; the Committee held the funds
+  rate at **3.50–3.75%** (first decision under Chair Kevin Warsh). Today's only data: weekly
+  **Initial Claims** (8:30 AM ET) plus minor Leading Indicators / TIC flows. Next CPI 7/14, next
+  jobs report 7/2.
+- **⚠️ Markets CLOSED tomorrow, Fri 6/19, for Juneteenth.** Today is the last session this week.
+- **Oil (WTI) ~$74–75**, down ~2–3% on a reported U.S.–Iran interim deal (supply-up narrative,
+  Strait of Hormuz reopening). No energy momentum catalyst — a headwind for energy names.
+
+### Sector Momentum
+- Week-ending-6/12 leaders per Gemini: **Basic Materials (+2.91%)** and **Consumer Defensives
+  (+2.53%)**; Financials firm (~+3% over five days to ~6/14); Technology/semis still constructive
+  on AI demand. Treat as directional context only.
+
+### Earnings Watch (held names)
+- None — portfolio is 100% cash, zero earnings exposure. (For idea-screening: MU reports 6/24 and
+  FDX 6/23 — both inside the 10-trading-day window, so disqualified as buy candidates.)
+
+### Trade Ideas
+- **None pursued.** Per routine STEP 4, trade ideas are generated **only when the regime is ON.**
+  Regime is **OFF** today, so buy-gate check #1 fails for every candidate — no point screening
+  individual names. STOCK-Act / congressional-disclosure idea query skipped for the same reason
+  (idea-gen only; any surfaced name would still need the regime ON plus the full 11-check gate).
+
+### Risk Factors
+- **Regime just flipped back OFF** after a one-day ON blip — classic early-uptrend whipsaw. Forcing
+  a trade into this chop is exactly what the regime filter exists to prevent.
+- **Holiday gap risk:** market is closed tomorrow (Juneteenth), so any position opened today would
+  carry a 3-day weekend of headline risk (e.g., the evolving U.S.–Iran situation) unmanaged.
+- **Oil rolling over** (~-2–3% on the Iran deal) removes the energy tailwind that anchored prior
+  setups; no clean leadership to lean on.
+
+### Decision
+**HOLD. Zero new trades.** Regime flipped back OFF (S&P below its 20-day SMA on both Alpaca and
+Gemini), it's a pre-holiday session, and the portfolio is already 100% cash with no positions to
+manage. Standing posture: cash — no new buys until a pre-market confirms the S&P has reclaimed its
+20-day SMA. Reassess at the next pre-market (Mon 6/22, after the Juneteenth close).
