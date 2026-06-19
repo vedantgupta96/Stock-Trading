@@ -512,3 +512,70 @@ Regime is ON, so candidates were screened. Deterministic buy_gate results (live 
 **HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
 fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
 disciplined pullback-on-volume setup at the next pre-market / midday scan.
+
+---
+
+## 2026-06-19 (Fri) — Pre-Market Routine
+
+**Decision: HOLD — zero new trades.** Two reasons, either of which alone forces cash: (1)
+**US stock market is CLOSED today for Juneteenth National Independence Day** — no session, no
+orders possible (Alpaca `balance_asof` = 2026-06-18 confirms no 6/19 activity). (2) The
+authoritative deterministic regime read is **borderline OFF** (SPY 746.75 vs 20-day SMA
+747.06, −0.04%). No candidates screened — regime not affirmatively ON and the market is shut.
+Next live session is Monday 2026-06-22.
+
+### Market Regime Status — BORDERLINE OFF (flip from ON, razor-thin & conflicting sources)
+- **Alpaca (deterministic, via buy_gate, AUTHORITATIVE for the gate):** SPY 746.75 vs SMA20
+  747.06 → **FAIL → OFF** (−0.04%). Bars reflect the Thu 6/18 close (no 6/19 session).
+- **Gemini:** S&P 500 7,486 vs 20-day SMA 7,485.26 → marginally **above → ON** (+0.01%).
+- The two sources straddle the line by <0.05% — effectively price *sitting on* its 20-day SMA,
+  not a clean ON or OFF. Per the deterministic gate the regime fails (c1_regime FAIL), so the
+  standing posture is cash. This is a soft reversal of the 6/17 read (then clearly ON: SPY
+  750.58 > SMA20 746.43). NOT treated as a "genuine" ON→OFF flip for STEP-5 alerting purposes:
+  the move is <0.05%, the market is closed today, and no action is possible until Monday — a
+  phone alert here would be noise. Will reconfirm at Monday's pre-market.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash). Open orders: 0. No earnings exposure (no holdings).
+- Position sizing (recalc on live equity, for Monday reference): 1.5% of $99,682 = $1,495,
+  hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** ($200 cap
+  binds). Shares ≈ $2,500 / entry.
+
+### Market Context
+- **MARKET HOLIDAY — Juneteenth (Fri 6/19).** NYSE/Nasdaq closed. Daily/weekly statistical
+  releases that would land today are pushed to Mon 6/22.
+- **VIX ~18.4** (per Gemini, +12% on the day to 18.44 from ~16.4; ~at its long-run ~18.5 avg).
+  A noticeable uptick in implied vol into the holiday weekend — mildly cautionary.
+- **Oil (WTI) ~$75–77**, roughly flat (sources span $75–77.5). Renewed Middle-East geopolitical
+  bid offsetting improved-supply optimism; benchmarks had recently touched early-March lows.
+- **Econ calendar:** none today (holiday). FOMC was 6/16–17 (decision/presser 6/17). Next CPI
+  ~7/14. Releases resume 6/22.
+
+### Sector Momentum (informational — no screening, market closed)
+- Week-ending leaders (Gemini): **Information Technology +3.06%** (semis strong — Intel, NVDA,
+  Micron on partnerships/AI-memory) and **Industrials +2.64%** (AI-infra / data-center power:
+  CAT, GE Vernova). Communication Services +1.08%, Consumer Discretionary +0.80% trailing.
+
+### Earnings Watch (held names)
+- None — portfolio is 100% cash. (For Monday's watchlist: **MU reports Wed 6/24** — inside the
+  10-trading-day window, so Micron is disqualified until after the print. ACN/KR reported 6/19,
+  CCL/KBH/FDX/SNX on 6/23, JEF 6/24.)
+
+### Trade Ideas — N/A
+Regime not affirmatively ON and the market is closed for Juneteenth → no buy candidates
+evaluated. Buy gate #1 (regime) fails on the deterministic read; gate moot with no session.
+
+### Risk Factors
+- Regime is sitting exactly on the 20-day SMA with sources disagreeing on the sign — early-cycle
+  whipsaw risk is high; a single Monday session could flip it either way. Don't pre-commit.
+- VIX ticked up ~12% into a long holiday weekend; thin pre-holiday tape can exaggerate moves and
+  Monday can gap. No reason to force the first post-holiday trade.
+- Even week-leading IT/Industrials breakout names have been extended at the highs on sub-1.5x
+  volume in recent screens — entries here would chase; wait for a 3–8% pullback on ≥1.5x volume.
+
+### Decision
+**HOLD. Zero new trades.** Market closed for Juneteenth and the deterministic regime read is
+borderline OFF (SPY 746.75 < SMA20 747.06). Stay 100% cash. No Discord alert (no trade; the
+sub-0.05% regime wobble on a closed-market day is not genuinely urgent). Re-screen for a clean
+pullback-on-volume setup at Monday 6/22 pre-market once a real session confirms the regime.
