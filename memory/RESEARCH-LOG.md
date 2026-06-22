@@ -512,3 +512,76 @@ Regime is ON, so candidates were screened. Deterministic buy_gate results (live 
 **HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
 fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
 disciplined pullback-on-volume setup at the next pre-market / midday scan.
+
+---
+
+## 2026-06-22 (Mon) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: BUY JPM ×6 @ $327.17.** Regime is ON, and JPM is the one candidate that clears
+the full 11-check buy gate — a genuine 3-month-high breakout on >1.5x volume that has pulled
+back ~3% (inside the 3–8% entry band) into a clean first-pullback entry, with earnings safely
+~14 trading days out and a documented, still-intact catalyst. All other screened names failed
+the deterministic gate. 12% trailing-stop GTC placed immediately.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 749.08 vs SMA20 747.38 → **PASS → ON.**
+- Gemini was DOWN (HTTP 503 on every query) → fell back to native WebSearch for macro/idea
+  context; the regime read itself is the deterministic Alpaca SPY-vs-SMA20 computation (not
+  web-dependent), so the gate's #1 check is authoritative. Regime ON; new entries permitted.
+
+### Account Snapshot (live Alpaca, paper) — pre-trade
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+- Post-trade: cash $97,718.70 | equity ~$99,682 | long mkt value $1,963 | day trades 0/3.
+
+### Market Context
+- **VIX ~16.4–16.8** — low/calm, below its long-run ~18.5 average.
+- **Oil (WTI) ~$77** (range ~74–78), easing on reported progress in US–Iran negotiations
+  (Strait-of-Hormuz risk receding) — a risk-on tailwind for cyclicals/banks.
+- **Key event this week: Thursday Core PCE** (Fed's preferred inflation gauge) + PMIs,
+  durable goods, jobless claims. **Micron and FedEx report this week.** No major print today.
+
+### Sector Momentum
+- Leaders cited: Basic Materials, Energy, Communication Services (and Financials firm on the
+  risk-on bank bid). WebSearch movers were dominated by penny/low-quality pumps (INHD, CAST,
+  STAK, etc.) — ignored per standing policy. Screened liquid large-cap momentum names instead.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+- **$JPM** (Financials) — **GATE: PASS.** c9 breakout PASS (3-mo high 338.05 on 6/18, last 5d
+  vs prior 321.29), c10 volume PASS (last5 maxvol 546,529 vs 406,620 threshold = 1.5x avg
+  271,080), pullback ~3.0% (in the 3–8% band). Earnings 7/14 (~14 trading days, >10 → PASS).
+  Catalyst documented & intact (bank risk-on bid + stress-test/capital-return optimism;
+  oil still easing). Sector-count 0, trades-this-week 0, PDT 0/3, cost ≤ cash. **→ BOUGHT.**
+- **$CAT** (Industrials) — FAIL c10 volume (last5 maxvol 129,870 vs 157,800 threshold);
+  breakout PASS. Skip.
+- **$FCX** (Materials) — FAIL c10 volume (1,051,771 vs 1,326,227 threshold). Skip.
+- **$XOM** (Energy) — FAIL c9 breakout (last5 high 142.22 < prior 176.40 — not a 3-mo high). Skip.
+- **$NEM** (Materials) — FAIL c9 breakout (112.15 < prior 131.63). Skip.
+- Congressional/STOCK-Act query: not run (Gemini down); idea-gen only, never a buy reason.
+
+### Order Execution
+- Market buy JPM 7 → partially filled **6 @ $327.17** in thin early-session liquidity;
+  canceled the unfilled 1-share remainder to lock and immediately protect the position
+  (6 sh ≈ $1,963 notional, slightly under the $2,500 cap — more conservative on risk).
+- **12% trailing-stop GTC placed** (qty 6, initial stop ~$287.87, hwm $326.87, accepted —
+  not PDT-blocked). order id d948673a-…
+- Entry: $327.17 | Target $405.69 (×1.24) | Time stop ~7/14, but the **7/14 earnings exit
+  binds first** → must close on/before 2026-07-13.
+
+### Held-position review
+- Pre-trade portfolio was 100% cash; no sell-side rules to evaluate. JPM is now the lone
+  position, +~0% at entry, fully stop-protected. No sell-side rule triggered.
+
+### Risk Factors
+- **Core PCE Thursday** is a two-sided macro event; JPM is stop-protected (12% trailing) and
+  the entry is on a pullback, not an extended chase. The late-June Fed stress-test readout is a
+  near-term catalyst event — expected supportive (2026 cycle leaves large-bank capital reqs
+  unchanged until 2027), but monitor. A sudden US-Iran breakdown would re-spike oil and could
+  unwind the risk-on bank bid; thesis would be reassessed if the catalyst breaks.
+
+### Decision
+**BUY JPM ×6 @ $327.17, 12% trailing stop GTC ($287.87).** Regime ON; JPM is the only name to
+clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
+documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
+1/3. Committed and pushed per the market-open routine (a trade was placed).

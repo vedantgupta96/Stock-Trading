@@ -156,3 +156,17 @@ Trades today: 0 | Trades this week: 0/3 | Regime: OFF (last read 6/08; no fresh 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now 100% cash for the first time since going live: zero open positions and zero open orders. CVX (the lone remaining position on 6/11) was closed sometime after the 6/11 snapshot with NO committed research/trade-log record; reconstructing from cash ($97,331.75 → $99,681.74, +$2,349.99 / 13 sh) implies an exit near $180.77 (~-4.63%, realized ~-$114.03). That price sits well above CVX's $169.56 trailing stop, so it was a discretionary/manual close — not a stop fill — and its trailing-stop GTC is gone too. ⚠️ This exit is undocumented and unconfirmed; operator should verify the actual fill and reason. Equity $99,681.74, down -$65.41 (-0.07%) vs the last committed EOD (6/11, $99,747.15); true single-session move vs Alpaca last_equity ($99,765.59, Fri 6/12 close) ≈ -$83.85 (-0.08%). Phase P&L -$318.26 (-0.32%) off the live $100k base. Regime last read OFF (6/08, S&P below 20-day SMA); no fresh research ran today (EOD-only routine), so the standing posture is cash — no new buys until a pre-market confirms the S&P has reclaimed its 20-day SMA. Day-trade count 0/3, PDT false. Outlook: fully in cash; run a fresh pre-market regime/research check before any new entries.
+
+---
+
+### 2026-06-22 BUY JPM — open
+- Side: buy
+- Shares: 6 (gate sized 7; order partially filled 6/7 in thin morning liquidity, remainder canceled to lock & protect the position — slightly under max, more conservative on risk)
+- Entry price: $327.17 (actual fill, avg)
+- Stop level: 12% trailing GTC — initial stop ~$287.87 (hwm $326.87); order id d948673a-9251-4f22-bca8-5b4723b92b49
+- Target: $405.69 (entry × 1.24, 3:1 R/R on 8% risk)
+- Catalyst: Banks rallied to a 3-month high on 6/16–6/17 (JPM +3.1% on 6/16) on a risk-on bid — sharp drop in crude (easing oil-shock/inflation fears) + capital-return optimism ahead of the Fed's late-June stress-test readout (JPM has ~$25.7B remaining on a $50B buyback authorization).
+- Thesis: JPM broke to a 3-month high of $338.05 on 6/18 on a strong-volume surge (546,529 sh on 6/17 = >1.5x the 271K 20-day avg), then pulled back ~3% to ~$327 — a clean first-pullback entry inside the 3–8% band. Financials are a leading sector and currently 0 held (no sector crowding). Regime ON (SPY 749 > 20d SMA 747). Oil still easing today (~$77, US-Iran talks) so the catalyst is intact.
+- Sector: Financials
+- Earnings next: 2026-07-14 (Q2, before open) — ~14 trading days out, clears the >10-day gate at entry. ⚠️ BINDING EXIT: must close by 2026-07-13 (never hold through earnings).
+- Time stop: 2026-07-14 (~15 trading days) — but the 7/14 earnings exit binds first; close on/before 7/13 regardless.
