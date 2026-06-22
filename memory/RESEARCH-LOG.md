@@ -512,3 +512,62 @@ Regime is ON, so candidates were screened. Deterministic buy_gate results (live 
 **HOLD. Zero new trades.** Regime flipped ON, but no candidate clears the 11-check gate (all
 fail volume; none in the pullback band) and it's FOMC day. Stay 100% cash; re-screen for a
 disciplined pullback-on-volume setup at the next pre-market / midday scan.
+
+---
+
+## 2026-06-22 (Mon) — Pre-Market Routine
+
+### Market Regime Status — OFF (flip ON → OFF)
+- **Alpaca (deterministic, via buy_gate):** SPY close 746.75 vs SMA20 747.06 → below →
+  **c1_regime FAIL → regime OFF.**
+- **Gemini:** regime query returned HTTP 503 (and most STEP-3 queries 503/429 today); the
+  deterministic Alpaca read is authoritative and stands on its own.
+- This is a regime **flip from ON → OFF** vs the last committed read (6/17 pre-market: SPY
+  750.58 > SMA20 746.43 → ON). The S&P has slipped back below its 20-day SMA by a hair
+  (~0.04%). **Buy gate check #1 FAILS today — no new long entries permitted.** Discord alert
+  sent (regime flip is a STEP 5 notification trigger).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | Day trades: 0/3 | PDT: false
+- Open positions: **0** (100% cash since CVX's ~6/12 exit). Open orders: 0.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding) — moot
+  today since regime is OFF.
+
+### Market Context
+- **VIX ~16.4–16.8** (Thu close 16.40, Mon open ~17.04) — low/calm, markets not pricing
+  near-term stress. Constructive sentiment but no fear signal either way.
+- **Oil (WTI) ~$76–77.5/bbl**, roughly flat on the day (~+0.3%) but **down ~17% over the past
+  month** — energy momentum has cooled materially from the spring run. No fresh energy catalyst.
+- **Economic calendar:** Gemini econ query rate-limited (429); WebSearch returned no
+  US-specific high-impact release for today. No CPI/FOMC/jobs print scheduled for 6/22 (last
+  CPI 6/10, last FOMC 6/17). Next CPI ~7/14. Quiet macro day.
+
+### Sector Momentum
+- Gemini sector/mover queries returned HTTP 503 → fell back to native WebSearch (noted). The
+  WebSearch sector figures were again garbled (nonsensical %), so treated as **directional
+  only**: **Energy, Industrials, Basic Materials, Consumer Defensive** cited as 2026 leaders;
+  **Technology lagging** as the market rotates out of the AI trade toward "real-economy" names.
+  Consistent with the picture from recent logs.
+
+### Earnings Watch (held names)
+- None — portfolio is 100% cash. No earnings exposure.
+
+### Trade Ideas
+- **None generated.** Regime is OFF, so per STEP 4 / the market-regime filter (highest-priority
+  rule) no new entries are permitted and idea screening is skipped. When the regime filter is
+  off, the right answer is almost always cash.
+
+### Risk Factors
+- Regime flipped OFF by the thinnest of margins (SPY ~0.04% under its SMA20) — it could whipsaw
+  back ON intraday or by the next session. Do NOT pre-position ahead of a confirmed flip; wait
+  for a committed ON read plus a candidate that clears all 11 checks.
+- Tech weakness / ongoing rotation means yesterday's leaders (semis) remain soft; chasing the
+  rotating-in sectors (energy, industrials) without a clean breakout-on-volume + 3–8% pullback
+  is exactly the low-conviction entry the gate is designed to reject.
+- Oil down ~17% on the month removes the energy tailwind that anchored prior CVX-style ideas.
+
+### Decision
+**HOLD. Zero new trades.** Market-regime filter is OFF (SPY back below its 20-day SMA), so no
+long entries are permitted today regardless of setup quality. Stay 100% cash; re-check regime
+and re-screen for a disciplined pullback-on-volume setup at the next pre-market / midday scan.
