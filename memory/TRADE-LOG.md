@@ -170,3 +170,15 @@ Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now
 - Sector: Financials
 - Earnings next: 2026-07-14 (Q2, before open) — ~14 trading days out, clears the >10-day gate at entry. ⚠️ BINDING EXIT: must close by 2026-07-13 (never hold through earnings).
 - Time stop: 2026-07-14 (~15 trading days) — but the 7/14 earnings exit binds first; close on/before 7/13 regardless.
+
+---
+
+## 2026-06-22 — EOD Snapshot
+Equity: $99,707.58 | Cash: $97,718.70 | Day P&L: +$25.84 (+0.03%) | Phase P&L: -$292.42 (-0.29%)
+Trades today: 1 (JPM buy) | Trades this week: 1/3 | Regime: ON
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| JPM    | 6      | $327.17 | $331.48  | +$25.86 (+1.32%) | 12% trailing GTC ($292.84) |
+
+Notes: First new entry since going 100% cash on 6/15 — bought 6 sh JPM @ $327.17 today (a clean first-pullback breakout entry that cleared all 11 gate checks; trades this week now 1/3). JPM closed green at +1.32% (current $331.48, hwm $332.77), fully protected by a live 12% trailing-stop GTC at $292.84. No sell-side rule triggered: well above the -8% cut, earnings (2026-07-14) safely ~14 trading days out. Equity $99,707.58, up +$25.84 (+0.03%) vs the last committed EOD (6/15, $99,681.74); the move matches Alpaca's last_equity ($99,681.72) almost exactly, so this is a true single-session gain of +$25.86 (+0.03%) driven by JPM's intraday rise. Phase P&L -$292.42 (-0.29%) off the live $100k base. Regime ON (SPY 749 > 20-day SMA 747 per today's pre-market research); day-trade count 0/3, PDT false. Outlook: hold JPM under standard sell-side rules — watch for the +15% stop-tighten (to 7%) trigger, the binding 7/13 pre-earnings exit, and Core PCE Thursday as a two-sided macro event.
