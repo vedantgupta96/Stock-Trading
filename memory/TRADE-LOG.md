@@ -170,3 +170,15 @@ Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now
 - Sector: Financials
 - Earnings next: 2026-07-14 (Q2, before open) — ~14 trading days out, clears the >10-day gate at entry. ⚠️ BINDING EXIT: must close by 2026-07-13 (never hold through earnings).
 - Time stop: 2026-07-14 (~15 trading days) — but the 7/14 earnings exit binds first; close on/before 7/13 regardless.
+
+---
+
+## 2026-06-23 — EOD Snapshot
+Equity: $99,723.53 | Cash: $97,718.69 | Day P&L: +$41.79 (+0.04%) | Phase P&L: -$276.47 (-0.28%)
+Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| JPM    | 6      | $327.17 | $334.14  | +$41.82 (+2.13%) | 12% trailing GTC ($295.12) |
+
+Notes: Quiet hold day — no trades (EOD-only routine). JPM, opened 6/22, is the lone position and is working: +$41.82 (+2.13%) at $334.14 vs the $327.17 entry, having printed a fresh high-water mark of $335.36 (its 12% trailing-stop GTC ratcheted up to $295.12, confirmed live and protecting the full 6 sh). No sell-side rule triggered — well above the -8% cut, not yet near the +15% stop-tightening threshold. Day P&L (+$41.79, +0.04%) is measured against the last committed EOD (2026-06-15, $99,681.74) since the 6/16–6/22 daily snapshots were missed; the true single-session move vs Alpaca's prior close (last_equity $99,707.57, asof 6/22) was +$15.96 (+0.02%), matching JPM's intraday gain. Phase P&L -$276.47 (-0.28%) off the live $100k base. Day-trade count 0/3, PDT false. Regime last read ON (6/22: SPY 749 > 20d SMA 747); standing posture is hold JPM and stay selective — trades this week 1/3 leaves room, but only a setup that clears all 11 gate checks earns a new entry. Outlook: hold JPM under standard sell-side rules; the binding 7/13 earnings exit (Q2 before 7/14 open) is still ~13 trading days out. Reassess regime and any new setups at the next pre-market.
