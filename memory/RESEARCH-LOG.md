@@ -585,3 +585,67 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-23 (Tue) — Pre-Market Routine
+
+### ⚠️ REGIME FLIP: ON → OFF
+The market regime filter flipped **ON → OFF** since yesterday's pre-market (6/22 read ON at
+SPY 749 > SMA20 747). **Authoritative deterministic Alpaca read today: SPY last close 744.27
+(6/22 session) < 20-day SMA 747.14 → REGIME OFF.** Gemini concurs (S&P 7365 < 20d ~7488).
+The 6/22 close came in soft and pulled SPY back below its 20-day SMA. **No new buys today.**
+Existing winning positions are NOT closed on the filter alone — stops manage them (strategy rule).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,706.05 | Cash: $97,718.69 | Buying power: $396,439 | Long mkt value: $1,987.36
+Day trades: 0/3 | PDT: false | Open positions: 1 (JPM) | Open orders: 1 (JPM 12% trailing GTC)
+
+### Market Context
+- **Regime: OFF** (SPY 744.27 < SMA20 747.14, Alpaca deterministic).
+- **VIX ~17.3** (up ~3% from 16.78; still below the ~18.55 long-run average — calm-ish but ticking up).
+- **Oil (WTI) ~$73.67** (down further), pressured by a reported **US–Iran 60-day peace roadmap**
+  + a US Treasury 60-day license for Iranian oil sales + rising Hormuz shipping and Gulf output
+  restarts (Kuwait force-majeure lifted, ADNOC resuming). Oil-shock/inflation fears continue to
+  ease — supportive of the JPM risk-on bank thesis, but a fading oil tailwind is now mostly priced.
+- **This week's macro: Core PCE on Thursday** (Fed's preferred inflation gauge) + PMIs, durable
+  goods, jobless claims. **Micron and FedEx report this week.** **Fed 2026 bank stress-test results
+  land tomorrow (Wed 6/24, 4pm ET)** covering 32 banks — note the 2026 stress capital buffers were
+  frozen back in February, so the numbers won't change capital requirements, but a weak result could
+  still dampen sentiment on dividends/buybacks. Directly relevant to JPM.
+
+### Sector Momentum
+- Gemini 503'd on the sector query → WebSearch fallback. Financials remain the held-sector of
+  interest; energy fading with oil. No fresh deterministic sector screen run because regime is OFF
+  (no new entries permitted), so trade-idea generation is intentionally skipped today.
+
+### Earnings Watch (held positions)
+- **JPM** next earnings **2026-07-14** (Q2, BMO) — ~13 trading days out, still outside the 10-day
+  window (no earnings-rule action today). ⚠️ BINDING EXIT remains: must close on/before 2026-07-13.
+
+### Trade Ideas
+- **None.** Regime filter is OFF → no new buys today. Per strategy, when the regime is off the right
+  answer is cash. Idea generation deferred until SPY reclaims its 20-day SMA.
+- Congressional/STOCK-Act query: not run (idea-gen only, never a buy reason; moot with regime OFF).
+
+### Held-Position Review — JPM (6 sh @ $327.17, Financials)
+- Current **$331.23**, unrealized **+$24.34 (+1.24%)**. Well above the -8% cut.
+- Fully stop-protected: live **12% trailing-stop GTC**, stop **$292.84**, hwm **$332.77**, trail 12%
+  (order d948673a-…). No tightening yet (needs +15% for a 7% trail; nowhere near).
+- Thesis check: risk-on bank bid intact — oil still easing, capital-return/stress-test optimism with
+  results tomorrow. No sell-side rule triggered (not -8%, not 15-day time stop — only day 1, not
+  flat-after-15, no earnings within 10 days, sector not rolling over). **HOLD.**
+
+### Risk Factors
+- **Regime OFF**: broad tape just rolled under its 20-day SMA — momentum longs face a headwind; hence
+  no new entries. JPM is a winner and stop-protected, so it stays per the rules.
+- **Stress-test headline risk tomorrow (6/24)** + **Core PCE Thursday**: two near-term, two-sided
+  events that could whip JPM. The 12% trailing stop is the protection; overnight gaps can bypass it.
+- **Fading oil tailwind**: with the US–Iran roadmap, much of the easing-oil bank catalyst may now be
+  priced; if the catalyst stalls and JPM rolls over, reassess the thesis at midday/next pre-market.
+
+### Decision
+**HOLD.** Regime filter flipped OFF (SPY below its 20-day SMA) → no new buys today; default to cash
+for new capital. Continue holding JPM under standard sell-side rules — it's a +1.2% winner, fully
+protected by its live 12% trailing stop, with earnings safely outside 10 trading days. Trades this
+week: 1/3 (the 6/22 JPM buy); 0 new today.
