@@ -585,3 +585,73 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-23 (Tue) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades. Market regime filter OFF.** The deterministic Alpaca
+SPY-vs-SMA20 read (authoritative gate check #1) flipped OFF this morning: **SPY 732.775 vs
+SMA20 746.5 (below).** A broad risk-off gap-down (tech-led selloff, Nasdaq-100 futures ~-2.7%)
+pushed SPY ~2% below yesterday's 749.08 and under its 20-day SMA. Per the highest-priority
+rule, no new buys today. JPM (lone position) held — let stops do the work; do not close a
+winner on the filter alone.
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, via buy_gate):** SPY 732.775 vs SMA20 746.5 → **FAIL → OFF.**
+- Gemini's web read claimed S&P 7,500.58 > SMA20 7,485.26 ("above"), but the deterministic
+  Alpaca SPY-vs-SMA20 computation is authoritative for gate #1 and is not web-dependent. The
+  morning gap-down put the index below its 20-day SMA. Regime OFF; new entries prohibited.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,686.63 | Cash: $97,718.69 | Long mkt value $1,967.94 | Day trades: 0/3 | PDT: false
+- Open positions: **1/5** — JPM ×6. Open orders: 1 (JPM 12% trailing stop GTC).
+- Trades this week: 1/3 (JPM bought Mon 6/22).
+- Position sizing (recalc on live equity): 1.5% of $99,687 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16–17** (Gemini reads ranged 16–19) — low/calm, near/below long-run ~18.5 average,
+  not yet stressed despite the gap-down.
+- **WTI ~$73.7** (-0.2%), descending channel — Strait-of-Hormuz normalization (US–Iran interim
+  treaty) + restrictive Warsh-Fed stance weighing on crude. No fresh energy momentum.
+- **This week:** Thursday **Core PCE** (Fed's preferred gauge; ~+0.3% m/m, 3.4% y/y expected),
+  S&P Global flash PMIs, durable goods, jobless claims, Q1 GDP 3rd revision. Micron reports
+  Wed 6/24 AMC; FedEx/General Mills today AMC. **Fed 2026 bank stress-test results 6/24 4pm ET.**
+
+### Sector Momentum
+- On the week Tech led (XLK ~+2.7–5%, AI/semis: INTC-AAPL partnership, MRVL, NVDA) but is
+  **selling off hard today** (GOOGL -5% on exec departures, NVDA/QCOM under pressure, QCOM -5%
+  on reported $4B Modular acquisition talks). Energy (XLE) lagging on falling crude.
+
+### Trade Ideas — regime OFF, so buy gate #1 fails for everything
+Candidates were still run through the deterministic gate for the record:
+- **$IBM** (Technology) — +6% pre-market on a quantum-computing executive order / political
+  praise. **GATE: FAIL — c1_regime, c9_breakout, c10_volume.** Breakout FAIL (last5 high
+  276.55 vs prior 332.4 — not a 3-mo high), volume FAIL (last5 maxvol 443,910 vs 528,807
+  threshold). A news-driven +6% gap is the opposite of our pullback-entry setup regardless.
+- **$GL** (Globe Life) — new 52-wk high ~$175.63 but trading right at the high (no pullback);
+  no documented catalyst → fails closed even ignoring regime. Not pursued.
+- Congressional/STOCK-Act query: not run (Gemini rate-limited on later queries; idea-gen only,
+  never a buy reason).
+
+### Held-position review — JPM
+- JPM ×6 @ $327.17, current ~$327.99 → **+0.25%** (intraday -1.05%). Trailing stop GTC active:
+  stop $292.84, hwm $332.77, qty 6 — fully protected.
+- No sell rule triggered: not at -8%, < 15 trading days held, earnings 7/14 (>10 trading days
+  out), not up +15%. No negative JPM catalyst; **stress-test results 6/24 are benign** — the
+  Fed froze 2026 capital buffers in February, so the print won't change requirements. Thesis
+  (risk-on bank bid; easing oil/geopolitics) intact. **HOLD; do not close a winner on the
+  regime filter alone.**
+
+### Risk Factors
+- Regime only just flipped ON Mon and is **already OFF** — early-uptrend whipsaw confirmed;
+  patience is correct. Forcing a long into a -2.7% Nasdaq-futures gap-down would be undisciplined.
+- Two-sided macro Thursday (Core PCE) + Micron earnings Wed + stress-test print 6/24 keep the
+  tape headline-driven. JPM is stop-protected; monitor at midday for any sell-rule trigger.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF (SPY below 20-day SMA).** No commit needed (no
+trades placed). Re-screen at the next pre-market/midday scan; re-enable buys only when the
+deterministic SPY-vs-SMA20 read flips back ON and a candidate clears all 11 checks on a clean
+3–8% pullback with confirming volume.
