@@ -585,3 +585,68 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-24 (Wed) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades. Market regime filter is OFF.** Deterministic Alpaca read
+(via buy_gate): **SPY 736.75 vs 20-day SMA 745.85 → BELOW → regime OFF.** With regime off, buy
+gate check #1 fails for every candidate; the right answer is cash. JPM (lone held position) is
++1.4% and fully stop-protected — held per the rule that the regime filter never forces closing
+an existing winner; let the trailing stop do that.
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, via buy_gate):** SPY 736.75 vs SMA20 745.85 → **FAIL → OFF.**
+- SPY fell from 749.08 (Mon 6/22) to 736.75, dropping below its 20-day SMA on a tech/semis
+  selloff. S&P 500 index 7,479.24 (-0.28% on the day). The regime read is the deterministic
+  Alpaca SPY-vs-SMA20 computation (not web-dependent) and is authoritative.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,709.25 | Cash: $97,718.69 | 1 position (JPM) | Day trades: 0/3 | PDT: false
+- Long market value $1,990.56 | open orders: 1 (JPM 12% trailing stop GTC).
+- Position sizing (recalc on live equity): 1.5% of $99,709 = $1,496, hard-capped at **$200
+  risk/trade** → max notional $2,500/position (the $200 cap is binding) — moot today (regime OFF).
+
+### Market Context
+- **VIX ~19.49** — risen, now slightly ABOVE its long-run ~18.5 average (Monday was ~16.4).
+  Volatility picked up on a tech/semiconductor selloff (BofA rate-hike note + Asian semis tumble).
+- **Oil (WTI) ~$71** (low $70s), continuing to fall on easing Mideast tensions / Iran sanctions
+  waiver — bearish for energy momentum; no fresh energy catalyst.
+- No major US data print today (CPI was 6/10, PPI 6/11; next CPI 7/14). Core PCE is Thursday 6/25.
+
+### Sector Momentum
+- Gemini sector/mover queries returned HTTP 503 → fell back to native WebSearch (noted). The
+  WebSearch sector % figures were garbage again (nonsensical +755%/+498% values) so treated as
+  directional only: Industrials, Consumer Defensive and Energy cited as leaders; Technology
+  faltering. Movers list was dominated by penny pumps (INHD, CAST, STAK) — ignored per policy.
+
+### Earnings Watch (held names)
+- **JPM** earnings 2026-07-14 (~13 trading days out, >10 → OK to hold). No earnings exposure
+  inside the 10-trading-day window.
+
+### Trade Ideas — not pursued (regime filter OFF gates everything)
+Regime is OFF, so buy-gate check #1 fails for all candidates and no order can proceed. One name
+was run through the deterministic gate to confirm the binding constraint:
+- **$CAT** (Industrials) — checks #2–#11 all **PASS** (3-mo high 1022.96 in last 5d; volume
+  196,881 vs 176,479 threshold = 1.5x; cost/sizing/PDT/earnings/catalyst OK), but pullback only
+  2.7% (extended, advisory shadow FAIL) and, decisively, **c1_regime FAIL.** GATE: **FAIL — c1_regime.**
+- No other names pursued — with regime OFF the screen is moot. Re-screen for a disciplined
+  pullback-on-volume setup once SPY reclaims its 20-day SMA.
+
+### Held-position review
+- **JPM** — 6 sh @ $327.17, current $331.76, **+1.4%** unrealized (+$27.54). 12% trailing-stop
+  GTC active (stop $295.12, hwm $335.36). No sell rule triggered: not at -8%, not +15%/+20%,
+  only 2 trading days held (time stop is 15), earnings 7/14 outside the 10-day window, thesis
+  intact. **Hold.** Regime OFF does not force closing a winner — the trailing stop governs the exit.
+
+### Risk Factors
+- Regime just flipped back OFF after only briefly turning ON last week — early-uptrend whipsaw
+  confirmed; forcing trades here would invite immediate stop-outs. **Core PCE Thursday 6/25** is
+  a two-sided macro event; JPM is stop-protected. Tech-led risk-off could broaden — monitor SPY
+  vs its 20-day SMA for a clean reclaim before any new entry.
+
+### Decision
+**HOLD. Zero new trades. Regime filter OFF (SPY below 20-day SMA).** No candidate can clear the
+11-check gate while #1 fails. Stay in JPM (stop-protected) + ~98% cash. No commit needed today
+per the market-open routine (no trades placed). Re-screen at the next pre-market / midday scan.
