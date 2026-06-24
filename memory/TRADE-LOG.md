@@ -170,3 +170,15 @@ Notes: Flat, no-trade day for this EOD-only routine — but the portfolio is now
 - Sector: Financials
 - Earnings next: 2026-07-14 (Q2, before open) — ~14 trading days out, clears the >10-day gate at entry. ⚠️ BINDING EXIT: must close by 2026-07-13 (never hold through earnings).
 - Time stop: 2026-07-14 (~15 trading days) — but the 7/14 earnings exit binds first; close on/before 7/13 regardless.
+
+---
+
+## 2026-06-24 — EOD Snapshot
+Equity: $99,719.39 | Cash: $97,718.69 | Day P&L: +$37.65 (+0.04%) | Phase P&L: -$280.61 (-0.28%)
+Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| JPM    | 6      | $327.17 | $333.45  | +$37.68 (+1.92%) | 12% trailing GTC ($295.12) |
+
+Notes: Quiet hold day — no trades. Equity $99,719.39, +$37.65 (+0.04%) vs the last committed EOD snapshot (6/15, $99,681.74); the true single-session move vs Alpaca's prior close (last_equity $99,723.53, 6/23) was only -$4.14 (-0.004%) — essentially flat. The +$37.65 "day" figure spans the gap since the 6/15 snapshot (the 6/16–6/23 daily snapshots, including the 6/22 JPM-buy session, were not committed as EOD entries). JPM is the lone position, now +$37.68 (+1.92%) at $333.45 vs $327.17 entry; fully stop-protected by its live 12% trailing-stop GTC (stop $295.12, hwm $335.36, order d948673a). No sell-side rule triggered — above -8%, not yet +15% (no stop tightening), well inside the time/earnings window. ⚠️ Binding constraints: JPM Q2 earnings 2026-07-14 (before open) → must close on/before 2026-07-13; 15-day time stop also ~7/14. Regime last read ON (6/22: SPY 749 > 20d SMA 747); this is an EOD-only routine so no fresh research ran today. Trades this week 1/3, day-trade count 0/3, PDT false. Outlook: hold JPM under standard sell-side rules; run a fresh pre-market regime/research check before any new entries; room for up to 2 more new trades this week.
