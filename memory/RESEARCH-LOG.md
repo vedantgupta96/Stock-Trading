@@ -585,3 +585,76 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-25 (Thu) — Pre-Market Research
+
+**Decision: HOLD (cash posture).** ⚠️ **Regime filter just FLIPPED ON → OFF.** The deterministic
+Alpaca read has SPY last close **733.32 (6/24) below its 20-day SMA 745.68** — the S&P has lost
+its 20-day SMA since the 6/22 ON read (SPY 749.08 > 747.38). Per the highest-priority rule, **no
+new buys today.** We do not sell winners just for the filter — JPM stays on under standard
+sell-side rules, fully stop-protected. No trade ideas generated (regime OFF).
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, authoritative):** SPY 733.32 (6/24 close, latest completed daily bar)
+  vs SMA20 745.68 → **below → REGIME OFF.** Buy gate check #1 FAILS today; standing posture is cash.
+- **Gemini (corroborating):** SPY 735.89 below its 20-day SMA 746.56 (as of 6/23) — agrees with
+  the Alpaca read. Regime flip ON→OFF confirmed by both sources.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,731.33** | Cash: **$97,718.69** | Buying power: $396,510 | Long mkt value: $2,012.64
+| Day trades: **0/3** | PDT: **false** | Positions: 1 (JPM) | Open orders: 1 (JPM trailing stop)
+- Position sizing (recalc on live equity, for reference only — no buys while regime OFF): 1.5% of
+  $99,731 = $1,496, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position**.
+
+### Market Context
+- **VIX ~18.6–19.3** — mildly elevated (spiked to ~19.5 on 6/23, easing since), just above its
+  ~18.5 long-run average. Consistent with a market that's lost its 20-day SMA; not panic.
+- **Oil (WTI) ~$69–70** — broke back below $70 (intraday low ~$69.0), down ~25% over the past
+  month as the US–Iran de-escalation removed the Strait-of-Hormuz risk premium. A disinflationary
+  tailwind, but a headwind for the energy complex.
+- **HIGH-IMPACT MACRO DAY:** 08:30 ET brings **Core PCE (May)** — the Fed's preferred inflation
+  gauge (consensus +0.1–0.2% MoM / 2.6% YoY) — plus **Final Q1 GDP** (cons. 1.6%), **Initial
+  Jobless Claims** (cons. 225K), **Advance Durable Goods**, and **Personal Income**. A genuinely
+  two-sided session; a hot PCE print could extend the break below the SMA.
+- *(Gemini returned HTTP 503 on the econ-calendar query; econ data above is the native-WebSearch
+  fallback. Regime/account/JPM reads are deterministic Alpaca or Gemini and unaffected.)*
+
+### Sector Momentum
+- Risk-off tilt as the index slips its 20-day SMA. Energy under pressure with WTI sub-$70.
+  Financials firm on the bank-stress-test/capital-return news (JPM-specific, below). No new
+  sector exposure being added while regime is OFF, so sector momentum is informational only today.
+
+### Earnings Watch (held positions)
+- **JPM — next earnings 2026-07-14 (Q2, before open), ~11–12 trading days out.** Still clears the
+  >10-trading-day gate, but the window is closing fast. **BINDING EXIT: close on/before 2026-07-13**
+  — never hold through earnings. Next pre-market should re-verify the day count; the 10-day exit
+  window opens around 6/29–6/30.
+
+### Held-Position Review — JPM ×6
+- Entry $327.17 (6/22) | Current **$335.44** | **+$49.62 / +2.53%** | hwm $335.36 | 12% trailing-stop
+  GTC live at **$295.12** (order d948673a-…, tracking). Above the -8% cut; not at +15%/+20% so no
+  stop tightening; only 3 trading days held so no time-stop concern. **No sell-side rule triggered.**
+- **Catalyst has strengthened, not broken:** JPM cleared the Fed stress test and announced a **new
+  $50B buyback** plus a **dividend raise to $1.65 (from $1.50)**. The capital-return thesis behind
+  the 6/22 entry is intact and reinforced. Hold under standard sell-side rules.
+
+### Trade Ideas
+- **None.** Regime filter is OFF (S&P below its 20-day SMA), so no new long entries are permitted
+  today regardless of any setup quality. Per strategy: "When the regime filter is off, the right
+  answer is almost always cash." Idea generation deferred until the S&P reclaims its 20-day SMA.
+
+### Risk Factors
+- **Core PCE / GDP at 08:30 ET** is a two-sided macro catalyst; a hot inflation print could deepen
+  the break below the SMA and pressure all longs. JPM is stop-protected (12% trailing) and is a
+  winner, so we hold and let the stop work rather than pre-empting it.
+- **Regime just flipped OFF** — momentum has cooled market-wide; this is precisely when the filter
+  earns its keep by keeping us out of new risk. Discipline: cash until SPY reclaims the SMA.
+- **JPM earnings (7/14) approaching** — the no-hold-through-earnings exit binds by 7/13; manage the
+  calendar so the position is closed in time even if the trailing stop hasn't fired.
+
+### Decision
+**HOLD — cash posture, no new buys (regime OFF: SPY 733.32 < 20-day SMA 745.68).** Continue holding
+JPM (+2.53%, catalyst reinforced by the stress-test/buyback news) under standard sell-side rules,
+fully stop-protected. Trades this week remain 1/3. Regime flip ON→OFF flagged to Discord per STEP 5.
