@@ -585,3 +585,54 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-25 (Thu) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades. Market regime filter OFF.** SPY has dropped back below
+its 20-day SMA, so the highest-priority rule blocks all new long entries today (buy gate #1
+fails for every candidate). Lone holding JPM is up ~2.7%, stop-protected, and triggers no
+sell rule. Stay ~98% cash.
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, via buy_gate):** SPY 737.32 vs SMA20 745.02 → **BELOW → regime OFF.**
+- Gemini concurs on the index: S&P 500 closed 6/24 at 7,358.22 vs 20-day SMA 7,410.76 (below).
+- Regime had only just flipped ON around 6/17–6/22; it has now flipped back OFF — classic
+  early-uptrend whipsaw. Per strategy, when the filter is off the right answer is cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,734.99 | Cash: $97,718.69 | Open positions: 1/5 (JPM) | Open orders: 1 (JPM trail stop) | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,735 = $1,496, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** ($200 cap binding). Moot today — regime OFF.
+
+### Market Context
+- **VIX ~17.88** (-4.0% on the day; was 19.49 on 6/23, 18.63 on 6/24) — easing but still elevated vs recent calm.
+- **Oil (WTI) ~$69.43** (-1.3%), breaking below $70 to pre-Mideast-conflict levels — Iraq/OPEC
+  quota friction + improved Hormuz shipping/UAE exports. Risk-off for energy, no fresh catalyst.
+- No CPI/PPI/jobs today. Next CPI 7/14. Core PCE was 6/26-area watch.
+
+### Sector Momentum (idea-gen context only; moot under regime OFF)
+- Leaders cited (Gemini): Technology (leader), Industrials, Real Estate, Energy (weakening), Materials.
+
+### Trade Ideas — none evaluated
+- **Regime filter OFF → buy gate #1 fails for everything; no candidates run through the deterministic gate.**
+  No new long exposure permitted today regardless of breakout/volume setups.
+
+### Held-position review
+- **$JPM** ×6 @ $327.17, current ~$335.99, **+2.7%** unrealized. 12% trailing-stop GTC live
+  (stop ~$296.14, hwm $336.52). Catalysts intact and strengthening: $50B buyback (eff. 7/1),
+  10% dividend hike to $1.65, passed Fed stress test. Earnings ~7/14 (~12-13 trading days out,
+  still >10). No sell rule triggered (not -8%, not +15% tighten band, not 15-day time stop,
+  thesis intact). **Hold, no action.** Do not close winners just because regime flipped OFF —
+  let the trailing stop do its job.
+
+### Risk Factors
+- Whipsaw regime: ON→OFF in days raises false-signal risk; staying in cash avoids chasing.
+- Oil breakdown below $70 could pressure energy/cyclicals; JPM thesis (capital return) is
+  bank-specific and intact, but monitor broad risk-off.
+
+### Decision
+**HOLD. Zero new trades — regime filter OFF (SPY below 20-day SMA).** Hold JPM (stop-protected,
+thesis intact, earnings safely outside 10 days). Trades this week remain 1/3. No commit per the
+market-open routine (no trades placed).
