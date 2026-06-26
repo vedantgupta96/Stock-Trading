@@ -585,3 +585,59 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-26 (Fri) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — Market regime filter OFF. Zero new buys today.** SPY sits below its
+20-day SMA, so buy-gate check #1 fails for every candidate; no new long is permitted. Hold
+JPM (the lone position, +1.8%, fully stop-protected) under standard sell-side rules. Stay
+otherwise in cash.
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, via buy_gate):** SPY **727.81** vs SMA20 **743.48** → **FAIL → OFF.**
+- Corroborated by Gemini: S&P 500 ~7,357 vs its 20-day SMA ~7,484 (below). The regime just
+  flipped OFF — SPY has dropped ~2.8% off the 6/22 level (~749) into a clear risk-off tape.
+- Per the strategy's highest-priority rule, no new buys while the S&P is below its 20-day SMA.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,716.27 | Cash: $97,718.69 | Long mkt value $1,997.58 (JPM) | Day trades: 0/3 | PDT: false
+- One open position (JPM ×6), one open order (JPM 12% trailing-stop GTC). 4 position slots free.
+- Sizing note (moot today, regime OFF): 1.5% of equity ≈ $1,496, hard-capped at $200 risk/trade.
+
+### Market Context
+- **VIX ~20.3 (+7.4%)** — jumped above 20 (from ~18.9 on 6/25), confirming a risk-off shift;
+  now above its long-run ~18.5 average.
+- **Sector rotation defensive/value:** Healthcare leading (+4% on the week), Industrials, Real
+  Estate, Energy firm; AI/mega-cap tech (NVDA, ORCL, MSFT, GOOGL, AAPL, PLTR) sold off hard.
+- **Macro:** Light calendar today (UMich consumer sentiment, LEI, KC Fed). Core PCE was 6/25;
+  June jobs 7/2; FOMC minutes 7/8. No major print today driving the move — it's a momentum
+  unwind / de-risking.
+
+### Earnings Watch (held names)
+- **JPM** — Q2 earnings 2026-07-14 (~12 trading days out, still > 10 → no earnings exit yet).
+  ⚠️ BINDING EXIT approaching: must close on/before 2026-07-13. Will bind within ~2 trading days.
+
+### Trade Ideas — not evaluated
+Regime filter OFF → buy gate #1 fails for everything; no candidates were individually screened.
+The right answer with the S&P below its 20-day SMA is cash. Re-screen when the regime reclaims.
+
+### Held-position review (sell-side rules)
+- **JPM ×6** @ $327.17 — current ~$333.10, **+1.8%** (+$35.58). 12% trailing-stop GTC active
+  (stop $302.23, hwm $343.45). No sell rule triggered: above -8% cut, not up +15%, time stop
+  far off, earnings >10 days. **Thesis intact and arguably stronger** — JPM today announced a
+  fresh $50B buyback + 10% dividend hike after passing the Fed stress test; analyst consensus
+  Buy (~$339 PT). Hold; let the trailing stop work. (Watch the 7/13 earnings exit next week.)
+
+### Risk Factors
+- Regime just flipped OFF on a sharp tech-led de-risk + VIX spike >20 — choppy, two-sided tape;
+  forcing a long here would fight the highest-priority rule. JPM is a value/bank name bucking
+  the tech selloff, but if the risk-off broadens it could give back gains — the 12% trailing
+  stop ($302.23) is the backstop. No discretionary action warranted today.
+
+### Decision
+**HOLD. Zero new trades.** Market regime filter OFF (SPY 727.81 < 20d SMA 743.48); no new buys
+permitted. Hold JPM (+1.8%, stop-protected, thesis intact) under standard sell-side rules; stay
+otherwise in cash. Re-screen for a disciplined breakout-on-volume pullback once the S&P reclaims
+its 20-day SMA. No trades placed → no commit per the routine (STEP 7).
