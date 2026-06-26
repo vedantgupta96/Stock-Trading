@@ -585,3 +585,71 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-26 (Fri) — Pre-Market Routine
+
+**Decision: HOLD. Regime flipped ON → OFF — no new buys today.** SPY closed 733.33,
+below its 20-day SMA (744.82), so the highest-priority market-regime filter is OFF for
+the first time since the 6/22 JPM entry. Standing posture reverts to cash for new entries.
+JPM (the lone position) is held — the regime filter never forces a winner out; let stops do
+that. No sell-side rule triggered on JPM, and its catalyst has now fully and positively
+materialized, so the thesis is intact/strengthened. No trade ideas generated (regime OFF).
+
+### Market Regime Status — OFF (filter flipped ON → OFF since 6/22)
+- **Alpaca (deterministic, authoritative):** SPY close **733.33** vs SMA20 **744.82** →
+  SPY below its 20-day SMA → **c1_regime FAIL → Regime OFF.** (bars_n 83.)
+- **Gemini corroborates:** S&P ~7,405 vs 20-day MA ~7,440 → below.
+- Prior read (6/22) was ON (SPY 749.08 > SMA20 747.38). This is a genuine ON→OFF flip — a
+  STEP 5 urgent-notification trigger; Discord alert sent. **No new buys until SPY reclaims
+  its 20-day SMA.**
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,734.69** | Cash: $97,718.69 | Long mkt value $2,016 | 1 position (JPM) |
+Day trades: 0/3 | PDT: false | Trades this week: 0/3 new (JPM was last week, 6/22).
+- Position sizing (recalc, moot today — regime OFF): 1.5% of $99,735 = $1,496, hard-capped
+  at **$200 risk/trade** → max notional $2,500/position.
+
+### Market Context
+- **VIX ~18.6–18.9** — slightly above its long-run ~18.55 average; flat Thu but noted to be
+  breaking out of a compression regime (rising near-term volatility demand). Mild caution.
+- **Oil (WTI) ~$70.5** — down further (from ~$77 on 6/22) on accelerating US–Iran peace
+  progress and Strait-of-Hormuz reopening; geopolitical risk premium largely unwound.
+- **Econ today:** quiet — U. Michigan final consumer sentiment / 5-yr inflation expectations
+  (2:00pm UTC). Core PCE printed yesterday (6/25); next jobs report 7/2; next CPI 7/14;
+  FOMC minutes 7/8; next FOMC 7/28–29. No major print today.
+- **Sectors:** Healthcare & Industrials firm this week (CAT/DE at records); Tech leadership
+  intact but narrow. (Gemini's percentage figures were garbled/implausible — treated as
+  unreliable; directional read only.)
+
+### Held-position review — JPM ×6 @ $327.17 (Financials)
+- Current **$336.00**, **+$52.98 (+2.70%)**; hwm $343.45. Fully stop-protected by live 12%
+  trailing-stop GTC (order d948673a…, stop **$302.23**, status new).
+- **News (strongly positive):** JPM passed the Fed stress tests and announced a **$50B
+  buyback** + **10% dividend hike** ($1.50→$1.65). Trading near its 52-week high ($279.10–
+  $343.45). The exact stress-test / capital-return catalyst behind the 6/22 entry has now
+  fully materialized in JPM's favor — thesis intact and strengthened.
+- **Earnings confirmed: Tue 2026-07-14, ~7:00am ET (Q2).** ~11 trading days out — still
+  clears the >10-trading-day gate today, but the window is closing. ⚠️ **BINDING EXIT: close
+  on/before Mon 2026-07-13 — never hold through earnings.**
+- **Sell-side rules:** none triggered. Not at -8% (well above). Up +2.70%, below the +15%
+  stop-tighten threshold (no stop change). Time stop far off (binds at earnings exit 7/13).
+  Thesis intact. → **HOLD.**
+
+### Trade Ideas
+- **None generated — market regime is OFF.** No new long entries permitted today regardless
+  of any individual setup. STOCK-Act/idea-gen query skipped (moot when no buys allowed).
+
+### Risk Factors
+- **Regime OFF** is the dominant signal: the broad tape (SPY) has rolled below its 20-day SMA
+  on a falling-oil / narrow-leadership backdrop. Best posture is cash for new entries; capital
+  preservation first.
+- **VIX edging up** out of compression hints at more two-sided volatility into next week.
+- **JPM earnings approaching** (7/14): the holding window is now bounded — must exit by 7/13.
+  A single position, fully stop-protected, is low portfolio risk in the meantime.
+
+### Decision
+**HOLD. No new buys (regime OFF — SPY 733.33 < 20-day SMA 744.82).** Continue holding JPM
+under standard sell-side rules (next binding action: earnings exit on/before 2026-07-13).
+Regime-flip Discord alert sent. Trades this week 0/3 new.
