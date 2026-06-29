@@ -182,3 +182,15 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+---
+
+## 2026-06-29 — EOD Snapshot
+Equity: $99,695.03 | Cash: $97,718.69 | Day P&L: +$5.82 (+0.01%) | Phase P&L: -$304.97 (-0.30%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; no fresh research today)
+
+| Symbol | Shares | Entry   | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|---------|----------|------------------|----------------------------|
+| JPM    | 6      | $327.17 | $329.39  | +$13.32 (+0.68%) | 12% trailing GTC ($302.23) |
+
+Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,695.03, up +$5.82 (+0.01%) vs the last committed EOD (2026-06-26, $99,689.21); the true single-session move vs Alpaca last_equity ($99,692.99) was +$2.04 (+0.002%) — essentially flat. Phase P&L -$304.97 (-0.30%) off the live $100k base. New week began today (Mon 6/29), so the trades-this-week counter resets to 0/3 (the JPM buy was 6/22, last week). JPM is the lone position, +0.68% from entry ($329.39 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered (not at +15%/+20% tighten thresholds, not 15 days elapsed). Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first — ~10 trading days out now. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
