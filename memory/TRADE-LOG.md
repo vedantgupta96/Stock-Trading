@@ -182,3 +182,24 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+### 2026-06-30 SELL JPM — closed (earnings-exit rule: earnings within 10 trading days)
+- Side: sell (sell_to_close, 6 sh)
+- Entry price: $327.17 (2026-06-22)
+- Exit price: ~$327.18 (cash-derived: proceeds $1,963.05 / 6 sh; market order 90e4fda3-… filled at the open)
+- Realized P&L: +$0.03 / +0.002% (essentially breakeven)
+- Exit reason: Hard "never hold through earnings" rule. JPM Q2 earnings confirmed 2026-07-14 ~7:00 AM ET (before open); from 6/30 that is ~9 trading days out — inside the 10-trading-day window. Entry note had flagged the binding deadline (close on/before 7/13). Canceled the 12% trailing-stop GTC (d948673a-…) to free the reserved shares, then market-closed at the open. The wide opening NBBO ($321.72/$346.11) was stale; real fill ~$327.18 (today's bar low $327.33).
+- Sector: Financials
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit. Day-trade count unaffected (0/3; held since 6/22).
+
+---
+
+## 2026-06-30 — EOD/Market-Open Snapshot
+Equity: $99,681.74 | Cash: $99,681.74 | Day P&L: -$13.29 (-0.01%) vs Alpaca last_equity $99,695.03 | Phase P&L: -$318.26 (-0.32%)
+Trades today: 1 (JPM exit) | Trades this week: 0/3 new | Regime: OFF (SPY 741.37 < 20d SMA 741.93)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Market-open routine ran research inline (no pre-market entry existed for today). Regime flipped OFF (SPY below its 20-day SMA) → no new buys. Closed the lone position JPM ×6 at the open (~$327.18, realized +$0.03 ≈ breakeven) on the hard earnings-within-10-days rule — JPM reports 2026-07-14 BMO (~9 trading days out). Now 100% cash: 0 positions, 0 open orders, day trades 0/3, PDT false. Posture: cash until the regime reclaims the 20-day SMA and a disciplined breakout-pullback setup clears the full 11-check gate.

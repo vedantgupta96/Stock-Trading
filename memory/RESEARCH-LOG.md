@@ -585,3 +585,62 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+## 2026-06-30 (Tue) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD on new buys (regime OFF) + CLOSED JPM ×6 @ ~$327.18 (earnings-exit rule).**
+No today entry existed (pre-market routine did not run), so research was run inline. The
+deterministic regime read flipped **OFF** (SPY below its 20-day SMA), so no new buys are
+permitted today. Separately, the lone held position JPM crossed into the 10-trading-day
+earnings window (Q2 reports 2026-07-14 BMO, ~9 trading days out), triggering the hard
+"never hold through earnings" exit — JPM was closed at the open. Back to 100% cash.
+
+### Market Regime Status — OFF
+- **Alpaca (deterministic, via buy_gate):** SPY **741.37 vs SMA20 741.93 → FAIL → OFF.**
+  Regime flipped OFF since the 6/22 read (then SPY 749 > SMA20 747). Per the rulebook, when
+  the regime filter is off the right answer is cash — place no new buys today.
+- This is the authoritative #1 gate check (deterministic SPY-vs-SMA20, not web-dependent).
+
+### Account Snapshot (live Alpaca, paper)
+- Pre-close: equity $99,683.39 | cash $97,718.69 | 1 position (JPM ×6) | day trades 0/3 | PDT false.
+- Post-close: equity $99,681.74 | cash $99,681.74 | **100% cash, 0 positions, 0 open orders** | day trades 0/3.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding). N/A today (regime OFF, no buys).
+
+### Market Context
+- **VIX ~17.6–18.4** (Gemini cited 17.65 on 6/29, ~18.4 prior session) — near/just below its
+  long-run ~18.55 average; calm-to-slightly-elevated, no panic. Quarter-end (6/30) rebalancing.
+- No CPI/PPI/FOMC today. Backdrop: regime just rolled back under the 20-day SMA — early
+  uptrend that began ~6/22 has faded; defensive posture warranted.
+
+### Held-position review (sell-side rules)
+- **$JPM ×6** (Financials, entry $327.17 on 6/22) — current ~$327.5, **+0.09%** (flat), stop
+  was a 12% trailing GTC at $302.23 (hwm $343.45). **Earnings-exit rule TRIGGERED:** Q2
+  earnings confirmed 2026-07-14, ~7:00 AM ET (before open) — counting forward trading days
+  from 6/30 (7/1, 7/2, [7/3 NYSE holiday — July 4 obs], 7/6, 7/7, 7/8, 7/9, 7/10, 7/13) puts
+  earnings ~9 trading days out, **inside the 10-trading-day window.** Per the hard rule
+  ("never hold through earnings; overnight gaps blow through stops") and the entry's flagged
+  binding deadline (close on/before 7/13), JPM was closed at the open.
+- Execution: canceled the 12% trailing-stop GTC (order d948673a-…) to free the reserved
+  shares, then market-closed JPM 6 sh (order 90e4fda3-…). Proceeds $1,963.05 / 6 = fill
+  **~$327.18** (clean — the wide $321.72/$346.11 opening NBBO snapshot was stale; today's bar
+  low was $327.33, real liquidity at ~$327.5). Realized P&L **+$0.03 (~breakeven, +0.002%)**.
+  This is a sell — does NOT count against the 3-new-trades/week limit. Day trades still 0/3
+  (position held since 6/22, not a day trade).
+
+### Trade Ideas — none evaluated
+- Regime filter OFF → buy gate #1 (regime) fails for everything; no buy candidates were
+  screened. No new entries until a pre-market confirms the S&P has reclaimed its 20-day SMA.
+
+### Risk Factors
+- Regime flipped back OFF after only a brief ON stretch (~6/22 onward) — choppy, indecisive
+  tape; forcing entries here invites whipsaw. Patience / cash is the disciplined posture.
+- JPM earnings-gap risk is now eliminated by the close; capital freed and protected.
+
+### Decision
+**HOLD (no new buys, regime OFF) and CLOSED JPM ×6 @ ~$327.18 (breakeven) on the
+earnings-within-10-days hard rule.** 100% cash, fully de-risked into quarter-end. Re-screen
+for a disciplined breakout-pullback setup at the next pre-market once the regime reclaims its
+20-day SMA. Committed and pushed per the market-open routine (a trade — the JPM close — was placed).
+
+---
