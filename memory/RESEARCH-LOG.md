@@ -585,3 +585,71 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-06-30 (Tue) — Pre-Market Routine
+
+### Market Regime Status — OFF ⚠️ (flipped ON → OFF)
+- **Alpaca (deterministic, authoritative via buy_gate):** SPY close **740.86** vs 20-day SMA
+  **742.78** → SPY **below** its 20-day SMA → **c1_regime = FALSE → REGIME OFF.**
+- **Gemini** independently agrees: S&P 500 (~7444) below its 20-day MA (~7465) on 6/30.
+- **This is a flip:** the last fresh regime read was **ON** on 6/22 (when JPM was bought);
+  intervening EOD snapshots only carried that read forward. Today's fresh read is OFF.
+- **Consequence:** no new buys today (buy-gate check #1 fails for every candidate). Do NOT
+  close the existing winning position just because of the filter — let sell-side rules /
+  stops manage it. Standing posture: cash; manage JPM per rules.
+- Margin: SPY is only -0.26% under its SMA20 — a marginal/borderline flip, easily reversible.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,698.75** | Cash: **$97,718.69** | Long mkt value $1,980.06 | Portfolio $99,698.75
+Day trades: **0/3** | PDT: false | Positions: 1 (JPM) | Open orders: 1 (JPM trailing stop)
+- Sizing reference (live equity): 1.5% of $99,699 = $1,495, hard-capped at **$200 risk/trade**
+  → max notional $2,500/position. (Moot today — regime OFF, no buys.)
+
+### Market Context
+- **VIX ~17.6** (6/29 close 17.65; intraday 17.5–19.4) — below its ~18.5 long-run average; calm.
+- **WTI crude ~$70.5–70.7** — softer (was ~$77 on 6/22), easing on receding Mideast risk;
+  disinflationary tailwind, mild headwind to Energy.
+- **Econ calendar:** Today (6/30) — Case-Shiller, FHFA HPI, Chicago PMI, Consumer Confidence,
+  JOLTS, ISM Manufacturing, Construction Spending (second-tier). **This week's main event:
+  June Nonfarm Payrolls / jobs report Thursday 7/2** (pulled forward by the July 4 holiday;
+  market closed Fri 7/3) + ADP Wed 7/1, jobless claims Thu 7/2. NFP is the key two-sided risk.
+
+### Sector Momentum
+- Late-week leaders: **Consumer Discretionary, Communication Services, Information Technology**
+  (tech/AI rebounded 6/30 after a 5-day losing streak on eased geopolitics + quarter-end).
+  **Financials** firm but middling (+0.35% on 6/29). Energy lagging on softer oil.
+
+### Held-Position Review — JPM (Financials, lone position)
+- 6 sh @ $327.17 entry; current **$330.01**; unrealized **+$17.04 (+0.87%)** — above the -8%
+  cut, not near a stop. 12% trailing-stop GTC live (stop **$302.23**, hwm $343.45, order
+  d948673a-…). No tighten trigger (not +15%). No sell-side rule fired today on price/time.
+- **Thesis: intact and strengthening.** JPM cleared the Fed stress test; Board intends to
+  raise the dividend to $1.65 (from $1.50) and authorized a **new $50B buyback effective 7/1**;
+  no downgrades; positive bank-sector sentiment. RSI ~70 (overbought → possible consolidation).
+- ⚠️ **EARNINGS WINDOW NOW ACTIVE:** JPM Q2 earnings **confirmed 7/14 (before open)**. As of
+  6/30 that is **~9 trading days out — inside the 10-trading-day "never hold through earnings"
+  window**. Per the sell-side rule (earnings within 10 days → close if still open) JPM is now
+  flagged for exit. **ACTION: close JPM at the midday scan today, or on any session through
+  7/13 — HARD DEADLINE: flat on/before close 2026-07-13** (never hold the 7/13→7/14 overnight
+  gap). The position remains fully stop-protected in the meantime. (This pre-market routine
+  does not place sells; handing the exit to the midday scan.)
+
+### Trade Ideas — none
+Regime OFF → buy-gate check #1 fails for every candidate; idea generation is skipped per the
+routine (ideas only when regime is ON). No screening run. Movers/STOCK-Act idea queries
+omitted — they cannot produce an actionable buy while the regime filter is off.
+
+### Risk Factors
+- **NFP Thursday 7/2** is a binding two-sided macro print into a holiday-shortened week
+  (thin liquidity, market closed Fri 7/3) — gap risk both ways.
+- **Borderline regime:** SPY is only fractionally below its SMA20; a single up day could flip
+  it back ON. Avoid over-reacting; re-read deterministically next pre-market.
+- **JPM earnings-gap risk** if the 7/13 exit is missed — the exit must be executed on time.
+
+### Decision
+**HOLD. Zero new trades — regime OFF (SPY below its 20-day SMA).** Continue holding JPM under
+sell-side rules, but it has entered the 10-trading-day earnings window: **flag JPM for exit at
+the midday scan, hard deadline close 2026-07-13.** Stay otherwise cash; re-confirm regime at
+the next pre-market.
