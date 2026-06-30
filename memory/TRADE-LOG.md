@@ -182,3 +182,20 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+---
+
+### 2026-06-30 SELL JPM — closed (exit recorded retroactively; no committed log entry)
+- Side: sell (sell_to_close, 6 sh)
+- Entry price: $327.17 (2026-06-22)
+- Exit price: ~$327.18 (cash-derived: proceeds $1,963.05 / 6 sh; not independently confirmed via activities)
+- Realized P&L: ~+$0.03 / ~+0.00% (essentially breakeven)
+- Exit reason: UNCERTAIN — no committed research/trade-log entry documents this exit. As of the midday scan on 2026-06-30 the position and its 12% trailing-stop GTC (stop $302.23, hwm $343.45) are both gone; account is 100% cash (equity $99,681.74, cash $99,681.74, 0 positions, 0 open orders). The derived exit (~$327.18) sits well ABOVE the $302.23 trailing stop, so this was NOT a trailing-stop fill — it was a discretionary/manual close at ~breakeven executed on a session (Mon 6/29 or Tue 6/30) whose snapshot was missed. This is the SECOND undocumented manual exit (CVX on ~6/12 was the first). Flagged for operator confirmation of the actual fill, price, and reason.
+- Sector: Financials
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit. JPM's binding 7/13 earnings-exit deadline is now moot (position closed well before it).
+
+### 2026-06-30 — Midday scan
+Equity: $99,681.74 | Cash: $99,681.74 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false | Trades this week: 0/3 new
+- Midday position scan: nothing to manage — portfolio is flat. No -8% cuts, no time stops, no earnings exits, no winners to tighten, no sector-failure exits (no open positions). Intraday equity move vs Alpaca last_equity ($99,695.03) ≈ -$13.29 (-0.01%), essentially flat.
+- ⚠️ Finding: the lone position JPM (held +0.38% at the 6/26 EOD snapshot) was closed between 6/26 and this scan with NO committed log entry — reconstructed above as a ~breakeven manual close (~$327.18, +$0.03), not a stop fill. Documented here so the record isn't lost again; operator should confirm the actual fill/reason.
+- Regime not re-read this scan (midday routine does not recompute regime); standing posture remains cash until a fresh pre-market confirms S&P 500 above its 20-day SMA and a name clears the full 11-check buy gate. No new buys at midday.
