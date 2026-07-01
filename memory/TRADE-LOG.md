@@ -182,3 +182,14 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+---
+
+### 2026-06-30(?) SELL JPM — closed (exit reconstructed; no committed log entry)
+- Side: sell (sell_to_close, 6 sh)
+- Entry price: $327.17 (2026-06-22)
+- Exit price: ~$327.17 (cash-derived: cash $97,718.69 → $99,681.72 = +$1,963.03 proceeds / 6 sh ≈ $327.17/sh; ~breakeven; not independently confirmed via activities)
+- Realized P&L: ~$0 / ~0% (essentially flat / breakeven)
+- Exit reason: UNCERTAIN — no committed research/trade-log entry documents this exit. As of the 2026-07-01 pre-market the position and its 12% trailing-stop GTC (stop $302.23, hwm $343.45) are both gone; portfolio is 100% cash. The derived exit (~$327.17) sits ~$25 ABOVE the $302.23 trailing stop, so this was NOT a trailing-stop fill — it was a discretionary/manual close (executed on a session, likely 6/29 or 6/30, whose snapshot was missed). Plausibly a de-risking close ahead of the binding 7/13 earnings-exit deadline and the thin holiday week, but the reason is not documented. Flagged for operator confirmation.
+- Sector: Financials
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit. Trades this week (7/1 week) remain 0/3.

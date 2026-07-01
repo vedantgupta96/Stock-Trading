@@ -585,3 +585,69 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-01 (Wed) — Pre-Market Routine
+
+**Decision: HOLD. Zero new trades.** Regime is ON, but no screened candidate clears all 11
+buy-gate checks — every genuine 3-month-high breakout (PANW, AMD, GE) fails the 1.5x volume
+confirmation, and the volume-confirmed names (CRWD) aren't at new highs; AMD/GE are also
+extended at their highs (pullback <2%, not in the 3–8% entry band). Holiday-shortened week
+(market closed Fri 7/3) with ADP/ISM today and jobs data Thursday adds two-sided event risk.
+Stay 100% cash; re-screen at the next pre-market / midday scan.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic):** SPY last close $746.65 (6/30) vs 20-day SMA $742.19 → **above → PASS → ON.**
+- **Gemini (corroborating):** S&P 500 ~7472–7499 vs 20-day SMA ~7425–7453 → above. Both agree: regime ON.
+- No regime flip since the last committed read (ON on 6/22 & 6/26). New entries permitted, gate-gated.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | **100% cash, 0 positions, 0 open orders** | Day trades: 0/3 | PDT: false
+- ⚠️ **JPM (6 sh, held 6/26) was closed between 6/26 and today with NO committed trade-log record.**
+  Cash rose $97,718.69 → $99,681.72 (+$1,963.03 for 6 sh ≈ $327.17/sh, ~breakeven). That price is
+  well above JPM's 6/26 trailing stop ($302.23, hwm $343.45), so it was a discretionary/manual
+  close, NOT a stop fill. Reconstructed and flagged in TRADE-LOG.md for operator confirmation.
+- Position sizing (recalc on live equity): 1.5% × $99,682 = $1,495, hard-capped at **$200 risk/trade**
+  → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+
+### Market Context
+- **VIX ~16.7** (opened 17.11, prev close 16.45) — low/calm, below its long-run ~18.5 average.
+- **Oil (WTI) ~$68–70**, easing (~-0.9% on the day) — soft, mild disinflationary tailwind for cyclicals.
+- **Econ this week:** Today 7/1 — ADP Employment (8:15 ET) + ISM Manufacturing (10:00 ET) + Construction
+  Spending. Thu 7/2 — jobs data (Employment Situation pulled forward ahead of the holiday). **Fri 7/3 —
+  U.S. equity markets CLOSED (Independence Day observed).** Two-sided macro risk in a thin week.
+- S&P/Dow closed Q2 strong (Dow topped 52,000 on 6/30, led by Alphabet); futures edged lower into 7/1 on rate-hike chatter.
+
+### Sector Momentum
+- Leaders: **Technology / semiconductors** (dominant 1H-2026 leadership), **cybersecurity** (record highs
+  cited), Communication Services (Alphabet). Consumer Staples & Health Care firm earlier in the week.
+- Pre-market movers were dominated by penny/low-float pumps (INLF, EDBL, BIYA, DXF, JEM) — **ignored per standing policy.**
+
+### Earnings Watch
+- No held positions → nothing to flag for an earnings exit. (Portfolio is 100% cash.)
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars). Regime ON.
+All failed the full 11-check gate; the binding failures were the deterministic c9 (breakout) / c10 (volume):
+- **$PANW** (Cybersecurity/Tech) — c9 breakout **PASS** (3-mo high 342.39 vs prior 302.87), c10 volume
+  **FAIL** (last5 maxvol 410,389 vs 456,811 threshold = only ~1.35x avg). Closest name; volume didn't confirm. Skip.
+- **$CRWD** (Cybersecurity/Tech) — c10 volume PASS (181,837 vs 166,511), c9 breakout **FAIL** (last5 high
+  765.06 < prior 785.53 — not a new high). Skip.
+- **$AMD** (Semis) — c9 breakout PASS (584.62 vs 562.30), c10 volume **FAIL** (814,929 vs 1,002,849 = ~1.22x);
+  also extended (pullback 0.7%, not in 3–8% band). Skip.
+- **$GE** (Industrials) — c9 breakout PASS (379.34 vs 364.29), c10 volume **FAIL** (286,793 vs 319,101 = ~1.35x);
+  also extended (pullback 1.6%). Skip.
+- **$GOOGL / $NVDA / $AVGO / $ORCL / $NFLX / $MSFT** — all **FAIL c9** (not at a 3-month high; still off Q1 peaks). Skip.
+- **$WFC** (Financials) — congressional/STOCK-Act idea (Sen. McConnell buy, filed 6/30). Idea-gen only, never a
+  buy reason. Independently **FAILS** c9 breakout (86.30 < prior 87.08) and c10 volume (~0.76x). **Dropped.**
+
+### Risk Factors
+- Thin, holiday-shortened week: ADP/ISM today + jobs data Thursday + market closed Friday → gap/whipsaw risk
+  into low-liquidity sessions. Forcing a marginal entry ahead of it is poor risk/reward.
+- Rate-hike chatter pressuring futures despite a strong Q2 close — early-Q3 momentum is not yet confirmed.
+- Every breakout candidate lacks volume confirmation — buying a breakout without the 1.5x volume tell is
+  exactly the low-conviction move the gate is designed to filter out.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON but no candidate clears the 11-check gate (breakouts lack 1.5x volume;
+volume names lack breakouts; leaders aren't at highs). Default to cash and patience; re-screen next session.
