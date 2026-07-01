@@ -182,3 +182,26 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+---
+
+### 2026-07-01 SELL JPM — closed (exit recorded retroactively; no committed log entry)
+- Side: sell (sell_to_close, 6 sh)
+- Entry price: $327.17 (2026-06-22)
+- Exit price: ~$327.17 (cash-derived: proceeds $1,963.03 / 6 sh; not independently confirmed via activities)
+- Realized P&L: ~+$0.01 / ~0.00% (essentially breakeven)
+- Exit reason: UNCERTAIN — no committed research/trade-log entry documents this exit. As of 2026-07-01 the JPM position and its 12% trailing-stop GTC ($302.23, hwm $343.45) are both gone; account is 100% cash. The cash-derived exit (~$327.17) sits well above the $302.23 trailing stop, so this was NOT a trailing-stop fill — it was a discretionary/manual close executed on a session (6/29 or 6/30) whose EOD snapshot was missed. It pre-empted the binding 2026-07-13 earnings exit deadline. Flagged for operator confirmation.
+- Sector: Financials
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit.
+
+---
+
+## 2026-07-01 — EOD Snapshot
+Equity: $99,681.72 | Cash: $99,681.72 | Day P&L: -$7.49 (-0.01%) | Phase P&L: -$318.28 (-0.32%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; no fresh research today)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Flat, no-trade day for this EOD-only routine — the portfolio is back to 100% cash: zero open positions, zero open orders. JPM (the lone position on the last committed EOD, 6/26) was closed sometime after 6/26 with NO committed research/trade-log record; reconstructing from cash ($97,718.69 → $99,681.72, +$1,963.03 / 6 sh) implies an exit at ~$327.17 — essentially breakeven (realized ~+$0.01). That price sits well above JPM's $302.23 trailing stop, so it was a discretionary/manual close, NOT a stop fill, and its trailing-stop GTC is gone too. ⚠️ This exit is undocumented and unconfirmed, and it pre-empted the binding 2026-07-13 earnings-exit deadline; operator should verify the actual fill, date, and reason. This is the second consecutive undocumented exit (CVX 6/12, JPM now) — a recurring reporting gap worth closing. Equity $99,681.72, down -$7.49 (-0.01%) vs the last committed EOD (6/26, $99,689.21); true single-session move vs Alpaca last_equity ($99,681.72, balance_asof 6/30) is $0.00 (0.00%) — flat, as expected for an all-cash book. Phase P&L -$318.28 (-0.32%) off the live $100k base. Day-trade count 0/3, PDT false. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and the full 11-check gate. Outlook: fully in cash; run a fresh pre-market regime/research check before any new entries, and confirm the JPM exit details.
