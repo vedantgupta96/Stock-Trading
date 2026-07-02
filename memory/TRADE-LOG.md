@@ -182,3 +182,26 @@ Trades today: 0 | Trades this week: 1/3 | Regime: ON (last read 6/22; no fresh r
 | JPM    | 6      | $327.17 | $328.42  | +$7.50 (+0.38%) | 12% trailing GTC ($302.23) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades. Equity $99,689.21. Day P&L (+$7.47, +0.01%) is measured against the last committed EOD snapshot (2026-06-15, $99,681.74) because no EOD snapshots were committed across 6/22–6/25 (the JPM buy on 6/22 was the only committed entry since 6/15); the true single-session move vs Alpaca last_equity ($99,729.41) was -$40.20 (-0.04%). JPM is the lone position, +0.38% from entry ($328.42 vs $327.17), well above the -8% cut and fully protected by a live 12% trailing-stop GTC (stop $302.23, hwm $343.45) — no sell-side rule triggered. Day-trade count 0/3, PDT false. ⚠️ JPM has a binding earnings exit: Q2 reports 2026-07-14 before open, so the position MUST be closed on/before 2026-07-13 (never hold through earnings); time stop also ~7/14 but the earnings exit binds first. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Outlook: hold JPM under standard sell-side rules; watch the 7/13 hard earnings-exit deadline.
+
+---
+
+### 2026-06-30 SELL JPM — closed (exit recorded retroactively; no committed log entry)
+- Side: sell (sell_to_close, 6 sh) — discretionary market close, trailing stop canceled first
+- Entry price: $327.17 (2026-06-22)
+- Exit price: $327.175 avg (fills: 1 @ $327.25, 4 @ $327.16, 1 @ $327.16 → proceeds $1,963.05); order id 90e4fda3-b66b-40dd-af39-9e1dbce002b4, filled 2026-06-30 13:38:03 UTC
+- Realized P&L: +$0.03 / ~+0.00% — essentially breakeven/flat
+- Exit reason: RECONSTRUCTED from Alpaca closed-orders + FILL activities; NO committed research/trade-log entry documents this exit (last committed state was the 6/26 EOD, which showed JPM open). The 12% trailing-stop GTC (d948673a, stop $302.23, hwm $343.45) was CANCELED at 13:37:50 UTC and a market sell placed 10s later — so this was a discretionary/manual close, NOT a trailing-stop fill. Timing is consistent with the strategy's earnings rule: JPM Q2 earnings 2026-07-14 (before open) was ~10 trading days out from 6/30, at the "close if earnings within 10 trading days / never hold through earnings" threshold; the 6/26 snapshot itself flagged a binding earnings exit on/before 7/13. Most likely an earnings-approaching exit executed early, at breakeven. ⚠️ Flagged for operator confirmation — this is the second undocumented discretionary exit (CVX 6/12 was the first).
+- Sector: Financials
+- Note: This is a sell, not a new trade — does not count against the 3 new-trades/week limit.
+
+---
+
+## 2026-07-02 — Midday Scan
+Equity: $99,681.72 | Cash: $99,681.72 | Positions: 0 | Open orders: 0 | Portfolio 100% cash
+Trades today: 0 | Trades this week: 0/3 | Regime: last read ON (6/22); no fresh research today (midday is position-management only)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Midday position scan found ZERO open positions and ZERO open orders — the portfolio is 100% cash ($99,681.72). No stops to check, no winners to tighten, no losers to cut; STEP 3–6 are all no-ops. The only action this scan is a reconciliation: the committed record (6/26 EOD) still showed JPM (6 sh) open, but JPM was closed on 2026-06-30 at breakeven (exit $327.175 vs entry $327.17, realized +$0.03) via a discretionary market sell — trailing stop canceled first, so NOT a stop fill — most likely the earnings-approaching exit (Q2 7/14 within ~10 trading days). That exit is now recorded above. Cash fully ties out: 6/26 cash $97,718.69 + $1,963.05 JPM proceeds = $99,681.74 ≈ live $99,681.72. Note JPM now trades ~$334–339 (7/02), above the $327 breakeven exit — some upside left on the table, but the exit already occurred and is not actionable. Day-trade count 0/3, PDT false. Standing posture is cash; any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check buy gate. Outlook: flat and disciplined; nothing to manage — reassess at the next pre-market.
