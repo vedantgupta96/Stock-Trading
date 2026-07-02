@@ -585,3 +585,84 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-02 (Thu) — Pre-Market Routine
+
+**Decision: TRADE `$CAT` — qualifying setup of record (all 11 gate checks PASS); execute at the
+market-open routine after the June jobs print. Default-HOLD posture on everything else.**
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 745.665 vs SMA20 741.50 → **PASS → ON.**
+- Regime read is the authoritative deterministic SPY-vs-SMA20 computation on live Alpaca bars
+  (83 bars), not web-dependent. New long entries permitted.
+- Gemini was unusable for date-specific data (refused to answer for "2026-07-02"), so macro/idea
+  context fell back to native WebSearch (noted per routine). The gate decisions below are all
+  deterministic on live Alpaca bars and are authoritative regardless.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | **100% cash — 0 positions, 0 open orders** | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+
+### ⚠️ Undocumented JPM exit (flag for operator)
+- Last committed EOD (2026-06-26) showed **JPM ×6 open** (+0.38%, 12% trailing GTC). Today the
+  account is **100% cash with zero positions and zero open orders** — JPM has been closed with
+  **no committed research/trade-log record**, mirroring the earlier undocumented CVX exit.
+- Reconstruction from cash: $97,718.69 (6/26) → $99,681.72 (7/02) = **+$1,963.03 ≈ 6 × $327.17**,
+  implying an exit near **~$327.0/share — essentially flat/breakeven** (≈ −$1 total), well above
+  JPM's trailing stop ($302.23), so this was **not a stop fill** — a discretionary/manual close.
+- Alpaca `orders`/`activities` via the wrapper returned empty, so the exact fill/timestamp is
+  unconfirmed. Most likely a pre-emptive close ahead of JPM's binding 7/13 earnings-exit deadline
+  (Q2 reports 7/14). **Operator should confirm the actual fill and reason.** Net effect: the JPM
+  trade round-tripped roughly flat and the book is now clean cash.
+
+### Market Context
+- **VIX ~16.5** (prev close 16.45; opened ~17.5) — calm, below its long-run ~18.5 average.
+- **TODAY = June Non-Farm Payrolls**, consensus ~170k (a Thursday release because **markets are
+  CLOSED Friday 7/03** for the July 4th holiday). Average hourly earnings is the number to watch;
+  ISM/ADP earlier this week were the warm-up. Two-sided macro event resolving this morning.
+- **3-day holiday weekend** ahead (closed Fri 7/03, Sat July 4). Any position opened today carries
+  full weekend gap risk with the trailing stop **inactive** Friday (stops only work in-session).
+- Earnings: light week (Nike Tue after close); Q2 season heats up mid-July.
+
+### Sector Momentum (2026 rotation)
+- **Leaders:** Energy (~+22% YTD), Industrials (~+16% YTD; **CAT +32%**, the largest contributor),
+  Consumer Defensive (~+13%; WMT/COST). Rotation out of Tech/AI into "real-economy" cyclicals.
+- Financials (last week's JPM sector) no longer a standout; now 0 held anyway.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+- **`$CAT`** (Industrials) — **GATE: PASS (11/11).** c9 breakout PASS (new 3-mo high 1073.46 in
+  last 5d vs prior 1022.96, 83 bars), c10 volume PASS (last5 maxvol 296,265 vs 216,092 threshold
+  = 1.5× avg 144,061), pullback **7.6%** (inside the 3–8% first-pullback band). Earnings **8/04**
+  (~22 trading days out, >10 → PASS). Catalyst documented & intact (Industrials leading the 2026
+  rotation; CAT the top sector contributor, +32% YTD, ~$63B backlog after a Q1 beat; fresh 3-mo-high
+  breakout on >1.5× volume, then a clean ~7.6% pullback). Sector-count 0, trades-this-week 0, PDT
+  0/3, cost ≤ cash. **Entry ~$991.98 | 2 sh | cost ~$1,984 | stop $912.62 (−8%) | target $1,230.06
+  (+24%) | 12% trailing GTC.**
+- **`$XOM`** (Energy) — FAIL c9 breakout (last5 high 138.06 « prior 176.40 — not a 3-mo high). Skip.
+- **`$CVX`** (Energy) — FAIL c9 breakout (172.75 < prior 214.65). Skip. (volume passes, breakout doesn't)
+- **`$COST`** (Consumer Def.) — FAIL c9 breakout (968.98 < prior 1096.46). Skip.
+- **`$WMT`** (Consumer Def.) — FAIL c9 breakout (118.57 < prior 135.14). Skip.
+- **`$NEM`** (Materials) — FAIL c9 breakout + c10 volume. Skip.
+- Congressional/STOCK-Act query: not run (Gemini down; idea-gen only, never a buy reason).
+
+### Risk Factors
+- **Jobs-day + 3-day-weekend stack:** entering today means holding CAT over a long weekend with the
+  trailing stop inactive Friday — amplified overnight/weekend gap risk. Downside is bounded by the
+  $200 risk sizing (2 sh, −8% hard cut $912.62), but a Monday gap-down could open below the stop.
+- **Thin pre-holiday liquidity** → poor fills likely (recall JPM's partial fill in thin liquidity);
+  size is already small (2 sh), so partial-fill impact is minor.
+- **Pullback at 7.6%** is the upper edge of the 3–8% band; a further leg down before entry would
+  push it toward "broken if >10%." A morning jobs shock could either break the setup or improve the
+  entry — the market-open routine should re-read CAT and the regime after the print.
+
+### Decision
+**TRADE `$CAT`** — the sole name clearing all 11 gate checks (real 3-mo-high breakout on >1.5×
+volume, disciplined ~7.6% first-pullback entry, leading sector, earnings safely ~22 trading days
+out, documented intact catalyst). **Execute at the market-open routine only after the June jobs
+number prints AND if CAT still holds the 3–8% band above its breakout pivot with regime still ON;**
+otherwise stand down and re-screen Monday. Size 2 sh (~$1,984), 12% trailing-stop GTC on fill,
+−8% hard cut $912.62. Trades this week would become 1/3. Book is otherwise 100% cash; no held
+positions to manage. Pre-market routine places no orders itself — this is the plan of record.
