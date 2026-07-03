@@ -585,3 +585,53 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-03 (Fri) — Pre-Market Routine
+
+### ⚠️ MARKET CLOSED TODAY — Independence Day (observed)
+July 4, 2026 falls on a Saturday, so the NYSE/Nasdaq observe Independence Day on **Friday, July 3, 2026 — the market is closed all day.** There is no trading session, so **no orders can be placed today regardless of regime.** This run is research/logging only; next live session is **Monday, July 6, 2026**. Gemini and the economic calendar both independently confirmed the 7/3 holiday.
+
+### Market regime status — ON
+- **Deterministic (authoritative, Alpaca SPY daily bars, split-adjusted, IEX):** SPY last close (7/2) **$744.86** vs **20-day SMA $741.03 → ABOVE → regime ON.** Last 5 closes: 729.35, 740.86, 746.65, 745.66, 744.86.
+- Gemini macro read agreed: S&P 500 ~7497 > its 20-day SMA ~7486.91 (as of 7/2). Regime last read ON on 6/22 — **no flip** (still ON), so no regime notification warranted.
+- Buy gate check #1 PASSES today. (But market is closed → cannot act; see above.)
+
+### Account snapshot (live Alpaca, paper) — 100% CASH
+Equity **$99,681.72** | Cash **$99,681.72** | Buying power $398,726.88 | Long mkt value $0 | **0 positions, 0 open orders** | Day-trades used 0/3 | PDT false.
+- Position sizing (recalc on live equity, for reference at next session): 1.5% of $99,682 = $1,495, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### ⚠️ JPM exit — undocumented (flagged for operator)
+JPM (6 sh, entry $327.17, held as the lone position at the 6/26 EOD snapshot) is **gone** as of today, with **no committed research/trade-log entry** documenting the exit — the same documentation gap seen earlier with CVX. No committed EOD snapshots exist for 6/29–7/2 either.
+- **Cash reconciliation:** 6/26 cash $97,718.69 + JPM proceeds ≈ $1,963.03 (6 sh) = **$99,681.72** (exactly today's cash) → implied exit ≈ **$327.17/sh, essentially breakeven** (realized P&L ≈ $0 / ~0%).
+- That fill (~$327) sits far **above** JPM's 12% trailing stop (~$302.23 as of 6/26), so this was **NOT a trailing-stop fill** — it was a discretionary/manual close (well ahead of the 7/13 binding earnings-exit deadline). The position and its trailing-stop GTC are both gone, consistent with a full close.
+- **Action for operator:** verify the actual JPM fill price/date/reason via Alpaca activities; the exit was benign (breakeven, freed capital) but should be logged for an accurate audit trail. This clears the 7/13 JPM earnings-exit obligation (no longer held).
+
+### Market context
+- **VIX ~16.1–16.6** (7/2 close ~16.15) — low/calm, below the ~18.5 long-run average. No stress.
+- **WTI crude ~$68.4/bbl** — **bearish**, down ~26% over the past month; "war premium" unwinding on Doha peace-talk progress; structure shifted backwardation→contango. Lowest since before the late-Feb Iran conflict. Headwind for Energy.
+- **Economic calendar:** No CPI/PPI/FOMC this week. June jobs report (released 7/2) came in **weaker than expected**. Ahead: **FOMC minutes 7/8**, **CPI 7/14**, **PPI 7/15**, next **FOMC 7/28–29**.
+
+### Sector momentum (week ending 7/2)
+- **Leaders:** Communication Services **+3.60%**, Financial Services **+3.39%**.
+- **Laggards:** Utilities −1.18%, **Energy −1.06%** (consistent with the crude slide — avoid energy longs).
+- Indices for the week: Nasdaq +2.1%, Dow +2.0%, S&P 500 +1.8%. Chipmakers volatile on AI-valuation concerns.
+
+### Earnings watch
+- **No held positions → no earnings-exit exposure today.**
+- Upcoming (for any Monday candidate screening): **PEP 7/9, DAL 7/10; big banks (JPM, GS, BAC, WFC, C, FAST) 7/14; CTAS/ASML 7/15; NFLX/TSM/UNH 7/16.** Note the entire **bank complex reports ~7/14** → any financials idea likely fails the ">10 trading days to earnings" gate at Monday's session, so financials are effectively off the table near-term despite leading the tape.
+
+### Trade ideas — none actionable today (market closed)
+Regime is ON, but with the market closed there is no session to trade and no live intraday data to confirm a fresh breakout/volume/pullback setup. Per discipline, **no gate is run to a "PASS/act" conclusion today.** Watchlist orientation for Monday 7/6 (each must independently clear the full 11-check gate on live data at that session):
+- **Communication Services** is the momentum leader — screen large-cap names there first (e.g. `$GOOGL`, `$META`, `$NFLX`), but note `$NFLX` earnings 7/16 (~9 trading days) likely **fails** the earnings gate.
+- **Avoid Energy** (crude in a −26%/month downtrend) and **avoid Financials for a fresh entry** (bank earnings cluster ~7/14 fails the 10-day earnings gate).
+- Congressional/STOCK-Act query: not run today (holiday, idea-gen only, never a buy reason).
+
+### Risk factors
+- **Holiday illiquidity / gap risk:** thin conditions around the long weekend; the next session (Mon 7/6) can gap on weekend headlines. Nothing held, so no direct exposure — but wait for Monday's real data before any entry.
+- **Energy/oil downdraft:** crude at multi-month lows; energy names remain a value trap on momentum rules — steer clear.
+- **CPI 7/14 + bank earnings 7/14 cluster:** a two-sided macro/earnings node ~7 trading days out; any new entry Monday should have earnings safely past that window.
+
+### Decision
+**HOLD — 100% cash.** The market is closed today for Independence Day, so no orders are possible regardless of the ON regime; the disciplined answer is to stand pat in cash. No positions to manage (JPM already exited at ~breakeven). Re-run the full pre-market regime/gate check on live data at the next session (**Monday, July 6, 2026**) before any new entry; avoid Energy and near-earnings Financials. Trades this week: 0/3.
