@@ -585,3 +585,74 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+## 2026-07-06 (Mon) — Pre-Market Routine
+
+**Decision: HOLD. Zero new trades.** Regime is ON, but no candidate presents a disciplined
+3–8% first-pullback entry with a documented present-tense catalyst. The three names that clear
+the deterministic breakout+volume gate (CAT, LLY, ABBV) all fail entry timing — CAT's pullback
+is broken (>10%), LLY/ABBV are at/near their highs (no pullback). Stay 100% cash and re-screen
+at the next session.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY_close 744.86 vs SMA20 741.03 → **c1 PASS → ON.**
+  (Gemini corroborates: US500 ~7510 above its 20-day MA ~7433–7487.)
+- Regime remains ON — no flip since the last committed read (ON, 6/22). New entries permitted
+  in principle, but each must independently clear the full 11-check gate.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+- No held positions → no sell-side rules to evaluate today.
+
+### Market Context
+- **VIX ~16.3–17.5** — low/calm, below its long-run ~18.5 average; steady over the past week.
+- **Oil (WTI) ~$68** — slipping ~0.4–0.8%, easing further (soft-inflation tailwind; a headwind
+  for Energy names specifically).
+- **This week:** ISM/S&P Global Services PMI (today), **FOMC Minutes Wed 7/8**, jobless claims
+  Thu 7/9. **June CPI Tue 7/14, June PPI Wed 7/15**, next FOMC 7/29. Q2 earnings season opens
+  mid-July: the big banks (JPM, BAC, C, GS, WFC) all report **7/14** → any bank is earnings-blocked.
+
+### Sector Momentum
+- Leaders (week ending 7/2): **Communication Services (+3.6%)** and **Financials (+3.4%)**, with
+  Materials (+3.0%), Utilities (+2.2%), Healthcare (+1.9%) firm. Info Tech and Energy lagged.
+- Financials lead but the large-cap banks are locked out by 7/14 earnings, so financials offers
+  no clean, gate-eligible entry this session.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Screened ~35 liquid large-caps across the leading/firm sectors. Pre-market % movers were
+dominated by penny/low-quality pumps (MSS, JLHL, YHC, SEER, SDOT) — ignored per standing policy.
+Most large-caps are trading well below their 3-month highs (broad prior-high overhang), so c9
+breakout fails for the majority. Three names clear **both** c9 breakout and c10 volume:
+
+- **$CAT** (Industrials) — c9 breakout PASS, c10 volume PASS, earnings 8/4 (~19d, PASS). But
+  **pullback 10.2% from the 5-day high → setup BROKEN (>10% rule) → SKIP.** No specific
+  present-tense catalyst documented; surfaced from screen only. (Mechanical gate shows PASS
+  *only* because catalyst was fed yes for screening; entry-timing + no-catalyst override it.)
+- **$LLY** (Healthcare) — c9 PASS, c10 PASS, earnings 8/5 (~20d, PASS). **Pullback 2.2% (< 3%
+  band) → too close to highs, no disciplined pullback entry → SKIP.** No documented catalyst.
+- **$ABBV** (Healthcare) — c9 PASS, c10 PASS, earnings 7/31 (~17d, PASS). **Pullback 0.2% →
+  sitting on its high, no pullback → SKIP.** No documented catalyst.
+- At-highs-but-thin-volume (c9 PASS / c10 FAIL, all skipped): V, MA, INTC, AMD, GE, UNH.
+- Everything else screened (NFLX, META, GOOGL, DIS, TMUS, CHTR, FCX, NEM, NUE, TPR, EQIX, TEL,
+  MU, AVGO, PLTR, COST, WMT, ORCL, RTX, LMT, NVDA, MSFT, AAPL, TSLA, GS, MS, HON) — FAIL c9
+  (not at a 3-month high) and/or c10.
+- Congressional/STOCK-Act query (idea-gen only, never a buy reason): surfaced T (Peters), LLY
+  (Cisneros), MSFT/BIIB/SPGI as most-bought; notable NVDA sales. None clears the gate on its own
+  merits — T not screened as a breakout, LLY fails entry-timing above. Dropped.
+
+### Risk Factors
+- **FOMC Minutes Wed 7/8** and **CPI/PPI 7/14–7/15** are two-sided macro events into a
+  low-VIX, complacent tape — forcing a marginal entry now risks buying right before a vol event.
+- Broad large-cap pullback: most names sit below prior 3-month highs, so breakouts are scarce
+  and the few at highs lack volume confirmation — a low-conviction backdrop for new longs.
+- The names that pass breakout+volume are extended (LLY, ABBV at highs) or broken (CAT >10%
+  pullback); chasing either violates the entry-timing discipline that is our edge.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON, but patience wins: no candidate combines a real
+breakout-on-volume with a clean 3–8% first-pullback entry AND a documented present-tense
+catalyst. CAT is broken (>10% pullback), LLY/ABBV are at their highs, and financials leaders are
+earnings-blocked into 7/14. Stay 100% cash; re-screen for a disciplined pullback-on-volume setup
+at the next pre-market / midday scan. Trades this week: 0/3.
