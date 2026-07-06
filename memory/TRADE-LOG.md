@@ -205,3 +205,15 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; no fresh r
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — the portfolio is back to 100% cash: zero open positions, zero open orders. JPM (the lone position on the 6/26 snapshot, 6 sh @ $327.17) was closed sometime between 6/26 and today with NO committed research/trade-log record; reconstructing from cash ($97,718.69 → $99,681.72, +$1,963.03 / 6 sh) implies an exit near $327.17 — essentially breakeven (realized ~+$0.01). That price sits far above JPM's $302.23 trailing stop, so it was a discretionary/manual close, not a stop fill, and its trailing-stop GTC is gone too. ⚠️ This exit is undocumented and unconfirmed — the third such undocumented exit on this account (after CVX 6/12 and the missed snapshots); operator should verify the actual fill, date, and reason. Equity $99,681.72, down -$7.49 (-0.01%) vs the last committed EOD (6/26, $99,689.21); Alpaca last_equity is $99,681.72 (balance_asof 2026-07-01) = today's equity, so the true single-session move today is $0.00 (flat). Phase P&L -$318.28 (-0.32%) off the live $100k base. Regime last read ON (6/22, SPY 749 > 20d SMA 747); no fresh research ran today (EOD-only routine), so the standing posture is cash and any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash; run a fresh pre-market regime/research check before any new entries, and confirm the JPM exit.
+
+---
+
+## 2026-07-06 — EOD Snapshot
+Equity: $99,681.72 | Cash: $99,681.72 | Day P&L: $0.00 (0.00%) | Phase P&L: -$318.28 (-0.32%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — no fresh research today)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/02, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-02), so the true session move is $0.00 — with no positions held, cash equity is static across the intervening market holiday (Fri 7/03, Independence Day observed) into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. The previously-flagged JPM binding earnings exit (7/13) is now moot — JPM was closed ~7/01 and the account has been flat since. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is two weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash into a new week (0/3 trades); run a fresh pre-market regime/research check before any new entries.
