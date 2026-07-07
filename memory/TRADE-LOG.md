@@ -217,3 +217,15 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/02, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-02), so the true session move is $0.00 — with no positions held, cash equity is static across the intervening market holiday (Fri 7/03, Independence Day observed) into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. The previously-flagged JPM binding earnings exit (7/13) is now moot — JPM was closed ~7/01 and the account has been flat since. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is two weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash into a new week (0/3 trades); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+## 2026-07-07 — EOD Snapshot
+Equity: $99,681.72 | Cash: $99,681.72 | Day P&L: $0.00 (0.00%) | Phase P&L: -$318.28 (-0.32%)
+Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — no fresh research today)
+
+| Symbol | Shares | Entry | Current | Unreal. P&L | Stop type |
+|--------|--------|-------|---------|-------------|-----------|
+| —      | —      | —     | —       | —           | —         |
+
+Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-06), so the true session move is $0.00 — with no positions held, cash equity is static day-over-day. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is now ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
