@@ -585,3 +585,80 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-07 (Tue) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD — zero new trades.** Regime is ON, but no candidate clears the full 11-check
+gate with a *disciplined* entry. Every liquid large-cap momentum name fails the c10 volume
+confirmation (breakout not on ≥1.5x average volume) and most are extended right at their highs
+(sub-3% pullback = no entry). The only deterministic gate-PASS name, RIVN, is a fading breakout
+sitting 11.6% below its high — the strategy's hard entry rule ("pullback >10% from the high →
+setup broken → skip") disqualifies it. Stay 100% cash. Trades this week 0/3.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 749.69 vs 20d SMA20 741.36 → **PASS → ON.**
+  (Independent recompute of last 20 completed daily closes ≈ 740.75; SPY ~$749.79 bid — well
+  above either read. Regime unambiguously ON.)
+- Gemini concurred (S&P index above its 20-day SMA). Regime ON; new entries permitted, but the
+  regime only recently flipped ON after a multi-week OFF stretch — early-uptrend whipsaw risk.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~15.57** (-1.5% on the day) — low/calm, below its long-run ~18.5 average. VIX1D collapsed
+  ~34% to ~8.7 (a quiet session priced in); futures term structure in contango (front ~18.1).
+- **Oil (WTI) ~$69** (+0.6% today on a Strait-of-Hormuz tanker headline) but **down ~24% over the
+  past month** — no energy momentum catalyst; risk premium has unwound, glut fears dominate.
+- **No major data today.** FOMC *minutes* Wed 7/8 (2:00pm ET); jobless claims Thu 7/9;
+  **CPI Tue 7/14.** Next FOMC meeting 7/28–29. Q2 earnings season kicks off (PEP 7/9, DAL 7/10,
+  FAST 7/13, big banks incl. JPM 7/14).
+
+### Sector Momentum
+- Leaders cited (Gemini): Consumer Cyclical, Communication Services, Financials/Financial
+  Services, Healthcare, Industrials, Semiconductors. Financials firm on the elevated-rates bid.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so candidates were screened. Deterministic results:
+- **$RIVN** (Consumer Cyclical/Autos) — **GATE: PASS deterministically** (c9 breakout PASS: 3-mo
+  high 20.195 in last 5d; c10 volume PASS: last5 maxvol 3.42M vs 2.09M threshold; earnings 7/30
+  ~16 td out → PASS). **BUT pullback is 11.6% below the breakout high** — the strategy's entry
+  rule hard-skips any setup pulled back >10% ("the setup is broken — skip it"), and STEP-3
+  revalidation requires the pullback to sit in the 3–8% band. RIVN spiked to ~$20.20 and has
+  since faded to ~$17.86 — a failing breakout, not a healthy first-pullback continuation.
+  **SKIP** (entry-timing rule; the c12 3–12% shadow band is advisory and does NOT override the
+  authoritative 10% rule in TRADING-STRATEGY.md).
+- **$V** (Financials) — c9 breakout PASS but **c10 volume FAIL**; pullback only 2.6% (extended at
+  52-wk high). GATE: FAIL — c10_volume. Skip.
+- **$JNJ** (Healthcare) — **c10 volume FAIL**; pullback 0.2% (right at the high). Skip.
+- **$ABBV** (Healthcare) — **c10 volume FAIL**; pullback 1.2%. Skip.
+- **$MRNA** (Healthcare) — **c10 volume FAIL** (has a 3.8% pullback but no volume confirmation).
+  Skip.
+- **$CNC** (Healthcare) — **c10 volume FAIL**; pullback 2.7%. Skip.
+- **$BPOP** (Financials) — **c10 volume FAIL**; pullback 0.7% (at the high). Skip.
+- **$CFLT** (Tech) — FAIL c9_breakout, c10_volume, c11_stock (near-52wk-high but no fresh 3-mo
+  breakout, no volume, and flagged non-stock/asset-class quirk). Skip.
+- Congressional/STOCK-Act query: not pursued (idea-gen only; nothing surfaced that would clear
+  the gate independently).
+
+### Held-position review
+- Portfolio is 100% cash (0 positions, 0 open orders) — no sell-side rules to evaluate, no stops
+  to manage. (JPM, the last position, was closed ~7/01 at breakeven; account flat since.)
+
+### Risk Factors
+- Regime only recently flipped ON — early-uptrend whipsaw risk elevated; no need to force the
+  first trade of the week. Momentum names are extended at the highs on sub-1.5x volume (chasing
+  invites a poor entry and a quick stop-out). The one gate-PASS name (RIVN) is already breaking
+  down off its high — exactly the profile the >10%-pullback skip rule is designed to avoid.
+  CPI (7/14) and the start of bank earnings loom next week.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON, but no name clears the 11-check gate with a disciplined
+3–8% pullback entry: all liquid momentum candidates fail the 1.5x volume confirmation, and the
+sole deterministic gate-PASS (RIVN) is a fading breakout 11.6% off its high (broken-setup skip).
+Stay 100% cash; re-screen for a clean pullback-on-volume setup at the next scan. Trades this
+week 0/3. No trades placed → no commit per the market-open routine.
