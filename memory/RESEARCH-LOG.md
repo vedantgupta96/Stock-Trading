@@ -585,3 +585,81 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-07 (Tue) — Pre-Market Routine
+
+**Decision: HOLD. Zero new trades.** Regime is ON, but no candidate clears the full 11-check
+buy gate with a disciplined entry — every clean momentum leader fails either the breakout (c9)
+or the volume (c10) deterministic check, and the one name passing both (TER) has a broken 22%
+pullback (far outside the 3–8% entry band and beyond the 10% skip threshold), no documented
+catalyst, and near-term earnings. Stay 100% cash; re-screen at the next pre-market/midday.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY close **751.27** vs **SMA20 740.75** → above
+  by ~1.4% → **PASS → ON.** New long entries permitted (subject to the full gate).
+- No regime flip: last committed read was ON (6/22); still ON today.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,681.72** | Cash: **$99,681.72** | 100% cash, **0 positions, 0 open orders** |
+Day-trades: **0/3** | PDT: false | Trades this week: **0/3** (new week).
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **S&P 500 +0.72% to 7,537** (record region); **Dow record close 53,056**; **Nasdaq +1.1%.**
+- **VIX ~15.6** — low/calm, well below the ~18.5 long-run average. Risk-on tape.
+- Tech/AI back in favor: chips rebounded from the late-June swoon (Foxconn strong sales →
+  sustained AI demand); XLK +~2% led by Western Digital (+7%) and Teradyne (+2.8%). Financials
+  and industrials also firm. Small-caps strong (Russell 2000 at a new ATH).
+- **Data source note:** Gemini returned no real-time market data (generic non-answer, exit 0)
+  → fell back to native WebSearch for macro/idea context. The regime read itself is the
+  deterministic Alpaca SPY-vs-SMA20 computation (not web-dependent), so gate check #1 is
+  authoritative regardless.
+- **Earnings backdrop:** Q2 earnings season begins mid-July (big banks ~7/14+). Many momentum
+  names report late July — a live c7 (no earnings within 10 trading days) risk on new entries.
+
+### Sector Momentum
+- Leaders: Technology / Semiconductors (AI trade re-engaging), Financials, Industrials; power
+  & memory AI-bottleneck names (NEE, VST, WMB, CCJ, MU, VRT) cited. Movers skew large-cap,
+  liquid — screened those, not low-quality pumps.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Screened ~28 liquid momentum/leader names. **None passed both the breakout AND volume checks
+with a valid entry.** Representative results:
+- **$AMD** (Tech) — c9 breakout PASS (l5 high 584.62 > prior 562.30), **c10 volume FAIL**
+  (852,924 < 1,048,756 threshold). Skip.
+- **$TSM** (Tech) — c9 breakout PASS (478.55 > 476.02), **c10 volume FAIL** (888,645 <
+  979,315). Skip.
+- **$GEV / $GE / $APH** (Industrials/Tech) — c9 breakout PASS, **c10 volume FAIL** each. Skip.
+- **$TER** (Tech) — c9 PASS + c10 PASS, but **shadow pullback 22.2%** (deeply broken breakout,
+  well beyond the 10% skip threshold — this is a post-breakout collapse, not a first-pullback
+  entry); no documented present-tense catalyst; Teradyne reports Q2 in late July (likely inside
+  the 10-trading-day earnings window). **Fails entry-timing + c7 + c8. Skip.**
+- **$SNDK / $ANET / $META / $AAPL / $TSLA / $WMB / $CCJ / $NEE / $VST / $PLTR / $HWM** —
+  c10 volume PASS but **c9 breakout FAIL** (not a 3-month high in the last 5 days). Skip.
+- **$MU / $VRT / $WDC / $NVDA / $AVGO / $CRDO / $NRG / $JPM / $GS / $NFLX / $GOOGL** —
+  fail c9 breakout (and mostly c10). Skip.
+- Congressional/STOCK-Act query (idea-gen only, never a buy reason): not surfaced today;
+  any such name would still have to clear the full gate independently.
+
+### Held-position review
+- Portfolio is 100% cash — **no positions, no open orders**, so no sell-side rules to evaluate
+  and no stops to manage. (JPM was closed ~7/01 at breakeven; account flat since.)
+
+### Risk Factors
+- **Early-Q2-earnings season:** breakout setups this week carry elevated c7 (earnings-window)
+  risk — several leaders report in the next ~2 weeks. Discipline demands verifying the earnings
+  date before any entry.
+- **Extended tape:** S&P/Dow at records with VIX ~15.6 — pullbacks can be sharp; chasing an
+  extended breakout (no valid 3–8% pullback) is exactly what the entry-timing rule forbids.
+- **AI-trade dependence:** the rally is narrow/AI-led; a chip-sentiment reversal (as in late
+  June) could unwind leaders quickly. No position = no exposure to that today.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON, but the deterministic gate rejects every screened name:
+clean leaders fail breakout or volume, and the lone breakout+volume pass (TER) has a broken
+22% pullback with no catalyst and near-term earnings. Patience beats activity — stay 100% cash
+and re-screen for a valid breakout-on-volume with a 3–8% first pullback at the next
+pre-market/midday scan. Trades this week remain 0/3.
