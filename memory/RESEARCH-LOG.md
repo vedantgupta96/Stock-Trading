@@ -585,3 +585,79 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-08 (Wed) — Pre-Market Routine
+
+### Regime — deterministic (Alpaca SPY vs SMA20)
+**ON.** SPY latest close (2026-07-07) **747.77** > 20-day SMA **741.26** (+6.51). New long
+entries are permitted today. This matches the last committed regime read (ON, 6/22) — no flip,
+so no regime notification. Regime is the authoritative computation (Alpaca daily bars, last 20
+closes 6/08→7/07), independent of any web read.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,681.72** | Cash: **$99,681.72** | 100% cash, **0 positions, 0 open orders** |
+Day trades: 0/3 | PDT: false. Buying power $398,726 (4x margin, unused — we trade cash-only).
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional = $200 / 8% = **$2,500/position** (the $200 cap is binding).
+- Weekly budget: 0/3 new trades used this week.
+
+### Market Context
+- **VIX ~16.13**, +3.60% on the day — still low/calm (below its ~18.5 long-run average) but
+  ticking up on the geopolitical headline below.
+- **Oil (WTI) surging ~+3–6% to ~$73–75** on a **Middle East escalation**: reports of US
+  military strikes against Iran + revoked sanctions waivers → Strait-of-Hormuz supply-disruption
+  fear, plus falling US crude/gasoline inventories. This is a two-sided macro shock, not a clean
+  momentum tailwind — it lifts energy but raises broad-market and inflation risk.
+- **Today's releases:** FOMC meeting minutes (2:00 PM ET), EIA crude inventories (9:30 AM ET),
+  wholesale inventories, consumer credit. No CPI/PPI today.
+- **This week/next:** June **CPI Tue 7/14** (8:30 ET), **PPI Wed 7/15**; **big-bank earnings
+  7/14** (JPM, BAC, C, WFC). June jobs (released 7/02) were soft: +57k vs expectations, unemp 4.2%.
+
+### Sector Momentum
+- Week leaders: **Communication Services** (~+6.9% 1-wk) and **Financials** (~+5.5% 1-wk).
+- **Energy** spiking today on the oil move (CVX +3.5%, XOM +3.9% cited).
+- **Tech mixed/soft** — AI/semis weak: MU −4.9%, SNDK −5.7% pre-market. Info Tech down ~4% on
+  the month.
+- Pre-market movers were mostly low-quality pumps (IOTR +72%, DCX +43%, BATL) — ignored per
+  policy. Liquid movers: AIG +8.9%, GRMN +6.9%, LOW +6.8%.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so candidates were screened. **None cleared the 11-check gate.**
+- **$AIG** (Financials) — c9 breakout PASS (at 3-mo high) but **FAIL c10 volume** (last5 maxvol
+  204,630 vs 280,071 threshold); no pullback (chasing an +8.9% single-day pop). Skip.
+- **$CVX** (Energy) — c10 volume PASS (534,329 vs 532,811) but **FAIL c9 breakout** (not a fresh
+  3-mo high); pullback 0.4% (no pullback — oil-spike chase). Skip. (Also: prior CVX energy trade
+  was a loss.)
+- **$XOM** (Energy) — FAIL c9 breakout AND c10 volume (665,468 vs 837,739). Skip.
+- **$META** (Comm Svcs) — c10 volume PASS but FAIL c9 breakout; pullback only 2%. Skip.
+- **$GOOGL / $NFLX** (Comm Svcs) — FAIL c9 breakout + c10 volume. Skip.
+- **$COP / $PSX** (Energy) — FAIL c9 breakout + c10 volume. Skip.
+- **$GRMN / $LOW** (movers) — FAIL c9 breakout + c10 volume (LOW's 3.5% pullback is fine but no
+  breakout-on-volume behind it). Skip.
+- **Financials caveat:** the leading tradable sector is largely earnings-blocked — JPM, BAC, C,
+  WFC all report **7/14** (~4 trading days out), inside the 10-day no-earnings window.
+- **STOCK-Act query (idea-gen only, never a buy reason):** recent disclosures surfaced HD, IBM,
+  JNJ, PPG, MTN, VLTO, VRSK (Reps. Doggett, Cisneros, et al.; transactions 6/9–6/24, filed
+  7/3–7/7). All are lagged watchlist names only; none has a fresh breakout-on-volume-with-pullback
+  setup today, so none clears the gate. Dropped.
+
+### Risk Factors
+- **Middle East / Iran escalation + oil spike** is the dominant risk: a two-sided event that
+  could re-ignite inflation fears, pressure the broad market, and spike the VIX. Chasing energy
+  into the news is exactly the kind of extended entry the strategy forbids.
+- **FOMC minutes today (2 PM)** and **CPI 7/14** are near-term macro catalysts; entering ahead of
+  them with no clean setup adds avoidable event risk.
+- **No clean setups:** nothing is making a fresh 3-month/52-week high on ≥1.5x volume with a 3–8%
+  pullback. Forcing a trade here would violate the entry discipline.
+
+### Held-position review
+Portfolio is 100% cash (0 positions, 0 open orders) — no sell-side rules to evaluate, no stops to
+manage. No held-position news required.
+
+### Decision
+**HOLD — no trade.** Regime is ON, but zero candidates clear the breakout-on-volume gate, the
+strongest tradable sector (Financials) is earnings-blocked into 7/14, and energy strength is a
+geopolitical oil-shock chase, not a disciplined pullback entry. Patience beats activity — staying
+100% cash. Trades this week remain 0/3. Re-check at the next pre-market.
