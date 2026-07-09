@@ -585,3 +585,65 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-09 (Thu) — Pre-Market Routine
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 745.28 vs 20-day SMA 741.57 → **PASS → regime ON.**
+  New long entries permitted today (subject to the full 11-check gate).
+- Gemini corroborates (index level): S&P 500 ~7,482.71 vs 20-day SMA ~7,440.20 (above). The
+  authoritative read is the deterministic Alpaca SPY-vs-SMA20 computation. Regime last committed
+  read was ON (6/22); **no flip** — still ON.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Trades this week: **0/3 new.**
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16.9** (+4.8% on the day from 16.13) — still low/calm, below its ~18.6 long-run average.
+- **Oil (WTI) ~$72–74** — choppy in the low-to-mid $70s; fresh US strikes on Iran are re-introducing
+  Strait-of-Hormuz supply risk, but no decisive move. Mild two-sided energy risk.
+- **Economic calendar today:** no top-tier print — Jobless Claims, Existing Home Sales, Fed
+  speakers (Williams, Logan). **Key events ahead: CPI 7/14, PPI 7/15, FOMC 7/29.** Big-bank
+  earnings (JPM/GS/BAC/WFC/C) 7/14.
+
+### Sector Momentum
+- Leaders: **Financials** (falling yields, capital-markets optimism), **Communication Services**
+  (AI/digital-ad bid), **Technology** (slowing but still firm); Consumer Defensive firm MTD.
+  Health Care improving. Materials/Industrials subtly firm.
+- Note: Financials lead, but the megacap-bank names all report earnings 7/14 (inside the 10-day
+  window) → gated out for new entry regardless of setup.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Screened ~22 liquid large-cap momentum names across the leading sectors. **No name clears both
+the breakout (c9) AND volume (c10) checks** — the two are mutually exclusive in today's tape:
+- **Fresh 3-mo high but volume TOO LIGHT (fail c10 ≥1.5x):** `$V` (high 364.21), `$MA` (543.65),
+  `$LLY` (1248.53), `$HD` (358.42), `$ABBV` (261.58), `$GE` (382.69), `$UNH` (430.10 — also
+  earnings 7/16, gated). Breakouts on sub-1.5x volume = low conviction; skip per c10.
+- **Volume OK but NO fresh breakout (fail c9):** `$META` (vol 1.52M > 0.91M thr, but pullback 4%
+  off, no new 3-mo high), `$PLTR` (vol 2.16M > 1.89M thr, no new high).
+- **Fail both c9 & c10:** `$NVDA`, `$GOOGL`, `$AVGO`, `$AMD`, `$MSFT`, `$NFLX`, `$COST`, `$WMT`,
+  `$ORCL`, `$CRM`, `$TSM`, `$NEM`, `$CAT`.
+- Congressional/STOCK-Act query (idea-gen only, never a buy reason): recent notable filings
+  incl. `$NVDA`, `$WFC`, `$CVX`, `$PEP`, `$T`, `$GPC` (~7/06 report). None screened as a valid
+  breakout-on-volume setup; all disregarded per policy (lagged ≤45d, no size/exits).
+
+### Risk Factors
+- **CPI 7/14 + PPI 7/15** land next Monday/Tuesday — a two-sided inflation event right at the
+  front of any new trade's life; a hot print could unwind the risk-on bid. No reason to force a
+  chase into it.
+- **Iran/oil headline risk** — fresh US strikes keep a Strait-of-Hormuz tail-risk live; energy
+  and broad risk sentiment could gap on escalation.
+- Regime is ON but momentum leadership is running on light volume (every fresh high failed the
+  1.5x confirmation) — classic low-conviction drift, elevated whipsaw/false-breakout risk.
+
+### Decision
+**HOLD. Zero new trades.** Regime is ON and the account is flat (0/3 trades this week), but **no
+candidate clears the full 11-check gate** — every fresh 3-month high failed the ≥1.5x volume
+confirmation (c10), and the only volume-backed names (META, PLTR) have no fresh breakout (c9).
+Patience beats activity: stay 100% cash and re-screen for a genuine breakout-on-volume pullback
+setup at the next pre-market / midday scan.
