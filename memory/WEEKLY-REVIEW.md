@@ -100,3 +100,57 @@
 - **Process focus:** (1) log each order at fill time; (2) run a fresh pre-market + midday gate screen every regime-ON session; (3) operator to confirm the JPM (and prior CVX) exit records.
 
 ### Grade: C
+
+---
+
+## Week of JUL 06 – JUL 10
+
+*Portfolio was 100% cash for the entire week — zero open positions, zero open orders, every session. Equity static at $99,681.72 since the ~7/01 JPM close. Only EOD-snapshot routines committed this week; no pre-market / research / midday screening routine ran.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,681.72 *(7/06 open = 7/02 close; flat over the 7/03 holiday)* |
+| Ending equity (Fri close) | $99,681.72 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | +0.83% *(7,506.96 → 7,569.06)* |
+| Trades taken | 0 (0 new buys, 0 closes) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 5 ON / 0 OFF *(presumed — no fresh regime read committed this week; last deterministic read ON 6/22, and the S&P rose all week to 7,569, comfortably above its 20-day SMA)* |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders.*
+
+### What Worked
+- **Capital fully preserved.** Zero drawdown, zero risk exposure all week; no losing trade, no stop breach, no rule violation. Equity dead flat at $99,681.72.
+- **No forced trades.** With no committed screen surfacing a gate-qualifying pullback-on-volume setup, nothing was chased — the "patience beats activity / zero trades can be the right answer" rule was honored.
+- **Clean books.** No undocumented exits this week (unlike the CVX/JPM reconstructions of prior weeks) — because there was simply no activity to document.
+
+### What Didn't Work
+- **Second consecutive week 100% cash lagging an up market.** S&P +0.83% this week (on top of +1.76% last week) while we sat entirely in cash — a compounding opportunity cost. Regime was (presumably) ON all week, yet no setup was hunted or taken.
+- **The research/screening routine did not run.** Only EOD-snapshot commits landed this week (7/06, 7/09) — no pre-market regime read, no gate screen, no midday scan. The regime filter has not been freshly computed since 6/22 (~2.5 weeks stale). We are not even *checking* for setups, let alone passing on them.
+- **Idea flow is nonexistent.** No candidate names were screened at all this week. The pipeline that would surface a JPM-style clean breakout is dormant.
+
+### Key Lessons
+- **Being flat is only "patience" if you actually screened and found nothing.** This week we didn't screen — that's not disciplined patience, it's an idle pipeline. A regime-ON week with no gate run is a missed process obligation, not a neutral outcome.
+- **A stale regime read is a blind spot.** Carrying a 6/22 "ON" read for 2.5 weeks means every "no new buys" note rests on unverified state. The deterministic SPY-vs-20d-SMA check must be re-run each session before any posture is asserted.
+
+### Adjustments for Next Week
+- **No rule changes.** Nothing has proven out or failed for 2+ consecutive weeks with data justifying a rulebook edit; `TRADING-STRATEGY.md` left unchanged. The problem is execution/process, not the rules.
+- **Restore the screening cadence:** run a fresh pre-market regime read + full 11-check gate screen every session next week, and a midday scan — the two-week cash-drag vs a rising S&P is now a pattern worth actively fixing with disciplined pullback-on-volume entries, not more passivity.
+- **Operator follow-up still open:** confirm the historical CVX (~6/12) and JPM (~7/01) undocumented exits.
+
+### Grade: C
