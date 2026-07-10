@@ -585,3 +585,83 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+## 2026-07-10 (Fri) — Pre-Market Research
+
+**Decision: HOLD (stay 100% cash).** Regime is ON, but no candidate clears the full
+11-check buy gate. The only two names with a genuine deterministic breakout-on-volume today
+(GEV, AXP) both fail check #7 — earnings inside the next 10 trading days. Zero trades is the
+right answer. No new buys; portfolio stays fully in cash.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 751.55 vs 20-day SMA 742.29 → **PASS → ON.**
+  (Recomputed independently: current close 751.55 > SMA20 742.29 over the last 20 daily bars.)
+- Regime remains ON (unchanged from the last real research read on 6/22, SPY 749 > SMA 747).
+  **No ON↔OFF flip today** → no urgent notification. New long entries are permitted in principle.
+- Gemini answered macro queries (search-backed, as-of 7/8–7/9) but refuses "future"-dated
+  price lookups; the regime read does not depend on it — it is the deterministic Alpaca
+  SPY-vs-SMA20 computation, which is authoritative for gate check #1.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 (reg-T $199,363.44) |
+100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → the $200 cap binds → max notional $200 / 8% = **$2,500/position**.
+
+### Market Context
+- **VIX ~15.8–16.9** (15.84 on 7/9) — low/calm, below the ~18.5 long-run average; risk-on tone.
+- **Oil (WTI) ~$71–72** — falling since mid-May on the US–Iran interim agreement (Hormuz
+  reopened, Iranian barrels returning) + OPEC+/US supply; ~$70 seen as a technical fulcrum.
+- **S&P 500** back near highs with improving breadth; SPY 751.55, above its rising 20-day SMA.
+- **Today's releases:** Delta (DAL) kicks off earnings season. Bank earnings begin 7/14
+  (JPM/BAC/GS/WFC). No major macro print flagged for today.
+
+### Sector Momentum
+- **Leaders:** Semiconductors / AI infrastructure (MU +4.5% on a US-investment expansion,
+  SOXX +3.5% on 7/9), Energy, Industrials, Consumer Defensive (WMT/COST), Healthcare.
+  AI-power names (NEE, WMB, VRT, GEV) gaining on the data-center build-out. Financials
+  improving into bank earnings.
+- **Watch:** July is historically rough for the momentum factor; early-July semis already
+  wobbled — rotation risk is elevated.
+
+### Earnings Watch
+- No held positions (100% cash) → no earnings exit to manage.
+- Next-10-trading-day earnings (7/13–7/24) knock out otherwise-qualifying ideas: DAL (7/10),
+  JPM/BAC/GS/WFC (7/14), NFLX/UNH/TSM (7/16), VZ (7/21), TSLA/GOOGL/GEV/FCX (7/22),
+  NEM/HON/RTX (7/23), AXP (7/24).
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so ideas are permitted. Screened a broad set of liquid momentum names; the gate's
+deterministic breakout (#9, 3-mo high in last 5d) + volume (#10, ≥1.5x 20d avg) checks did the
+filtering. Only two names cleared both — and both then failed on earnings:
+
+- **$GEV** (GE Vernova, Industrials/Power) — **GATE: FAIL (c7 earnings).** c9 breakout PASS
+  (last-5 high 1193.27 > prior 1181.05), c10 volume PASS (252,595 vs 238,291 threshold),
+  pullback ~9.9% (near the broken-setup edge). **Earnings 7/22 (~8 trading days) → inside 10 →
+  FAIL.** Also holding through a report is a hard no. Skip.
+- **$AXP** (American Express, Financials) — **GATE: FAIL (c7 earnings).** c9 breakout PASS
+  (358.77 > 352.415), c10 volume PASS (365,698 vs 193,191 threshold), clean ~3.4% pullback.
+  **Earnings 7/24 (~10 trading days) → inside the >10 requirement → FAIL.** Skip.
+- **$MU** (Semis) — FAIL c9 breakout: last-5 high 1064.59 sits well below the 1254.71 prior
+  high (deep pullback, not a new high). Extended name; skip.
+- Also screened AVGO, ANET, ORCL, NOW, GE, LLY, V, MA, ISRG, HWM, PH, TT, PWR, RTX, UNH, NEE,
+  WMB, VRT, CAT, PLTR, AKAM, COST, WMT, NEE — none passed both breakout AND volume today
+  (most lacked the volume surge or the fresh 3-mo high).
+- **Congressional/STOCK-Act (idea-gen only, never a buy reason):** Sen. Whitehouse bought
+  Micron (6/25), sold NVIDIA (partial 6/30) & Crown Castle (6/25); Sen. Peters bought AT&T
+  (6/29). None independently clear the gate (MU fails breakout; T not a momentum breakout).
+  Dropped — disclosures lag ~45 days and never bypass the gate.
+
+### Risk Factors
+- **Earnings season is ramping** — the next 10 trading days are dense with reports, so the
+  earnings gate will keep knocking out otherwise-clean breakouts. Patience over forcing a trade.
+- **Momentum-factor seasonality** — July is historically weak for momentum; early-July semis
+  already showed a wobble. A "violent rotation" out of the AI/semis leadership is a live risk.
+- **Oil at a ~$70 fulcrum** — a break either way would reprice energy/cyclicals and could
+  unsettle the risk-on tone.
+
+### Decision
+**HOLD — stay 100% cash.** Regime ON but zero names clear all 11 gate checks: the only two
+breakout-on-volume candidates (GEV, AXP) both fail the earnings gate. No trade is the
+disciplined outcome. Trades this week 0/3; day-trades 0/3; PDT false. No urgent notification
+(no positions, no regime flip). Re-screen at the next pre-market as earnings clear.
