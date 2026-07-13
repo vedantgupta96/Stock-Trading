@@ -585,3 +585,51 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-13 (Mon) — Pre-Market Research
+
+**Decision: HOLD.** Regime is ON, but no screened candidate clears the 11-check buy gate — every name fails the c9 breakout (none made a fresh 3-month high within the last 5 trading days; the momentum leaders are consolidating/pulling back deeper than the breakout window). On top of that, this is a heavy two-sided macro week (CPI Tue 7/14, PPI Wed 7/15, Fed Chair Warsh testimony Tue/Wed, and the big-bank + mega-cap earnings slate all week). No trade today; stay 100% cash and wait for a clean breakout-on-volume pullback setup.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 754.94 vs SMA20 743.76 → **PASS → ON.** New long entries permitted (subject to full gate).
+- Gemini cross-check (index points): S&P 500 ~7554 vs computed 20-day SMA ~7476 → also above. Both agree: regime ON. The Alpaca SPY-vs-SMA20 read is authoritative.
+- No regime flip vs last read (ON on 6/22) — filter status unchanged.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | Buying power: $398,726.88 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Trades this week: 0/3 (fresh week).
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16.4** — still calm/low (below its ~18.5 long-run average), but ticked up ~+9% on the day on renewed Middle East (US–Iran ceasefire breakdown / Strait-of-Hormuz) jitters. Implied correlation noted near 20-year lows — index calm masking single-stock dispersion.
+- **WTI crude ~$74**, surging ~+4% on the day on the US–Iran ceasefire breakdown and Hormuz supply-flow risk (~20% of world oil transits the strait); OPEC+ meeting + monthly report today add volatility. Energy tailwind but also an inflation/vol two-sided risk into CPI.
+- **Econ calendar:** No major US print today (Fed's Bowman & Waller speak). **This week is loaded:** US CPI (June) Tue 7/14, US PPI (June) Wed 7/15, Fed Chair Warsh semi-annual testimony to Congress Tue/Wed. Next FOMC decision 7/29.
+
+### Sector Momentum
+- Leaders this week: **Energy** (+3.2%, on the crude surge) and **Technology / semiconductors** (semis +6.3% on the week), with Healthcare and Utilities also firm month-to-date. Note: chips/AI infra were sliding pre-market today (SNDK −6%, MU −5%) — near-term wobble against the weekly strength.
+- Pre-market movers were dominated by penny/low-float pumps (MIMI, FTRK, ELPW, QTTB, etc.) — ignored per standing policy. Notable large-caps: BG +3.4%, FFIV +3.2%.
+
+### Earnings Watch — heavy week
+No held positions, so no earnings-driven exit to manage. But the next 10 trading days are packed, which knocks most large-cap momentum names out of the gate (c7): **Tue 7/14** banks — BAC, JPM, C, WFC; **Wed 7/15** JNJ, ASML, BLK, MS, UAL, JBHT, CTAS, KMI; **Thu 7/16** UNH, ABT, TSM, NFLX, ISRG, STT; **Fri 7/17** GE, TRV, FITB, RF; **week of 7/20** GOOGL, TSLA, AXP, STLD. Any candidate reporting in this window fails the >10-trading-day earnings gate.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so ideas were screened. **All failed the gate on c9 breakout** (no fresh 3-month high in the last 5 days):
+- **$XOM** (Energy) — GATE: FAIL. c10 volume PASS (last5 maxvol 904,499 vs 842,815 threshold) and shadow pullback PASS (3.3%), but **c9 breakout FAIL** (last5 high 143.52 « prior 176.40 — nowhere near a 3-month high). Skip.
+- **$COP** (Energy) — GATE: FAIL. c9 breakout FAIL (111.32 vs prior 135.84) and c10 volume FAIL (581,334 vs 780,889 threshold). Skip.
+- **$NVDA** (Tech) — GATE: FAIL. c10 volume PASS (7.55M vs 7.17M threshold) but **c9 breakout FAIL** (210.99 vs prior 236.54; 0% pullback = sitting mid-range, not a fresh high). Skip.
+- **$AMD** (Tech) — GATE: FAIL. c9 breakout FAIL (572.50 vs prior 584.62) and c10 volume FAIL (756,273 vs 984,680 threshold). Skip.
+- **$NEM** (Materials) — GATE: FAIL. c9 breakout FAIL (98.89 vs prior 121.98) and c10 volume FAIL (422,225 vs 696,641 threshold). Skip.
+- Congressional/STOCK-Act query (idea-gen only, never a buy reason): recent filings surfaced CVX & Installed Building Products (Rep. Taylor), AMD/AAPL/IBM/LLY/MSTR (Rep. Cisneros), T/GPC/MRK/NVDA/PEP (Rep. Self). None independently clear the gate today (breakout/volume fail as above), so all dropped.
+
+### Held-position review
+- Portfolio is 100% cash — no positions, no open orders, no stops to manage, no sell-side rule to evaluate.
+
+### Risk Factors
+- **CPI Tue + PPI Wed + Warsh testimony** = a two-sided macro gauntlet; entering ahead of it would be buying into an event, not a pullback. Patience favored.
+- **Oil/geopolitics:** the Hormuz risk that's lifting crude can also re-ignite inflation fears and spike the VIX — a headline-driven tape where breakouts are prone to whipsaw.
+- **Semis wobbling** pre-market against a strong weekly trend — momentum leadership is unsettled; no clean setup to lean on.
+
+### Decision
+**HOLD — no trade.** Regime ON but zero names clear the 11-check gate (all fail c9 breakout), and the week is front-loaded with CPI/PPI and mega-cap earnings. Stay 100% cash; trades this week 0/3. Re-screen next pre-market for a genuine breakout-on-volume pullback. No urgent notification warranted (no positions at risk, no regime flip).
