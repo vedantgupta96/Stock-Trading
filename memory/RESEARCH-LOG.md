@@ -585,3 +585,77 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-14 (Tue) — Pre-Market Routine
+
+**Decision: HOLD. Zero new trades.** Regime is ON, but no screened candidate clears the
+11-check buy gate — today's "leaders" (Energy) are bouncing on a geopolitical oil spike, not
+breaking to new highs, so every energy name fails c9 (3-month-high). It is also CPI day (June
+CPI at 8:30 ET), a two-sided macro event no disciplined new entry should chase into. Stay 100%
+cash and re-screen at the next pre-market / midday scan.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic):** SPY last close 749.13 vs 20-day SMA 744.33 → **PASS → ON** (last
+  bar 2026-07-13). Same read the buy_gate produced on every candidate below. New entries permitted.
+- No regime flip vs last committed read (6/22, ON) — no urgent alert warranted.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- balance_asof 2026-07-13; equity unchanged from last EOD (7/09, $99,681.72) — flat since the
+  ~7/01 JPM close. Phase P&L -$318.28 (-0.32%) off the $100k base.
+- Sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200 risk/trade**
+  → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+
+### Market Context
+- **CPI day:** June CPI + Core CPI at 8:30 AM ET — the key event; ADP weekly private-employment
+  change also out; FOMC's Bowman speaks 1:55 PM ET. No PPI today; next jobs report Aug 7.
+- **Oil (WTI) ~$79–80**, up ~2–2.8% and highest since June 2026, spiking on the **US reimposing
+  a naval blockade on Iran (Strait of Hormuz)** — a war-premium/supply-shock move. Note this is
+  the *reverse* of the June easing-oil catalyst; a geopolitical spike is fragile and two-sided.
+- **VIX:** gemini 503 on that query; not independently confirmed. Given the CPI print + Hormuz
+  risk, treat volatility as elevated/uncertain.
+- **Earnings underway:** Q2 season opens today with the big banks — **JPM, BAC, GS, C, WFC, MS
+  all report 7/14**; ASML/JNJ/BLK 7/15; NFLX/UNH/TSM 7/16. Megacap tech (GOOGL, TSLA 7/22;
+  META/MSFT 7/29; AMZN/AAPL 7/30) later this month. Financials are effectively un-buyable this
+  week (all reporting = inside the 10-day earnings gate).
+
+### Sector Momentum
+- **Energy leading** (XLE +3.2%, XOM +4.1%) purely on the oil spike. **Tech/chipmakers,
+  Materials, and Communication Services lagging/red** today. Financials seeing profit-taking
+  ahead of/into bank earnings.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars) — ALL FAIL
+- **$XOM** (Energy) — **GATE: FAIL** c9_breakout. last5 high 145.21 vs prior 3-mo high 176.40
+  (nowhere near a new high); pullback only 0.5% (not in 3–12% band). Volume passes but breakout
+  doesn't — an oversold bounce, not a breakout. Skip.
+- **$CVX** (Energy) — **GATE: FAIL** c9_breakout + c10_volume (last5 high 182.33 vs prior
+  214.65; vol 391k vs 534k threshold). Skip.
+- **$COP** (Energy) — **GATE: FAIL** c9_breakout + c10_volume (113.22 vs prior 135.84; vol 581k
+  vs 767k). Skip.
+- **$MU** (Tech/semis) — **GATE: FAIL** c8_catalyst + c9_breakout (1035.39 vs prior 1254.71).
+  Volume passes and pullback 9.5% is in-band, but no fresh breakout and no documented catalyst;
+  chipmakers red today. Skip.
+- **$STX** (Tech/storage) — **GATE: FAIL** c8, c9, c10. Skip.
+- **STOCK-Act query (idea-gen only, never a buy reason):** surfaced NEM (Ro Khanna, spouse,
+  6/29), plus assorted notes/bonds and a SpaceX (private) buy. NEM already failed the breakout
+  gate on 6/22 and is a lagging Materials name today — not a candidate. Dropped, per policy.
+
+### Risk Factors
+- **June CPI at 8:30 ET** is a binary macro catalyst; entering ahead of it invites gap risk on
+  a fresh position. With no compliant setup, cash is the correct posture through the print.
+- **Strait-of-Hormuz escalation** is driving the oil bid — a headline reversal (de-escalation)
+  could unwind energy strength as fast as it appeared; energy names are extended, not basing.
+- Early-Q2 bank earnings could set a risk-on or risk-off tone for the week; wait for a clean
+  post-catalyst breakout-on-volume with a 3–8% pullback rather than forcing a trade today.
+
+### Held-position review
+- Portfolio is 100% cash — no positions, no open orders. No sell-side rules to evaluate, no
+  stops to manage, no held-ticker news to check. Nothing below -8%, no held-position earnings.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON, but the deterministic gate rejects every candidate (all
+fail c9 breakout — the energy strength is a geopolitical bounce, not a new high), and it's a
+CPI-print day. Patience beats activity: stay 100% cash (0/3 trades this week) and re-screen for
+a disciplined pullback-on-volume setup at the next pre-market / midday scan.
