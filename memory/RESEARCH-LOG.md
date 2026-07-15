@@ -585,3 +585,75 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-15 (Wed) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: HOLD. Zero new trades.** Regime is ON, but no candidate clears a disciplined
+pullback entry. Every name that cleared the deterministic breakout + volume checks (JPM, MS, GS)
+is a **big-bank post-earnings pop, extended at a fresh high** (pullback 0.7–2.4%, none in the
+strategy's 3–8% entry band) and all three are the same sector (Financials, max 2). Buying here =
+chasing an earnings gap, which the strategy explicitly forbids ("Do not buy breakouts the moment
+they happen — you will overpay"). Stay 100% cash.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY close 753.67 vs SMA20 744.79 → **PASS → ON.**
+- Regime read is the authoritative deterministic Alpaca SPY-vs-SMA20 computation (not web-dependent).
+
+### Account Snapshot (live Alpaca, paper) — pre-trade
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16.50** (-3.85% on the day) — low/calm, below its long-run ~18.55 average.
+- **Oil (WTI) ~$79.75** (+0.55%) — firming on US–Iran tensions / Strait-of-Hormuz supply risk;
+  +4.9% over the past month. A geopolitics-driven bid, not clean demand momentum.
+- **Macro today:** June PPI, Empire State Mfg, Fed Beige Book. **CPI was released 7/14** (yesterday);
+  June Retail Sales Thu 7/16. **Next FOMC 7/29** — no policy event today. Mid-July = bank earnings week.
+
+### Sector Momentum
+- Leaders cited (Gemini): Information Technology (XLK, AI optimism), Communication Services,
+  Energy. Financials firm on the risk-on bank bid + post-earnings pops.
+
+### Earnings Watch (held names)
+- None — portfolio is 100% cash. No earnings exposure.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so surfaced large-cap movers were run through the deterministic gate:
+- **$JPM** (Financials) — c9 breakout PASS (3-mo high 351.05 in last 5d), c10 volume PASS
+  (last5 maxvol 442,197 vs 417,848 thr). BUT pullback only **0.7%** (extended, at the high) and
+  it is a **post-earnings pop** (reported 7/14). Not a pullback entry → **chase, skip.**
+- **$MS** (Financials) — c9 PASS, c10 PASS, pullback **2.4%** (below the 3% band). **Reported
+  earnings TODAY 7/15** — the breakout IS the earnings reaction. Chasing an earnings gap → **skip.**
+- **$GS** (Financials) — c9 PASS, c10 PASS, pullback **1.1%** (extended). **Reported 7/14** —
+  post-earnings pop. → **skip.** (Also: JPM/MS/GS are all Financials; sector cap is 2.)
+- **$BAC** (Financials) — c9 PASS, **c10 volume FAIL** (last5 3.18M vs 3.51M thr). Skip.
+- **$AAPL** (Tech) — c9 PASS, **c10 volume FAIL** (1.44M vs 3.04M thr). Skip.
+- **$FTNT** (Tech) — c9 PASS, **c10 volume FAIL** (210,527 vs 331,521 thr). Skip.
+- **$DELL** (Tech) — **c9 breakout FAIL** (last5 high 463.48 < prior 468.64). Skip.
+- **$MU** (Tech) — **c9 FAIL** (1035.39 < prior 1254.71). Skip.
+- **$CAT** (Industrials) — **c9 FAIL** (982.76 < prior 1073.46). Skip.
+- **$TSLA** (Consumer Disc) — surfaced as a "3–8% pullback" idea, but **c9 FAIL** (last5 high
+  413.09 < prior 453.39 — a "sell-the-news" decline, not a breakout) + c10 FAIL. Skip.
+- **Congressional/STOCK-Act query** (idea-gen only): mostly ETFs/energy (T, UNH, PALL, IGV, SCHP,
+  CEG, NI, ES) — CEG run through the gate → c9 FAIL, c10 FAIL. Nothing pursued; never a buy reason.
+
+### Risk Factors
+- The only names clearing breakout+volume did so on **earnings-day volume**, not accumulation on a
+  pullback — the riskiest kind of chase (buying the gap into a new high). All three are in one
+  sector (Financials), which would also breach the 2-per-sector cap if stacked.
+- Market at/near highs post-CPI; forcing an extended entry here invites an immediate stop-out.
+
+### Tooling note (operator FYI)
+- `scripts/alpaca.sh` `_get` was sending `Content-Type: application/json` on GET requests, which
+  makes the egress proxy hang ~60s and return HTTP 504 on every read (account/positions/orders/
+  bars). Fixed `_get` to use auth-only headers (no body content-type on a bodyless GET). This was
+  breaking all market-data reads in the cloud environment; committed with this run.
+
+### Decision
+**HOLD. Zero new trades.** Regime ON, but the only gate-clearing names are extended big-bank
+post-earnings pops (0.7–2.4% pullback, all Financials), not the 3–8% first-pullback setups the
+strategy requires. Discipline says don't chase the gap. Stay 100% cash; re-screen at the next
+pre-market / midday scan for a genuine pullback-on-volume entry. Trades this week: 0/3.

@@ -15,13 +15,18 @@ if [[ -z "${ALPACA_API_KEY:-}" || -z "${ALPACA_SECRET_KEY:-}" ]]; then
   exit 1
 fi
 
-_headers=(
+_auth_headers=(
   -H "APCA-API-KEY-ID: ${ALPACA_API_KEY}"
   -H "APCA-API-SECRET-KEY: ${ALPACA_SECRET_KEY}"
+)
+_headers=(
+  "${_auth_headers[@]}"
   -H "Content-Type: application/json"
 )
 
-_get()  { curl -sf "${_headers[@]}" "$1"; }
+# GET requests carry no body; sending Content-Type on them makes the egress
+# proxy hang and return 504, so reads use auth-only headers.
+_get()  { curl -sf "${_auth_headers[@]}" "$1"; }
 _post() { curl -sf -X POST "${_headers[@]}" -d "$2" "$1"; }
 _delete() { curl -sf -X DELETE "${_headers[@]}" "$1"; }
 
