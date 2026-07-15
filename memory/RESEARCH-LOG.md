@@ -585,3 +585,45 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-15 — Pre-Market Research
+
+### Market Regime — ON (buys permitted)
+- **Deterministic Alpaca read (authoritative):** SPY close **751.94** > 20-day SMA **744.85** → regime **ON**. S&P is above its 20-day SMA; the #1 buy-gate check passes, new long entries are permitted today.
+- Gemini Q1 (SPY-vs-SMA) returned no usable data (model declined real-time). The regime read above is the deterministic buy_gate computation, not web-dependent.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,681.72** | Cash: **$99,681.72** | **100% cash, 0 positions, 0 open orders** | Day trades: 0/3 | PDT: false | Trades this week: **0/3** (fresh week)
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~16.5** — calm, down ~3.9% on the day, below its long-run ~18.5 average.
+- **Oil (WTI) ~$79.75–80**, rising ~0.6% on **escalating US–Iran tensions / Strait-of-Hormuz supply-disruption risk** — a two-sided macro risk (bid for energy, headwind for broad risk if it escalates).
+- **Today's releases:** **PPI (June) 8:30 AM ET** (wholesale inflation) + **Fed Beige Book 2:00 PM ET**. CPI was released yesterday 7/14 (came in soft — supportive, boosted futures). Next FOMC 7/28–29.
+- **Q2 earnings season in full swing** — the binding constraint on new entries this week (earnings check #7 knocks out most large caps reporting in the next 10 trading days).
+
+### Sector Momentum
+- Leaders cited: Healthcare, Technology, Consumer Cyclical; copper firm. **Financials rallied hard on strong Q2 bank earnings this week** (JPM/GS reported 7/14, MS 7/15), pushing the group to fresh highs. IT softer intraday on IBM's weak preliminary Q2.
+- Gemini pre-market-movers query returned no usable real-time data; screened liquid large-cap momentum names deterministically via buy_gate instead.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Screened ~27 liquid large-caps across Tech, Healthcare, Consumer, Energy, Materials, Industrials, Financials. **Only three names clear both the breakout (c9) and volume (c10) checks — all Financials, and all are extended at their highs with sub-2% pullbacks (outside the 3–8% first-pullback entry band):**
+
+- **$JPM** (Financials) — 11-check hard gate **PASS** (c9 breakout 344.64 fresh high, c10 vol pass; next earnings ~10/13 clears #7). **Pullback only ~0.5%** → at the high, NOT a first-pullback entry. **Chase — skip today.**
+- **$GS** (Financials) — hard gate **PASS** (c9/c10 pass, breakout 1143.79; reported 7/14, next earnings ~10/14 clears #7). **Pullback ~0.2%** → at the high. **Chase — skip today.**
+- **$MS** (Financials) — c9/c10 pass (breakout 232.01; reported this morning 7/15). **Pullback ~1.7%**, and buying the same session it reported earnings = buying into realized earnings volatility at the high. **Chase — skip today.**
+- Everything else failed the deterministic gate: **AAPL** c9 pass but c10 FAIL (volume light); **NVDA / META / XOM / FCX / COST** c10 pass but c9 FAIL (in pullbacks well below prior highs, not fresh breakouts); AMD/MSFT/GOOGL/AVGO/PLTR/WMT/TSLA/NFLX/UBER/CAT/DE/GE/CVX/COP/NEM/SCCO/LLY/UNH all FAIL breakout and/or volume.
+- **Congressional/STOCK-Act (idea-gen only, never a buy reason):** Sen. Boozman disclosed UNH (6/4 trade), CEG (6/12), plus ETFs/palladium (we don't trade ETFs). Filings lag the trade ~45 days (stale). UNH independently FAILS the gate (c10 volume). CEG not a fresh breakout candidate here. Dropped.
+
+### Held-position review
+- Portfolio is 100% cash — no positions, no open orders, no stops to manage, no sell-side rules to evaluate. (JPM was the last position, closed ~7/01 at breakeven per prior reconstructed logs.)
+
+### Risk Factors
+- **PPI (8:30 AM) + Beige Book (2:00 PM)** are two-sided macro events — reason not to chase an extended entry ahead of the print.
+- **Oil rising on US–Iran/Strait-of-Hormuz tension** — an escalation would re-spike oil and could unwind the risk-on bid, especially for financials/cyclicals.
+- **Financials extended post-earnings** — the only names clearing breakout+volume are all sitting at fresh highs with no pullback; entering here overpays and invites a mean-reversion whipsaw. The entry-timing rule (3–8% pullback) exists precisely for this.
+
+### Decision
+**HOLD — no new trades today.** Regime is ON and capital is available (0/3 trades, $2,500/position headroom), but the only names passing the breakout-on-volume gate (JPM, GS, MS) are all Financials extended at their highs with <2% pullbacks — outside the disciplined 3–8% first-pullback entry band, i.e. chases into an earnings-driven spike. No idea offers a disciplined first-pullback entry today. **Watchlist:** JPM, GS, MS — revisit for a 3–8% pullback from the breakout high that holds support on drying volume, with earnings still >10 trading days out. Patience beats activity; staying in cash is the correct posture today.
