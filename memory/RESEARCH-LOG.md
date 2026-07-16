@@ -585,3 +585,80 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-16 (Thu) — Pre-Market Routine
+
+**Decision: HOLD (no trade).** Regime is ON, but no screened name clears the full 11-check
+buy gate. The only technical breakout-on-volume passer (PYPL) fails on earnings and is a pure
+takeover-rumor pop, not a momentum setup. Every leading-sector large-cap is trading *below* its
+prior 3-month high — there is simply no clean first-pullback breakout to buy today. Staying 100%
+cash. Patience beats activity.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY close **754.77** vs SMA20 **744.85** → **PASS → ON.**
+- Gemini corroborates (S&P 7,572.42 above its 20d SMA 7,544.96). Regime ON; new entries permitted
+  in principle. No flip vs the last committed read (ON, 6/22).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,681.72** | Cash: $99,681.72 | 100% cash, **0 positions, 0 open orders** | Day trades: 0/3 | PDT: false
+- balance_asof 2026-07-15; last_equity $99,681.72 → static (no positions held). Account has been
+  flat cash every session since the ~7/01 JPM close.
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200 risk/trade**
+  → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### Market Context
+- **VIX ~15.7** — low/calm, down ~5% on the day, below its long-run ~18.5 average.
+- **WTI crude ~$79–80** — near one-month highs on Middle East tensions, but longer-term trend down
+  since May (descending trendline, 100d SMA < 200d SMA).
+- **Econ calendar today:** June Retail Sales (est +0.2% m/m), Philly Fed Mfg (est 13), Initial Jobless
+  Claims (est 216k), Pending Home Sales, FOMC speakers (Logan, Schmid). CPI (6/26 data) printed 7/14,
+  PPI 7/15 (mixed). Next **FOMC 7/27**; July jobs report 8/07.
+- **Earnings season is live (mid-July).** Q2 reports flooding in: NFLX/ISRG tonight; SCHW, MMM, TRV,
+  TFC, FITB, RF 7/17; GM 7/21; T, CME, GEV, PM, GOOGL, IBM, NOW, TSLA 7/22; etc. Many otherwise-
+  interesting names are inside the 10-trading-day earnings window and thus gate-blocked.
+
+### Sector Momentum
+- Leaders this week (Gemini): **Energy (+2.15%), Financials (+1.94%), Real Estate, Consumer Discretionary,
+  Comm Services.** Financials strong on bank Q2 beats (MS/BLK/PNC reported 7/16) — but that same earnings
+  wave disqualifies most bank names for new entries. Energy leads on price but no energy large-cap is at
+  a new 3-month high.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Screened ~30 large-cap momentum names across the leading sectors. Deterministic results:
+- **$PYPL** (Financials/Fintech) — **GATE: FAIL (c7 earnings).** c9 breakout PASS (last5 high 55.88 >
+  prior 52.29) and c10 volume PASS (4.30M vs 1.21M threshold) — but the entire move is a **takeover
+  rumor** (Stripe + Advent joint buyout offer at $60.50/sh, reported 7/15, board meets 7/20), *not* a
+  momentum breakout. Earnings **7/28 (~8 trading days)** → inside the 10-day window, **c7 FAIL.** Pullback
+  only 0.6% (buying at the high, shadow c12 FAIL). Binary merger-arb event risk (board could reject 7/20).
+  Disqualified on multiple grounds. **Skip.**
+- **$ANET** (Technology) — **FAIL c10 volume.** c9 breakout PASS (last5 high 189.66 > prior 181.19,
+  pullback 9.4%) but breakout-day volume below the 1.5x threshold — no volume confirmation. Earnings 8/04.
+  **Skip.**
+- **Energy** ($XOM, $CVX, $COP, $WMB, $KMI) — all **FAIL c9 breakout** (trading well below prior 3-month
+  highs; e.g. XOM last5 145.5 vs prior 176.4). Leading on the tape but not making new highs. Skip.
+- **Mega-cap / momentum** ($AMZN, $META, $NVDA, $AVGO, $COST, $GE, $HD, $BKNG, $RCL, $UBER, $PLTR, $VST,
+  $CEG, $GEV, $ORCL, $NOW, $BABA, $HWM, $PWR, $TT, $MSI) — all **FAIL c9 breakout** (each below its prior
+  3-month high). A few showed volume but none has a fresh breakout to buy. Skip.
+- Congressional/STOCK-Act query (idea-gen only, never a buy reason): surfaced UNH, CEG, APH, MCK, QCOM
+  (mixed buyers, lagged 45-day filings, several ETFs/notes). None independently clears the gate — CEG
+  fails breakout above; the rest not at qualifying breakouts. Dropped per policy.
+
+### Held-position review
+- Portfolio is 100% cash — no positions, no open orders, no stops to manage, no sell-side rule to evaluate.
+
+### Risk Factors
+- **Earnings-season landmine:** two-thirds of the momentum universe reports inside 10 trading days;
+  even a clean breakout would likely be gate-blocked on c7 right now. Fewer valid setups until the wave clears.
+- **Takeover-rumor traps:** PYPL-style M&A pops screen as breakouts-on-volume but are binary and not our
+  strategy — the gate's earnings check happened to catch PYPL; discretion must catch the next one.
+- **Macro two-sided:** FOMC 7/27 approaching; today's retail sales / Philly Fed and Fed speakers could
+  swing the tape. Oil near one-month highs on Middle East risk is a latent inflation/vol catalyst.
+
+### Decision
+**HOLD — no trade.** Regime ON but zero qualifying setups: no leading-sector large-cap is at a fresh
+3-month high, the one breakout-on-volume name (PYPL) is an earnings-blocked takeover rumor, and the one
+other breakout (ANET) lacks volume confirmation. Correct posture is 100% cash and patience. Trades this
+week 0/3. No urgent Discord alert warranted (no positions, no regime flip). Committed and pushed per the
+pre-market routine.
