@@ -585,3 +585,79 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-16 (Thu) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: BUY MS ×11 @ $222.47.** Regime is ON, and Morgan Stanley is the one candidate that
+clears the full 11-check buy gate — a genuine 3-month-high breakout on >1.5x volume (232.12 on
+7/15 earnings day) that has pulled back ~4.2% (inside the 3–8% band) into a clean first-pullback
+entry, with next earnings safely ~66 trading days out (10/21) and a fresh, documented catalyst
+(Q2 beat + $20B buyback + analyst PT hikes). 12% trailing-stop GTC placed immediately, accepted.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 751.26 vs SMA20 744.88 → **PASS → ON.**
+- Gemini corroborated: S&P 500 ~7,572 vs 20-day SMA ~7,476 (above). The regime read itself is
+  the deterministic Alpaca SPY-vs-SMA20 computation (not web-dependent); gate check #1 is authoritative.
+
+### Account Snapshot (live Alpaca, paper) — pre-trade
+Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,682 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+- Post-trade: cash $97,234.52 | equity ~$99,678.50 | long mkt value $2,443.98 | day trades 0/3.
+
+### Market Context
+- **VIX ~15.98** (+2.0%) — low/calm, ~15% below its long-run ~18.5 average.
+- **Oil (WTI) ~$80.3** (+~1%, 4th up day) on Middle East (US–Iran) tensions near 1-month highs;
+  US/OPEC+ output caps the upside. Mild inflation risk but not disrupting the risk-on tape.
+- **Cooler June CPI (7/14) and PPI (7/15)** trimmed Fed-hike odds; Dow +150 on the PPI print.
+  No FOMC/PCE this week (FOMC 7/29, PCE 7/30). Today: retail sales, jobless claims, Philly Fed.
+
+### Sector Momentum
+- Leaders: Financials (heavy 52-wk-high cluster: JPM, MS, BAC, WFC, BEN), Industrials/rails
+  (UNP, CSX), Tech (AAPL record high), Healthcare, Energy. (Gemini's sector % figures were
+  garbage/hallucinated and treated directional-only, per standing policy.)
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+- **$MS** (Financials) — **GATE: PASS.** c9 breakout PASS (3-mo high 232.12 on 7/15 vs prior
+  230.12), c10 volume PASS (last5 maxvol 590,374 vs 445,703 threshold = 1.5x avg 297,135),
+  pullback ~4.2% (in 3–8% band, shadow c12 PASS). Earnings 10/21 (~66 td, >10 → PASS). Catalyst
+  documented & fresh (Q2 beat 7/15 + $20B buyback + Barclays $262 / KBW $250 PT hikes). Sector 0
+  held, trades-this-week 0, PDT 0/3, cost $2,447 ≤ cash. **→ BOUGHT 11 @ $222.47.**
+- **$UNP** (Industrials) — c9/c10 PASS but **pullback 0% (at the high, extended)** AND next
+  earnings **7/23 (~5 td, <10 → c7 FAIL)**. Skip on both entry-timing and the earnings rule.
+- **$JPM** (Financials) — c9/c10 PASS, but **pullback 2.7% (just under the 3–8% band, extended)**;
+  would also make Financials the only sector held twice. Passed on it in favor of MS's cleaner
+  pullback entry. (JPM was our 6/22 trade, closed ~7/01 breakeven.)
+- **$CSX** (Industrials) — c10 volume FAIL (last5 maxvol 699,025 vs 1,300,572 threshold). Skip.
+- **$BAC** (Financials) — c10 volume FAIL (3,508,841 vs 3,553,001). Pullback 1.5% (extended). Skip.
+- **$AAPL** (Tech) — c10 volume FAIL (1,721,273 vs 3,077,631) and pullback 0.4% (at the high). Skip.
+
+### Order Execution
+- MS quote at the open showed an abnormally wide IEX-feed snapshot (bid $210.90 / ask $235.66)
+  — a stale displayed-quote artifact, not executable price. Confirmed via bars that MS was
+  trading a tight ~$221.7–225.0 range today (VWAP $223.82). Proceeded with the market buy
+  (MS is highly liquid, 480–590K sh/day). **Filled 11 @ $222.472727** — right at the real market,
+  confirming the wide quote was noise. Cost basis $2,447.20.
+- **12% trailing-stop GTC placed** (qty 11, initial stop $195.5976, hwm $222.27, status new —
+  accepted, not PDT-blocked). order id 6109eca4-31ad-49cb-a5a5-17f9494c7559.
+- Entry $222.47 | Target $275.86 (×1.24) | Time stop ~2026-08-06 (15 td); no earnings exit binds
+  (next earnings 10/21).
+
+### Held-position review
+- Pre-trade portfolio was 100% cash; no sell-side rules to evaluate. MS is now the lone position,
+  ~flat at entry (-0.1%), fully stop-protected by the 12% trailing GTC. No sell-side rule triggered.
+
+### Risk Factors
+- Early-uptrend/thin-open liquidity: mitigated by the clean fill at $222.47 and immediate stop.
+- Oil grinding up on US–Iran tensions is a two-sided macro risk (inflation), but MS's driver is
+  IB/trading/capital-return, and the position is stop-protected on a pullback entry (not a chase).
+- Financials leadership could rotate; thesis reassessed if the sector rolls over or the catalyst breaks.
+
+### Decision
+**BUY MS ×11 @ $222.47, 12% trailing stop GTC ($195.60).** Regime ON; MS is the only name to clear
+all 11 gate checks with a real breakout-on-volume, a disciplined ~4.2% first-pullback entry, a
+fresh documented catalyst, and earnings safely outside 10 trading days. UNP/JPM/CSX/BAC/AAPL each
+failed on volume, entry-timing (extended at highs), or the earnings rule. Trades this week now 1/3.
+Committed and pushed per the market-open routine (a trade was placed).

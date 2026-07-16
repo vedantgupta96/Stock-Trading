@@ -229,3 +229,17 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-08), so the true session move is $0.00 — with no positions held, cash equity has been static every session since the ~7/01 JPM close, across the 7/03 holiday and the 7/06–7/08 sessions into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash mid-week (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+### 2026-07-16 BUY MS — open
+- Side: buy
+- Shares: 11
+- Entry price: $222.47 (actual fill avg, $222.472727; cost basis $2,447.20)
+- Stop level: 12% trailing GTC — initial stop $195.60 (hwm $222.27); order id 6109eca4-31ad-49cb-a5a5-17f9494c7559 (accepted, not PDT-blocked)
+- Target: $275.86 (entry × 1.24, 3:1 R/R on 8% risk)
+- Catalyst: Morgan Stanley reported Q2 on 7/15 — EPS $3.46 (beat $2.91) on record $21.35B revenue (surging IB + equity trading), and authorized a new $20B buyback. Multiple analyst PT hikes on 7/16 (Barclays → $262, KBW → $250).
+- Thesis: MS broke to a 3-month high of $232.12 on 7/15 (earnings day) on 590,374 sh = >1.5x the 297,135 20-day avg (breakout day 7/14 also 480K). It then pulled back ~4.2% to ~$222.5 today — a clean first-pullback entry inside the 3–8% band. Financials is a leading sector and 0 currently held (no sector crowding). Regime ON (SPY 751.26 > 20d SMA 744.88). VIX ~16 calm; cooler June CPI/PPI this week trimmed Fed-hike odds — risk-on backdrop for banks.
+- Sector: Financials
+- Earnings next: 2026-10-21 (Q3) — ~66 trading days out, clears the >10-day gate comfortably; no near-term earnings exit binds.
+- Time stop: 2026-08-06 (~15 trading days) — close if < +5% gain by then.
