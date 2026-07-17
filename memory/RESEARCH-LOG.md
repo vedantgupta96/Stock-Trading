@@ -585,3 +585,98 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-17 (Fri) — Pre-Market Routine
+
+**Decision: TRADE `$GS` (planned for market-open execution).** Regime is ON, and Goldman
+Sachs is the one screened candidate that clears the full 11-check buy gate with a genuine
+first-pullback entry: a 7/14 earnings-beat breakout to fresh 52-week highs (~$1,153) on
+>1.5x volume, then a clean ~5% pullback into the 3–8% entry band, earnings now safely past
+(next 10/13, well outside 10 trading days), and a documented, present-tense catalyst. Pre-
+market places no orders (that is the market-open routine's job); GS is handed off for entry
+at the open subject to live pullback confirmation. Default was HOLD; GS earns the exception.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic, via buy_gate):** SPY 750.87 vs SMA20 744.86 → **PASS → ON.**
+- Gemini cross-check: SPY closed 750.72 on 7/16 vs a ~746.6 20-day average → above. Agrees.
+- No regime flip vs the last known read (ON, 6/22); new entries permitted.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,599.51 | Cash: $97,234.51 | Buying power: $395,560 | Day trades: 0/3 | PDT: false
+- 1 open position (MS, Financials), 1 open order (MS 12% trailing-stop GTC). NOT flat.
+- Position sizing (recalc on live equity): 1.5% of $99,600 = $1,494, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+
+### ⚠️ Undocumented new position discovered — MS (Morgan Stanley)
+- Live account holds **MS ×11 @ $222.472727** (cost $2,447.20), current $215.00,
+  unrealized **-$82.20 (-3.36%)**, protected by a **12% trailing-stop GTC** (stop $195.646,
+  hwm $222.325, order 6109eca4…, created 2026-07-16 13:42 UTC).
+- This buy is NOT in the committed logs — the last committed EOD (7/09) showed 100% cash.
+  MS was bought ~7/16 with no committed research/trade-log record. This is the **4th such
+  undocumented trade** on this account (after CVX 6/12, JPM ~7/01, and missed snapshots).
+  Operator should confirm the fill, entry, and reason. Trade-log reconstruction is pending.
+- MS earnings: reported **Q2 on 7/15** (EPS $3.46 beat $2.89; record revenue; dividend
+  raised). Next earnings **~10/14** — so the 7/16 buy was placed AFTER earnings and does NOT
+  violate the never-hold-through-earnings rule; earnings are safely >10 trading days out.
+- Sell-side review: MS at -3.36% is above the -8% cut; fully stop-protected; no sell rule
+  triggered. **HOLD MS.** (Counts MS as this week's trade #1 → trades this week 1/3.)
+
+### Market Context
+- **Regime ON.** SPY 750.87 > SMA20 744.86.
+- **VIX:** Gemini query returned HTTP 503 (model down) — VIX not read this run; treat as a
+  data gap. No fallback obtained; nothing in price action suggests a vol spike (SPY near
+  highs). Note the gap.
+- **Oil (WTI) ~$79–80**, upward trend (+~1–2% on the day, +6% on the month) on renewed
+  US–Iran tensions / Strait-of-Hormuz supply risk — a tailwind for Energy.
+- **Economic calendar today (7/17):** Housing Starts / Building Permits / Import Prices
+  (8:30 ET), Industrial Production (9:15 ET), prelim UMich Consumer Sentiment (10:00 ET).
+  No CPI/PPI/jobs/FOMC today (CPI was 7/14, PPI 7/15, retail sales 7/16). **FOMC 7/28–29.**
+- **Earnings today:** SCHW, MMM, TFC, FITB, RF (regional/financials) — none held, none idea.
+
+### Sector Momentum
+- Leaders this week: **Energy** (+3.76%, oil-driven), Consumer Staples, Real Estate,
+  **Financials** (+1.89%, moved up to 4th), Health Care. Laggards: **Technology** (-2.70%,
+  semis rolling over), Communication Services, Industrials, Materials.
+- Financials is in the top half and firm — supportive for both the MS hold and a GS add.
+
+### Earnings watch (held positions)
+- **MS:** reported 7/15, next ~10/14 — no earnings risk inside 10 trading days. Clear.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+- **$GS** (Financials) — **GATE: PASS.** c1 regime PASS (SPY 750.87 > 744.86), c9 breakout
+  PASS (3-mo high 1153.54 in last 5d vs prior 1124.55), c10 volume PASS (last5 maxvol
+  163,320 vs 117,692 threshold = 1.5x avg 78,461), pullback **5%** (in the 3–8% band).
+  Earnings 7/14 done, next ~10/13 (>10 trading days → PASS). Catalyst documented & intact
+  (Q2 blowout: EPS $20.98 vs ~$14.50, IB fees +55%, equity underwriting +130%, buyback +
+  dividend raise to $5.00; BofA raised PT to $1,300 on 7/16). Sector-count 1 (MS) → GS makes
+  2 Financials, at the ≤2 cap. Sizing: **2 sh @ ~$1,096, cost ~$2,192, stop $1,008 (-8%) /
+  12% trailing GTC on entry, target $1,359 (+24%)**. PDT 0/3, cost ≤ cash, trades-week 2/3.
+  **→ TRADE at open (market-open routine), subject to live pullback-hold confirmation.**
+- **$DINO** (Energy) — **GATE: PASS but SKIP on entry timing.** Breakout PASS (3-mo high
+  87.215 vs prior 78.78), volume PASS (231,347 vs 194,566), but pullback only **0.4%** — it
+  is sitting AT its high, an extended chase, not a first-pullback entry. Strategy entry rule
+  requires a 3–8% pullback; DINO fails it. Watchlist only; revisit on a real pullback.
+- **$JPM / $BAC / $C / $XOM** — screened, GATE FAIL. JPM/BAC at/near fresh highs (pullback
+  2.3% / 0.8% — too shallow, chase), C pullback 8.7% (breakout/volume verdict FAIL), XOM
+  breakout FAIL. All skipped.
+- Congressional/STOCK-Act query: not run this pre-market (idea-gen only, never a buy reason).
+
+### Risk factors
+- **Sector concentration:** MS + GS would put the entire book (2/2) in Financials, at the
+  same-sector cap. A financials-specific shock (rate/credit headline) would hit both at once.
+  Acceptable under the rules but the book has no diversification until a non-financial adds.
+- **GS is post-earnings-gap:** the 7/14 gap up was large (7.5–9%); post-gap pullbacks can
+  extend. Enter only if GS holds above its pullback support at the open; the 12% trailing
+  stop and -8% hard cut protect the downside. If the pullback exceeds ~10% from the high
+  before entry, the setup is broken — skip.
+- **VIX data gap** (Gemini 503) — no independent vol read this run; monitor at midday.
+- **Oil/geopolitics:** escalating US–Iran risk is a two-sided macro (supports Energy, could
+  spike vol broadly). FOMC 7/28–29 is the next major event.
+
+### Decision
+**TRADE `$GS`** at the open (planned; executed by the market-open routine on live
+confirmation) — the only candidate clearing all 11 gate checks with a genuine ~5% first-
+pullback entry, documented intact catalyst, and earnings safely past. **HOLD MS** (protected,
+-3.36%). Trades this week would be 2/3 after GS. Regime ON.
