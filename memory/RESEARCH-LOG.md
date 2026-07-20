@@ -585,3 +585,99 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-20 (Mon) — Market-Open Routine (research run inline; pre-market entry was missing)
+
+**Decision: BUY UNH ×5 @ $423.22.** Regime is ON (deterministic Alpaca SPY-vs-SMA20), and
+UNH is the one screened name that clears the full 11-check buy gate — a genuine 3-month-high
+breakout on ~2.6x volume off a blow-out Q2 earnings beat (already reported 7/16, so no forward
+earnings risk), now pulled back 8% into a clean first-pullback entry. 12% trailing-stop GTC
+placed immediately. All other screened names failed the deterministic gate (breakout/volume).
+
+### Market Regime Status — ON (authoritative deterministic read)
+- **Alpaca (deterministic, via buy_gate):** SPY 748.26 vs SMA20 745.05 → **PASS → ON.**
+- ⚠️ Divergence noted: Gemini's *index-level* read had the S&P 500 cash index at 7,475.69
+  vs a 7,479.03 20-day SMA on 7/17 (marginally BELOW). Both instruments sit on a razor-thin
+  margin. Per the strategy doc and routine, the gate's deterministic **SPY-vs-SMA20** compute
+  is authoritative (not web-dependent); SPY is +0.4% above its 20-day SMA → regime ON, new
+  entries permitted. This is an early/thin-margin uptrend — position sizing stays at the $200
+  risk cap and we took only one disciplined entry.
+
+### Account Snapshot (live Alpaca, paper) — pre-trade
+Equity: $99,619.64 | Cash: $97,234.51 | Positions: 1 (MS) | Open orders: 1 (MS trail stop) | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,620 = $1,494, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap is binding).
+- Post-trade: cash $95,118.41 | equity $99,609.88 | long mkt value $4,491.47 | day trades 0/3.
+
+### Undocumented state reconciliation (⚠️ operator action)
+- The account has a **MS (Morgan Stanley) position — 11 sh @ $222.47** with a live 12%
+  trailing-stop GTC ($195.65, hwm $222.33, placed 7/16) — that is NOT in the committed
+  TRADE-LOG (last committed entry: 7/09 EOD snapshot, flat/100% cash). The MS buy on ~7/16
+  was never logged. This is the **fourth** undocumented action on this account (after CVX
+  ~6/12, the JPM exit ~7/01, and now the MS entry). Reconstructed cost basis $2,447.20.
+  MS reported Q2 ~7/16, so no forward earnings risk. Flagged for operator verification.
+
+### Market Context
+- **VIX ~18.0** (-3.8% on the day), easing from a ~18.8 spike on 7/17 — calm-to-modestly
+  elevated, near its long-run ~18.5 average.
+- **Oil (WTI) ~$82–84**, rallying on renewed US–Iran / Strait-of-Hormuz supply-risk premium
+  (a reversal of June's easing). Energy geopolitical risk is back on — a two-sided macro input.
+- **No major print this week:** no CPI (next 8/12), no FOMC (next 7/28–29). Minor labor/housing
+  data (leading indicators, jobless claims, PMI flash Fri 7/24). Light macro calendar.
+
+### Sector Momentum
+- Leaders cited: Information Technology, Energy, Communication Services, Industrials.
+  Healthcare not a cited leader, but UNH's move is a single-name earnings catalyst, not a
+  sector-momentum trade. MS (held) is Financials — no sector crowding vs a Healthcare add.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Regime ON, so candidates were screened. 14 liquid large-caps run through the deterministic gate:
+- **$UNH** (Healthcare) — **GATE: PASS (all 11).** c9 breakout PASS (3-mo high 460.95 in
+  last 5d vs prior 434.19), c10 volume PASS (last5 maxvol 640,682 vs 362,901 threshold =
+  ~2.6x the 241,934 20-day avg), pullback 8.0% (in the 3–8% strategy band). **Earnings already
+  reported 7/16** (Q2 beat) → next ~October, safely > 10 trading days → c7 PASS. Sector-count 0
+  (Healthcare), trades-this-week 0, PDT 0/3, cost $2,120 ≤ cash. **→ BOUGHT 5 @ $423.22.**
+- **$UNH catalyst (independent, documented — NOT the STOCK-Act disclosure):** blow-out Q2
+  2026 report on 7/16 — adj EPS $6.38 vs ~$4.88 consensus, revenue $112.0B beat, **raised FY26
+  guidance to $19.50–$20.00** (up from prior/consensus), medical care ratio improved to 86.7%
+  (from 89.4% y/y), $11.1B operating cash flow, ~$4.0B buyback YTD; multiple analyst PT hikes
+  (KeyBanc, Truist, Wells Fargo, RBC, Piper) into the mid-to-high $400s. Earnings-driven
+  breakout; the 8% pullback is the disciplined first-pullback entry.
+- **$UNH — GE, NFLX** passed volume but **FAIL c9 breakout** (last5 high < prior high). 
+- **$NVDA, AVGO, MSFT, GOOGL, META, AMZN, XOM, COP, CAT, MU** — FAIL (breakout and/or
+  volume; several extended <3% pullback or volume under 1.5x). **$AAPL** breakout PASS but
+  volume FAIL and pullback only 1.4% (extended). All skipped.
+- **Congressional/STOCK-Act query (idea-gen only):** Boozman disclosed a UNH buy (filed 7/13)
+  — noted but **NOT** the buy reason; UNH cleared the gate independently on its own earnings
+  catalyst. Other disclosures (MU, NI, ES) not pursued (MU failed the gate; NI/ES not screened).
+
+### Held-position review (sell-side rules)
+- **MS** (Financials, 11 sh @ $222.47) — current ~$216.1, **-2.86%** from entry. Above the
+  -8% cut, well inside tolerance, fully protected by a live 12% trailing-stop GTC ($195.65).
+  No earnings within 10 days (reported ~7/16). No time-stop/thesis trigger. **HOLD — no
+  sell-side rule triggered.**
+- **UNH** (new) — +0% at entry, protected by 12% trailing-stop GTC ($372.14, hwm $422.89).
+
+### Order Execution
+- Market buy UNH 5 → **filled 5 @ $423.22** (quote bid 423.06 / ask 424.04, spread ~0.23%,
+  not halted). order id 204b6b86-….
+- **12% trailing-stop GTC placed** (qty 5, initial stop $372.14, hwm $422.89, accepted — not
+  PDT-blocked). order id 1cd14949-….
+- Entry $423.22 | Target $524.79 (×1.24, 3:1 R/R on 8%) | Time stop ~2026-08-10 (15 trading
+  days); no earnings exit binds (next earnings ~October).
+
+### Risk Factors
+- Thin-margin/early uptrend — regime is barely ON (SPY +0.4% over its SMA); whipsaw risk is
+  elevated. Kept to one entry at the $200 risk cap; UNH is 12%-trailing protected.
+- Buying a post-earnings breakout after an 8% pullback risks buying into a fading gap if the
+  guidance-raise enthusiasm reverses; the 12% trailing stop and -8% hard cut bound the downside.
+- Oil re-spiking on Iran/Hormuz is a macro wildcard but UNH (Healthcare) is largely insulated.
+
+### Decision
+**BUY UNH ×5 @ $423.22, 12% trailing stop GTC ($372.14).** Regime ON (deterministic SPY read);
+UNH is the only screened name to clear all 11 gate checks — a real 3-month-high breakout on
+~2.6x volume off a genuine, documented Q2 earnings beat, with earnings already past (no forward
+gap risk) and a disciplined 8% first-pullback entry. Trades this week now 1/3. MS held under
+standard sell-side rules. Committed and pushed per the market-open routine (a trade was placed).

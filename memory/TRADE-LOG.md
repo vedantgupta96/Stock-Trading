@@ -229,3 +229,30 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-08), so the true session move is $0.00 — with no positions held, cash equity has been static every session since the ~7/01 JPM close, across the 7/03 holiday and the 7/06–7/08 sessions into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash mid-week (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+### 2026-07-20 BUY UNH — open
+- Side: buy
+- Shares: 5
+- Entry price: $423.22 (actual fill, avg)
+- Stop level: 12% trailing GTC — initial stop $372.14 (hwm $422.89); order id 1cd14949-1c76-4dcc-b06a-2fa963a4afcd
+- Target: $524.79 (entry × 1.24, 3:1 R/R on 8% risk)
+- Catalyst: Blow-out Q2 2026 earnings on 7/16 — adj EPS $6.38 vs ~$4.88 consensus, revenue $112.0B beat, raised FY26 guidance to $19.50–$20.00, medical care ratio improved to 86.7% (from 89.4% y/y); multiple analyst PT hikes into the mid/high-$400s. (STOCK-Act: Sen. Boozman disclosed a UNH buy filed 7/13 — idea-gen only, NOT the buy reason; UNH cleared the gate independently.)
+- Thesis: UNH gapped to a 3-month high of $460.95 on the 7/16 earnings beat on ~2.6x average volume (last-5d maxvol 640,682 vs 362,901 = 1.5x threshold; 20d avg 241,934), then pulled back 8% to ~$423 — a clean first-pullback entry inside the 3–8% band. Earnings already reported (7/16) so no forward gap risk; next earnings ~October. Regime ON (SPY 748.26 > 20d SMA 745.05). Healthcare, 0 held → no sector crowding (MS is Financials).
+- Sector: Healthcare
+- Earnings next: ~2026-10 (Q3; reported Q2 on 2026-07-16) — safely > 10 trading days out. No binding earnings exit.
+- Time stop: 2026-08-10 (~15 trading days from entry)
+
+---
+
+## 2026-07-20 — Market-Open Snapshot (post-trade)
+Equity: $99,609.88 | Cash: $95,118.41 | Long mkt value: $4,491.47
+Trades today: 1 (BUY UNH) | Trades this week: 1/3 | Regime: ON (deterministic SPY 748.26 > 20d SMA 745.05)
+
+| Symbol | Shares | Entry    | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|----------|----------|------------------|----------------------------|
+| MS     | 11     | $222.47  | ~$216.10 | -$65.15 (-2.86%) | 12% trailing GTC ($195.65) |
+| UNH    | 5      | $423.22  | ~$422.89 | ~-$1.65 (-0.08%) | 12% trailing GTC ($372.14) |
+
+Notes: BUY UNH ×5 @ $423.22 placed at market open; regime ON per the authoritative deterministic Alpaca SPY-vs-SMA20 read (748.26 > 745.05, +0.4%) — note Gemini's index-level read was marginally below its SMA on 7/17, a razor-thin two-sided margin resolved in favor of the deterministic gate per strategy. UNH was the only screened name (of 14 large-caps) to clear all 11 gate checks: a genuine 3-month-high earnings-gap breakout on ~2.6x volume, 8% first-pullback entry, earnings already reported 7/16 (no forward gap risk), documented catalyst. 12% trailing-stop GTC placed immediately ($372.14). ⚠️ **Reconciliation:** the MS position (11 sh @ $222.47, trail stop $195.65, bought ~7/16) was never committed to this log — the fourth undocumented account action (after CVX ~6/12, JPM exit ~7/01, MS entry ~7/16); MS reviewed under sell-side rules today (-2.86%, within tolerance, stop-protected, no earnings within 10d) → HOLD. Now 2 open positions / 5, both stop-protected. Day trades 0/3, PDT false. Trades this week 1/3.
