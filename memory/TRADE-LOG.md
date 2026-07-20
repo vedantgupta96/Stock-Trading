@@ -229,3 +229,16 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-08), so the true session move is $0.00 — with no positions held, cash equity has been static every session since the ~7/01 JPM close, across the 7/03 holiday and the 7/06–7/08 sessions into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash mid-week (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+## 2026-07-20 — EOD Snapshot
+Equity: $99,548.97 | Cash: $95,118.41 | Day P&L: -$132.75 (-0.13%) | Phase P&L: -$451.03 (-0.45%)
+Trades today: 1 (UNH buy — undocumented) | Trades this week: 1/3 | Regime: ON (last read 6/22; stale — no fresh research today)
+
+| Symbol | Shares | Entry    | Current  | Unreal. P&L       | Stop type                  |
+|--------|--------|----------|----------|-------------------|----------------------------|
+| MS     | 11     | $222.47  | $210.96  | -$126.64 (-5.18%) | 12% trailing GTC ($195.65) |
+| UNH    | 5      | $423.22  | $422.00  | -$6.10 (-0.29%)   | 12% trailing GTC ($374.84) |
+
+Notes: The account is no longer flat — two positions have appeared since the last committed EOD (7/09, $99,681.72), NEITHER with a committed research/trade-log entry (same undocumented-entry pattern as the earlier CVX 6/12 and JPM 7/01 exits; operator should confirm actual fills/dates/catalysts). Reconstructing from Alpaca order timestamps: **MS** (Financials, 11 sh @ $222.47) was bought ~2026-07-16 (its 12% trailing-stop GTC was created 7/16), now $210.96 = -$126.64 (-5.18%) — above the -8% cut, no sell-side rule triggered, fully protected (stop $195.65, hwm $222.325). **UNH** (Healthcare, 5 sh @ $423.22) was bought **today 7/20** (trailing-stop GTC created 2026-07-20T13:43Z), now $422.00 = -$6.10 (-0.29%), fully protected (stop $374.84, hwm $425.95). Both positions carry live 12% trailing-stop GTCs — no missing stops; sectors are distinct (Financials + Healthcare), 2/5 position slots used, ≤2 per sector. Equity $99,548.97, down -$132.75 (-0.13%) vs the last committed EOD (7/09); true single-session move vs Alpaca last_equity ($99,605.01, balance_asof 2026-07-17) ≈ -$56.04 (-0.06%). Phase P&L -$451.03 (-0.45%) off the live $100k base. Trades today 1 (UNH); trades this week 1/3 (MS was last week, 7/16). Regime last read ON (6/22) but ~4 weeks stale; no fresh research ran today (EOD-only routine). Day-trade count 0/3, PDT false. Outlook: hold MS and UNH under standard sell-side rules — watch MS at -5.18% (approaching the -8% cut); run a fresh pre-market regime/research check and document the MS/UNH entries before any new buys.
