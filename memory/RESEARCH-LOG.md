@@ -585,3 +585,77 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-20 (Mon) — Pre-Market Routine
+
+### Market Regime — OFF (buy gate FAILS today)
+- **Deterministic Alpaca read: SPY close 743.28 < 20-day SMA 744.97 → regime OFF** (c1_regime=false, 81 bars).
+  Marginal (~0.23% below the SMA), but below is below — **no new long entries today.**
+- **Regime flip ON→OFF.** Last committed research read was ON (6/22, SPY 749 > 20d 747); the interim
+  MS buy on ~7/16 implies a pre-market read regime ON then. So the filter has flipped ON→OFF since
+  the last committed run. Discord alert sent per STEP 5 (regime flip). Standing posture reverts to
+  no-new-buys; existing positions ride their stops (do not close winners on the filter alone).
+- Gemini could not confirm the regime (knowledge-cutoff refusal on the live-price query); this does
+  not matter — the gate's #1 check is the deterministic Alpaca SPY-vs-SMA20 computation, which is
+  authoritative. VIX/sector/mover/earnings context below came from Gemini; the oil and STOCK-Act
+  queries returned HTTP 503 and, being idea-generation-only inputs that are moot with regime OFF,
+  were not re-run via WebSearch.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,619.86 | Cash: $97,234.51 | Buying power: $395,617 | Long mkt value: $2,385.35
+Day trades: 0/3 | PDT: false | last_equity $99,605.01 → **day move +$14.85 (+0.01%)**
+Phase P&L vs $100k base: **-$380.14 (-0.38%)**
+- Position sizing (recalc on live equity, moot today — regime OFF): 1.5% of $99,620 = $1,494,
+  hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** ($200 cap binds).
+
+### ⚠️ New position discovered — MS (undocumented buy, but stop-protected & in-strategy)
+- **MS (Morgan Stanley), Financials — 11 sh @ $222.47, current $216.85, unrealized -$61.85 (-2.53%).**
+- 12% trailing-stop GTC live: stop $195.646, hwm $222.325, trail 12% (order 6109eca4-…, created 7/16).
+- **Not recorded in the committed trade/research logs** — the fourth undocumented action on this
+  account (after CVX 6/12, JPM ~7/01, and this). Reconstruction is clean: last committed EOD (7/09)
+  was 100% cash at $99,681.72; current cash $97,234.51 + MS cost basis $2,447.20 = $99,681.71, so
+  the MS buy consumed the cash on ~7/16. **Flagged for operator confirmation** of the actual fill/date/reason.
+- In-strategy check: MS reported **Q2 2026 earnings on 2026-07-15** (EPS $3.46 vs $2.89 est; revenue
+  $21.35B +27.1% y/y record; raised dividend +15%; new $20B buyback). The buy on ~7/16 was placed
+  **after** the earnings print, so the "no earnings within 10 trading days" rule was clean at entry;
+  next earnings ~mid-Oct (Q3), well outside 10 days. Position is correctly protected by a 12% trailing
+  stop. So this is a legitimate, disciplined entry — just missing its log entry.
+
+### Market Context (Gemini; oil query 503)
+- **VIX ~18.0** (7/20 open 18.01, range 17.68–19.50; 7/17 close 18.77, up from 16.73 on 7/16) — nudging
+  up off the mid-teens, right around its long-run ~18.5 average. Mild risk-off tilt consistent with the
+  SPY dip below its 20-day SMA.
+- Index futures modestly green pre-market (SPY +0.21%, QQQ +0.37%, DIA +0.18%, IWM +0.28%).
+- **Fed blackout week ahead of the 7/28–7/29 FOMC.** Light macro: 7/21 ADP pulse, 7/23 jobless claims,
+  7/24 new-home sales + S&P PMIs. No CPI/PPI this week (next CPI 8/12). Oil (WTI) read unavailable (Gemini 503).
+- **Heavy earnings week** (TSLA, GOOGL, IBM, TXN, T on 7/22; INTC, HON, LMT on 7/23; etc.) — a source
+  of single-name volatility; none held.
+
+### Sector Momentum (Gemini)
+- Week-of-7/14 leader: Information Technology; laggards Materials & Health Care. Month-to-date leaders
+  cited: Consumer Cyclical, Health Care, Technology. Financials not called out as a leader this week —
+  monitor MS's sector momentum, but no sell trigger (MS is a single leading-franchise name post-blowout Q2).
+
+### Trade Ideas
+- **None.** Regime is OFF, so per strategy no new long ideas are generated or screened today. The right
+  answer is patience/cash. (Pre-market movers were dominated by penny/low-quality pumps — SLND, SDOT,
+  CJMB, DFNS, etc. — ignored per standing policy; MU +2.6% and NVDA +0.4% the only quality names, not screened.)
+
+### Held-position review
+- **MS -2.53%** ($216.85 vs $222.47 entry): well above the -8% cut ($204.67); fully protected by the live
+  12% trailing-stop GTC ($195.646, hwm $222.325). Earnings past (7/15) — no earnings rule in play. Not up
+  +15%/+20%, so no stop-tightening. Not 15 trading days old. **No sell-side rule triggered → HOLD.**
+
+### Risk Factors
+- Regime just flipped OFF into a Fed-blackout week with the 7/28–7/29 FOMC ahead — chop/downside risk; we
+  add no new exposure.
+- MS is the lone position and undocumented; if the operator did not intend it, that's a reconciliation item
+  (though it is stop-protected and post-earnings, so risk is bounded to ~-12% from the hwm).
+- Financials not leading this week; if the sector rolls over, reassess MS on thesis even before the stop.
+
+### Decision
+**HOLD — no new trades (regime OFF: SPY 743.28 < 20-day SMA 744.97).** Keep MS (11 sh @ $222.47, -2.53%)
+on its 12% trailing stop under standard sell-side rules; flag the undocumented MS buy for operator
+confirmation. Trades this week 0/3. Committed and pushed per the pre-market routine.
