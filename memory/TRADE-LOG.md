@@ -229,3 +229,20 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-08), so the true session move is $0.00 — with no positions held, cash equity has been static every session since the ~7/01 JPM close, across the 7/03 holiday and the 7/06–7/08 sessions into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash mid-week (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+## 2026-07-20 — Midday Scan (position management; no trade action)
+Equity: $99,552.14 | Cash: $95,118.41 | Long mkt value: $4,433.73 | Day P&L: -$52.87 (-0.05%) | Phase P&L: -$447.86 (-0.45%)
+
+| Symbol | Shares | Entry     | Current  | Unreal. P&L      | Stop type                       |
+|--------|--------|-----------|----------|------------------|---------------------------------|
+| MS     | 11     | $222.4727 | $211.155 | -$124.49 (-5.09%)| 12% trailing GTC ($195.65, hwm $222.325) |
+| UNH    | 5      | $423.22   | $422.205 | -$5.08 (-0.24%)  | 12% trailing GTC ($374.84, hwm $425.95)  |
+
+**Sell-rule evaluation — no rule triggered on either position:**
+- **MS (Financials)** -5.09%: above the -8% hard cut ($204.67 exit); stop order placed 7/16 so ~2 trading days open (not near the 15-day time stop); not up +15%/+20% (no tighten). Q2 earnings already reported 7/15 (beat: EPS $3.46 vs $2.89, +27% YoY rev, dividend raised to $1.15, $20B buyback authorized); next earnings ~Oct 13–14 → clears the 10-day rule. Thesis intact — today's -2% is valuation chatter (a DCF/FCF note), no catalyst break. Fully protected by live 12% trailing-stop GTC (stop $195.65). → HOLD.
+- **UNH (Healthcare)** -0.24%: entered today (stop placed 7/20 13:43 UTC), essentially flat. Q2 already reported 7/16 (beat; FY2026 adj-EPS outlook raised to $19.50–$20.00 from >$18.25; medical care ratio improved to 86.7%); next earnings ~Oct → clears the 10-day rule. Thesis intact and strengthening (multiple analyst target hikes). Protected by live 12% trailing-stop GTC (stop $374.84). → HOLD.
+- Sector concentration: 1 Financials (MS) + 1 Healthcare (UNH) — both ≤ 2/sector; 2/5 total positions. No sector-failure trigger (no 2 consecutive losing closes in any sector this month). No winner qualified for a stop tighten. Nothing moving >3% intraday without cause.
+
+⚠️ **Record-keeping flag:** The last committed log entry was the 7/09 EOD snapshot showing 100% cash. The live account now holds MS (11 sh, ~$222.47) and UNH (5 sh, $423.22), each with a live 12% trailing-stop GTC — but **neither buy has any committed research-log or trade-log entry** (the pre-market/market-open runs that placed them never committed to git). Entry prices, catalysts, sizing rationale, and buy-gate records for both are missing from git. This continues the account's recurring commit-discipline gap (prior undocumented CVX 6/12 and JPM ~7/01 exits). Positions are healthy and correctly stop-protected, so no corrective trade is needed — but the operator should confirm the entry rationale/gate results and ensure pre-market/market-open runs are committing going forward. Day-trade room OK, no PDT flag. No Discord sent (midday routine notifies only on a sell/tighten/thesis exit). Committed because this scan updated the log.
