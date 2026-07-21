@@ -229,3 +229,16 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (last read 6/22; stale — 
 | —      | —      | —     | —       | —           | —         |
 
 Notes: Flat, no-trade day for this EOD-only routine — portfolio remains 100% cash: zero open positions, zero open orders. Equity $99,681.72 exactly matches the last committed EOD (7/06, $99,681.72) and Alpaca last_equity ($99,681.72, balance_asof 2026-07-08), so the true session move is $0.00 — with no positions held, cash equity has been static every session since the ~7/01 JPM close, across the 7/03 holiday and the 7/06–7/08 sessions into today. Day P&L $0.00 (0.00%); Phase P&L -$318.28 (-0.32%) off the live $100k base. No open positions means no sell-side rules to evaluate and no stops to manage. Regime last read ON (6/22, SPY 749 > 20d SMA 747), but that read is ~2.5 weeks stale; no fresh research ran today (EOD-only routine), so any new entry must wait for a fresh pre-market regime confirmation and clear the full 11-check gate. Day-trade count 0/3, PDT false. Outlook: fully in cash mid-week (0/3 trades this week); run a fresh pre-market regime/research check before any new entries.
+
+---
+
+## 2026-07-21 — EOD Snapshot
+Equity: $99,683.14 | Cash: $95,118.40 | Day P&L: +$1.42 (+0.00%) | Phase P&L: -$316.86 (-0.32%)
+Trades today: 0 | Trades this week: 1/3 | Regime: ON (SPY 748.15 > 20d SMA 744.94, fresh read today)
+
+| Symbol | Shares | Entry    | Current  | Unreal. P&L      | Stop type                  |
+|--------|--------|----------|----------|------------------|----------------------------|
+| MS     | 11     | $222.47  | $216.34  | -$67.46 (-2.76%) | 12% trailing GTC ($195.65) |
+| UNH    | 5      | $423.22  | $437.00  | +$68.90 (+3.26%) | 12% trailing GTC ($384.51) |
+
+Notes: Quiet hold day for this EOD-only routine — no trades placed today. Equity $99,683.14. Headline Day P&L (+$1.42, +0.00%) is measured against the last committed EOD (2026-07-09, $99,681.72) since no EOD snapshots were committed across 7/10–7/20; the true single-session move vs Alpaca last_equity ($99,546.49, balance_asof 7/20) was +$136.65 (+0.14%). Phase P&L -$316.86 (-0.32%) off the live $100k base. The portfolio now holds two positions — MS (Financials, 11 sh @ $222.47, -2.76%) and UNH (Healthcare, 5 sh @ $423.22, +3.26%) — that were opened during the uncommitted 7/10–7/20 gap: MS's 12% trailing-stop GTC was submitted 7/16 (implied buy ~7/16) and UNH's 7/20 (implied buy ~7/20). ⚠️ Neither buy has a committed research/trade-log entry — the fourth stretch of undocumented activity on this account (after CVX 6/12, JPM ~7/01, and the missed 7/10–7/20 snapshots); operator should confirm the actual fills, entries, and catalysts. Both positions are fully protected by live 12% trailing-stop GTCs (MS stop $195.65, hwm $222.33; UNH stop $384.51, hwm $436.95) and sit in different sectors (no crowding). Sell-side review: MS at -2.76% is well above the -8% cut; UNH at +3.26% is below the +15% tighten threshold — neither triggers any sell-side rule, and both are recent enough that the 15-day time stop is not in play. Regime ON (deterministic Alpaca read today: SPY 748.15 > 20-day SMA 744.94). Day-trade count 0/3, PDT false. Outlook: hold MS and UNH under standard sell-side rules; confirm the undocumented entries and check next earnings dates for both names before the next session.
