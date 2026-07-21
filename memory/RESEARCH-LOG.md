@@ -585,3 +585,54 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-21 (Tue) — Pre-Market Research
+
+**Decision: HOLD. Regime OFF today — no new buys.** SPY closed *below* its 20-day SMA (deterministic Alpaca read), which fails buy-gate check #1, so no entries are permitted regardless of setup quality. Hold both existing positions (MS, UNH) under standard sell-side rules — both are stop-protected, neither is near the -8% cut, and both have earnings safely behind them.
+
+### Market Regime Status — OFF ⚠️ (flip from last-known ON)
+- **Alpaca (deterministic, via buy_gate):** SPY close **742.15** vs SMA20 **744.74** → below by ~0.35% → **c1_regime FAIL → OFF.** (bars_n 82; authoritative — this read is not web-dependent.)
+- This is a genuine, *marginal* ON→OFF flip: the last committed regime read was ON (6/22), and the two undocumented buys below (MS 7/16, UNH 7/20) imply the gate saw regime ON as recently as 7/20. SPY has now slipped just under its 20-day line. Being only -0.35% below, it could flip back on any up day — but today the gate is closed to new buys.
+- Gemini returned canned "cannot provide future/real-time data" non-answers on the regime query (RC 0, not a code-3 outage); macro color below is from native WebSearch. The regime verdict is the deterministic Alpaca computation, not web-dependent.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,567.66** | Cash: **$95,118.40** | Non-marginable (cash) BP: $97,343.03 | Day trades: **0/3** (PDT false)
+- Day change vs last_equity ($99,546.49): **+$21.17 (+0.02%)**. Phase P&L off the live $100k base: **-$432.34 (-0.43%)**.
+- Long market value $4,449.26 across 2 positions.
+- Position sizing (recalc on live equity): 1.5% of $99,568 = $1,494, hard-capped at **$200 risk/trade** → max notional $200/8% = **$2,500/position** (the $200 cap is binding). Moot today — regime OFF, no buys.
+
+### ⚠️ DATA INTEGRITY — two undocumented positions since last committed log
+The last committed log (TRADE-LOG 7/09 EOD) showed the account **100% cash, 0 positions**. It now holds **two positions with live trailing stops that were never documented** in any committed research/trade-log entry:
+- **MS** (Morgan Stanley, Financials) — 11 sh @ $222.4727 (cost $2,447.20). Trailing-stop GTC order created **2026-07-16** (stop $195.646, hwm $222.325). Implies a buy on/around **7/16**.
+- **UNH** (UnitedHealth, Healthcare) — 5 sh @ $423.22 (cost $2,116.10). Trailing-stop GTC order created **2026-07-20** (stop $374.836, hwm $425.95). Implies a buy on/around **7/20**.
+- No committed research entry, catalyst, or gate record exists for either buy. This continues the pattern of undocumented account activity flagged repeatedly in prior EOD notes (CVX ~6/12, JPM ~7/01). **Operator should confirm the actual fills, dates, catalysts, and that each cleared the 11-check gate at entry.** Both positions are at least properly stop-protected (12% trailing GTC each) and cleared earnings (see below).
+
+### Market Context
+- **VIX ~17.6** (down ~5.7% pre-market) — calm/low.
+- **10-yr Treasury ~4.52%**, easing after cooler CPI (headline **3.5% YoY**, Jun); unemployment 4.2% (Jun). S&P futures slightly higher on softer inflation.
+- **No major release today.** Key event is next week: **FOMC decision Wed 2026-07-29** (2pm ET). Q2 earnings season in full swing.
+
+### Sector Momentum
+- Held sectors: Financials (MS) and Healthcare (UNH) — 1 each, no sector crowding (max 2/sector OK). Banks firm post-earnings; UNH re-rated higher after a strong Q2 beat (Barclays raised PT to $441 on 7/20).
+
+### Earnings Watch (held positions) — both CLEAR
+- **MS:** reported Q2 on **2026-07-15**; next earnings **~2026-10-14**. Bought right after the report → no earnings within 10 days. ✅
+- **UNH:** reported Q2 on **2026-07-16** (adj EPS $6.38 vs $4.90 est, raised FY guide to $19.50–$20.00); next earnings ~mid-Oct. Bought 7/20, right after the report → no earnings within 10 days. ✅
+- Neither triggers the "earnings within 10 days" exit.
+
+### Held-Position Sell-Side Review — HOLD both
+- **MS** 11 sh @ $222.47, current $212.66 → **-4.41%** unreal (-$107.94). Above the -8% cut; stop-protected (trailing GTC $195.646). Not up +15%/+20% (no tighten). Time stop ~early Aug (bought ~7/16). No sell rule triggered → **hold**; watch the -8% line (would be ~$204.67) given it's the weaker of the two.
+- **UNH** 5 sh @ $423.22, current $422.00 → **-0.29%** unreal (-$6.10). Essentially flat; stop-protected (trailing GTC $374.836). No sell rule triggered → **hold**.
+
+### Trade Ideas
+- **None.** Regime filter is OFF (SPY below 20-day SMA) → buy-gate check #1 fails for every candidate today. No new entries screened. Trades this week: 1/3 (UNH 7/20).
+
+### Risk Factors
+- **Marginal regime:** SPY sits only ~0.35% under its 20-day line — a low-conviction, easily-reversed signal. Standing posture is no new buys, but a single up day could flip it back ON.
+- **FOMC next Wed (7/29):** a two-sided macro event into which both positions are stop-protected on 12% trailing GTCs.
+- **Undocumented account activity:** the two current positions have no committed entry record; if the operator's actual intent/thesis differs from what's reconstructed here, sell-side management could be operating on wrong assumptions. Confirmation requested.
+
+### Decision
+**HOLD.** Regime OFF → zero new buys today (the disciplined default). Hold MS and UNH under standard sell-side rules; both stop-protected, earnings-clear, and above the -8% cut. Flagging the two undocumented entries and the fresh ON→OFF regime flip for operator awareness.
