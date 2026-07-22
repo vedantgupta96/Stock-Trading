@@ -585,3 +585,75 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-22 (Wed) — Pre-Market Routine
+
+**Decision: HOLD.** Regime is ON, but the portfolio already holds two healthy, stop-protected
+positions (MS, UNH), neither triggers any sell-side rule, and no deterministic breakout-on-volume
+candidate surfaced to justify a third entry. Patience over activity — zero new trades today.
+
+### Market Regime Status — ON
+- **Alpaca (deterministic):** SPY last close **748.16** vs 20-day SMA **744.94** → **PASS → ON.**
+- Gemini regime query returned HTTP 503; regime read is the deterministic Alpaca SPY-vs-SMA20
+  computation (not web-dependent), so the gate's #1 check is authoritative. Regime unchanged
+  from 7/21 (ON → ON) — no flip, no urgent notification.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,664.94** | Cash: **$95,118.40** | Buying power: $393,203.91 | Long mkt value: $4,546.54
+Positions: 2 (MS, UNH) | Open orders: 2 (both 12% trailing-stop GTCs) | Day trades: 0/3 | PDT: false
+- Position sizing (recalc on live equity): 1.5% of $99,665 = $1,495, hard-capped at **$200
+  risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+- Trades this week: **1/3** (UNH opened ~7/20). Room for up to 2 more, but none warranted today.
+
+### Market Context
+- **VIX ~17.05**, down -8.6% from prior close (18.65) — calm/risk-on, below long-run ~18.5.
+- **Oil (WTI):** forward curve firm/higher (energy sector surging up to 6th) — mild risk-on
+  tailwind for cyclicals/banks (supports MS thesis).
+- **Econ calendar:** No major print today. New-Home Sales (June) Thu 7/23. Heavy earnings week
+  ahead (7/27–7/31): ~36% of S&P 500 and 4 of the Mag-7 report; AMZN ~7/30. Today: GOOG, TSLA,
+  IBM, TXN, T report after close.
+
+### Sector Momentum
+- Leaders this week: **Technology** (#1, despite a pullback), **Financials** (#2, climbing) —
+  supportive for MS. **Industrials** #3, **Health Care** #4 (supportive for UNH), Real Estate #5,
+  Energy surging (#10 → #6). Both held sectors sit in the top half of momentum.
+
+### Held-Position Review (sell-side rules evaluated)
+- **MS** (Financials) — 11 sh @ $222.47, current **$215.14**, **-$80.66 (-3.30%)**. Stop:
+  12% trailing GTC, stop **$195.65**, hwm $222.33 (order 6109eca4, submitted 7/16). Earnings:
+  **reported Q2 on 7/15; next 10/14** — no earnings-exit trigger. -3.30% is well above the -8%
+  cut; below +15% tighten. Opened ~7/16 → 15-day time stop not in play. **No rule triggered → HOLD.**
+- **UNH** (Healthcare) — 5 sh @ $423.22, current **$436.00**, **+$63.90 (+3.02%)**. Stop:
+  12% trailing GTC, stop **$384.51**, hwm $436.95 (order 1cd14949, submitted 7/20). Earnings:
+  **next 10/27** (already beat Q2, raised FY26 EPS guide to $19.50–$20.00, stock rose) — no
+  earnings risk. +3.02% is below the +15% tighten threshold. **No rule triggered → HOLD.**
+- Both positions fully stop-protected, in different sectors (no crowding: Financials 1/2,
+  Healthcare 1/2), both above -8% and below tighten thresholds. Nothing to adjust.
+
+### Earnings Watch (held positions)
+- MS: next 10/14 — clear. UNH: next 10/27 — clear. Neither within the next 10 trading days.
+
+### Trade Ideas — none actioned
+- Regime is ON, so new entries are permitted (1/3 trades used, room for 2), but **no candidate
+  cleared a deterministic breakout-on-volume screen today.** Gemini's mover/screener query
+  returned no live data (model can't screen feeds), and the heavy 7/27–7/31 earnings wave means
+  most large-cap Tech leaders would fail the "no earnings within 10 trading days" gate anyway.
+  Fabricating an idea off a guessed ticker would violate the deterministic-gate discipline.
+- Congressional/STOCK-Act query: not run (idea-gen only, never a buy reason; no bearing on today's
+  HOLD). No watchlist name is being carried forward as gate-ready.
+
+### Risk Factors
+- **Earnings-season gap risk (7/27–7/31):** neither held name reports in that window (MS 10/14,
+  UNH 10/27), so no direct exposure, but a broad-market air-pocket around Mag-7 prints could
+  pressure both — 12% trailing stops are the backstop.
+- **MS underwater (-3.30%):** still a healthy hold, but monitor toward the -8% hard cut; the
+  bank/AI-financing catalyst remains intact and Financials momentum is improving.
+- **Regime is only ~0.4% above the 20d SMA** (748.16 vs 744.94) — a modest pullback could flip
+  it OFF; re-check every pre-market before any new entry.
+
+### Decision
+**HOLD.** Regime ON, but two healthy stop-protected positions (MS -3.30%, UNH +3.02%) with no
+sell-side trigger and no deterministic breakout candidate = no new trade. Zero trades is the
+right answer today. Trades this week remain 1/3. Silent run — no urgent notification condition met.
