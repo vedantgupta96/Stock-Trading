@@ -585,3 +585,56 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+## 2026-07-23 (Thu) — Pre-Market Routine
+
+**Decision: HOLD.** Regime is (marginally) ON per the authoritative deterministic Alpaca read, but every screened idea fails the deterministic breakout gate and the macro backdrop (fresh oil shock, FOMC next week) argues for patience. Hold MS and UNH under standard sell-side rules. No new trades. Trades this week remain 1/3.
+
+### Market Regime Status — ON (marginal)
+- **Alpaca (deterministic, authoritative via buy_gate):** SPY close 747.49 vs 20-day SMA 745.63 → **PASS → ON** (+0.25% above). Gate check #1 uses this deterministic SPY-vs-SMA20 computation and is the authority.
+- ⚠️ **Discrepancy noted:** Gemini's cash-index (SPX) read had it *below* its 20-day MA (7484 vs 7494.63, −0.14%). The two are on opposite sides of the line but both within a quarter-percent — the regime is right at the threshold. Per standing precedent (6/22 log), the deterministic Alpaca SPY read governs the gate; regime is ON but marginal, reinforcing a conservative posture.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: $99,672.95 | Cash: $95,118.40 | Buying power: $95,118.40 | Long mkt value: $4,554.55 | Day trades: 0/3 | PDT: false
+- **Positions (2):** MS 11 sh @ $222.47 (cur ~$218.65, −1.72%); UNH 5 sh @ $423.22 (cur ~$429.88, +1.57%). Different sectors (Financials / Healthcare) — no crowding.
+- **Open orders:** both positions carry live 12% trailing-stop GTCs — MS stop $195.65 (hwm $222.33), UNH stop $384.51 (hwm $436.95).
+- Position sizing (recalc on live equity): 1.5% of $99,673 = $1,495, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+
+### Market Context
+- **VIX ~17.0** (16.6–17.1), down from 18.65 prior day — calm, ~10% below its long-run 18.6 average.
+- **Oil (WTI) ~$90** — a sharp **+4% spike today**, breaking above $90 (up from ~$77 in June). A notable macro shift: energy tailwind but a two-sided inflation/risk signal.
+- **Economic calendar today:** only jobless claims + Chicago Fed activity index (8:30 ET) — no CPI/PPI/FOMC. CPI (Jun) was 7/14, PPI (Jun) 7/15. **FOMC July 28–29 next week** (rate decision Wed 7/29) — the dominant near-term event.
+- Earnings-season tape: TSLA −4% (Q2 miss), ServiceNow +5% and United Rentals +8% (beats).
+
+### Sector Momentum
+- **Leaders:** Energy (+4.69% last week, extending on the oil breakout), Financials firm (+0.1%).
+- **Laggards:** Technology worst (−3.64% last week), Communication Services (−2.56%), Industrials, Health Care soft. Tech is rolling over — momentum has rotated toward energy/defensives.
+
+### Earnings Watch (held positions)
+- **MS** — next earnings **~2026-10-14** (Q3), well outside 10 trading days. Already reported Q2 ~7/16. No earnings risk.
+- **UNH** — next earnings **~2026-10-09 to 10-27** (Q3), well outside 10 trading days. Reported strong Q2 ~7/16, raised FY EPS guide to $19.50–20.00, Zacks #1. No earnings risk.
+
+### Trade Ideas — screened deterministically (buy_gate, live Alpaca bars)
+Energy was the only sector with clear momentum (oil +4%), so screened the liquid large-caps. **Every name FAILED the c9 breakout check** — despite the oil rally, none has made a fresh 3-month/52-week high; the equities have not confirmed the commodity move:
+- **$XOM** — FAIL c9 (last5 high 154.8 < prior 176.4), FAIL c10 volume. Skip.
+- **$CVX** — FAIL c9 (193.6 < 214.6), FAIL c10. Skip.
+- **$COP** — FAIL c9 (119.7 < 135.8), FAIL c10. Skip.
+- **$OXY** — FAIL c9 (57.8 < 67.5), FAIL c10. Skip.
+- **$EOG** — FAIL c9 (145.9 < 151.7), FAIL c10. Skip.
+- **$SLB** — FAIL c9 (47.9 < 58.8), FAIL c10. Skip.
+- **$FANG** — FAIL c9 (204.9 < 214.3), FAIL c10. Skip.
+- **$HAL** — c10 volume PASS (2.36M vs 1.54M threshold) and pullback 8.1% (in band), but FAIL c9 breakout (35.9 < 43.6). Not a new high — the oil pop is too fresh for the equity to confirm. Skip.
+- **STOCK-Act query:** only *sales* disclosed (Sen. Tuberville, 7/18) — no purchases. Nothing actionable; idea-gen only, never a buy reason.
+
+### Risk Factors
+- **FOMC 7/28–29 next week** — a two-sided macro event into a marginal-regime tape. New entries now would sit through it.
+- **Oil shock (+4% to ~$90)** cuts both ways: energy tailwind but an inflation impulse that could pressure the Fed and risk assets broadly.
+- **Regime at the line** — SPY +0.25% above / SPX −0.14% below its 20-day MA. A small down day flips the filter OFF; conviction for new longs is low here.
+
+### Held-position review
+- **MS** (−1.72%): well above the −8% cut, below the +15% tighten threshold; 12% trailing GTC live; earnings safe. No sell-side rule triggered.
+- **UNH** (+1.57%): below the +15% tighten threshold; 12% trailing GTC live; earnings safe. No sell-side rule triggered.
+- Neither is near the 15-day time stop (both opened ~7/16 / 7/20). Hold both.
+
+### Decision
+**HOLD — no new trades.** Regime is only marginally ON (SPY just above, SPX just below its 20-day MA), every screened momentum idea fails the deterministic breakout gate, and FOMC + an oil shock loom next week. "Patience beats activity — zero trades can be the right answer." Hold MS and UNH under standard sell-side rules; both fully stop-protected with earnings safely in October. Trades this week 1/3; day-trades 0/3.
