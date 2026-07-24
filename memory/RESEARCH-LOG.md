@@ -585,3 +585,69 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-24 (Fri) — Pre-Market Routine
+
+### Market regime status
+- **REGIME OFF** — deterministic Alpaca read (IEX daily bars, last completed bar 2026-07-23):
+  **SPY last close $738.06 < 20-day SMA $745.87.** The S&P 500 is **below** its 20-day SMA.
+- **⚠️ Regime just FLIPPED ON→OFF.** Last committed read was ON (7/21: SPY 748.15 > 744.94;
+  7/22 carried it forward). The Thursday 7/23 selloff (S&P −1.2%, its biggest one-day drop in
+  a month) pushed price under the average. **Buy gate FAILS for today — no new buys.**
+
+### Account snapshot
+- **Equity $99,643.72** | Cash $95,118.40 | Buying power $393,144.50 (Reg-T $194,762.12)
+- Position market value $4,525.32 | last_equity $99,603.18 (balance_asof 7/23) → session +$40.54 (+0.04%)
+- Day-trades used this week **0/3**, PDT false | Trades this week **1/3** (UNH ~7/20)
+
+### Market context
+- **S&P 500 fell −1.2% Thursday 7/23** — biggest one-day drop in a month — a tech-led rout:
+  Alphabet −5.92% after raising capex guide to $205B (double last year), reigniting AI-spend
+  concerns; Amazon −3.11%, IBM −2.90%. Friday pre-market: futures modestly higher (ES +0.2%,
+  YM +0.5%) attempting to stabilize.
+- **VIX 18.70, +12.4%** — volatility rising off its calm sub-17 regime, now above its ~18.5 avg.
+- **New global tariffs took effect**; rising oil and elevated bond yields cited as extra headwinds.
+- No major US data print flagged for today.
+- *Data note: Gemini returned generic non-answers (future-date knowledge cutoff), so market
+  context fell back to native WebSearch. Regime itself is from the authoritative Alpaca bar read.*
+
+### Sector momentum
+- **Leaders: Energy and Healthcare** (Chevron +1.77%, Merck +1.33%, Travelers +1.11% on 7/23).
+- **Laggards: Technology / megacap growth** (Alphabet, Amazon, IBM). Rotation defensive/value.
+- Held-position read-through: **UNH (Healthcare)** sits in a leading sector; **MS (Financials)**
+  is neutral-to-firm (Travelers strength, banks steady).
+
+### Earnings watch (held positions)
+- **MS — next earnings 2026-10-14** (~57 trading days out). Well outside 10 days → **no exit.**
+- **UNH — reported Q2 on 2026-07-16 (already passed)**; next report ~mid-Oct. Outside 10 days → **no exit.**
+- Neither held name triggers the earnings rule.
+
+### Held-position review (sell-side rules)
+- **MS** — 11 sh @ $222.47, current $218.52, **−1.78%** (−$43.48). 12% trailing-stop GTC live
+  (stop $195.65, hwm $222.33, order 6109eca4). Above −8% cut; below +15%/+20% tighten thresholds;
+  opened ~7/16 (~6 trading days) so 15-day time stop not in play. **No rule triggered → HOLD.**
+- **UNH** — 5 sh @ $423.22, current $424.32, **+0.26%** (+$5.50). 12% trailing-stop GTC live
+  (stop $384.51, hwm $436.95, order 1cd14949). Above −8%; below tighten thresholds; opened ~7/20
+  (~4 trading days). **No rule triggered → HOLD.**
+- Both positions fully stop-protected, in different sectors (no crowding), neither below −8% in
+  pre-market, neither with earnings inside 3 days.
+
+### Trade ideas
+- **None.** Regime is OFF — no new long entries are permitted today regardless of setup quality.
+  When the regime filter is off, the right answer is cash-plus-existing-holds. Watchlist screening
+  and the congressional/STOCK-Act query were skipped (idea-gen only, and moot with the gate closed).
+
+### Risk factors
+- **Regime just flipped off into a rising-VIX, tariff-driven tape** — momentum longs are the wrong
+  posture; discipline is to place no new buys and let stops manage existing holds.
+- **AI-capex derating** (Alphabet-led) could broaden from tech into the wider index; watch for
+  follow-through selling that could pressure even defensive names.
+- **Both holds are small (~$4.5k total, ~4.5% of equity) and stop-protected**, so downside is
+  bounded; the main risk is an overnight gap through a trailing stop, which no intraday order can prevent.
+
+### Decision
+**HOLD.** Regime OFF (SPY $738.06 < 20-day SMA $745.87) → no new buys today. Hold MS and UNH under
+standard sell-side rules — both stop-protected, clear of earnings, and nowhere near a trigger.
+Trades this week stays 1/3.
