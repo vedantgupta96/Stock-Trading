@@ -40,6 +40,45 @@ HOLD | TRADE [SYMBOL] — [one-sentence reason]
 
 ---
 
+## 2026-07-27 — Pre-Market Research
+
+### Market Regime — ⚠️ FLIPPED ON → OFF
+- **Regime OFF.** Deterministic Alpaca read: **SPY close $738.90 < 20-day SMA $746.15** (−0.97% below).
+- This is a **regime flip from ON to OFF** vs the last read (7/21: SPY 748.15 > SMA 744.94). Last week's semiconductor-led selloff pulled SPY under its 20-day line.
+- **Buy gate FAILS today (check #1). No new long entries.** Standing posture is cash-for-new-ideas; existing positions are held and left to their stops per the strategy (do not close winners just because the filter flipped).
+- Note: S&P futures are green (+0.7% to +0.96%) pre-market on US–Iran de-escalation, but the regime rule is governed by the deterministic SPY-close-vs-SMA20 computation, which is OFF. Intraday strength does not override the gate.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,598.91** | Cash: $95,118.40 | Buying power: $393,019.03 | Day trades used: 0/3 (PDT: false) | Positions: 2/5 | Trades this week: 1/3
+- Position sizing (recalc on live equity, for reference only — no entries today): 1.5% of $99,599 = $1,494, hard-capped at **$200 risk/trade** → max notional $200 / 8% = **$2,500/position** (the $200 cap binds).
+
+### Market Context
+- **VIX ~18.6** (opened 17.62, front-future ~18.61) — normal regime, ~at its long-run ~18.57 average. Calm, no stress spike.
+- **S&P 500 futures +0.7% to +0.96%** pre-market — risk-on bounce driven by US–Iran de-escalation and a sharp drop in oil; follows last week's semi-led selloff.
+- **Oil (WTI)** easing on receding Strait-of-Hormuz risk (Middle East de-escalation) — the tailwind cited last week.
+- **This week:** busy mega-cap tech earnings + an **FOMC meeting** (rates widely expected held). Two-sided macro risk into the Fed.
+
+### Sector Momentum
+- Healthcare showing renewed interest / steadying (favorable read-through for UNH). Financials firm. Sector detail is context only — no entries today (regime OFF).
+
+### Held-Position Review
+- **MS** (Financials, 11 sh @ $222.47) — current ~$215.05, **−3.34% (−$81.69)**. Well above the −8% cut. 12% trailing-stop GTC live (stop $195.65, hwm $222.33). **Earnings behind us** (Q2 reported 7/14–15, beat: EPS $3.46 vs ~$2.85; $20B buyback + dividend raise to $1.15). **Next earnings ~Oct 14** — far outside 10 trading days. No sell-side rule triggered.
+- **UNH** (Healthcare, 5 sh @ $423.22) — current ~$423.00, **−0.05% (−$1.10)**. 12% trailing-stop GTC live (stop $384.51, hwm $436.95). **Earnings behind us** (Q2 reported 7/16, adj EPS $6.38 beat; FY26 guide raised to $19.50–$20.00). **Next earnings ~Oct 9** — far outside 10 trading days. No sell-side rule triggered.
+- Both positions sit in different sectors (no crowding), neither is below −8%, neither has earnings within the next 10 trading days, neither is at a tighten threshold (+15%/+20%), and neither is near the 15-day time stop. **Nothing to do but hold.** The previously-flagged earnings-exit risk on both names is now moot — both reported Q2 in mid-July and are clear until October.
+
+### Trade Ideas
+- **None.** Regime is OFF (SPY below its 20-day SMA), so per strategy no trade ideas are generated and no orders are placed. When the regime filter is off, the right answer is cash for new capital.
+
+### Risk Factors
+- **FOMC this week** is a two-sided event; both held positions are stop-protected (12% trailing GTCs), so a hawkish surprise is bounded by the stops.
+- **Regime just flipped OFF** — if last week's selloff resumes, further downside is likely; new longs stay off until SPY reclaims its 20-day SMA. Both existing positions have ~9–12% of cushion to their trailing stops.
+- A renewed US–Iran flare-up would re-spike oil and could unwind the risk-on bounce; the deterministic regime read would remain the governing signal.
+
+### Decision
+**HOLD — no new trades.** Market regime flipped ON → OFF (SPY $738.90 < 20-day SMA $746.15), so check #1 of the buy gate fails and no new longs are permitted. Hold MS and UNH under standard sell-side rules (both healthy, stop-protected, earnings behind them until October); let the trailing stops manage risk. Trades this week remain 1/3. Urgent Discord alert sent for the regime flip.
+
+---
+
 ## 2026-06-04 — Pre-Market Research
 
 ### Research source note
