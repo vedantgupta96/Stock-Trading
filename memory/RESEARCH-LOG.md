@@ -585,3 +585,76 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-28 (Tue) — Pre-Market Routine
+
+**Decision: HOLD (no new trades). Market regime flipped OFF.** SPY closed below its
+20-day SMA for the first time since before 6/22 — the buy gate's #1 check now FAILS, so
+no new long entries today. Hold MS and UNH under standard sell-side rules; both are
+stop-protected and neither triggers a sell rule.
+
+### Market Regime Status — OFF ⚠️ (flipped ON→OFF)
+- **Alpaca (deterministic, via buy_gate):** SPY close **738.85** vs SMA20 **746.62** →
+  **FAIL → OFF.** Prior read (7/21) was ON (SPY 748.15 > SMA20 744.94). This is a genuine
+  ON→OFF flip — a STEP 5 urgent trigger; Discord alert sent (embed 16776960).
+- Regime OFF ⇒ **no new buys today.** Do not close winners just for the filter — let stops work.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,570.70** | Cash: $95,118.40 | Buying power: $392,940 | Long mkt value: $4,452.30
+Positions: 2 (MS, UNH) | Open orders: 2 (both trailing-stop GTCs) | Day trades: 0/3 | PDT: false
+- Trades this week: **0/3** (new week).
+- Position sizing (if regime were ON): 1.5% of $99,571 = $1,494, hard-capped at **$200 risk/trade**
+  → max notional $2,500/position ($200 cap binding). Moot today — regime OFF.
+
+### Market Context
+- **VIX ~18.67**, up from 18.58, slightly above its ~18.57 long-run average and trending up —
+  rising risk aversion, consistent with the regime flip.
+- **FOMC meeting 7/28–29 → policy statement/rate decision Wed 7/29 2:00 PM ET** + press conf
+  2:30 PM ET (no SEP this meeting). This is the dominant two-sided event of the week.
+- **Thursday 7/30:** advance Q2 GDP + June personal income & PCE inflation + jobless claims.
+  Friday 7/31: Employment Cost Index, final UMich sentiment. No CPI/PPI/jobs report this week.
+- Today (7/28): Consumer Confidence, Richmond Fed, FHFA HPI, advance goods trade balance.
+
+### Sector Momentum (week, as of 7/27 close)
+- Leaders: **Consumer Staples +1.46%, Consumer Discretionary +1.31%, Comm Services +1.28%,
+  Financials +1.01%**, Health Care +0.51%, Industrials +0.30%, Materials +0.25%.
+- Defensive/staples leadership alongside a rising VIX is a mild risk-off tell.
+
+### Earnings Watch (held positions)
+- **MS (Financials):** next earnings **~Oct 14, 2026** (Q2 reported 7/14, beat: $3.46 vs $2.81
+  est). ~55 trading days out → **well outside** the 10-day exit window. No earnings risk.
+- **UNH (Healthcare):** next earnings **~Oct 8–9, 2026** (Q2 reported 7/15, big beat: $6.38 vs
+  ~$4.90 est; raised FY guide to $19.50–20.00). ~50 trading days out → **well outside** the
+  10-day window. No earnings risk. ✅ This resolves the standing earnings-date flag from the
+  7/21–7/24 EOD notes (UNH's mid-July report is already past; next is October).
+
+### Held-Position Sell-Side Review
+| Symbol | Sector     | Shares | Entry    | Current | Unreal. P&L      | Stop (12% trail GTC) | Verdict |
+|--------|------------|--------|----------|---------|------------------|----------------------|---------|
+| MS     | Financials | 11     | $222.47  | $214.30 | -$89.90 (-3.67%) | $195.65 (hwm 222.33) | HOLD    |
+| UNH    | Healthcare | 5      | $423.22  | $419.00 | -$21.10 (-1.00%) | $384.51 (hwm 436.95) | HOLD    |
+- Neither is at/near the **-8%** cut. Both below the +15% tighten threshold. 15-day time stop
+  not yet in play (MS entry ~7/16 ≈ 8 trading days; UNH ~7/20 ≈ 6 trading days). Different
+  sectors (no crowding). Both trailing-stop GTCs verified live in the orders feed. No sell rule
+  triggers today.
+
+### Trade Ideas
+- **None screened** — regime is OFF, so no new long entries are permitted regardless of setup.
+  Standing posture when the filter is off is cash. Congressional/STOCK-Act query not run
+  (idea-gen only, never a buy reason, and moot with regime OFF).
+
+### Risk Factors
+- **FOMC Wed 7/29** is the key event — a hawkish surprise into an already-soft tape (SPY under
+  its 20d SMA, VIX rising) could accelerate the pullback. Both positions are stop-protected.
+- **Thursday Q2 GDP + PCE** is a second two-sided macro print.
+- Defensive-sector leadership + rising VIX suggests the market is de-risking; watch whether SPY
+  reclaims the 20d SMA (746.62) or breaks lower. MS (a bank) is the more macro-sensitive hold.
+
+### Decision
+**HOLD — no new trades.** Regime filter is OFF (SPY 738.85 < 20d SMA 746.62), so the buy gate
+fails on check #1 and no long entries are placed. Hold MS and UNH under standard sell-side
+rules — both are stop-protected, earnings are far out, and neither triggers a cut or time stop.
+Trades this week 0/3. Discord urgent alert sent for the ON→OFF regime flip. Reassess at the
+next pre-market read (and after the 7/29 FOMC decision).
