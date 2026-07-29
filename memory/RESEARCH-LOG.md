@@ -585,3 +585,53 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-29 (Wed) — Pre-Market Routine
+
+**Decision: HOLD — no new buys. Market regime filter has FLIPPED ON → OFF today.** The
+deterministic Alpaca read puts SPY (740.795) below its 20-day SMA (746.62), so buy-gate check
+#1 fails and no long entries are permitted today. Standing posture is cash. Both existing
+positions (MS, UNH) are held and left to their live 12% trailing-stop GTCs; the regime filter
+never forces a close of a non-triggered position.
+
+### Market Regime Status — OFF (flipped from ON)
+- **Alpaca (deterministic, via buy_gate):** SPY close **740.795** vs SMA20 **746.62** →
+  **c1_regime = FAIL → OFF.** (bars_n 82; probe run AAPL.)
+- **Gemini confirms:** S&P 500 ~7,444 vs 20-day SMA ~7,492.85 → below. Independent web read
+  agrees with the deterministic Alpaca computation.
+- **This is a regime flip.** Last committed read was ON (7/21, SPY 748.15 > SMA20 744.94).
+  Today ON → OFF. New entries blocked until regime confirms ON again in a future pre-market.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,577.95** | Cash: **$95,118.40** | Buying power: $392,960.34 | Long mkt value: $4,459.55
+Positions: 2 (MS, UNH) | Open orders: 2 (both trailing-stop GTCs) | Day trades: **0/3** | PDT: false
+- True single-session move vs Alpaca last_equity ($99,589.73, balance_asof 7/28) = **-$11.78 (-0.01%)** — essentially flat.
+- Phase P&L off the live $100k base: **-$422.05 (-0.42%)**.
+- Sizing (moot today, regime OFF): 1.5% of $99,578 = $1,494, hard-capped at $200 risk → $2,500 max notional.
+
+### Market Context
+- **VIX ~18.2–18.7** (up ~0.5% d/d), sitting right around its long-run ~18.5 average — no panic, but no longer the calm sub-17 of June.
+- **WTI crude ~$82–83** (up ~4–5% d/d), spiking on the reported collapse of US–Iran ceasefire talks, renewed Houthi tanker attacks, and OPEC+ under-supply. Energy tailwind but an inflation/risk-off headwind for the broad tape.
+- **FOMC rate decision TODAY at 2:00 PM ET** (Chair Warsh press conf 2:30 PM ET) — the dominant event of the session and a plausible driver of the sub-SMA tape. No CPI/PPI today (next CPI 8/12).
+
+### Sector Momentum
+- Leaders (5-day): defensive rotation — **Healthcare (XLV +4.3%), Consumer Staples (XLP +3%)** strong; Semiconductors and Technology declining. Communication Services / Basic Materials firm on the month.
+- Read-through: money rotating defensive into the FOMC / with the tape below its 20-day SMA — consistent with a risk-off regime read.
+
+### Held-Position Review (sell-side rules)
+- **MS** (Financials) — 11 sh @ $222.47, current $211.55, **-$120.15 (-4.91%)**. Above the -8% cut (watch, not actionable). Live 12% trailing-stop GTC $195.646 (hwm $222.325), verified open. Earnings: last reported **7/15/2026** (beat); **next ~Oct 14, 2026** — well outside 10 trading days → no earnings exit. Held ~9 trading days → inside the 15-day time-stop window. No sell rule triggered → **HOLD**.
+- **UNH** (Healthcare) — 5 sh @ $423.22, current $426.50, **+$16.40 (+0.78%)**. Live 12% trailing-stop GTC $384.5116 (hwm $436.945), verified open. Earnings: last reported **7/15/2026** (beat); **next ~Oct 2026** — well outside 10 trading days → no earnings exit. Below the +15% tighten threshold. Held ~7 trading days. No sell rule triggered → **HOLD**. (In a leading sector today — the defensive-Healthcare bid is supportive.)
+- Both prior-flagged undocumented entries (MS ~7/16, UNH ~7/20) now have confirmed next-earnings dates (both Oct, outside 10 days) — the earnings-risk question on both is resolved. Actual fills/catalysts still lack a committed original research entry (operator note only).
+
+### Trade Ideas
+- **None generated.** Regime is OFF, so per the routine trade ideas are only produced when the regime is ON. Idea-generation queries (pre-market movers, earnings-calendar screening, STOCK-Act disclosures) were skipped as non-decision-relevant today — no name could clear buy-gate check #1 regardless. Congressional/STOCK-Act query: not run (idea-gen only, never a buy reason; moot under regime OFF).
+
+### Risk Factors
+- **FOMC at 2:00 PM ET** is a two-sided event into a tape already below its 20-day SMA — an outsized reaction either way is possible; both positions are stop-protected.
+- **Oil spiking on US–Iran breakdown + Houthi attacks** — a renewed inflation impulse could pressure a Fed that markets want dovish, and weigh on financials (MS).
+- **Regime just flipped OFF** — if SPY stays sub-SMA the cash posture persists; MS drifting toward (though still well above) its -8% cut warrants monitoring at the midday scan.
+
+### Decision
+**HOLD. No new buys — market regime is OFF (SPY 740.795 < 20-day SMA 746.62, deterministic Alpaca read, Gemini-confirmed).** Hold MS and UNH under standard sell-side rules; both are fully protected by live 12% trailing-stop GTCs and have earnings safely outside 10 trading days. Trades this week 0/3. Discord alert sent for the ON→OFF regime flip per routine STEP 5.
