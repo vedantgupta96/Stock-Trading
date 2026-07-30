@@ -585,3 +585,50 @@ Equity: $99,681.72 | Cash: $99,681.72 | 100% cash, 0 positions, 0 open orders | 
 clear all 11 gate checks with a real breakout-on-volume, a disciplined ~3% pullback entry,
 documented intact catalyst, and earnings safely outside 10 trading days. Trades this week now
 1/3. Committed and pushed per the market-open routine (a trade was placed).
+
+---
+
+## 2026-07-30 (Thu) — Pre-Market Routine
+
+**Decision: HOLD (no new trades). Regime flipped ON→OFF; execute the deferred MS -8% cut at today's open.**
+Regime is now OFF (SPY below its 20-day SMA), so no new buys today — the right answer is cash/hold.
+The only action this session is the mandated Rule 6 cut on MS (queued market sell for the 9:30 ET open).
+UNH is held under standard sell-side rules, fully protected by its live 12% trailing-stop GTC.
+
+### Market Regime Status — OFF (flipped from ON)
+- **Alpaca (deterministic):** SPY last close **729.57** (7/29) vs **20-day SMA 745.76** → **729.57 < 745.76 → REGIME OFF.**
+  Gap is a wide **-2.2%** (not a marginal call). Recent SPY closes rolled over: 747.49 → 738.06 → 738.90 → 738.85 → 740.79 → 729.57.
+- **Gemini corroboration:** S&P 500 7,316.15 vs 20-day SMA ~7,404.20 → below. Independent confirmation of OFF.
+- ⚠️ **Regime FLIP ON→OFF** vs the last committed read (7/21: SPY 748.15 > SMA 744.94 = ON). Per Strategy Rule 1,
+  no new long entries while the filter is OFF; do not close winning positions just for the filter — let stops do that.
+
+### Account Snapshot (live Alpaca, paper) — pre-cut
+Equity: $99,456.40 | Cash: $95,118.40 | Buying power: $392,620 | Positions: 2 (MS, UNH) | Day trades: 0/3 | PDT: false
+- Trades this week: 0/3 (week of Mon 7/27).
+
+### Market Context
+- **VIX 20.66**, up +13.45% on the day (prior close 18.21), ~+29% YoY, and above its long-run ~18.58 average — elevated fear / risk-off.
+- **Today (8:30 AM ET):** June **PCE** (Fed's preferred inflation gauge) + **advance Q2 GDP** + weekly jobless claims (exp ~200k vs 187k prior).
+- **FOMC** rate decision was **yesterday (7/29)** — post-meeting repositioning is a dominant driver today.
+- BoE decision + eurozone/Germany Q2 GDP and German CPI also on the tape (offshore risk).
+- US CPI (Aug 12), PPI (Aug 13), and July jobs report (Aug 7) are NOT today.
+
+### Sector Momentum
+- Not screened for entries — regime is OFF, so no trade ideas are generated today (per routine STEP 4: ideas only when regime is ON).
+
+### Held-Position Review
+- **MS** (Financials, 11 sh @ $222.47) — current **$204.00**, **-8.30%** (unrealized_plpc -0.08303). **BREACHES the -8% hard cut (Rule 6).**
+  Flagged at the 7/29 EOD (closed -8.69%) for cutting at today's open. **ACTIONED THIS SESSION:**
+  (1) cancelled the MS 12% trailing-stop GTC (id 6109eca4) to free the shares (qty_available was 0, reserved by the stop);
+  (2) placed a **market SELL 11 MS, TIF day** (id 4870384f-416f-49ac-ac05-2d1559d97c02, status pending_new) — queued to fill at the 9:30 ET open with live prices.
+  Realized loss will be ~-$205 (~-8.3%) on ~$2,447 cost basis. No averaging down, no hoping — rule enforced.
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **$418.80**, **-1.04%**. Far above the -8% cut and below the +15% tighten threshold — **no sell-side rule triggered.**
+  Q2 2026 earnings already reported ~7/15 (EPS $6.38 beat vs $4.94; raised FY guide); **next earnings ~mid-to-late October 2026** — well outside the 10-trading-day window, so no earnings exit. ~7-8 trading days held (inside the 15-day time stop). Live 12% trailing-stop GTC intact (id 1cd14949, stop $384.51, hwm $436.945). **HOLD.**
+
+### Risk Factors
+- **Double macro event today** (PCE + advance Q2 GDP at 8:30 ET) landing the morning after FOMC — two-sided gap risk into the open, exactly when the MS market-sell fills. Accept the fill; the -8% rule is non-negotiable and downside was otherwise unbounded post-stop-cancel only during the closed pre-market window.
+- **Regime OFF + VIX 20.66 rising** = risk-off tape; correct posture is defensive/cash. Guard against the temptation to bottom-fish.
+- UNH is the lone remaining position after the MS cut; concentration is low (1 name, ~$2.1k) and it is stop-protected.
+
+### Decision
+**HOLD — no new trades (regime OFF).** Cut MS at the open per Rule 6 (order queued). Hold UNH under standard sell-side rules with its 12% trailing stop. After the MS fill the book is UNH-only + cash. Trades this week 0/3. Committed and pushed per the pre-market routine.
