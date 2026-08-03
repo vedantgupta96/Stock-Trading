@@ -632,3 +632,51 @@ Equity: $99,456.40 | Cash: $95,118.40 | Buying power: $392,620 | Positions: 2 (M
 
 ### Decision
 **HOLD — no new trades (regime OFF).** Cut MS at the open per Rule 6 (order queued). Hold UNH under standard sell-side rules with its 12% trailing stop. After the MS fill the book is UNH-only + cash. Trades this week 0/3. Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-03 (Mon) — Pre-Market Routine
+
+**Decision: HOLD (no new trades). Regime flipped OFF→ON (marginal). AAPL & MSFT clear the 11-check hard gate but FAIL entry-timing discipline — watchlist only. Hold UNH.**
+Regime is back ON but barely (+0.15% gap), into a macro-heavy week (Jul NFP Fri 8/7, CPI Wed 8/12) and peak earnings season. Two names pass all 11 hard-gate checks (AAPL, MSFT), but neither offers a valid pullback entry today, so the disciplined answer is HOLD and watch. UNH held under standard sell-side rules, fully protected by its live 12% trailing-stop GTC.
+
+### Market Regime Status — ON (flipped from OFF)
+- **Alpaca (deterministic):** SPY last close **746.79** (7/31) vs **20-day SMA 745.66** → **746.79 > 745.66 → REGIME ON.** Gap is a thin **+0.15%** — a marginal, not decisive, read. Recent SPY closes rebounded off the 7/29 low: 738.85 → 740.79 → 729.57 → 741.63 → 746.79.
+- **Gemini corroboration:** S&P 500 ~7,528 on 8/3, described as **above** its 20-day MA. Independent confirmation of ON.
+- ⚠️ **Regime FLIP OFF→ON** vs the last committed read (7/30: SPY 729.57 < SMA 745.76 = OFF). New long entries are permitted again, but every candidate must still clear the full 11-check gate AND the entry-timing rules.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,474.76** | Cash: **$97,395.81** | Buying power: $395,404 | Positions: **1 (UNH)** | Day trades: 0/3 | PDT: false
+- Trades this week: **0/3** (new week, Mon 8/3). last_equity $99,467.81 (balance_asof 7/31) → true session move ≈ +$6.95 (+0.01%), essentially flat.
+
+### Market Context
+- **VIX 15.99** — low/benign, down ~6% on the week; term structure in contango (risk-on tone). Supports the ON regime but does not override the thin SPY gap.
+- **WTI crude ~$79.40**, down ~6% on the day (US–Iran diplomacy + OPEC+ production increase). Disinflationary at the margin; pressures Energy.
+- **Econ calendar:** Today ISM Manufacturing + Construction Spending (10:00 ET). This week is front-loaded with jobs data — **ADP Wed 8/5, ISM Services Wed 8/5, Jul Employment Report (NFP) Fri 8/7** (the week's key event). **No FOMC this week** (Jul 29 minutes land 8/19). CPI **Wed 8/12**, PPI **Thu 8/13** — both next week.
+- **Peak earnings week:** AMD, MCD, CAT, PFE, MRK (Tue); DIS, UBER, LLY, CVS (Wed); plus PLTR/SNAP/VRTX today. Most large-cap leaders are in/near their earnings windows — the earnings gate screens most of them out.
+
+### Sector Momentum
+- **Leading:** Technology and Consumer Discretionary (Mag-7 / AI supercycle), Communication Services strong (~+5.5% on the week).
+- **Lagging:** Utilities, Real Estate; Energy pressured by the oil drop.
+
+### Held-Position Review
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **$415.79**, **-1.76%** (unrealized -$37.15). Far above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Q2 2026 already reported ~7/15 (EPS $6.38 beat vs $4.94; raised FY guide); **next earnings ~late Oct 2026** — well outside the 10-trading-day window. Live 12% trailing-stop GTC intact (id 1cd14949, stop $384.51, hwm $436.945; qty_available 0 = reserved by the stop). ⏳ **Time-stop watch:** entered ~7/20, ~11 trading days held at a <+5% gain — the 15-trading-day time stop (Rule) comes due around **8/7**. Not triggered today; flag for the midday/EOD scans this week. **HOLD.**
+
+### Trade Ideas (regime ON) — both clear the 11-check hard gate, both FAIL entry timing → WATCHLIST, not buys
+Deterministic breakout/volume screen across momentum leaders (buy_gate.sh) — only two names show a genuine 3-month-high-in-last-5-days on ≥1.5x volume: **$AAPL** and **$MSFT** (NVDA, AVGO, NFLX, COST, ORCL, GE all fail breakout; AMZN/GOOGL/META pass volume but fail breakout; HWM passes breakout but fails volume).
+
+- **$AAPL** (Technology) — 11-check gate: **PASS.** Breakout: 3-mo high 344.56 in last 5d (PASS); volume 4.90M vs 2.80M threshold (PASS, ~2.6x avg); regime/positions/sector/trades/cost/PDT/earnings/catalyst/is-stock all PASS. Earnings verified: last reported **7/30**, next ~late Oct/early Nov (outside 10d). Sizing: entry ~$308.73, 8 sh, cost ~$2,470, stop $284.03 (-8%), target $382.82 (+24%). ❌ **Entry timing FAIL:** pullback from breakout high is **10.4%**, which **exceeds the strategy's 10% "setup broken → skip" threshold** (Strategy §Entry timing). Setup is stretched too far off the high — **do not chase; watchlist.**
+- **$MSFT** (Technology) — 11-check gate: **PASS.** Breakout: 3-mo high 466.83 in last 5d (PASS); volume 4.74M vs 2.14M threshold (PASS, ~3.3x avg); all other checks PASS. Earnings verified: last reported **7/29**, next ~late Oct (outside 10d). Sizing: entry ~$464.70, 5 sh, cost ~$2,324, stop $427.52 (-8%), target $576.23 (+24%). ❌ **Entry timing FAIL:** pullback is only **0.5%** — MSFT is sitting on its breakout high, so buying now = overpaying (Strategy: wait for the first 3–8% pullback). **Watchlist — set an alert for a 3–8% pullback to ~$438–$450 that holds the 8/21-day EMA.**
+
+Net: no name offers a valid 3–8% pullback entry today. Two watchlist candidates (both Technology; note the 2-per-sector cap if both eventually trigger).
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Nothing actionable: recent House/Senate disclosures were munis/structured notes (McCormick), individual bank stocks (Latta FMAO), and lagged large-cap buys (Moskowitz META/MSFT/MNST filed 7/26 for 6/17 trades; Fields TSM). None presents a clean breakout-on-volume setup, and all lag by up to ~45 days. Dropped — no gate impact.
+
+### Risk Factors
+- **Marginal regime + huge jobs week.** SPY sits only +0.15% over its 20-day SMA the day after flipping ON; a soft **NFP on Fri 8/7** could flip it straight back to OFF. Chasing a marginal regime into a binary macro print is exactly the low-quality entry the rules exist to prevent.
+- **Peak earnings + entry-timing traps.** The two gate-passers are un-buyable today for opposite reasons (MSFT no pullback, AAPL over-extended pullback). Forcing either would violate the entry discipline and risk buying the top or a broken setup.
+- **UNH time-stop due ~8/7** at a <+5% gain — capital may need to be freed this week if it stays flat; factor into any new-entry decision.
+
+### Decision
+**HOLD — no new trades.** Regime flipped OFF→ON but only marginally, and neither gate-passing candidate (AAPL, MSFT) offers a valid pullback entry today — AAPL is over-extended (10.4% pullback > 10% break), MSFT has no pullback yet (0.5%). Both go on the watchlist for a proper 3–8% pullback. Hold UNH under standard sell-side rules with its 12% trailing stop; watch its ~8/7 time-stop. Trades this week 0/3. Committed and pushed per the pre-market routine.
