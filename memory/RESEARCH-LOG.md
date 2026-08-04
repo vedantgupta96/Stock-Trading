@@ -680,3 +680,42 @@ Nothing actionable: recent House/Senate disclosures were munis/structured notes 
 
 ### Decision
 **HOLD — no new trades.** Regime flipped OFF→ON but only marginally, and neither gate-passing candidate (AAPL, MSFT) offers a valid pullback entry today — AAPL is over-extended (10.4% pullback > 10% break), MSFT has no pullback yet (0.5%). Both go on the watchlist for a proper 3–8% pullback. Hold UNH under standard sell-side rules with its 12% trailing stop; watch its ~8/7 time-stop. Trades this week 0/3. Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-04 (Tue) — Market-Open Routine
+
+**Decision: BUY AMZN ×9 @ $276.95, 12% trailing stop GTC ($243.85). Regime decisively ON; AMZN clears all 11 hard-gate checks with a genuine post-earnings breakout on volume and a disciplined 3.4% pullback entry.** Watchlist names AAPL & MSFT still FAIL entry timing (skipped). UNH held under standard sell-side rules, fully protected by its live 12% trailing stop. (No 8/4 pre-market entry existed; ran research inline per routine STEP 1.)
+
+### Market Regime Status — ON (decisive)
+- **Alpaca (deterministic, via buy_gate):** SPY **762.08** vs **20-day SMA 746.70** → **ABOVE by +2.0% → REGIME ON.** No longer marginal — SPY rebounded hard off the 7/29 low: 729.57 → 741.63 → 746.79 → 757.72 → 761.55.
+- Regime was ON (marginal) on 8/3; today it firmed decisively above the 20-day SMA.
+
+### Account Snapshot (live Alpaca, paper) — pre-trade
+Equity: **$99,458.16** | Cash: **$97,395.81** | Buying power: $395,358 | Positions: **1 (UNH)** | Day trades: 0/3 | PDT: false
+- Trades this week: **0/3** (week of Mon 8/3) → 1/3 after this buy.
+
+### Market Context
+- **VIX 15.86** (−0.8%) — low/benign, risk-on tone; supports the ON regime.
+- **WTI crude ~$80** (mixed, ~flat-to-slightly-up on easing geopolitics) — neutral macro.
+- **Econ calendar:** Today ADP (Jul), JOLTS, PMI Services final. **ISM Services Wed 8/5. NFP Fri 8/7** (the week's key binary event). **CPI Wed 8/12** next week. No FOMC.
+- **Sector momentum:** Consumer Discretionary #1 this week (+3.3% XLY), Communication Services (+1.6%), Energy (+1%); Materials worst (−2.3%), Health Care slightly negative (−0.19%).
+
+### Held-Position Review
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **$412.47**, **−2.54%**. Above the −8% cut, below the +15% tighten threshold → **no sell-side rule triggered.** Next earnings ~Oct 9–27 (outside 10d). ⏳ **Time-stop watch:** entered ~7/20, ~13 trading days held at a <+5% gain — the 15-day time stop comes due ~8/7; not triggered today, flag for midday/EOD scans. Live 12% trailing-stop GTC intact (id 1cd14949, stop $384.51, hwm $436.945). **HOLD.**
+
+### Trade Ideas (regime ON) — deterministic breakout+pullback screen
+Screened AAPL, MSFT (yesterday's watchlist) + NVDA, AVGO, GOOGL, META, AMZN, NFLX, GE, PLTR, AMD, ORCL.
+
+- **$AMZN** (Consumer Discretionary) — **buy_gate: GATE PASS (all 11).** Breakout: 3-mo high $287.17 on 8/3 (last 5d, PASS); volume last5 max 6.03M vs 3.25M threshold (~2.8x avg, PASS); regime/positions/sector(0)/trades(0)/cost/PDT/earnings(none in window)/catalyst/is-stock all PASS. **Entry timing PASS:** pullback **3.4%** from the $287.17 high — squarely in the 3–8% band. Earnings verified: reported ~7/31 (EPS $5.75 vs $1.82 est; AWS +36.7%), **next ~Oct 29** (outside 10d → no earnings-hold risk). Catalyst durable & forward-looking (AWS re-acceleration, +43% operating income, $496B backlog, ≥15 PT raises, $3T cap). Spread tightened to $0.11 (0.04%) after early-session IEX-feed noise. Sizing: 9 sh @ $276.95, ~$2,497 cost, risk capped $200, stop $243.85 (12% trail), target $343.42 (+24%). → **BOUGHT.**
+- **$AAPL** (Technology) — 11-check gate PASS, but **entry timing FAIL:** pullback now **11.95%** (worse than yesterday's 10.4%) — exceeds the 10% "setup broken → skip" threshold. Over-extended; watchlist only, no chase.
+- **$MSFT** (Technology) — 11-check gate PASS, but **entry timing FAIL:** pullback only **0.77%** — sitting on its breakout high after a ~25% 3-day rip; no pullback = overpaying. Watchlist; wait for a 3–8% pullback.
+- Others: NVDA/AVGO/NFLX/ORCL/AMD failed breakout-recency and/or volume; GOOGL (8.7% pullback, breakout 53d ago), META (14.8%, 14d ago), GE (breakout 22d ago), PLTR (breakout 44d ago) — all failed the fresh-breakout-in-last-5-days test. **AMZN was the only clean fresh-breakout-on-volume with a valid pullback.**
+
+### Risk Factors
+- **AMZN is a post-earnings gap up ~20% over two sessions** — extended; the 3.4% pullback is a thinner cushion than a gradual-grind breakout. Mitigated by the hard $200 risk cap, the −8% rule, and the 12% trailing stop; earnings risk is now behind the position.
+- **NFP Fri 8/7** is a binary macro event 3 sessions out — a soft print could pressure the tape; AMZN is stop-protected and sizing is disciplined.
+- **UNH time-stop due ~8/7** at a <+5% gain — capital may free up this week; factored in (book is now 2/5 positions, plenty of room).
+
+### Decision
+**BUY AMZN ×9 @ $276.95, 12% trailing stop GTC ($243.85), target $343.42.** Regime decisively ON; AMZN is the sole name to clear all 11 gate checks AND the entry-timing discipline — a genuine breakout-to-all-time-highs on a durable AWS-reacceleration catalyst, pulled back a clean 3.4% into the band, in the week's top sector, with earnings safely behind it. AAPL (over-extended) and MSFT (no pullback) remain watchlist. Trades this week now 1/3; positions 2/5 (UNH Healthcare + AMZN Consumer Discretionary, no sector crowding). Committed and pushed per the market-open routine (a trade was placed).

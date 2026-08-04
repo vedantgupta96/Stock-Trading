@@ -318,3 +318,17 @@ Trades today: 0 | Trades this week: 0/3 | Regime: ON (SPY marginally > 20d SMA, 
 | UNH    | 5      | $423.22  | $415.82  | -$37.00 (-1.75%) | 12% trailing GTC ($384.51) |
 
 Notes: Quiet hold day for this EOD-only routine — no trades placed today; book is UNH-only + cash. Equity $99,474.91, headline Day P&L -$28.22 (-0.03%) vs the last committed EOD (7/30, $99,503.13); the true single-session move vs Alpaca last_equity ($99,467.81, balance_asof 7/31) was +$7.10 (+0.01%) — essentially flat, UNH +0.34% intraday. Phase P&L -$525.09 (-0.53%) off the live $100k base. UNH (Healthcare, 5 sh @ $423.22) closed $415.82, -1.75% — far above the -8% cut and below the +15% tighten threshold, so no sell-side rule triggers; its 12% trailing-stop GTC (id 1cd14949, stop $384.51, hwm $436.945) is verified open in the orders feed, next earnings ~late Oct 2026 (outside the 10-day window). ⏳ Time-stop watch: UNH entered ~7/20 at a <+5% gain — the 15-trading-day time stop comes due around 8/7; not triggered today but flag for the midday/EOD scans this week. Regime flipped OFF→ON at today's fresh pre-market read but only marginally (SPY sits just above its 20-day SMA, ~+0.15%); today's research surfaced two gate-passing names (AAPL, MSFT) but both FAIL entry timing (AAPL 10.4% pullback > 10% broken-setup threshold; MSFT only 0.5% pullback = no pullback yet) → watchlist, no buys. Big binary macro week ahead (ADP + ISM Services Wed 8/5, NFP Fri 8/7) that could flip the marginal regime straight back OFF. Trades today 0; trades this week 0/3 (new week from Mon 8/03). Day-trade count 0/3, PDT false. Outlook: hold UNH under standard sell-side rules with its trailing stop and watch its ~8/7 time stop; place no new buys unless a candidate offers a valid 3–8% pullback entry and clears the full 11-check gate — and note the marginal regime into NFP.
+
+---
+
+### 2026-08-04 BUY AMZN — open
+- Side: buy
+- Shares: 9
+- Entry price: $276.95 (actual fill)
+- Stop level: $243.85 (12% trailing GTC, id 26477093-1d1d-46de-9576-4addc44d293f, hwm $277.10)
+- Target: $343.42 (×1.24, 3:1 R/R on 8% risk)
+- Catalyst: Blowout Q2 2026 report (reported ~7/31) — AWS revenue re-accelerated to +36.7% (fastest in 18 quarters), company-wide operating income +43%, $496B cloud backlog; ≥15 brokerages raised price targets, market cap crossed $3T for the first time.
+- Thesis: Broke out to fresh all-time highs on the earnings beat (3-mo high $287.17 on 8/3), then pulled back a disciplined 3.4% into the 3–8% entry band. All 11 buy-gate checks PASS (regime ON, breakout in last 5d on ≥1.5x volume — last5 max 6.03M vs 3.25M threshold). Consumer Discretionary is the #1 sector this week (+3.3% XLY). Earnings risk now behind the position (next ~Oct 29, outside the 10-day window). Risk capped at $200 (9 sh × ~$277, ~$2,497 notional).
+- Sector: Consumer Discretionary
+- Earnings next: ~2026-10-29 (Q3 2026)
+- Time stop: ~2026-08-25 (15 trading days)
