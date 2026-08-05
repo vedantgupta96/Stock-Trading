@@ -680,3 +680,59 @@ Nothing actionable: recent House/Senate disclosures were munis/structured notes 
 
 ### Decision
 **HOLD — no new trades.** Regime flipped OFF→ON but only marginally, and neither gate-passing candidate (AAPL, MSFT) offers a valid pullback entry today — AAPL is over-extended (10.4% pullback > 10% break), MSFT has no pullback yet (0.5%). Both go on the watchlist for a proper 3–8% pullback. Hold UNH under standard sell-side rules with its 12% trailing stop; watch its ~8/7 time-stop. Trades this week 0/3. Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-05 (Wed) — Pre-Market Routine
+
+**Decision: HOLD (no new trades). Regime now decisively ON, but no candidate offers a valid 3–8% pullback entry — AAPL over-extended (10.2%), MSFT/ANET no pullback → watchlist only. Hold AMZN & UNH. ⚠️ New UNDOCUMENTED AMZN entry (~8/04) — operator confirm.**
+Regime strengthened from marginal-ON (8/3, +0.15%) to decisive-ON (+3.2%). Deterministic breakout/volume screen surfaces the same tech leaders (AAPL, MSFT) plus a fresh ANET earnings gap, but none is buyable on entry-timing discipline today. Book now holds AMZN (Cons. Disc.) + UNH (Healthcare), both stop-protected. UNH 15-day time-stop comes due ~8/7.
+
+### Market Regime Status — ON (decisive, strengthened)
+- **Alpaca (deterministic):** SPY last close **771.11** vs **20-day SMA 747.15** → **771.11 > 747.15 → REGIME ON.** Gap is a decisive **+3.2%** (vs a thin +0.15% on 8/3) — no longer marginal. 83 bars, screen healthy.
+- **Gemini corroboration:** S&P 500 **7,761** on 8/5, above its 20-day SMA (~7,597.14 as of 8/4). Independent confirmation of ON.
+- **No flip** vs the last committed read (8/3 ON) — regime has simply firmed up. New long entries permitted, but each must still clear the full 11-check gate AND entry-timing rules.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,470.07** | Cash: **$94,903.25** | Buying power: $392,400 | Positions: **2 (AMZN, UNH)** | Day trades: **0/3** | PDT: false
+- last_equity $99,437.78 (balance_asof 8/04) → true session move ≈ **+$32.29 (+0.03%)**, essentially flat.
+- Phase P&L off the live $100k base: **-$529.93 (-0.53%)**.
+- Trades this week: **1/3** — the AMZN buy (~8/04, see below) counts as this week's first trade (new week from Mon 8/03).
+
+### Market Context
+- **VIX ~15.86** (8/4 close, from 15.99) — low/benign, below its ~18.6 long-run average; risk-on tone. Supports the ON regime.
+- **WTI crude ~$76** (range $74.2–$76.4), roughly flat-to-slightly-up on the day; still soft after the late-July slide from ~$82. Disinflationary at the margin; pressures Energy (XLE -1.3% on 8/4).
+- **Econ calendar TODAY (8/5):** ADP employment (8:15 ET), PMI Composite Final (9:45), **ISM Services PMI (10:00 ET)** — the day's key print. **NFP Fri 8/7** is the week's marquee event; **CPI Wed 8/12**, **PPI Thu 8/13**, **FOMC minutes 8/19** all later. A soft ISM/ADP today or a weak NFP Fri could still jolt the tape — but the +3.2% regime cushion is far more resilient than the +0.15% we had Monday.
+- **Peak earnings:** UBER, LLY, BRK.A, DIS report today/this week; ANET already reported (see below). Most large-cap names remain in/near earnings windows.
+
+### Sector Momentum
+- **Leading:** Technology (XLK +8% on the week; +4.1% on 8/4; Philly Semi +6.6% on 8/4), Communication Services (+2.9%), Industrials (+1.9%), Consumer Discretionary (+1.8%).
+- **Lagging:** Energy (XLE -1.3%, oil-pressured), Utilities, Real Estate.
+- Note: I hold **0 tech** currently — up to 2 tech names could be added if a valid pullback appears (2-per-sector cap).
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$279.73**, **+1.00%** (+$25.02). Far below the +15% tighten threshold and far above the -8% cut → **no sell-side rule triggered.** Q2 2026 reported **7/30** (EPS $5.75 huge beat; AWS +37% y/y, fastest in 18 quarters; crossed $3T mkt cap 8/3); **next earnings ~late Oct 2026 (~Oct 29)** — well outside the 10-trading-day window. News: Jeff Bezos filed to sell ~$4B (pre-scheduled 10b5-1 plan, ~0.14% of shares) on 8/4, contributing to a -2.32% day — routine/non-thesis-breaking. Live 12% trailing-stop GTC verified open (id 26477093, stop **$247.34**, hwm **$281.07**, qty_available 0 = reserved by stop). **HOLD.**
+  - ⚠️ **UNDOCUMENTED ENTRY:** AMZN did not exist in the last committed book (8/03 EOD = UNH-only). Its trailing-stop GTC was submitted **2026-08-04 13:43 UTC** ⇒ implied buy ~8/04, but there is **no committed research/trade-log entry** for it — the 6th instance of undocumented account activity (after CVX 6/12, JPM ~7/01, the 7/10–7/20 MS/UNH gap). Operator should confirm the actual fill, entry, catalyst, and sizing. Position is nonetheless fully stop-protected and sits in its own sector (no crowding). Counted as trade 1/3 this week.
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **$409.85**, **-3.16%** (-$66.85). Above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Q2 2026 reported ~7/16 (EPS $6.38 beat vs $4.94; raised FY guide); **next earnings ~Oct 9–27 2026** — well outside the 10-day window. Live 12% trailing-stop GTC verified open (id 1cd14949, stop **$384.51**, hwm **$436.945**). ⏳ **TIME-STOP WATCH:** entered ~7/20 at a <+5% gain; today is ~trading day **13 of 15** — the 15-day time stop (Rule: close if < +5% after 15 trading days) comes due **~Fri 8/7**. Not triggered today; **flag for the 8/6–8/7 midday/EOD scans** — if still < +5% on 8/7, close to free capital. **HOLD today.**
+
+### Trade Ideas (regime ON) — screened deterministically; none buyable on entry timing → WATCHLIST
+Deterministic breakout/volume screen (buy_gate.sh) across the momentum leaders. Sizing on live equity: risk capped at **$200/trade → $200/8% = $2,500 max notional**.
+
+- **$AAPL** (Technology) — breakout **PASS** (3-mo high 344.56 in last 5d; vol 4.90M vs 2.97M thr, ~1.6x+) . Earnings: reported 7/30, next ~late Oct (outside 10d) → gate-eligible. ❌ **Entry timing FAIL:** pullback from the breakout high is **10.2%**, which **exceeds the 10% "setup broken → skip" threshold** (Strategy §Entry timing). (buy_gate's advisory 3–12% shadow band flags True, but the authoritative strategy hard-rule is >10% = broken.) **Do not chase — watchlist.**
+- **$MSFT** (Technology) — breakout **PASS** (last-5 high 499.34; vol 4.74M vs 2.25M thr, ~2.1x). Earnings: reported 7/29, next ~late Oct (outside 10d) → gate-eligible. ❌ **Entry timing FAIL:** pullback only **1.3%** — sitting on its highs (up from ~$464 Monday), so buying now = overpaying (need a 3–8% pullback). **Watchlist — alert for a 3–8% pullback that holds the 8/21-day EMA (~$460–$478).**
+- **$ANET** (Technology) — breakout **PASS** (last-5 high 194.30; vol PASS). But shares gapped **+15.9%** pre-market on a Q2 beat + strong Q3 guide; the 1.9% "pullback" is just off a fresh earnings spike. ❌ **Entry timing FAIL:** chasing a +16% one-day earnings gap is exactly the low-quality entry the rules exist to prevent. **Watchlist — wait for it to base/pull back 3–8% and hold.**
+- **NVDA / AVGO / NFLX** — **breakout FAIL** (each well below its prior high; NVDA also fails volume). Dropped. (NVDA additionally has late-Aug earnings risk approaching the 10-day window.)
+
+Net: no name offers a valid 3–8% pullback entry today. Three tech watchlist candidates — note the 2-per-sector Tech cap if two eventually trigger.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Nothing actionable: the notable recent disclosure is Sen. McCormick buying a Pittsburgh **municipal water/sewer authority** bond ($500k–$1M, traded 7/22) and a spouse structured note — neither a tradable equity, neither a breakout-on-volume setup. Also notable: the House passed a "Stop Insider Trading Act" (7/22) that would bar members from buying individual stocks. Nothing clears the gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Binary jobs week continues.** ADP + ISM Services today, **NFP Fri 8/7**. A downside surprise could compress the tape — but the regime cushion is now +3.2% (decisive), far sturdier than Monday's +0.15%, so a single soft print is unlikely to flip the filter OFF outright.
+- **Entry-timing traps in every candidate.** The gate-passers are un-buyable for opposite reasons (AAPL over-extended, MSFT/ANET no pullback / earnings chase). Forcing any of them would violate entry discipline — buying the top or a broken setup.
+- **UNH time-stop due ~8/7** at a <+5% gain — capital (~$2.0k) may need to be freed Friday if UNH stays flat; factor into any new-entry decision this week.
+- **Undocumented AMZN entry** means the book was changed outside the committed process again — the actual entry/catalyst/sizing are unverified. Downside is capped by the live trailing stop, but governance-wise this needs operator confirmation.
+
+### Decision
+**HOLD — no new trades.** Regime is decisively ON, but no candidate clears entry-timing discipline (AAPL 10.2% pullback = broken; MSFT 1.3% and ANET post-earnings-gap = no pullback / chase). All three go to the tech watchlist. Hold AMZN and UNH under standard sell-side rules, both fully protected by live 12% trailing-stop GTCs; **watch UNH's ~8/7 time stop.** Trades this week 1/3 (the ~8/04 AMZN buy). Flag the undocumented AMZN entry for operator confirmation. Committed and pushed per the pre-market routine.
