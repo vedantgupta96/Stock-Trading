@@ -680,3 +680,47 @@ Nothing actionable: recent House/Senate disclosures were munis/structured notes 
 
 ### Decision
 **HOLD — no new trades.** Regime flipped OFF→ON but only marginally, and neither gate-passing candidate (AAPL, MSFT) offers a valid pullback entry today — AAPL is over-extended (10.4% pullback > 10% break), MSFT has no pullback yet (0.5%). Both go on the watchlist for a proper 3–8% pullback. Hold UNH under standard sell-side rules with its 12% trailing stop; watch its ~8/7 time-stop. Trades this week 0/3. Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-05 (Wed) — Market-Open Routine (pre-market entry ran inline; log was missing)
+
+**Decision: HOLD (no new trades). Regime ON (decisive). ANET is the only 11-check gate-passer with a valid pullback band, but it just reported earnings (8/4) and is gapping +11% at ATH into a ~5.4% spread → SKIP per STEP 3 (gapped >5%, spread ≫0.5%). MSFT/PLTR pass the gate but sit on their highs (chase). Hold AMZN & UNH.**
+Today's pre-market entry was missing (routine didn't run), so research was run inline before any decision. No trade cleared both the hard gate AND the entry-timing/liquidity discipline, so the disciplined answer is HOLD.
+
+### Market Regime Status — ON (decisive)
+- **Alpaca (deterministic):** SPY last close **776.51** vs **20-day SMA 748.71** → **776.51 > 748.71 → REGIME ON.** Gap a decisive **+3.7%** (not marginal; a clear improvement from the 8/3 +0.15% read).
+- **Gemini corroboration:** S&P 500 ~7,600.50 vs 20-day SMA ~7,484.30 → above. Independent confirmation of ON.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,446** | Cash: **$94,903** | Buying power: $392,334 | Positions: **2 (AMZN, UNH)** | Day trades: 0/3 | PDT: false
+- Trades this week: **1/3** (week of Mon 8/3) — AMZN bought 8/4. A new buy today would be 2/3.
+
+### Market Context
+- **VIX 15.86** (−0.81% on the day) — low/benign, risk-on tone; supports the ON regime.
+- **WTI crude ~$76.19** (+0.55%) — steady.
+- Macro week: Jul Employment Report (NFP) **Fri 8/7** is the key event; CPI **Wed 8/12**, PPI **Thu 8/13** next week. Peak earnings still rolling (ANET, PLTR reported 8/4).
+
+### Sector Momentum
+- Technology / AI infrastructure leading (ANET, MSFT, AVGO, AMD names screening as breakout-on-volume). Networking/AI-switching strong on ANET's blowout.
+
+### Trade Ideas — deterministic breakout/volume screen (buy_gate.sh) across momentum leaders
+Only three names clear the hard 11-check gate today (c9 breakout + c10 volume PASS): **ANET, MSFT, PLTR**. Of those, only ANET shows a pullback in the 3–8% band — but it fails entry-quality/liquidity:
+
+- **$ANET** (Technology) — 11-check hard gate: **PASS** (breakout 214.62 ATH in last 5d; vol 842,563 vs 609,690 threshold; earnings now safely out — reported **8/4**, next **11/3**; sizing 12 sh @ ~$198.41, stop $182.53, target $246.02). Shadow pullback 7.6% (in band). ❌ **SKIP anyway:** live quote **$188.72 × $199.25 = ~5.4% spread** (STEP 3 requires <0.5%), and the stock is **+11% premarket at fresh ATH** on the 8/4 earnings blowout (Q2 rev $3.04B +37.7% YoY, EPS $1.02 beat, Q3 guide $3.3B). STEP 3: "gapped up >5% → skip, you missed the entry." The 7.6% "pullback" is post-earnings intraday noise, not a genuine first-pullback-on-drying-volume setup. Chasing an earnings gap into a wide spread is exactly the low-quality entry the rules prevent.
+- **$MSFT** (Technology) — hard gate **PASS** (breakout 499.34, vol PASS, earnings 7/29→late Oct). ❌ **Entry-timing FAIL:** pullback only **1%** — sitting on its breakout high; buying now = overpaying. Watchlist (same as 8/3).
+- **$PLTR** (Technology) — hard gate **PASS** (breakout + volume). ❌ **Entry-timing FAIL:** pullback **0.3%** (on the high) and just reported earnings ~8/4. Chase + fresh-earnings gap. Watchlist/skip.
+- **$AAPL** — hard gate **FAIL** (c9: no new 3-mo high in last 5d; last5 high 334.41 < prior 344.56). Off the table.
+- Also screened (all FAIL hard gate): NVDA, AVGO, GOOGL, META, NFLX, GE, AMD (valid 7.1% pullback but breakout FAIL), CRM, ORCL, COST, JPM (breakout ok, volume FAIL), GS, LLY, NOW.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$278.68**, **+0.63%**. Held ~1 trading day (bought 8/4). Reported **7/30**, next **~10/29** (outside 10d). Live 12% trailing-stop GTC intact (id 26477093, stop $248.85, hwm $282.78). No sell-side rule triggered. **HOLD.**
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **$407.00**, **−3.83%**. Above the −8% cut; below +15% tighten. Reported ~7/15, next ~late Oct (outside 10d). ⏳ **Time-stop watch:** ~12 trading days held (entered 7/20) at a <+5% gain → **15-day time stop due ~Fri 8/7.** Not triggered today; flag for the midday/EOD scans this week. Live 12% trailing-stop GTC intact (id 1cd14949, stop $384.51, hwm $436.945). **HOLD.**
+
+### Risk Factors
+- **NFP Fri 8/7** is a binary macro event that could flip the regime; not a reason to force a marginal entry today.
+- **Earnings-gap trap:** ANET/PLTR just reported — the biggest temptation today is chasing a fresh earnings pop. Discipline says no.
+- **UNH time-stop due ~8/7** at a loss; capital may free up this week if it stays flat — factor into next entries.
+
+### Decision
+**HOLD — no new trades.** Regime is decisively ON, but no candidate clears both the hard gate and the entry/liquidity discipline: ANET (the lone pullback-band gate-passer) is an earnings-gap chase into a 5.4% spread at +11%/ATH → skip; MSFT (1%) and PLTR (0.3%) offer no pullback → watchlist. Hold AMZN and UNH under standard sell-side rules with live 12% trailing stops; watch UNH's ~8/7 time stop. Trades this week 1/3. No trade placed → no commit per routine STEP 7.
