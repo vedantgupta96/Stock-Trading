@@ -729,3 +729,49 @@ Nothing actionable: recent disclosures (Rick Scott, McCormick) are municipal wat
 
 ### Decision
 **HOLD — no new trades.** Regime is firmly ON, but the only hard-gate passer (MSFT) has no valid pullback entry (2.4% < 3% floor), and NFP is tomorrow — the disciplined answer is to wait. MSFT stays on the watchlist for a 3–8% pullback. Hold AMZN and UNH under standard sell-side rules with their live 12% trailing stops; **enforce UNH's ~8/07 time stop** if it is still flat at the next scan. Confirm the undocumented AMZN entry. Trades this week 1/3. Committed and pushed per the pre-market routine.
+
+## 2026-08-07 (Fri) — Pre-Market Routine
+
+**Decision: TIME-STOP CUT UNH (5 sh) + HOLD (no new buys). UNH hit its 15-trading-day time stop today at a loss (-4.58%) → cancelled its 12% trailing-stop GTC and queued a market SELL 5 sh (day) to fill at the open. Regime firmly ON (SPY +2.59% over 20d SMA), but NFP (Jul jobs report) lands today and the lone hard-gate passer (MSFT) has no valid pullback (0.3%) → no new entries. Hold AMZN.**
+The UNH time stop, flagged for enforcement on ~8/07 across the last several logs, came due today: UNH entered ~7/20 and today (8/07) is its 15th trading session held (7/20–8/07 inclusive: 5+5+5 = 15), at -4.58% (< +5% gain) — dead money at a small loss for ~3 weeks. Rule ("Close any position that is flat < +5% gain after 15 trading days") enforced: trailing-stop GTC (id 1cd14949) cancelled, market SELL 5 UNH (day) submitted (id e4795cfd, status new) to fill at the 9:30 ET open — same mechanism as the 7/30 MS cut. No new buys: NFP is today (binary macro), and MSFT (only 11-check passer) sits on its high (0.3% pullback < 3% floor).
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic):** SPY last close **768.64** (8/06) vs **20-day SMA 749.23** → **768.64 > 749.23 → REGIME ON**, a solid **+2.59%** gap. Recent closes: 741.63 (7/30) → 746.79 → 757.72 → 771.11 → 769.79 → 768.64. Gemini corroborated (SPY 769.79 > 20d SMA 748.41).
+- No flip vs the last committed read (8/06: ON). New long entries permitted, but every candidate must still clear the full 11-check gate AND the entry-timing rules.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,383.85** | Cash: **$94,903.25** | Buying power: $392,159 | Positions: **2 (AMZN, UNH — UNH cut queued)** | Day trades: 0/3 | PDT: false
+- last_equity $99,373.44 (balance_asof 8/06) → true session move ≈ **+$10.41 (+0.01%)**, essentially flat pre-bell.
+- Phase P&L **-$616.15 (-0.62%)** off the live $100k base.
+- Trades this week: **1/3** (week of Mon 8/03) — the AMZN buy (~8/04) is trade #1; the UNH sell does NOT count toward the 3-new-buys/week limit.
+
+### Market Context
+- **VIX ~15.85** (15.15 close 8/06, down ~11% on the week) — benign / risk-on, well below its ~18.6 long-run average. Supports the ON regime.
+- **WTI crude ~$75** — soft, disinflationary at the margin, pressures Energy.
+- **⚠️ Econ calendar today (8/07): July Employment Report (NFP)** — the week's key binary macro event (consensus ~+80k NFP, unemployment 4.2%, AHE +0.3% m/m). A soft print could pressure the tape; a hot one revives rate-cut-delay fears. Reason enough to avoid a marginal entry today.
+- CPI Wed 8/12, PPI Thu 8/13 next week. No FOMC this week (Jul 29 minutes land 8/19).
+
+### Sector Momentum
+- **Leading:** Technology (XLK), Energy, Industrials (aerospace/defense clusters at 52-wk highs), Communication Services.
+- **Lagging:** Utilities, Real Estate. Energy strength is oil-price-driven and choppy.
+
+### Held-Position Review
+- **UNH** (Healthcare, 5 sh @ $423.22) — current **~$403.85**, **-4.58%**. ⏳ **15-TRADING-DAY TIME STOP DUE TODAY** (entered ~7/20; 7/20–8/07 = 15 sessions) at a <+5% gain → **CUT per Strategy time-stop rule.** Action taken: cancelled 12% trailing-stop GTC (id 1cd14949) and queued market SELL 5 sh (day, id e4795cfd) to fill at the open; approx realized ≈ **-$96.85 (-4.58%)** on the ~$2,116 cost basis. No averaging down, no hoping — dead money cleared, ~$2,020 capital freed. Next earnings ~late Oct (outside window); no thesis-relevant news (some late-July Medicare drug-subsidy headlines, mild sector negative, not a catalyst). Was an undocumented entry from the 7/10–7/20 gap.
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$273.40**, **-1.28%** (unrealized -$31.95). Far above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Live 12% trailing-stop GTC intact (id 26477093, stop $248.85, hwm $282.78; qty_available 0 = reserved by the stop). Earnings reported 7/30; next ~10/29/2026 (outside 10d). Entered ~8/04, ~4 trading days held (inside 15-day time stop). News benign (routine 13F stake changes). **HOLD.**
+
+### Trade Ideas (regime ON) — deterministic buy_gate.sh screen
+Only **$MSFT** clears all 11 hard-gate checks; it FAILS entry timing (pullback too shallow) → **watchlist, not a buy.**
+
+- **$MSFT** (Technology) — 11-check hard gate: **PASS** (regime, positions 2, sector 0 tech held, trades 1, cost $2000 vs cash, PDT 0, earnings none-in-window, catalyst, breakout: 3-mo high 501.54 in last 5d, volume 2.34M vs 2.23M threshold ~1.6x, is-stock). Sizing: entry ~$500.04, 4 sh, cost ~$2,000, stop $460.03 (-8%), target $620.04 (+24%). ❌ **Entry timing FAIL:** pullback from breakout high is only **0.3%** — MSFT is sitting on its high; buying now = overpaying (same as 8/03, 8/06). **Watchlist — wait for a 3–8% pullback to ~$460–$485 that holds the 8/21-day EMA.**
+- Pre-market movers screen: only micro-cap/low-float junk (NAMI, DSY, CPOP, AQB) and earnings-reaction names (TEAM +30%, TTD -27%) — no clean momentum-leader breakout-on-volume setup. Dropped.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Nothing actionable this run — no clean breakout-on-volume common-stock setup surfaced; all disclosures lag by up to ~45 days. Dropped — no gate impact.
+
+### Risk Factors
+- **NFP today (8/07)** — binary jobs print; forcing a marginal entry (MSFT at its high) into it is exactly the low-quality trade the rules prevent.
+- **Fill risk on the UNH exit** — market SELL queued pre-bell fills at the open at whatever the print is; NFP could move the open. Acceptable: the time stop mandates the exit and downside was already capped by the (now-cancelled) trailing stop before submission.
+- **AMZN** — mild sentiment overhang (prior Bezos/Berkshire selling); monitor that its 12% trailing stop remains live.
+
+### Decision
+**TIME-STOP CUT UNH; otherwise HOLD — no new buys.** UNH's 15-trading-day time stop came due today at a -4.58% loss → cancelled its trailing stop and queued a market SELL 5 sh to fill at the open (frees ~$2,020). Regime is firmly ON, but the only hard-gate passer (MSFT) has no valid pullback (0.3% < 3% floor) and NFP is today, so no new entries — MSFT stays on the watchlist. Hold AMZN under standard sell-side rules with its live 12% trailing stop. Trades this week 1/3 (the UNH sell does not count). Verify the UNH fill and record it (TRADE-LOG) at the midday/EOD scan. Committed and pushed per the pre-market routine.
