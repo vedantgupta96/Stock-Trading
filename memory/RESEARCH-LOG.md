@@ -775,3 +775,51 @@ Nothing actionable this run — no clean breakout-on-volume common-stock setup s
 
 ### Decision
 **TIME-STOP CUT UNH; otherwise HOLD — no new buys.** UNH's 15-trading-day time stop came due today at a -4.58% loss → cancelled its trailing stop and queued a market SELL 5 sh to fill at the open (frees ~$2,020). Regime is firmly ON, but the only hard-gate passer (MSFT) has no valid pullback (0.3% < 3% floor) and NFP is today, so no new entries — MSFT stays on the watchlist. Hold AMZN under standard sell-side rules with its live 12% trailing stop. Trades this week 1/3 (the UNH sell does not count). Verify the UNH fill and record it (TRADE-LOG) at the midday/EOD scan. Committed and pushed per the pre-market routine.
+
+## 2026-08-10 (Mon) — Pre-Market Routine
+
+**Decision: HOLD — no new buys. Regime firmly ON (SPY +3.07% over its 20d SMA), but no candidate offers both a fresh breakout-on-volume AND a valid 3–8% pullback: the only two hard-gate passers (MSFT, PLTR) are sitting on their highs (pullback 0.2–1% < 3% floor → entry-timing FAIL), and the one name with a real pullback (GOOGL, 7.8%) has a stale breakout. Hold AMZN. UNH time-stop exit from 8/07 confirmed filled — book is now AMZN-only + cash.**
+New trading week (Mon 8/10). Book cleaned up: UNH's 15-day time-stop market SELL (queued 8/07) filled — UNH is out of positions and cash rose to $96,914.50 (~$2,011 UNH proceeds vs the $94,903 pre-sale cash on 8/07). Sole remaining position is AMZN, fully stop-protected. Strong, broad tape at record highs keeps the leaders extended right on their highs — the same no-valid-pullback picture as 8/03/8/06/8/07, so the disciplined answer stays HOLD.
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic, via buy_gate):** SPY last close **773.16** vs **20-day SMA 750.14** → **773.16 > 750.14 → REGIME ON**, a solid **+3.07%** gap (82 bars). No flip vs the last committed read (8/07: ON). New long entries permitted, but every candidate must still clear the full 11-check gate AND the entry-timing rule.
+- Gemini refused the future-dated regime/VIX queries (as on prior runs) → relied on the deterministic Alpaca read, which is the authoritative source per the buy-gate design.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,391.66** | Cash: **$96,914.50** | Buying power: $394,594 | Positions: **1 (AMZN)** | Day trades: 0/3 | PDT: false
+- last_equity $99,384.82 (balance_asof 8/07) → true session move ≈ **+$6.84 (+0.01%)**, essentially flat pre-bell.
+- Phase P&L **-$608.34 (-0.61%)** off the live $100k base.
+- Trades this week: **0/3** (new week of Mon 8/10). Sells (the 8/07 UNH cut) don't count toward the 3-new-buys/week limit.
+
+### Market Context
+- **VIX ~14.9** (14.90 close 8/07; 1-month range 14.77–20.88, avg ~17.06) — benign / risk-on, well below its ~18.6 long-run average. Supports the ON regime.
+- **WTI crude ~$78** (reads $77.8–$79.3, up ~1–2% on the day) — firmer than last week's ~$75; a mild tailwind for Energy rather than the prior soft/disinflationary read.
+- **Econ calendar today (8/10):** no major US macro releases (bill auctions, routine Fed H.15/H.10 only). **CPI Wed 8/12** and **PPI Thu 8/13** are this week's binary events; **Retail Sales + prelim UMich sentiment Fri 8/14**. NFP already landed last week (8/07). Jul FOMC minutes 8/19; next FOMC decision 9/16.
+- ⚠️ CPI (Wed) is the week's key print — a hot number could pressure the tape; a reason not to chase a marginal entry early in the week.
+
+### Sector Momentum
+- **Leading:** Information Technology (XLK, +8.4% recent), Materials (+7.6%), Health Care (+5.0%), Financials, Industrials (+2.8%) — broad rally, Dow at all-time highs; AI names (PLTR +29.5%, SHOP +17%) led last week.
+- **Lagging:** Utilities, Real Estate. Energy firmer on the crude bounce but choppy.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$275.24**, **-0.62%** (unrealized -$15.39; cost basis $2,492.55, mkt value $2,477.16). Far above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Live 12% trailing-stop GTC intact (id 26477093, stop $248.85, hwm $282.78; qty_available 0 = reserved by the stop). Earnings reported 7/30 (EPS $5.75 beat, AWS +37%); **next earnings ~10/29/2026** — outside the 10-day window. Entered ~8/04 → ~5 trading days held (inside the 15-day time stop). News benign: strong AWS/AI backlog ($496B), $220B capex guide (a mild FCF overhang), routine insider selling (~$367M/3mo). **HOLD.**
+  ⚠️ **Undocumented entry (still open item):** AMZN has no committed research/trade-log buy entry — the recurring pattern flagged for CVX (6/12), JPM (~7/01), MS/UNH (7/10–7/20). It IS fully stop-protected. Operator should confirm the actual fill price/date/catalyst.
+
+### Trade Ideas (regime ON) — deterministic buy_gate.sh screen across momentum leaders
+Screened MSFT, NVDA, AVGO, AAPL, PLTR, GOOGL, META, NFLX. **Only MSFT and PLTR clear all 11 hard-gate checks; BOTH fail entry timing (sitting on their highs).** No name offers a fresh breakout-on-volume AND a valid 3–8% pullback → **watchlist, no buys.**
+
+- **$MSFT** (Technology) — 11-check hard gate **PASS** (regime; positions 1; 0 tech held; trades 0; cost $2,499 vs $96.9k cash; PDT 0; earnings none-in-window; catalyst; breakout: 3-mo high 505.10 in last 5d; volume 2.34M vs 2.22M threshold ~1.6x; is-stock). Sizing: entry ~$499.88, 5 sh, cost ~$2,499, stop $459.89 (-8%), target $619.85 (+24%). ❌ **Entry timing FAIL:** pullback from breakout high is only **~1%** — MSFT is on its high; buying now = overpaying (same as 8/03/8/06/8/07). **Watchlist — wait for a 3–8% pullback to ~$465–$490 that holds the 8/21-day EMA.**
+- **$PLTR** (Technology) — 11-check hard gate **PASS** (breakout: high 172.41 in last 5d; volume PASS). But this is a **post-earnings +29.5% gap** and the pullback is only **0.2%** — PLTR is pinned to its high after a huge earnings move. ❌ **Entry timing FAIL** (0.2% < 3% floor) and chasing a 30% earnings gap is exactly the low-quality entry the rules prevent. **Watchlist only.**
+- **$GOOGL** — hard gate **FAIL (c9 breakout stale):** it has a real **7.8%** pullback off its recent high, but no fresh 3-mo/52-wk high in the last 5 trading days → the setup isn't a valid breakout-on-volume entry. **Dropped.**
+- **$NVDA / $AVGO / $AAPL / $META / $NFLX** — all **FAIL c9 breakout** (stale; NVDA/META/NFLX also fail c10 volume), pullbacks 0.4–1.5%. None near a fresh breakout-on-volume setup. **Dropped.**
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Recent disclosures: Rep. David Taylor bought **AVGO** (7/24) and **GOOGL** (7/17) and KR; Sen. Tuberville bought Realty Income **O** (7/23, a REIT — we don't trade ETFs/REITs); Sen. Whitehouse *sold* LOW. **Nothing actionable:** AVGO and GOOGL both FAIL our hard gate (stale breakouts) independently, and all disclosures lag by up to ~45 days. Dropped — no gate impact.
+
+### Risk Factors
+- **CPI Wed 8/12 (then PPI Thu, Retail Sales Fri).** A hot CPI could pressure a record-high tape; forcing a marginal entry (a leader on its high) ahead of it is the low-quality trade the rules prevent.
+- **Leaders extended at highs.** The whole momentum complex is sitting on its highs with no pullback — the persistent condition that has kept us in HOLD; risk is chasing and overpaying, not missing out.
+- **AMZN undocumented entry / $220B capex overhang / insider selling** — mild sentiment overhang; monitor that its 12% trailing stop stays live and that the entry was intentional.
+
+### Decision
+**HOLD — no new trades.** Regime is firmly ON (SPY +3.07% over its 20d SMA, VIX ~14.9), but no candidate clears both the hard gate and the entry-timing rule: MSFT and PLTR pass the 11 checks yet sit on their highs (pullback < 3%), and GOOGL's only real pullback comes off a stale breakout. MSFT stays on the watchlist for a 3–8% pullback into CPI week. Hold AMZN under standard sell-side rules with its live 12% trailing stop; UNH's 8/07 time-stop exit is confirmed filled (book AMZN-only + cash). Trades this week 0/3. No urgent notification warranted (AMZN -0.62%, no near earnings, regime unchanged). Committed and pushed per the pre-market routine.
