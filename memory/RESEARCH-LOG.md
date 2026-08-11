@@ -823,3 +823,52 @@ Recent disclosures: Rep. David Taylor bought **AVGO** (7/24) and **GOOGL** (7/17
 
 ### Decision
 **HOLD — no new trades.** Regime is firmly ON (SPY +3.07% over its 20d SMA, VIX ~14.9), but no candidate clears both the hard gate and the entry-timing rule: MSFT and PLTR pass the 11 checks yet sit on their highs (pullback < 3%), and GOOGL's only real pullback comes off a stale breakout. MSFT stays on the watchlist for a 3–8% pullback into CPI week. Hold AMZN under standard sell-side rules with its live 12% trailing stop; UNH's 8/07 time-stop exit is confirmed filled (book AMZN-only + cash). Trades this week 0/3. No urgent notification warranted (AMZN -0.62%, no near earnings, regime unchanged). Committed and pushed per the pre-market routine.
+
+## 2026-08-11 (Tue) — Pre-Market Routine
+
+**Decision: HOLD — no new buys. Regime firmly ON (SPY 773.02 > 20d SMA 751.33, +2.89%), but no candidate offers both a fresh breakout-on-volume AND a valid 3–8% pullback: PLTR is the only 11-check hard-gate passer and it FAILS entry timing (2.4% pullback < 3% floor, still a post-earnings-gap name pinned near its high). MSFT now also fails the gate (breakout-day volume dried up below 1.5x). Hold AMZN. Into CPI (Wed 8/12) / PPI (Thu 8/13).**
+Same no-valid-pullback picture as 8/03/8/06/8/07/8/10 — leaders are either extended on their highs or their breakouts have gone stale. The disciplined answer stays HOLD ahead of tomorrow's CPI print.
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic, via buy_gate):** SPY last close **773.02** vs **20-day SMA 751.33** → **773.02 > 751.33 → REGIME ON**, a solid **+2.89%** gap. No flip vs the last committed read (8/10: ON). New long entries permitted, but every candidate must still clear the full 11-check gate AND the entry-timing rule.
+- Gemini answered market-context queries this run (regime read remains the authoritative deterministic Alpaca source per the buy-gate design).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,422.06** | Cash: **$96,914.50** | Buying power: $394,679 | Positions: **1 (AMZN)** | Day trades: 0/3 | PDT: false
+- last_equity $99,417.31 (balance_asof 8/10) → true session move ≈ **+$4.75 (+0.005%)**, essentially flat pre-bell.
+- Phase P&L **-$577.94 (-0.58%)** off the live $100k base.
+- Trades this week: **0/3** (week of Mon 8/10). Sells don't count toward the 3-new-buys/week limit.
+
+### Market Context
+- **VIX ~15.5** (15.51, +0.3% today; up from 15.46 on 8/10) — benign / risk-on, well below its ~18.6 long-run average. Supports the ON regime.
+- **WTI crude ~$84** (83.95–84.33, up ~2.7% on the day) — firmer, extending Monday's bounce; a tailwind for Energy.
+- **Econ calendar today (8/11):** US Existing Home Sales (Jul) 10:00 ET — second-tier. **CPI Wed 8/12** (8:30 ET) and **PPI Thu 8/13** (8:30 ET) are this week's binary events; **Retail Sales + prelim UMich sentiment Fri 8/14**. Jul FOMC minutes 8/19; next FOMC decision 9/16.
+- ⚠️ CPI (Wed) is the week's key print — a hot number could pressure the record-high tape; a reason not to chase a marginal entry the day before.
+
+### Sector Momentum
+- **Leading:** Energy (XLE +4.6% Mon on the crude bounce), Materials/Metals (Aluminum, Metal Mining), Financials, Healthcare (Medical Labs). Barclays flags US large-cap growth / AI-server names as favored.
+- **Lagging (Monday):** Real Estate (XLRE), Utilities (XLU), and — notably — Information Technology (XLK) all declined, so the tech leaders pulled back modestly but none enough to reset a valid breakout entry.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$278.62**, **+0.60%** (unrealized +$15.01; cost basis $2,492.55, mkt value $2,507.56). Far above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Live 12% trailing-stop GTC intact (id 26477093, stop $248.85, hwm $282.78; qty_available 0 = reserved by the stop). Earnings reported 7/30 (EPS $5.75 beat, AWS +37%); **next earnings ~10/29/2026** — outside the 10-day window. Entered ~8/04 → ~6 trading days held (inside the 15-day time stop). News benign/positive: AWS/AI momentum ($25B+ AI/chips run-rate), Zoox robotaxi approved for paid rides in Las Vegas, analysts bullish (avg PT ~$323); mild overhangs are the $220B capex guide and routine insider selling (~$20.5M/90d). **HOLD.**
+  ⚠️ **Undocumented entry (still open item):** AMZN has no committed research/trade-log buy entry — the recurring pattern flagged for CVX (6/12), JPM (~7/01), MS/UNH (7/10–7/20). It IS fully stop-protected. Operator should confirm the actual fill price/date/catalyst.
+
+### Trade Ideas (regime ON) — deterministic buy_gate.sh screen across momentum leaders
+Screened MSFT, PLTR, NVDA, AVGO, GOOGL, META, AAPL, NFLX. **Only PLTR clears all 11 hard-gate checks, and it FAILS entry timing (sitting near its high).** No name offers a fresh breakout-on-volume AND a valid 3–8% pullback → **watchlist, no buys.**
+
+- **$PLTR** (Technology) — 11-check hard gate **PASS** (regime; positions 1; 0 tech held; trades 0; cost $2,500 vs $96.9k cash; PDT 0; earnings none-in-window; catalyst; breakout: high in last 5d; volume 5.59M vs 2.06M threshold ~4x; is-stock). Sizing: entry ~$175.23, 14 sh, cost ~$2,500, stop $161.21 (-8%), target $217.28 (+24%). ❌ **Entry timing FAIL:** pullback from breakout high is only **2.4%** (< 3% floor) — PLTR is still pinned near its high after its post-earnings +29.5% gap; chasing that move is exactly the low-quality entry the rules prevent. **Watchlist — wait for a real 3–8% pullback that holds support.**
+- **$MSFT** (Technology) — **GATE FAIL (c10 volume):** breakout-day volume has dried up (last-5 max 1.50M vs 2.19M = 1.5x threshold), and pullback is only 1.5%. The prior runs' passer no longer clears the gate. **Dropped.**
+- **$GOOGL** — **GATE FAIL (c9 breakout stale):** it has a real **7%** pullback (in band) and volume PASS, but no fresh 3-mo/52-wk high in the last 5 trading days → not a valid breakout-on-volume entry. **Dropped** (same as prior runs).
+- **$NVDA** (pullback 3.2%, in band) / **$AVGO** (2.4%) / **$META** / **$AAPL** / **$NFLX** — all **FAIL c9 breakout** (stale; NVDA/META/AAPL/NFLX also fail c10 volume). None near a fresh breakout-on-volume setup. **Dropped.**
+- Pre-market movers screen (Gemini): only micro-cap / low-float junk (WXM, UZX, WAFU, ELPW, WYHG, NCRA…) and earnings-reaction names (RIOT). No clean momentum-leader breakout-on-volume setup. Dropped.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Gemini query hit an HTTP 429 rate-limit this run and returned nothing; not re-run via WebSearch because STOCK Act disclosures are idea-generation only, never a buy reason (they lag up to ~45 days, omit size/exits, are often options), and no name they could surface would bypass the hard gate. No gate impact.
+
+### Risk Factors
+- **CPI Wed 8/12 (then PPI Thu, Retail Sales Fri).** A hot CPI could pressure a record-high tape; forcing a marginal entry (a leader near its high) the day before is the low-quality trade the rules prevent.
+- **Leaders extended / breakouts stale.** The passer (PLTR) sits near its high with <3% pullback; the name with a real 7% pullback (GOOGL) has a stale breakout — the persistent condition that keeps us in HOLD. Risk is chasing and overpaying, not missing out.
+- **AMZN undocumented entry / $220B capex overhang / insider selling** — mild sentiment overhang; monitor that its 12% trailing stop stays live and confirm the entry was intentional.
+
+### Decision
+**HOLD — no new trades.** Regime is firmly ON (SPY +2.89% over its 20d SMA, VIX ~15.5), but no candidate clears both the hard gate and the entry-timing rule: PLTR passes the 11 checks yet sits near its high (2.4% pullback < 3% floor), MSFT no longer clears the gate (volume dried up), and GOOGL's only real pullback comes off a stale breakout. PLTR/MSFT stay on the watchlist for a genuine 3–8% pullback into CPI week. Hold AMZN under standard sell-side rules with its live 12% trailing stop. Trades this week 0/3. No urgent notification warranted (AMZN +0.60%, no near earnings, regime unchanged). Committed and pushed per the pre-market routine.
