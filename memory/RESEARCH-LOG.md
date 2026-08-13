@@ -919,3 +919,21 @@ Only disclosure surfaced: Sen. Gary Peters bought **Realty Income (O)** — a RE
 
 ### Decision
 **HOLD in this pre-market run; PRIME `$PLTR` (14 sh, ~$2,395, stop $157.40 / 12% trail, target $212.15) for MIDDAY execution conditional on a benign PPI and PLTR holding ≥ ~$168 support.** Regime firmly ON (SPY +2.57% over its 20d SMA, VIX ~14.6–15.3, Tech leading). PLTR is the first name in weeks to clear both the 11-check hard gate and the 3–8% entry-timing band (4.7% pullback on drying-up volume) — a genuine, gate-passing setup, not a forced marginal entry. It is deliberately queued for after the 8:30 ET PPI/jobless-claims prints rather than bought into a binary event on a thin pre-market quote; the midday scan executes it mechanically if the setup holds. Hold AMZN under standard sell-side rules with its live 12% trailing stop (next earnings ~10/29, ~8 of 15 time-stop days used). Trades this week 0/3 (this would be 1/3). No urgent notification warranted (AMZN -3.27% >> -8% cut, no near earnings, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-13 (Thu) — Market-Open Routine (EXECUTED $PLTR)
+
+**Decision: BUY `$PLTR` ×14 @ $173.70 — EXECUTED at the open.** The trade primed by this morning's 6 AM CT pre-market fired. All three conditional triggers were met: (a) **PPI benign** — SPY opened $776+ (vs 772.54 prior close), **up ~+0.5%**, no risk-off gap; regime firmly ON (SPY 776.13 > 20d SMA 754.42, +2.9%); (b) **PLTR held support** — bouncing off its $171 pullback low, trading $173.4–173.9, well above the ~$168 breakout shelf / 8-EMA, a 3.4% pullback (in the 3–8% band); (c) **buy_gate PASS** on all 11 checks. Entry-timing re-validated: bid/ask $173.37/$173.50 (spread 0.075% < 0.5%), not halted, price +1.4% above the planned $171 entry (inside the 2% tolerance, not gapped). Executed rather than deferred to midday because the sole deferral reason — PPI event risk — had resolved favorably before the open, and waiting risked drifting past the entry.
+
+### Account Snapshot (live Alpaca, paper — at execution)
+Equity: **$99,330.73** | Cash: **$96,914.50** → post-fill cash ~$94,483 | Buying power: $394,423 | Day trades: 0/3 | PDT: false. Positions after fill: **2 (AMZN, PLTR)**.
+
+### Order Detail
+- **Market buy** PLTR 14 sh (order `6c6e7ef3`) → filled **$173.703571**, cost basis **$2,431.85**.
+- **12% trailing-stop GTC** placed immediately (order `c89fba0d`, trail 12%, stop **$153.08**, hwm $173.95) — accepted, no PDT rejection. Position fully stop-protected.
+- Sizing (buy_gate, $200 risk cap): entry $173.44, notional $2,500 → 14 sh; -8% hard-cut ref $159.81 (risk ~$195 < $200 cap); target +24% $215.39.
+
+### Held-Position Review (AMZN)
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — $268.19, **-3.16%** (unrealized -$78.84). Above the -8% cut, below the +15% tighten threshold → no sell-side rule triggered. Live 12% trailing-stop GTC intact (id 26477093, stop $248.85, hwm $282.78). Next earnings ~10/29/2026; ~8 of 15 time-stop days used. **HOLD.**
+
+### Decision
+**BUY $PLTR ×14 @ $173.70 (stop $153.08 12% trail, target $215.39). Trades this week now 1/3; book is AMZN + PLTR + cash.** First gate-and-timing-clearing entry in weeks, executed cleanly at the open post-benign-PPI. Committed and pushed per STEP 7.
