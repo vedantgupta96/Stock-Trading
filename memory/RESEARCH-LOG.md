@@ -919,3 +919,51 @@ Only disclosure surfaced: Sen. Gary Peters bought **Realty Income (O)** — a RE
 
 ### Decision
 **HOLD in this pre-market run; PRIME `$PLTR` (14 sh, ~$2,395, stop $157.40 / 12% trail, target $212.15) for MIDDAY execution conditional on a benign PPI and PLTR holding ≥ ~$168 support.** Regime firmly ON (SPY +2.57% over its 20d SMA, VIX ~14.6–15.3, Tech leading). PLTR is the first name in weeks to clear both the 11-check hard gate and the 3–8% entry-timing band (4.7% pullback on drying-up volume) — a genuine, gate-passing setup, not a forced marginal entry. It is deliberately queued for after the 8:30 ET PPI/jobless-claims prints rather than bought into a binary event on a thin pre-market quote; the midday scan executes it mechanically if the setup holds. Hold AMZN under standard sell-side rules with its live 12% trailing stop (next earnings ~10/29, ~8 of 15 time-stop days used). Trades this week 0/3 (this would be 1/3). No urgent notification warranted (AMZN -3.27% >> -8% cut, no near earnings, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-14 (Fri) — Pre-Market Routine
+
+**Decision: HOLD — no new trades.** Regime firmly ON (SPY 777.84 > 20d SMA 754.50, +3.09%), but no candidate clears both the 11-check hard gate AND the 3–8% entry-timing band. The closest gate-clearer (MRK: fresh breakout on ~1.8x volume) sits right on its high with no pullback; the names with real pullbacks (NVDA/GOOGL) fail on stale breakouts and thin volume. Hold AMZN + PLTR under standard sell-side rules — both healthy, theses intact, stop-protected, no earnings in window. Retail Sales (July) drops at 8:30 ET — a binary event ahead of this run; patience beats a forced marginal entry into it.
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic):** SPY last close **777.84** (8/13, latest IEX daily bar) vs **20-day SMA 754.50** → **777.84 > 754.50 → REGIME ON**, a solid **+3.09%** gap. No flip vs the last committed read (8/13: ON). New long entries permitted, but each candidate must still clear the full 11-check gate AND the entry-timing rule.
+- **Gemini corroborated:** S&P 500 hit a fresh intraday record 8/13 (~7,816) on a tech/comm-services-led rally — its strongest week since April; index sits well above its 20-day SMA. Both sources agree → regime ON.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,360.87** | Cash: **$94,482.64** | Buying power: $391,589.60 | Positions: **2 (AMZN, PLTR)** | Day trades: 0/3 | PDT: false
+- last_equity $99,374.95 (balance_asof 8/13) → true session move ≈ **-$14.08 (-0.01%)**, essentially flat pre-bell.
+- Phase P&L **-$639.13 (-0.64%)** off the live $100k base.
+- Trades this week: **1/3** (week of Mon 8/10 — PLTR bought 8/13). Room for 2 more, but patience beats activity.
+
+### Market Context
+- **VIX ~14.56** (down ~0.5% d/d from a 14.63 close) — benign / risk-on, ~21% below its ~18.6 long-run average. Supports the ON regime.
+- **Retail Sales (July) today 8/14, 8:30 ET** — the week's remaining binary macro print (advance monthly retail trade; incl. control group), plus **prelim UMich consumer sentiment / inflation expectations** and June business inventories. All release ~2 hrs after this pre-market run. **July CPI (8/12)** landed in-line (+0.1% m/m headline, **+3.4% y/y**; core +0.2% m/m, +2.5% y/y). **July PPI (8/13)** benign (final demand unchanged m/m; +4.7% y/y). **Jul FOMC minutes 8/19**; next FOMC 9/16.
+- **WTI crude ~$82/bbl**, up ~1–2% on the day on Mideast supply risk, but the medium-term outlook is soft (OPEC + IEA cut 2026 demand forecasts; a 17.4M-bbl US inventory build). Energy strong month-to-date on price, mixed near-term.
+
+### Sector Momentum
+- **Leading (week to 8/13):** Technology (+~1% Wed, week's leader; IT +1.68% w/w to 8/12) and Communication Services (+~1% Wed) drove the record — supportive backdrop but the tech complex is extended at highs. Energy leads MTD (+~12% Aug on oil). Real Estate / Utilities / Industrials modestly positive.
+- **Lagging:** nothing sharply negative this week — a broad, risk-on tape into Retail Sales.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$264.95**, **-4.33%** (unrealized -$108.00; cost basis $2,492.55, mkt value $2,384.55). Far above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered.** Live 12% trailing-stop GTC intact (id 26477093, stop **$248.85**, hwm $282.78; qty_available 0 = reserved by the stop). Q2 reported 7/30 (EPS $5.75 beat, AWS +37% to $42.2B, backlog ~$496B; topped $3T mkt cap 8/03); **next earnings ~10/29/2026** — outside the 10-day window. Entered ~8/04 → **~9 trading days held** (inside the 15-day time stop, **due ~8/25** — watch the clock, AMZN is at a <+5% gain). News benign: $220B 2026 capex overhang (mild FCF concern), FTC monopoly trial set for Oct, routine insider/Bezos 10b5-1 selling — nothing thesis-breaking. **HOLD.**
+  ⚠️ **Undocumented entry (still open item):** AMZN has no committed research/trade-log buy entry — the recurring pattern flagged for CVX (6/12), JPM (~7/01), MS/UNH (7/10–7/20). It IS fully stop-protected. Operator should confirm the actual fill price/date/catalyst.
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$178.12**, **+2.54%** (unrealized +$61.83; cost basis $2,431.85, mkt value $2,493.68). Below the +15% tighten threshold → **no stop change yet.** Live 12% trailing-stop GTC intact (id c89fba0d, stop **$158.32**, hwm $179.91; qty_available 0 = reserved). Bought 8/13 on a blowout Q2 (rev +92.8% y/y, US-commercial +149%) → healthy 4.7% pullback entry; **next earnings ~90d out** — outside the window. Entered 8/13 → 2 trading days held, far from the time stop. **HOLD** — let it work; watch for the +15% level to tighten to 7%.
+
+### Trade Ideas (regime ON) — deterministic breakout/pullback/volume screen
+Screened MRK, DELL, NVDA, GOOGL (surfaced via new-52wk-high lists + the STOCK Act scan) against the c9 breakout-≤5d / c10 volume-≥1.5x / entry-timing 3–8%-pullback rules. **No name clears the hard gate AND entry timing simultaneously — the persistent condition of the last several weeks.** *(Note: the IEX free-tier feed understates consolidated volume, so volume ratios below are conservative; breakout-recency and pullback-timing — the robust checks — rule these out regardless.)*
+
+- **$MRK** (Health Care) — **closest gate-clearer.** Fresh 3-mo high $135.66 on 8/13 (≤5d **PASS**) on **~1.77x** 20-day volume (**c10 PASS**); Health Care held 0 → no crowding. ❌ **Entry-timing FAIL:** pullback from the high is only **0.1%** — MRK is pinned to its breakout high with no pullback. Buying now = chasing/overpaying, exactly what the entry rule prevents. **Watchlist — wait for a 3–8% pullback that holds support.**
+- **$DELL** (Technology) — 3.7% off its intraday 8/13 high (in-band) but that "high" is same-session, not a multi-day first pullback, and breakout-day volume is only **~1.0x** → **c10 FAIL.** Dropped/watchlist.
+- **$NVDA** (Technology) — valid **4.7% pullback**, but the 3-mo high was **8 weeks ago (5/14)** → **c9 breakout FAIL (stale)**, and volume ~0.98x → **c10 FAIL.** No fresh breakout-on-volume. Dropped.
+- **$GOOGL** (Comm. Services) — **15.2% pullback** off a stale 5/18 high → **broken setup (>10%)**, plus stale breakout / thin volume. Dropped.
+- Adding another tech name is still allowed (PLTR is 1 of a 2-per-sector cap), but none qualifies today.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Rep. Michael Rulli (R-OH) disclosed purchases of **GOOGL, NVDA, META** (filed 8/7; part of a 32-trade batch, many past the 45-day deadline — trades dated as far back as 2024). Idea-generation only: disclosures lag by up to ~45 days, omit size/exits, and each name must independently clear our gate — GOOGL and NVDA both **FAIL** on stale breakouts/thin volume (above), and META is likewise extended off a non-fresh high. **Nothing actionable. Dropped — no gate impact.**
+
+### Risk Factors
+- **Retail Sales + prelim UMich today, 8:30/10:00 ET.** A soft consumer print could pressure the record-high, tech-led tape; forcing a marginal entry (a leader on its high) ahead of it is the low-quality trade the rules prevent — hence HOLD.
+- **Leaders extended at highs.** The momentum complex (MRK/DELL and the mega-cap techs) sits on or just off its highs with no valid 3–8% pullback — the persistent condition keeping us in HOLD. The risk here is chasing/overpaying, not missing out.
+- **AMZN time-stop clock + capex/FTC overhang.** AMZN is ~9 of 15 time-stop days at a <+5% gain (due ~8/25); if it doesn't gain traction it becomes a time-stop candidate next week. $220B capex and the Oct FTC trial are mild sentiment overhangs — monitor its live trailing stop and confirm the (undocumented) entry.
+
+### Decision
+**HOLD — no new trades.** Regime firmly ON (SPY +3.09% over its 20d SMA, VIX ~14.6, Tech leading), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the names with real pullbacks (NVDA/GOOGL) fail on stale breakouts / thin volume. MRK goes on the watchlist for a valid pullback. Hold **AMZN** (-4.33%, stop $248.85, next earnings ~10/29, ~9 of 15 time-stop days used — watch ~8/25) and **PLTR** (+2.54%, stop $158.32, 2 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 1/3. Retail Sales lands at 8:30 ET — a binary event ahead of this run; nothing to force here. No urgent notification warranted (AMZN -4.33% >> -8% cut, no earnings within 3 days, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
