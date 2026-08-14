@@ -100,3 +100,61 @@
 - **Process focus:** (1) log each order at fill time; (2) run a fresh pre-market + midday gate screen every regime-ON session; (3) operator to confirm the JPM (and prior CVX) exit records.
 
 ### Grade: C
+
+---
+
+## Week of AUG 10 – AUG 14
+
+*Regime filter ON all five sessions. One new entry (PLTR, 8/13) — the first name in weeks to clear both the 11-check hard gate and the 3–8% pullback entry band. No closes this week.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,384.82 *(= Fri 8/07 close / Mon 8/10 open, per the 8/10 snapshot's last_equity; the 8/10 EOD close was $99,417.31)* |
+| Ending equity (Fri close) | $99,280.63 *(live Alpaca read 8/14; the 8/14 EOD snapshot logged $99,282.43)* |
+| Week return | -$104.19 (-0.10%) |
+| S&P 500 week return | +0.36% *(closed 7785.76; third consecutive weekly gain, record high Thu 8/13)* |
+| Phase P&L (vs $100k base) | -$719.37 (-0.72%) |
+| Trades taken | 1 new buy (PLTR); 0 closed |
+| Win / Loss / Open | W:0 L:0 O:1 (PLTR open) |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no realized trades) |
+| Worst trade | N/A (no realized trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 5 ON / 0 OFF (fresh ON reads 8/10, 8/12, 8/13, 8/14; 8/11 no committed read, regime carried ON) |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No positions closed this week. |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| AMZN | $276.95 (9 sh, ~8/04) | $262.74 | -$127.90 (-5.13%) | 12% trailing GTC $248.85 (id 26477093) |
+| PLTR | $173.70 (14 sh, 8/13) | $173.81 | +$1.49 (+0.06%) | 12% trailing GTC $158.54 (id c89fba0d) |
+
+*2 open positions (≤5). Sectors: Consumer Discretionary (AMZN) + Technology (PLTR) — no crowding. Both fully stop-protected; ~$94,483 cash.*
+
+### What Worked
+- **Textbook disciplined entry on PLTR.** The first name in weeks to clear *both* the 11-check hard gate *and* the 3–8% entry-timing band — a 4.7% pullback on declining, below-average volume holding the 8/07 breakout shelf after a ~+30% earnings gap. Sized at the risk cap (8% stop risk ≈ $192 < $200), executed mechanically at midday only after a benign 8:30 ET PPI/claims print, and immediately protected with a live 12% trailing-stop GTC. Fully documented in the trade and research logs — the cleanest execution in weeks.
+- **Capital preserved through a binary-macro week.** Equity essentially flat (-0.10%) with a tiny drawdown, no rule breaches, no stop breaches. The book held through CPI (8/12), PPI (8/13), and Retail Sales (8/14) without a thesis break on either name.
+- **The gate kept us out of low-conviction chases.** Multiple leaders were screened and correctly rejected — MRK (breakout-on-volume but pinned to its high, 0.1% pullback), NVDA/GOOGL/AAPL/AVGO (real pullbacks but stale breakouts or thin volume). None were forced.
+- **Every position stop-protected and correctly sized.** Both trailing stops verified live in the orders feed all week; two positions, two sectors, no crowding.
+
+### What Didn't Work
+- **Slight lag vs a modestly up market.** S&P +0.36% while we finished -0.10% — a small opportunity cost, driven mostly by AMZN's steady drift lower.
+- **AMZN is dead-money drift.** Entered ~8/04, it bled from -3.40% (8/12) to -5.13% at week end, sits at a <+5% gain, and its ~8/25 15-day time stop is now close. It was the week's main drag.
+- **Thin qualifying idea flow persists.** Only 1 of 3 allowed weekly slots was used despite the regime being ON all week; most leaders were pinned to their highs with no valid pullback to enter on.
+- **Recurring documentation gap on AMZN.** AMZN remains an undocumented original entry (same pattern flagged for CVX 6/12, JPM ~7/01, MS/UNH 7/10–7/20) — stop-protected, but no committed buy record; operator confirmation of its original fill/date/catalyst is still pending.
+
+### Key Lessons
+- **The pullback wait is the edge.** PLTR only cleared once it offered a genuine 3–8% pullback on drying volume — not when it first broke out. Waiting for that entry (and not forcing the other two weekly slots just because they were open) is exactly what the strategy is built to do.
+- **Enforce AMZN's time stop mechanically (~8/25).** A <+5%-gain drifter is precisely what the 15-trading-day time stop exists to clear; if AMZN hasn't moved by the deadline next week, cut it without hoping.
+- **The undocumented-entry pattern is now multi-name.** Real-time logging of every fill remains the standing process fix — reconstructing from cash balances after the fact erodes the audit trail.
+
+### Adjustments for Next Week
+- **No rule changes.** Nothing this week has proven out or failed for 2+ consecutive weeks with data to justify a rulebook edit; `TRADING-STRATEGY.md` left unchanged.
+- **Focus:** (1) enforce AMZN's ~8/25 time stop if it's still at a <+5% gain; (2) keep hunting valid 3–8% pullback entries while the regime is ON (2 of 3 weekly slots still open); (3) operator to confirm AMZN's original fill/date/catalyst.
+
+### Grade: B
