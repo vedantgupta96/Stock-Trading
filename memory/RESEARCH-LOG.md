@@ -1018,3 +1018,54 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-18 (Tue) — Pre-Market Routine
+
+**Decision: HOLD — no new trades.** Regime remains firmly ON (SPY 772.62 > 20d SMA 757.68, **+1.97%**), but the pre-market tape is risk-off (S&P futures **-0.5%** on Middle East geopolitics, rising oil, rising yields; VIX ~14–16 with some feeds showing fear building). The persistent condition also holds: no candidate clears both the 11-check hard gate AND the 3–8% entry-timing band. The one name surfaced today (CVX, via a STOCK Act filing and the leading Energy sector) is pinned to a fresh high — 0.44% pullback (entry-timing FAIL) on 0.94x volume (c10 FAIL). Hold AMZN + PLTR under standard sell-side rules; both are stop-protected with no earnings in window, though **AMZN's 15-day time stop comes due this week (~8/21–8/24)** at a <+5% gain — watch the clock at the midday/EOD scans. FOMC minutes land Wed 8/19; patience beats a forced marginal entry into a soft tape.
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic, SPY daily bars):** SPY last close **772.62** (8/17) vs **20-day SMA 757.68** → **772.62 > 757.68 → REGIME ON**, a solid **+1.97%** gap (20-bar SMA over closes 7/21–8/17). No flip vs the last committed read (8/17: ON). New long entries permitted, but each candidate must still clear the full 11-check gate AND the entry-timing rule.
+- **Gemini could not price the SPY 20-day SMA directly** (no real-time data); regime is confirmed off the deterministic Alpaca computation above. Gemini corroborated the macro backdrop (futures soft, VIX low-teens).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,231.47** | Cash: **$94,482.64** | Buying power: $391,227.28 | Positions: **2 (AMZN, PLTR)** | Day trades: 0/3 | PDT: false
+- last_equity $99,250.13 (balance_asof 8/17) → true session move ≈ **-$18.66 (-0.02%)**, essentially flat pre-bell.
+- Phase P&L **-$768.53 (-0.77%)** off the live $100k base.
+- **Trades this week: 0/3 (week from Mon 8/17).** Room for 3, but patience beats activity.
+
+### Market Context
+- **S&P 500 futures -0.4% to -0.5% pre-market** — risk-off, attributed to heightened Middle East geopolitical risk, rising crude, and firmer bond yields. A genuine ON regime on the daily close, but a soft open into a binary macro day (FOMC minutes Wed).
+- **VIX ~14.3–15.9** — mixed reads across feeds (some ~14.3 down, some ~15.9 up ~+5% "fear building"); still sub-16, contained, but ticking up from last week's ~14.3. Consistent with the risk-off futures.
+- **Macro calendar:** **FOMC minutes (Jul 28–29 meeting) Wed 8/19, 2:00 PM ET** — the week's key event. **Jobless claims + Philly Fed Mfg + Leading Indicators Thu 8/20.** Housing Starts/Permits + Industrial Production + Pending Home Sales today (Tue). **Jackson Hole Symposium 8/27–29 (next week)** — forward focus; next FOMC 9/16. No CPI/PPI this week (July prints landed 8/12–8/13, benign).
+- **WTI crude ~$85/bbl**, up ~0.5% d/d and firming on Middle East risk (from ~$82.5 last week) — a tailwind for Energy but a mild inflation/margin headwind for the broad tape.
+
+### Sector Momentum
+- **Leading (week):** **Technology** (still top-ranked), **Energy** (surging **+7.6%** on the week, re-entering the top five as oil rises), **Financials**, **Industrials**; **Health Care** momentum improving. Energy leads MTD/YTD (+36% YTD).
+- **Lagging:** defensive **Utilities** and **Consumer Staples** at the bottom; **Materials -1%**, **Consumer Discretionary -2%** on the week — the pro-cyclical rotation persists but has rotated *away* from the discretionary complex that led the prior week.
+- **Idea pool:** Energy is the standout momentum sector into rising oil, but its large-cap leaders (CVX below) sit pinned to fresh highs with no valid pullback.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$260.11**, **-6.08%** (unrealized -$151.58; cost basis $2,492.55, mkt value $2,340.97; intraday -$10.82). Above the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered today**, but it has drifted to its weakest read (5 consecutive down days, ~-8% over 10 days) and is now the position to watch. Live 12% trailing-stop GTC intact (id **26477093**, stop **$248.85**, hwm $282.78; qty_available 0 = reserved by the stop). **Next earnings ~10/22–10/29/2026** — outside the 10-day window. Entered ~8/04 → **~11 of 15 time-stop days used; the 15-day time stop comes due ~8/21–8/24** at a <+5% gain → time-stop close candidate this week if it doesn't recover. News: insider selling (exec Herrington filed to sell 16,844 sh on 8/17; prior Bezos 10b5-1), Citi "Market Outperform/Hold," consensus "Moderate Buy" avg PT ~$322 — sentiment/valuation drift, nothing thesis-breaking. **HOLD — but flag the time stop for the midday/EOD scans.**
+  ⚠️ **Undocumented entry (still open item):** AMZN has no committed research/trade-log buy entry — the recurring pattern flagged for CVX (6/12), JPM (~7/01), MS/UNH (7/10–7/20). It IS fully stop-protected. Operator should confirm the actual fill price/date/catalyst.
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$171.99**, **-0.99%** (unrealized -$23.99; cost basis $2,431.85, mkt value $2,407.86; intraday -$7.84). Below the +15% tighten threshold → **no stop change yet.** Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$158.54**, hwm $180.16; qty_available 0 = reserved). Bought 8/13 on a blowout Q2; **next earnings ~11/02/2026** — outside the window. Entered 8/13 → ~4 trading days held, far from the time stop. News: valuation-based caution only (P/E ~147, "trading above fair value") — noise, not a thesis break; stock holds ~entry. **HOLD.**
+
+### Trade Ideas (regime ON) — deterministic breakout/volume screen
+Gemini could not run a technical breakout screen (no real-time data); ideas were sourced from the STOCK Act scan + leading Energy sector and verified directly against Alpaca daily bars. **No name clears the hard gate AND entry timing simultaneously — the persistent condition of recent weeks.**
+
+- **$CVX** (Energy) — surfaced via Sen. John Boozman's STOCK Act filing (bought CVX 7/9, filed 8/17) *and* the week's surging Energy sector on rising oil. Verified on Alpaca bars: fresh period high **$203.635 on 8/17** (0 bars ago → a genuine breakout, c9 PASS) **but ❌ entry-timing FAIL** — pullback from the high is only **0.44%** (CVX is pinned to its high, no pullback) — **and ❌ c10 volume FAIL** — breakout-day volume 273,845 = **0.94x** the 20-day average (290,589), below the 1.5x requirement. Buying now = chasing. **Watchlist — wait for a 3–8% pullback that holds support on volume.**
+- **$APT** — Boozman's disclosure lists "Aptiv PLC (APT)," but Aptiv's actual ticker is **APTV**; the symbol **APT** on Alpaca is an illiquid micro-cap (last $5.40, 20-day avg volume **766 shares**, -27% from its May high). Untradeable / not the disclosed name. **Dropped.**
+- STOCK Act reminder: political disclosures are idea-generation only — they lag by up to ~45 days, omit size/exits, and are often options. Neither surfaced name clears the gate. **Dropped — no gate impact.**
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Sen. John Boozman (R-AR)** — bought **CVX** (trade 7/9, filed 8/17) and **Aptiv/APT** (trade 7/2, filed 8/17), each $1,001–$15,000. CVX assessed above (gate FAIL: no pullback + sub-1.5x volume); APT is a ticker mismatch to an untradeable micro-cap. **Neither actionable.**
+- **Late disclosures (no gate impact):** Rep. Michael Rulli (R-OH) filed 32 trades 8/7 (many past the 45-day deadline, stale 2024–25 names incl. GOOGL/NVDA/AMZN/PLTR); Sen. Ron Wyden (D-OR) late spousal disclosure (8/11); Rep. Shri Thanedar (D-MI) late AAPL/MSTR *sales* (8/14). All stale and/or sales. **Nothing actionable.**
+
+### Risk Factors
+- **AMZN time-stop clock + weakening tape.** AMZN is ~11 of 15 time-stop days at a <+5% gain (**due ~8/21–8/24**) and has now printed 5 straight down days to -6.08% — the most likely near-term action item. It remains above the -8% cut and fully stop-protected (stop $248.85), but if it keeps drifting it becomes a time-stop (or -8%) close candidate at this week's midday/EOD scans. Watch it closely.
+- **Risk-off open into FOMC minutes (Wed).** Futures are soft on Middle East geopolitics, rising oil, and firmer yields; a hawkish minutes read could pressure the record-high, rate-sensitive tape. The daily-close regime is firmly ON, but the intraday setup argues against forcing a marginal entry today.
+- **Energy leaders extended.** The one momentum sector with a clean tailwind (rising oil) has its large-cap leaders (CVX) pinned to fresh highs with no valid 3–8% pullback — the risk is chasing/overpaying, not missing out. Force nothing.
+
+### Decision
+**HOLD — no new trades.** Regime remains firmly ON (SPY +1.97% over its 20d SMA on the 8/17 close), but the pre-market is risk-off (futures -0.5%, VIX ticking up, rising oil/yields into FOMC minutes Wed) and no candidate clears both the 11-check hard gate and the entry-timing rule: CVX — surfaced via Energy momentum and a Boozman STOCK Act filing — is pinned to its fresh high (0.44% pullback → entry-timing FAIL) on 0.94x volume (c10 FAIL). Watchlist: CVX/MRK/energy leaders for a valid 3–8% pullback on volume. Hold **AMZN** (-6.08%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21–8/24, watch this week**) and **PLTR** (-0.99%, stop $158.54, ~4 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -6.08% still above the -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
