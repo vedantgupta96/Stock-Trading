@@ -1018,3 +1018,50 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-19 (Wed) — Pre-Market Routine
+
+### Research source note
+`scripts/gemini.sh` returned exit 0 but the model has no live-market access (knowledge-cutoff disclaimer, no real data) — same practical outcome as a fallback. Regime computed **deterministically from Alpaca 1-Day bars** (source of truth); market context from native WebSearch. Flagging again that Gemini adds no live signal for this routine.
+
+### Market Regime Status
+**ON — but deteriorating.** Deterministic Alpaca read: SPY last close **767.37** (8/18) vs **20-day SMA 758.64** → **ABOVE by +1.15%**. Buy gate is open on the regime check. No ON→OFF flip (prior run 8/17 also ON at +2.67%), but the cushion has shrunk from +2.67% to +1.15% as SPY logged its **3rd straight down day** (last 5 closes 772.54 → 777.84 → 776.30 → 772.62 → 767.37). Momentum leadership has rotated **out of tech**, our primary hunting ground.
+
+### Account Snapshot
+Equity: **$99,208.60** | Cash: **$94,482.64** | Non-marginable buying power: **$96,845.62** (RegT/4x BP $391,163) | Day trades used: **0/3** (no same-day round trips this week) | PDT flagged: no
+- last_equity $99,219.25 (balance_asof 8/18) → session move ≈ **-$10.65 (-0.01%)**, essentially flat.
+- Long market value $4,725.96 across 2 positions; remainder cash.
+
+### Market Context
+- Oil (WTI / Brent): **~$84 / ~$91** — highest in 2+ weeks, elevated; a headwind feeding the yield/inflation narrative.
+- S&P 500: fell for a **3rd straight session** (8/18), pressured by sovereign bond yields at **multi-decade highs** on persistent-inflation concerns. Nasdaq led lower (~-1.3%) on a chip-stock selloff.
+- VIX: **~15.84** (8/18, +4.3%) — off the 2026 lows (~14.2) but still low absolute; volatility ticking up.
+- Notable releases today (Wed 8/19): **FOMC Minutes 2:00 PM ET** (July meeting) — the day's key event; Jackson Hole sets up next week. Two-sided whipsaw risk into the afternoon.
+
+### Sector Momentum
+- **Leading:** Energy (higher oil) and **defensives** — Health Care, Utilities, Consumer Staples. Classic risk-off rotation.
+- **Lagging / rolling over:** **Technology** (Nasdaq -1.3%, chips selling off) and rate-sensitive growth. This is hostile terrain for momentum-breakout tech/growth longs.
+
+### Earnings Watch (held positions)
+- **AMZN** — next earnings **~Oct 22–29, 2026** (>40 trading days out). Clear of the 10-day window. ✅
+- **PLTR** — next earnings **Nov 9, 2026** (confirmed, after close). Clear of the 10-day window. ✅
+- Neither holding is earnings-blocked; no earnings-driven exit today.
+
+### Open Positions (both carry live 12% trailing GTC stops — no missing stops)
+| Symbol | Sector | Shares | Entry | Current | Unreal. P&L | Stop (trailing 12%) | Notes |
+|--------|--------|--------|-------|---------|-------------|---------------------|-------|
+| AMZN | Cons. Disc. | 9 | $276.95 | $260.04 | **-$152.19 (-6.11%)** | $248.85 (id 26477093, hwm $282.78) | Approaching -8% cut (= $254.79). **~12 of 15 time-stop days used — due ~8/21.** |
+| PLTR | Technology | 14 | $173.70 | $170.40 | -$46.25 (-1.90%) | $158.54 (id c89fba0d, hwm $180.16) | ~4 trading days held. |
+
+- Positions after fill would be within limits (2 held, ≤5; one Cons-Disc + one Tech, ≤2/sector). **AMZN is the watch item** for the midday scan: at -6.11% it is ~1.9 pts above the -8% hard cut, and its 15-day time stop lands ~8/21 while it sits at a loss — both point to a likely near-term exit if it doesn't recover.
+
+### Trade Ideas (regime ON → ideas allowed)
+**None qualify.** The leadership is defensives + energy, not the breakout-growth names this strategy trades, and tech is actively selling off — there are no constructive 3–8% pullbacks in leading momentum names; what's "pulling back" in tech is breaking down, not basing. Entering momentum longs into a tech-led selloff with defensives leading and a 2pm FOMC-minutes catalyst violates both the regime intent and entry-timing discipline. Watchlist only (no order): energy/defensive breakout names would need a valid breakout-on-≥1.5x-volume **plus** a 3–8% pullback that holds — none present today. No `$TICKER` clears the 11-check gate.
+
+### Risk Factors
+- **FOMC Minutes 2:00 PM ET** — a hawkish read could accelerate the yield-driven selloff; two-sided intraday whipsaw.
+- **Bond yields at multi-decade highs + elevated oil (~$84 WTI)** — sustained pressure on equities, especially the rate-sensitive tech/growth we already hold.
+- **Tech leadership rolling over while we hold 2 tech/discretionary names** (AMZN, PLTR); AMZN is close to its -8% cut and its time stop (~8/21).
+
+### Decision
+**HOLD — no new trades.** Regime is technically ON (SPY +1.15% over its 20d SMA) but weakening into a 3-day pullback with tech rolling over, defensives/energy leading, yields at multi-decade highs, and a 2pm FOMC-minutes catalyst — a poor backdrop for new momentum-breakout longs, and no candidate clears both the hard gate and entry-timing rule anyway. Hold AMZN (-6.11%, stop $248.85, **watch the -8% cut and the ~8/21 time stop at midday**) and PLTR (-1.90%, stop $158.54) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -6.11% still above the -8% cut, no held-name earnings within 3 days, regime unchanged ON → silent per STEP 5). Committed and pushed per the pre-market routine.
