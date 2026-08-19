@@ -1018,3 +1018,51 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-19 (Wed) — Market-Open Routine (pre-market entry generated inline; the pre-market run did not produce one)
+
+**Decision: HOLD — no new trades.** Regime firmly ON (SPY 769.54 > 20d SMA 759.74, **+1.29%**), VIX 15.87 (benign, +0.19%), risk-on tape. The persistent condition holds unchanged: no candidate clears both the 11-check hard gate AND the 3–8% entry-timing band. The two names that clear the full hard gate — **MRK** (fresh high on ~1.8x volume) and **SCHW** (fresh high on ~1.9x volume) — are both pinned to their highs (0.2% and 0.7% pullback → entry-timing FAIL); the energy/financial breakout leaders with any pullback (PSX/VLO/MPC/JPM) all FAIL c10 volume. Hold AMZN + PLTR under standard sell-side rules — both stop-protected, theses intact, no earnings in window. **FOMC (Jul 28–29) minutes today 2:00 PM ET**; Jackson Hole 8/27–29 next week.
+
+### Market Regime Status — ON (firmly)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **769.54** vs **20-day SMA 759.74** → **769.54 > 759.74 → REGIME ON**, a **+1.29%** gap (84 bars). No flip vs the last committed read (8/17: ON). New long entries permitted, but each candidate must still clear the full 11-check gate AND the entry-timing rule.
+- **Gemini corroborated:** S&P 500 above its 20-day SMA; a broad risk-on tape with 14 S&P 500 names printing fresh 52-wk highs on 8/19 (clusters in Oil & Gas Refining/Marketing and Asset Management & Custody Banks). Both sources agree → regime ON.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,285.54** | Cash: **$94,482.64** | Buying power: $391,378.67 | Positions: **2 (AMZN, PLTR)** | Day trades: 0/3 | PDT: false
+- last_equity $99,219.25 (balance_asof 8/18) → true session move ≈ **+$66.29 (+0.07%)**, roughly flat pre-bell.
+- Phase P&L **-$714.46 (-0.71%)** off the live $100k base.
+- **Trades this week: 0/3** (week of Mon 8/17). Room for 3, but patience beats activity.
+
+### Market Context
+- **VIX 15.87** (+0.19% d/d) — benign / risk-on, below its ~18–19 long-run average; contained. Supports the ON regime.
+- **Macro calendar:** **FOMC minutes (Jul 28–29 meeting) today 8/19, 2:00 PM ET** — the day's binary macro event, ~5.5 hrs after this open run. No CPI/PPI this week (July CPI 8/12 in-line +3.4% y/y; July PPI 8/13 benign; next prints 9/10–9/11). Jobless claims Thu 8/20; flash PMIs Fri 8/22. **Jackson Hole Symposium 8/27–29 (next week)** — the forward macro focus (Powell tone); next FOMC 9/16. July jobs (8/07) was soft — a live dovish undercurrent into the minutes.
+- **WTI crude ~$82–83/bbl**, roughly flat; Energy strong on price (sector +7.6% on the week per Gemini), refiners leading new highs.
+
+### Sector Momentum
+- **Leading:** **Energy +7.6%** on the week (refiners PSX/VLO/MPC to fresh highs), **Technology** still leading overall, **Financials** (asset managers/custody banks, SCHW to a fresh high), Industrials, Health Care (MRK). A risk-on, broadening tape.
+- **Lagging:** defensives — Utilities, Consumer Staples at the bottom.
+- **Fresh-52wk-high idea pool (8/19):** MRK; refiners PSX/VLO/MPC; SCHW; JPM. All screened below.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$260.13**, **-6.07%** (unrealized -$151.38; cost basis $2,492.55, mkt value $2,341.17; intraday +$6.12 today). **Above the -8% cut** (no cut triggered) and below the +15% tighten threshold → no sell-side rule triggered *at this open run*. Live 12% trailing-stop GTC intact (id **26477093**, stop **$248.85**, hwm $282.78; qty_available 0 = reserved). Next earnings ~10/22–11/02 — outside the 10-day window. Entered ~8/04 → **~13 trading days held — time stop due ~8/21** (this Fri); AMZN is at a loss (< +5% gain), so it becomes a time-stop close candidate at the 8/21 midday/EOD scan if it hasn't turned. News benign/constructive: Prime Air drone expansion to ~500 cities by year-end, AWS AI at ~$25B run-rate (AWS +37% y/y) — no thesis break. **HOLD; watch the 8/21 time-stop clock and the -8% line ($254.79).**
+  ⚠️ **Undocumented entry (still open item):** AMZN has no committed research/trade-log buy entry — recurring pattern flagged since CVX (6/12). It IS fully stop-protected. Operator should confirm the actual fill price/date/catalyst.
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$175.83**, **+1.22%** (unrealized +$29.77; cost basis $2,431.85, mkt value $2,461.62; intraday +$60.06 today). Below the +15% tighten threshold → no stop change yet. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$158.54**, hwm $180.16; qty_available 0 = reserved). Bought 8/13 on a blowout Q2 (rev +93% y/y, US-commercial +149%) → next earnings ~90d out, outside the window. Entered 8/13 → ~5 trading days held, far from the time stop. News bullish/benign (structural AI-demand thesis intact; some valuation-caution noise). **HOLD** — let it work; watch for the +15% level (~$199.75) to tighten the stop to 7%.
+
+### Trade Ideas (regime ON) — deterministic `buy_gate.sh` breakout/volume screen
+Screened the 8/19 fresh-52-wk-high leaders: MRK, SCHW, PSX, VLO, MPC, JPM. *(IEX free-tier feed understates consolidated volume, so c10 ratios are conservative; breakout-recency and pullback-timing — the robust checks — decide these regardless.)* **No name clears the hard gate AND entry timing simultaneously — the persistent condition of recent weeks.**
+
+- **$MRK** (Health Care) — **hard gate PASS.** Fresh 3-mo high **$149.195** within last 5d (c9 PASS) on **~1.81x** 20-day volume (c10 PASS, maxvol 533,884 > 441,452 threshold). ❌ **Entry-timing FAIL:** pullback only **0.2%** — pinned to the breakout high (same condition as 8/14/8/17, and now extended higher). Buying = chasing. **Watchlist — wait for a 3–8% pullback holding support.** Sizing if it ever pulls back: entry ~$148.97 → 16 sh, cost ~$2,384, stop $137.05, target $184.72.
+- **$SCHW** (Financials) — **hard gate PASS.** Fresh 3-mo high **$112.185** within last 5d (c9 PASS) on **~1.93x** 20-day volume (c10 PASS, maxvol 708,248 > 550,362 threshold). ❌ **Entry-timing FAIL:** pullback only **0.7%** — pinned to its high. **Watchlist — wait for a valid pullback.**
+- **$PSX** (Energy) — c9 breakout PASS (243.995 vs prior 226.51) but **c10 volume FAIL** (146,292 < 198,933) and only **0.9%** pullback. Watchlist.
+- **$VLO** (Energy) — c9 breakout PASS (350.51 vs 330.895) but **c10 volume FAIL** (90,944 < 176,010) and **1.5%** pullback. Watchlist.
+- **$MPC** (Energy) — c9 breakout PASS (367.035 vs 348.195) but **c10 volume FAIL** (163,403 < 168,301, marginal) and **1.1%** pullback. Watchlist.
+- **$JPM** (Financials) — c9 breakout PASS (366.30) but **c10 volume FAIL** (182,720 < 292,822) and **1.8%** pullback. Watchlist.
+- Sector-crowding note: none of these sectors is held (holdings are Consumer-Disc + Tech), so 2-per-sector was never the binding constraint — breakout-volume and entry-timing were.
+
+### Risk Factors
+- **AMZN time-stop + -8% line.** AMZN is ~13 of 15 time-stop days at a loss (**due ~8/21**) and is **-6.07%**, ~1.9% above the -8% cut ($254.79). Not triggered at this open run, but it is the position to watch at the 8/21 scans — a further drift either trips the time stop (Fri) or approaches the hard cut. The 12% trailing stop ($248.85) backstops a gap.
+- **Leaders pinned to highs.** MRK and SCHW clear the full hard gate but sit on their highs (0.2%/0.7% pullback); the refiner/financial breakouts fail c10 volume. The persistent condition — the risk here is chasing/overpaying, not missing out. Force nothing.
+- **FOMC minutes today 2 PM ET + Jackson Hole next week.** A hawkish minutes read or Powell's Jackson Hole tone could pressure the record-high, rate-sensitive tape. Nothing to pre-position for; the minutes land hours after this run.
+
+### Decision
+**HOLD — no new trades.** Regime firmly ON (SPY +1.29% over its 20d SMA, VIX 15.87, Energy/Tech/Financials leading a risk-on tape), but no candidate clears both the 11-check hard gate and the 3–8% entry-timing band: **MRK and SCHW** clear the full hard gate yet are pinned to their highs (0.2%/0.7% pullback), while the energy/financial names with any pullback (PSX/VLO/MPC/JPM) fail c10 volume. Watchlist: MRK/SCHW/PSX for a valid pullback. Hold **AMZN** (-6.07%, stop $248.85, next earnings ~10/22+, **~13 of 15 time-stop days — due ~8/21, watch the -8% line $254.79**) and **PLTR** (+1.22%, stop $158.54, ~5 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No trades placed → per the market-open routine, this research entry is committed but no orders were sent. Discord decision summary sent.
