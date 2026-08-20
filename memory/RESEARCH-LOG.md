@@ -1018,3 +1018,55 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+---
+
+## 2026-08-20 (Thu) — Pre-Market Routine
+
+### Market regime status
+**ON.** Deterministic Alpaca read: SPY latest close **769.09** (8/19 bar, IEX feed) vs its **20-day SMA 759.72 → +1.23% above**. Above the 20-day SMA ⇒ the regime filter permits new longs today. (Gemini could not supply live SPY/SMA — computed directly from Alpaca daily bars, the authoritative source; note the IEX feed lags one session so the 8/20 bar is not yet closed pre-market.) Regime unchanged vs the last read (ON on 8/17), so **no filter flip** — no urgent notification on that basis.
+
+### Account snapshot
+- **Equity:** $99,327.91 | **Cash:** $94,482.64 | **Buying power:** $391,497.32 (4× margin; non-marginable/options BP $96,905.27) | **Portfolio (long) value:** $4,845.27
+- **Day-trades used:** 0/3, **PDT:** false (sub-$25k room intact)
+- **Open positions:** 2 of 5 max — AMZN (Consumer Discretionary) + PLTR (Technology); **0 sectors at the 2-position cap**
+- **Trades this week:** 0/3 (week from Mon 8/17)
+- **Phase P&L:** ~-$672 (-0.67%) off the live $100k base
+
+### Market context
+- **VIX ~15.16**, +1.81% on the day (8/20) up from 8/19's 14.89 — still a low, risk-on regime; no volatility stress.
+- **Econ calendar:** No CPI/PPI/FOMC-decision this week. FOMC **minutes** landed Wed 8/19; **weekly jobless claims** Thu 8/20 (8:30 ET) — a minor print. **Key event is next week: Jackson Hole symposium (Powell)** — a hawkish tone could pressure the record-high, rate-sensitive tape; nothing to pre-position for.
+- **Tape note:** Information Technology, a top weekly sector, took a sharp **-2.09% daily hit on 8/20** — worth watching for our Tech holding (PLTR), though no thesis break.
+
+### Sector momentum
+- **Leaders (week):** Energy (~+2.4–2.8%), Information Technology (~+1.4–2.4%), Health Care (~+1.7%).
+- **Laggards (week):** Communication Services (~-1.0 to -1.8%), Consumer Staples (~-1.0%), Materials (~-0.6 to -2.0%), Consumer Discretionary (flat-to-negative), Utilities/Real Estate (mixed).
+- Read: cyclical/energy + selective tech leadership persists; defensives and comm-services lag.
+
+### Earnings watch (held positions)
+- **AMZN** — last reported 7/30; next earnings **~10/22–10/29/2026**, **outside** the 10-day window. No earnings block.
+- **PLTR** — last reported 8/03; next earnings **~90 days out**, well outside the window. No earnings block.
+- Neither holding has earnings within 3 days ⇒ no urgent notification on that basis.
+
+### Held-position review
+- **AMZN** — 9 sh @ $276.95, now **$266.08, -3.92%** (unrealized -$97.83). 12% trailing-stop GTC **id 26477093** open, stop **$248.85** (hwm $282.78), qty_available 0 = reserved. No price-based sell rule triggers (far above -8% cut, below +15% tighten). Catalyst intact (blowout Q2, AWS +37%, new Austin robotics plant announced 8/20, Rosenblatt initiated Buy/top-pick 8/20). ⏳ **TIME STOP: entered ~8/04 → ~13 of 15 trading days held at a <+5% gain, due ~8/21.** NOT forced today (pre-market is research-only; the time stop executes at the midday/EOD scan). **This is the day's key action item: AMZN is a time-stop close candidate at the 8/21 (or next) midday scan unless it gains real traction.** To close it correctly: cancel GTC id 26477093 first, then market-sell 9 sh.
+- **PLTR** — 14 sh @ $173.70, now **$175.04, +0.77%** (unrealized +$18.70). 12% trailing-stop GTC **id c89fba0d** open, stop **$158.54** (hwm $180.16), qty_available 0 = reserved. Far from every sell threshold; entered 8/13 → ~6 trading days held (far from time stop). Catalyst intact (Q2 rev +92.8% YoY, AIP commercial acceleration). Watch the Tech -2.09% daily dip, but no thesis break.
+
+### Trade ideas (regime ON — screened, none clears both the hard gate and 3–8% entry timing)
+Data-checked against Alpaca 60-day bars (breakout recency, pullback %, earnings). Volume-at-high (volx) is understated by the free IEX feed, so it is treated as unconfirmed, not disqualifying by itself.
+- **$NVDA** — high 2d ago, **pullback 4.5%** (inside the 3–8% window ✓), Tech leader. **FAILS gate c7 (earnings): reports Wed 8/26 (~4 trading days out, inside the 10-day block).** Drop — never hold through earnings.
+- **$EQT** — Energy (leading sector), high 3d ago, earnings ~Oct (clear). **Pullback only 2.7% (< 3% → FAILS entry-timing);** essentially pinned to its high, and breakout-volume unconfirmed. Watchlist for a valid 3–8% pullback.
+- **$AVGO** — **pullback 16.2% from its 60d high (> 10% → setup broken, FAILS entry-timing).** Drop.
+- **XLE** (energy ETF) — **FAILS gate c11 (stocks only, no ETFs);** also pullback ~1.1% (too shallow). Drop.
+- **Biotech spikes** (MRNA/BNTX cancer-vaccine data, +80–180%; GLMD/YJ/TNON microcaps) and **EL** (+16% earnings gap) — news/earnings-driven single-day spikes with no breakout-then-pullback structure and binary risk; **not our setup.** Idea-gen only.
+- **Congressional/STOCK-Act (idea-gen only, never a buy reason):** filings 8/17–8/18 surfaced AMD/AVGO (Rick Allen), AMZN/EQT (T. Kean Jr.), plus late Rulli disclosures (GOOGL/NVDA/META). None independently clears the gate today — noted as watchlist context only.
+
+### Risk factors
+- **Jackson Hole next week (Powell):** a hawkish tone could pressure the record-high, rate-sensitive tape and the cyclical/energy leadership.
+- **Tech wobble:** IT -2.09% on 8/20 after leading the week — a rotation-out risk for PLTR; watch, no action.
+- **AMZN dead-money drift:** at -3.92% and <+5% gain into its ~8/21 time stop — opportunity cost, not a loss threat (well above the -8% cut, fully stop-protected).
+
+### Decision
+**HOLD — no new trades.** Regime firmly ON (SPY +1.23% over its 20-day SMA, VIX ~15.2 risk-on, Energy/Tech leadership), but no candidate clears both the 11-check hard gate and the 3–8% entry-timing rule: NVDA has a valid 4.5% pullback but is earnings-blocked (8/26); EQT is pinned to its high at a 2.7% pullback; AVGO's setup is broken (16.2% off high); the biotech/earnings movers have no breakout-pullback structure. Watchlist: **$EQT / $NVDA** (NVDA only post-earnings) for a valid pullback. Hold **AMZN** (-3.92%, stop $248.85, **~13/15 time-stop days used — close candidate at the ~8/21 midday scan**) and **PLTR** (+0.77%, stop $158.54) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. **No urgent notification** — no holding below -8% pre-market, no earnings within 3 days, regime unchanged ON (silent per STEP 5). Committed and pushed per the pre-market routine.
+
+⚠️ Still-open housekeeping: AMZN remains an undocumented original entry (recurring pattern flagged for CVX 6/12, JPM ~7/01, MS/UNH 7/10–7/20) — fully stop-protected, but the operator should confirm its original fill price/date/catalyst; PLTR's 8/13 entry is fully documented.
