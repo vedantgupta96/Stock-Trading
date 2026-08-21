@@ -1018,3 +1018,48 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-21 (Fri) — Market-Open Routine (pre-market research run INLINE — see ⚠️ below)
+
+**Decision: HOLD — no new trades.** Regime is only **marginally ON** on the deterministic SPY read (SPY 762.62 close 8/20 vs 20-day SMA 760.94 → **+0.22%**, razor-thin), and SPY has trended clearly DOWN this week (777.84 on 8/13 → 762.62 on 8/20). No candidate clears both the 11-check hard gate AND the 3–8% entry-timing rule — the persistent multi-week condition: MRK and PSX pass all 11 hard checks but are pinned to their highs (**1.8% pullback**, shadow c12 entry-timing FAIL = chasing risk); JPM fails the hard gate (stale breakout + thin volume). With a tech/industrials selloff this week and **Jackson Hole event risk imminent** (Powell keynote), buying a breakout name pinned to its high into a binary event with SPY sitting right on its 20-day SMA is exactly the low-conviction trade the strategy is built to avoid. Hold AMZN + PLTR under standard sell-side rules with their live 12% trailing stops. **⏳ AMZN time-stop / -8% both IMMINENT — flagged for the midday scan (see Held-Position Review).**
+
+⚠️ **Operational flag:** No pre-market/research entry has been committed since **2026-08-17** (four sessions: 8/18, 8/19, 8/20, and this morning's pre-market all missing — only EOD snapshots ran 8/19–8/20). This routine therefore ran the pre-market research steps INLINE per market-open STEP 1. The pre-market cron appears to be failing silently — operator should investigate.
+
+### Market Regime Status — MARGINALLY ON (deterministic) / conflicting sources
+- **Alpaca (deterministic, SPY IEX daily bars, completed through 8/20):** SPY last close **762.62** vs **20-day SMA 760.94** → **762.62 > 760.94 → REGIME ON, but only +0.22%** (essentially sitting ON the line). Including today's partial intraday bar: SPY ~765.0 vs SMA ~762.25 (+0.37%). The buy_gate c1 read (SPY 765.02 vs SMA20 762.25) = PASS. **Clear weekly downtrend:** 8/13 777.84 → 8/14 776.30 → 8/17 772.62 → 8/18 767.37 → 8/19 769.09 → 8/20 762.62.
+- **Gemini (S&P 500 index):** reads the cash index **BELOW** its 20-day SMA (7,641 vs ~7,697 → regime OFF). The two sources DISAGREE on the sign — the regime is genuinely borderline. Per the routine, the deterministic SPY gate read governs (marginally ON), but the razor-thin margin + downtrend + event risk means the bar for any new buy is very high, and none clears it anyway.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,239.04** | Cash: **$94,482.64** | Buying power: $391,248.47 | Positions: **2 (AMZN, PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,259.07 (balance_asof 8/20) → true session move ≈ **-$20.03 (-0.02%)**, ~flat at the open.
+- Phase P&L **-$760.96 (-0.76%)** off the live $100k base.
+- **Trades this week: 0/3** (week from Mon 8/17). Room for 3, but patience beats activity.
+
+### Market Context
+- **VIX ~15.82** (down ~1.2% d/d) — still benign/contained (<20) but has ticked UP from the ~14.3–14.6 range of the prior two weeks, consistent with pre-Jackson-Hole jitters.
+- **WTI crude ~$86/bbl** (-0.9% d/d) — firm; Energy is a weekly sector leader on price.
+- **Sector momentum (week):** **Leaders — Health Care (+2.95%), Energy (+2.75%).** **Laggards — Industrials (-3.68%), Information Technology (-3.18%).** A defensive/energy rotation OUT of tech/industrials — the leadership that drove the record highs is under pressure this week.
+- **Macro:** **Jackson Hole Symposium — Powell keynote is the week's binary event** (elevated intraday chop expected). Next FOMC 9/16; next CPI/PPI 9/10–9/11.
+
+### Held-Position Review
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$257.55**, **-7.01%** (unrealized -$174.65; cost basis $2,492.55, mkt value $2,317.91). Live 12% trailing-stop GTC intact (id **26477093**, stop **$248.85**, hwm $282.78, qty_available 0 = reserved). Next earnings ~10/22–11/02/2026 (outside the 10-day window; confirmed via Gemini). **⏳ BOTH sell triggers now IMMINENT but NOT yet crossed:** (1) **-8% cut** level is **$254.79** — current $257.55 is just **1.08% above** it (not triggered); (2) **15-day time stop** — entered 8/04 → **day 14 of 15** today; the 15th trading day is **Mon 8/24** (not yet due). It is a losing, dead-money position drifting deeper (was -6.09% at 8/20 EOD, now -7.01%). **No hard sell rule is triggered at this open, so HOLD stands per the rules — but this is knife's-edge:** the midday scan (or Monday's open) must resolve close-vs-keep; if AMZN prints ≤ $254.79 or fails to recover by its 15th day, close it. Flagged to operator.
+  ⚠️ **Still-open item:** AMZN remains an undocumented original entry (recurring pattern flagged for CVX/JPM/MS/UNH) — fully stop-protected, but operator should confirm its original fill/date/catalyst.
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$173.82**, **+0.06%** (unrealized +$1.56; cost basis $2,431.85, mkt value $2,433.41). Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$158.54**, hwm $180.16, qty_available 0 = reserved). Next earnings ~90d out (Q2 reported 8/03; confirmed via Gemini). Entered 8/13 → ~7 trading days held (far from the time stop); flat to entry, far from the -8% cut and below the +15% tighten threshold → **no sell-side rule triggered. HOLD.**
+
+### Trade Ideas (regime marginally ON) — deterministic buy_gate.sh screen
+Gemini declined live screening today; screened this week's sector leaders (Health Care/Energy) and the standing watchlist via the deterministic gate. *(IEX free-tier feed understates consolidated volume, so c10 ratios are conservative; breakout-recency and entry-timing — the robust checks — govern.)*
+- **$MRK** (Health Care) — **11-check hard gate PASS** (c9 fresh 3-mo high 153.405 vs prior 135.95, within 5d; c10 volume 1,348,714 vs 553,831 threshold = strong). ❌ **Entry-timing FAIL (shadow c12): pullback only 1.8%** vs the 3–8% band — pinned to its high. Buying now = chasing/overpaying. **Watchlist — same condition as 8/14 & 8/17.**
+- **$PSX** (Energy) — **11-check hard gate PASS** (c9 fresh high 246.86 vs prior 236.05; c10 volume 269,225 vs 208,511 threshold). ❌ **Entry-timing FAIL: pullback only 1.8%** — pinned to its high. **Watchlist.**
+- **$JPM** (Financials) — **hard gate FAIL** (c9 breakout stale: last5 high 365.565 < prior 366.30; c10 volume 200,442 < 278,239 threshold). Dropped.
+- **Note on MRK/PSX:** even setting entry-timing aside, buying a name pinned to its high into Powell's Jackson Hole keynote, with SPY marginally ON (+0.22%) and in a weekly downtrend, is exactly the event-risk trade the strategy avoids. No forced entry.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No new actionable disclosures surfaced this run (Gemini declined live data). Prior batches (Rep. Rulli GOOGL/NVDA/META; Sen. Peters REIT O) remain stale and non-actionable — disclosures lag up to ~45 days and each name must independently clear the full gate. No gate impact.
+
+### Risk Factors
+- **Jackson Hole / Powell keynote** — the week's binary event; a hawkish tone could pressure the record-high, rate-sensitive tape further. Nothing to pre-position for.
+- **Regime on a knife's edge** (+0.22% deterministic; Gemini reads the index OFF) amid a tech/industrials selloff — a break below the 20-day SMA flips the filter OFF and forbids all new buys. Watch the next read closely.
+- **AMZN dual sell-trigger imminence** (see Held) — the leading capital-preservation item; must be resolved at the midday scan / Monday open.
+
+### Decision
+**HOLD — no new trades.** Regime only marginally ON (+0.22% deterministic; Gemini reads the S&P 500 index OFF) in a clear weekly downtrend, with Health Care/Energy leading and tech/industrials selling off. MRK and PSX clear the 11-check hard gate but FAIL entry timing (1.8% pullback, pinned to highs); JPM fails the hard gate — no name clears both the gate and entry timing, the persistent condition. Buying into Powell's Jackson Hole keynote with SPY on its 20-day SMA would be a low-conviction, high-event-risk entry the strategy exists to prevent. Hold **AMZN** (-7.01%, stop $248.85 — **both -8% cut [$254.79, 1.08% away] and 15-day time stop [day 14/15, due Mon 8/24] IMMINENT; flagged for midday resolution**) and **PLTR** (+0.06%, stop $158.54, ~7 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. ⚠️ Pre-market cron has failed silently since 8/17 — research run inline this session; operator to investigate. Notified operator (Discord + push) on the AMZN imminence and the pre-market outage; committed and pushed the research log (no trades → no trade-log entry per STEP 7).
