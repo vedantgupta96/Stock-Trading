@@ -1018,3 +1018,49 @@ Same **Rep. Michael Rulli (R-OH)** batch as last week (32 trades filed 8/7 incl.
 
 ### Decision
 **HOLD — no new trades.** Regime firmly ON (SPY +2.67% over its 20d SMA, VIX ~14.3–14.6, cyclical leadership broadening), but no candidate clears both the 11-check hard gate and the entry-timing rule: MRK is again the only name with a fresh breakout-on-volume and it sits on its high (0.1% pullback), while the financial/energy leaders (JPM/PNC/PSX) fail c10 volume with no pullback, and the leading Consumer-Discretionary complex is earnings-blocked this week. Watchlist: MRK/PSX/JPM for a valid 3–8% pullback. Hold **AMZN** (-4.02%, stop $248.85, next earnings ~10/22+, **~11 of 15 time-stop days used — due ~8/21**) and **PLTR** (-0.15%, stop $158.54, ~3 days held) under standard sell-side rules with their live 12% trailing stops. Trades this week 0/3. No urgent notification warranted (AMZN -4.02% >> -8% cut, no earnings within 3 days for either holding, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
+
+## 2026-08-24 (Mon) — Pre-Market Routine
+
+**Decision: HOLD (no new buys) + executed AMZN time-stop exit.** Regime is **ON but marginal** (SPY 765.64 > 20d SMA 762.28, **+0.44%** — down hard from +2.67% on 8/17 as the tape compressed toward its SMA on last week's selling) heading into a **binary macro cluster**: Core PCE + Q2 GDP (2nd est.) + Durable Goods **and NVDA earnings after the close, all Wed 8/26**, then Jackson Hole 8/27–29 (Fed Chair keynote Fri 8/28). The persistent condition also still holds — no leader offers a valid 3–8% pullback that clears the full 11-check gate — so freed capital sits in cash into the event risk. The one actionable item this session: **AMZN's 15-day time stop, due since 8/21, is breached** (16 trading days held at a **-6.58%** loss); the 8/21 pre-market never ran, so this run resolved it per the strategy's time-stop rule.
+
+### Market Regime Status — ON (marginal, fragile)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **765.64** vs **20-day SMA 762.28** → **765.64 > 762.28 → REGIME ON**, but only **+0.44%** (82 bars) — a sharp compression from +2.67% on 8/17. New long entries are permitted, but the cushion is thin: a single modest down day flips the filter OFF, and a binary macro week sits directly ahead.
+- **Gemini:** could not resolve S&P levels (treated 8/24 as a future date) — deterministic Alpaca read is authoritative. Corroborating color: "investors were rattled by large downward movements in the market last week," consistent with the regime compression.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,310.82** | Cash: **$94,482.64** | Buying power: $391,449.46 | Positions: **2 (AMZN exiting, PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,329.47 (balance_asof 8/21) → true session move ≈ **-$18.65 (-0.02%)**, essentially flat pre-bell.
+- Phase P&L **-$689.18 (-0.69%)** off the live $100k base.
+- **Trades this week (new buys): 0/3** (new week from Mon 8/24). The AMZN sale is a rule-driven **exit**, not a new-trade count.
+
+### Market Context
+- **VIX ~15.9** — a slight uptick (+~5% on the day, up from 14.89 on 8/20); still contained (<20) but no longer at the mid-14 complacency lows. Consistent with a fragile, event-heavy tape.
+- **WTI crude ~$84.65–85.58/bbl**, down ~2% on the day (eased geopolitical supply risk, profit-taking off multi-week highs).
+- **Macro calendar (binary week):** Tue 8/25 — ADP employment, CB Consumer Confidence (10:00 ET), Richmond Fed, House Price Index. **Wed 8/26 — Core PCE (Fed's preferred inflation; exp +0.2% m/m, ~3.3% y/y), Q2 GDP 2nd estimate (exp ~1.5%), Durable Goods, and NVDA fiscal-Q2 earnings after the close** — a genuine cluster of two-sided catalysts on one day. Thu 8/27 — Initial Jobless Claims; **Jackson Hole Symposium 8/27–29.** Fri 8/28 — prelim annual NFP revision + Fed Chair keynote (10:00 ET). Next FOMC 9/16.
+
+### Sector Momentum
+- **Strong MTD:** Financial Services, Healthcare, Technology (per Gemini; the cited % gains are unreliable/garbled, treat qualitatively). Energy led on 8/18 on oil/geopolitics; Information Technology took the largest single-day drawdown on 8/18 as AI names saw renewed volatility. Net read: a mixed, choppy tape with no clean, durable sector leadership into the macro week.
+- **Fresh-high leaders (idea pool, unchanged):** MRK remains the closest gate-clearer from prior weeks; financial/energy breakout names (JPM, PNC, PSX) still lack pullbacks.
+
+### Earnings Watch (held positions)
+- **AMZN** next earnings ~**Oct 29, 2026** — outside the 10-day window (exiting on the time stop regardless).
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold.
+- No held position reports within the next 10 trading days.
+
+### Held-Position Review + Action
+- **AMZN** (Consumer Discretionary, 9 sh @ $276.95) — current **$258.72**, **-6.58%** (unrealized -$164.07; mkt value $2,328.48). Above the -8% cut and below the +15% tighten level, so no *price*-based rule fired — **but the 15-trading-day time stop is breached**: entered ~8/04 → **16 trading days held at a <+5% gain** (a -6.58% loss), due since Fri 8/21. Per the strategy ("Close any position flat/<+5% after 15 trading days — dead money has opportunity cost. No hoping."), **ACTION TAKEN this session:** cancelled the 12% trailing-stop GTC (id 26477093), then placed a **market sell of 9 sh (day, id d8c2ac0f, `sell_to_close`, status `new` → fills at the 9:30 ET open).** Book becomes PLTR-only + cash; frees the Consumer-Discretionary sector slot. News today was actually constructive (Zoox robotaxi launch in San Francisco; Citizens reiterated $315 PT) — but the time stop is mechanical and the position had been dead money for 16 sessions; discipline over the catalyst. *(Note: AMZN remained an undocumented original entry — the recurring pattern flagged for CVX/JPM/MS/UNH — now closed out by rule; realized P&L will book at the open fill.)*
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$178.55**, **+2.79%** (unrealized +$67.85; mkt value $2,499.70). Below the +15% tighten threshold → no stop change yet. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$160.55**, hwm **$182.44**, qty reserved). Entered 8/13 → ~7 trading days held (far from the time stop). Q2 was a blowout (rev +93% y/y, US-commercial +149%, guide raised); recent downgrades are valuation-based sentiment noise, not a thesis break. **HOLD** — let it work; watch for +15% to tighten the stop to 7%.
+
+### Trade Ideas (regime ON) — no new buys
+No candidate clears both the 11-check hard gate **and** the 3–8% entry-timing band — the persistent condition of recent weeks. MRK remains the only name with a fresh breakout-on-volume but stays pinned to its high (no valid pullback); the financial/energy breakout leaders (JPM/PNC/PSX) fail c10 volume with no pullback. With the regime cushion thin (+0.44%) and a Wed 8/26 cluster (PCE + GDP + NVDA) plus Jackson Hole directly ahead, **forcing an entry into that event risk is exactly the low-quality trade the rules prevent.** Freed AMZN capital stays in cash. **Watchlist:** `$MRK`, `$PSX`, `$JPM` for a valid 3–8% pullback that holds support and clears the full gate *after* the macro week resolves.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Recent filings (last 2 wks): Rep. David Taylor (GOOGL/IBP/PG buys, MSFT sale, 8/19–20), Rep. Ed Case spouse (AAPL, filed 8/17), Rep. Steve Cohen (JPM, ~$175k, Aug), plus the stale Rep. Rulli 8/7 batch (32 trades, many past deadline) and various sales. **Nothing actionable** — disclosures lag up to ~45 days, omit size/exits, are frequently options, and each name must independently clear the full 11-check gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Wed 8/26 binary cluster + Jackson Hole (Fri).** Core PCE + Q2 GDP + NVDA-after-close on one day, then the Fed Chair keynote — a hot PCE, weak GDP, or soft NVDA guide could pressure the marginal regime straight OFF. High-variance week; cash is the right posture.
+- **Regime is fragile (+0.44% vs SMA, down from +2.67%).** A single modest down day flips the filter OFF — no reason to add exposure ahead of the event risk.
+- **AMZN exit fills at the open into a positive-catalyst day (Zoox SF launch).** The fill could print modestly above/below the $258.72 last read; accepted as a disciplined, mechanical time-stop exit — the position was dead money on day 16.
+
+### Decision
+**HOLD on new buys; executed the AMZN 15-day time-stop exit (market sell, fills at open).** Regime ON but marginal (SPY +0.44% over its 20d SMA) into a binary macro week (Core PCE + Q2 GDP + NVDA Wed 8/26, Jackson Hole 8/27–29), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (+2.79%, stop $160.55, ~7 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. Sent a Discord note flagging the executed time-stop exit. Committed and pushed to main per the pre-market routine.
