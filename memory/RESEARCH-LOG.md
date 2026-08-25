@@ -1064,3 +1064,46 @@ Recent filings (last 2 wks): Rep. David Taylor (GOOGL/IBP/PG buys, MSFT sale, 8/
 
 ### Decision
 **HOLD on new buys; executed the AMZN 15-day time-stop exit (market sell, fills at open).** Regime ON but marginal (SPY +0.44% over its 20d SMA) into a binary macro week (Core PCE + Q2 GDP + NVDA Wed 8/26, Jackson Hole 8/27–29), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (+2.79%, stop $160.55, ~7 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. Sent a Discord note flagging the executed time-stop exit. Committed and pushed to main per the pre-market routine.
+
+## 2026-08-25 (Tue) — Pre-Market Routine
+
+**Decision: HOLD (no new buys). ⚠️ REGIME FLIPPED ON → OFF.** The fragile +0.44% cushion flagged yesterday gave way: SPY last close **763.46** is now **below** its 20-day SMA **763.51** (−0.05, **−0.007%**) → the market-regime filter is **OFF**. Per the highest-priority rule ("Only go long when the S&P 500 is above its 20-day SMA"), **no new buys today** — and the right posture with the filter off is cash. This lands directly ahead of tomorrow's binary macro cluster (Core PCE + Q2 GDP + Durable Goods, 8:30 ET, **plus NVDA earnings after the close, all Wed 8/26**) and Jackson Hole 8/27–29 — so there is no case for forcing exposure regardless. Book is **PLTR-only + cash**; AMZN's 15-day time-stop exit from the 8/24 run filled at the open (cash rose to $96,827.91). No trade ideas generated (idea-generation is gated on regime ON).
+
+### Market Regime Status — OFF (flip from ON)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **763.46** vs **20-day SMA 763.51** (83 bars) → **763.46 < 763.51 → REGIME OFF.** A clean flip from ON: +2.67% (8/17) → +0.44% (8/24) → **−0.007% (8/25)**, i.e., the tape sold off (Tech/Industrials led last week's decline) while the rising SMA caught up. Razor-thin (−$0.05) but deterministically OFF; buy gate c1 = false. **New long entries are barred today.**
+- **Gemini:** could not resolve S&P/SPY levels (treats 8/25 as a future date) — the deterministic Alpaca read is authoritative. Corroborating color: tech shares fell Monday 8/24, consistent with the regime compression flipping negative.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,297.37** | Cash: **$96,827.91** | Buying power: $394,226.13 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,290.37 (balance_asof 8/24) → true session move ≈ **+$7.00 (+0.01%)**, flat pre-bell.
+- Phase P&L **−$702.63 (−0.70%)** off the live $100k base.
+- **Trades this week (new buys): 0/3** (week of Mon 8/24). The 8/24 AMZN sale was a rule-driven time-stop **exit**, not a new-trade count; realized at the 8/24 open fill (cash $94,482.64 → $96,827.91).
+
+### Market Context
+- **VIX ~15.13** — contained (<20), below its ~18.6 long-run average; a slight two-sided wobble (down ~5% Fri, up modestly on the week). Benign but not complacent into the event week.
+- **WTI crude ~$83.08/bbl**, down ~2% on the day / ~1.5% on the week — ample supply capping moves; EIA STEO ~$81 Q3 avg.
+- **Macro calendar (binary week):** **Tue 8/25** — CB Consumer Confidence, New Home Sales, Richmond Fed (all 10:00 ET). **Wed 8/26 — Core PCE (Fed's preferred inflation) + Q2 GDP 2nd est. + Durable Goods, 8:30 ET, and NVDA fiscal-Q2 earnings after the close** — a genuine cluster of two-sided catalysts on one day. **Thu 8/27** — Initial Jobless Claims; **Jackson Hole Symposium 8/27–29.** Next FOMC 9/16.
+
+### Sector Momentum
+- **Week ending 8/21 (Gemini):** Leaders **Healthcare +4.3%**, **Energy +2.8%**, **Materials +1.9%**; laggards **Utilities −3.5%, Technology −3.5%, Industrials −3.4%**, Communication Services −1.4%, Financials −1.2%. The Tech/Industrials drawdown is what compressed SPY under its SMA. Early this week (8/24) tech shares fell further. Mixed, defensive-tilting tape with no durable leadership into the macro week.
+- **Fresh-high idea pool (unchanged, all moot with regime OFF):** MRK remains the closest historical gate-clearer; financial/energy breakout names (JPM/PNC/PSX) still lack pullbacks.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold. No held position reports within the next 10 trading days.
+
+### Held-Position Review
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$176.39**, **+1.55%** (unrealized **+$37.61**; cost basis $2,431.85, mkt value $2,469.46). Below the +15% tighten threshold → **no stop change**. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$160.5472**, hwm **$182.44**, qty_available 0 = reserved by the stop). Entered 8/13 → ~9 trading days held (inside the 15-day time stop). Q2 was a blowout (rev +93% y/y, US-commercial +149%, guide raised); news is valuation-based caution only (a bearish $107 EOY call, "overvalued" notes) — sentiment noise, not a thesis break; stock holds well above entry. **HOLD** — let it work; watch for +15% to tighten the stop to 7%.
+
+### Trade Ideas — none (regime OFF)
+Idea-generation is gated on regime ON. Watchlist for a **post-flip, post-macro-week** re-entry once SPY reclaims its 20-day SMA AND a name offers a valid 3–8% pullback that clears the full 11-check gate: `$MRK` (fresh 3-mo/52-wk high $154.45 on ~1.84x+ volume but pinned to its high, 2.4% pullback), `$JPM`, `$PSX`. Force nothing.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Same stale batch as prior weeks — Rep. David Taylor (PG/GOOGL buys, MSFT sale, 8/11), Rep. Ed Case spouse (AAPL, filed 8/17), the past-deadline Rep. Rulli 8/7 batch (32 trades). **Nothing actionable** — disclosures lag up to ~45 days, omit size/exits, are frequently options, and each name must independently clear the full gate. Moot with regime OFF. Dropped.
+
+### Risk Factors
+- **Regime just flipped OFF (−0.007% vs SMA).** The margin is razor-thin, so it could flip back ON on a single up day — but the rule is mechanical: no new longs while below the SMA. Do not pre-position on a hoped-for reclaim.
+- **Wed 8/26 binary cluster + Jackson Hole.** Core PCE + Q2 GDP + NVDA-after-close on one day, then the Fed Chair keynote — a hot PCE, weak GDP, or soft NVDA guide could drive SPY decisively below its SMA (and pressure PLTR, a high-beta AI name, via NVDA read-through). Cash is the right posture.
+- **PLTR is the lone position and high-beta.** Its 12% trailing stop ($160.55) is the discipline; at +1.55% it's well clear of any sell-side trigger, next earnings outside the window.
+
+### Decision
+**HOLD — no new trades; regime filter flipped ON → OFF** (SPY 763.46 < 20d SMA 763.51). No longs permitted today, and none warranted into tomorrow's PCE + GDP + NVDA cluster and Jackson Hole. Hold **PLTR** (+1.55%, stop $160.55, ~9 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; the rest of the book is cash. Watchlist MRK/JPM/PSX for a re-entry *after* SPY reclaims its SMA and a valid pullback appears. Trades this week (new buys) 0/3. **Sent an urgent Discord alert flagging the ON→OFF regime flip (STEP 5 trigger).** Committed and pushed to main per the pre-market routine.
