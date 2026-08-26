@@ -1064,3 +1064,46 @@ Recent filings (last 2 wks): Rep. David Taylor (GOOGL/IBP/PG buys, MSFT sale, 8/
 
 ### Decision
 **HOLD on new buys; executed the AMZN 15-day time-stop exit (market sell, fills at open).** Regime ON but marginal (SPY +0.44% over its 20d SMA) into a binary macro week (Core PCE + Q2 GDP + NVDA Wed 8/26, Jackson Hole 8/27–29), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (+2.79%, stop $160.55, ~7 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. Sent a Discord note flagging the executed time-stop exit. Committed and pushed to main per the pre-market routine.
+
+## 2026-08-26 (Wed) — Pre-Market Routine
+
+**Decision: HOLD (no new buys).** Regime is **ON but razor-thin** (SPY 765.79 > 20d SMA 764.76, **+0.13%** — compressed further from +0.44% on 8/24 and +2.67% on 8/17) heading straight into **the single biggest binary macro day of the month: Core PCE + Q2 GDP (2nd est.) + Durable Goods all at 8:30 ET, plus NVDA fiscal-Q2 earnings after the close**, then Jackson Hole 8/27–29 (Fed Chair keynote Fri 8/28). The persistent condition also still holds — no leader offers a valid 3–8% pullback that clears the full 11-check gate — so freed AMZN capital stays in cash into the event. Book is **PLTR-only + cash**; no sell-side rule fires on PLTR.
+
+### Market Regime Status — ON (marginal / fragile)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **765.79** vs **20-day SMA 764.76** → **765.79 > 764.76 → REGIME ON**, but only **+0.13%** (83 bars). New longs are technically permitted, but the cushion is now razor-thin — a single modest down day flips the filter OFF, and the highest-variance macro session of the month sits directly ahead (PCE + GDP + NVDA today).
+- **Gemini:** could not resolve S&P levels (treated 8/26 as a future date) — the deterministic Alpaca read is authoritative.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,224.35** | Cash: **$96,827.91** | Buying power: $394,021.67 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,246.13 (balance_asof 8/25) → true session move ≈ **-$21.78 (-0.02%)**, essentially flat pre-bell.
+- Phase P&L **-$775.65 (-0.78%)** off the live $100k base.
+- **Trades this week (new buys): 0/3** (week from Mon 8/24).
+
+### Market Context
+- **VIX ~15.68** — contained (<20), a slight daily uptick (+1.49%) but **down -7.37% on the week**; no fear premium building despite the event risk.
+- **WTI crude ~$80.45/bbl**, down ~2–3% on the day (US–Iran deal hopes + a bearish US inventory build) — off the multi-week ~$90 highs, drifting toward $80 support.
+- **Macro calendar (binary day):** **Wed 8/26 8:30 ET — Core PCE** (Fed's preferred inflation; exp +0.2% m/m, ~3.3% y/y), **Q2 GDP 2nd est.** (adv. 1.5%, down from 2.1% Q1), **Durable Goods (July prelim)** — all at once; **NVDA fiscal-Q2 earnings after the close.** Thu 8/27 — Initial Jobless Claims; **Jackson Hole 8/27–29.** Fri 8/28 — prelim annual NFP revision + Fed Chair keynote (10:00 ET). Next FOMC 9/16.
+
+### Sector Momentum
+- **Week leaders (per Gemini):** Materials **+4.12%**, Health Care +2.92%, Communication Services +1.69%, Consumer Discretionary +1.53%, Real Estate +1.44%. **Information Technology** was the single-day leader 8/25 on an AI-stock surge; **Energy** was worst 8/25 (-1.70%, tracking oil lower). Net: choppy, rotating tape with no clean durable leadership into the macro day.
+- **Fresh-high leaders (idea pool, unchanged):** MRK remains the closest prior gate-clearer; financial/energy breakout names (JPM/PNC/PSX) still lack pullbacks.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold. No held position reports within the next 10 trading days.
+
+### Held-Position Review + Action
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$171.17**, **-1.46%** (unrealized **-$35.41**; mkt value $2,396.44). Above the -8% cut and below the +15% tighten level → **no sell-side rule fires**. Live **12% trailing-stop GTC intact** (id **c89fba0d**, stop **$160.55**, hwm **$182.44**, qty_available 0 = reserved) — verified open in the orders feed. Entered 8/13 → ~**9 trading days held** (inside the 15-day time stop). **HOLD.** Fundamentals intact (Q2 rev +93% y/y, US-commercial +149%, FY guide raised to $8.15–8.16B, adj FCF record $1.22B); the circulating bear call to $107 is valuation/technical opinion (a "death cross" note dated 8/25), **not a thesis break** — analyst avg 12-mo PT ~$192. Watch for +15% to tighten the stop to 7%.
+
+### Trade Ideas (regime ON) — no new buys
+No candidate clears both the 11-check hard gate **and** the 3–8% entry-timing band — the persistent condition of recent weeks (MRK pinned to its high; JPM/PNC/PSX fail c10 volume with no pullback). With the regime cushion at just **+0.13%** and a **Core PCE + Q2 GDP + NVDA** cluster on this exact session plus Jackson Hole immediately after, **forcing an entry into that event risk is precisely the low-quality trade the rules exist to prevent.** Freed capital stays in cash. **Watchlist:** `$MRK`, `$PSX`, `$JPM` for a valid 3–8% pullback that holds support and clears the full gate *after* the macro week resolves.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Gemini returned HTTP 429 (rate-limited) on this query; not re-run via WebSearch because the scan is **idea-generation only and can never be a buy reason** — any surfaced name must independently clear all 11 gate checks, and with no buys placed today it has zero gate impact. Deferred to the next run.
+
+### Risk Factors
+- **Today is the binary cluster.** Core PCE + Q2 GDP at 8:30 ET **and** NVDA after the close on one session — a hot PCE, weak GDP, or soft NVDA guide could pressure the +0.13% regime straight OFF and hit the broad AI/Tech complex (which PLTR sits in).
+- **Regime is one down day from OFF (+0.13% vs SMA).** No reason to add exposure ahead of the event.
+- **PLTR is Tech and AI-adjacent into NVDA night.** Its live 12% trailing stop ($160.55, ~-6.4% below the current $171.17) is the defense; a gap through it overnight is the tail risk the strategy explicitly accepts (trailing stops don't protect overnight gaps). No pre-positioning warranted — it's a hold, well above every price stop.
+
+### Decision
+**HOLD — no new buys.** Regime ON but razor-thin (SPY +0.13% over its 20d SMA) into the month's biggest binary macro day (Core PCE + Q2 GDP + NVDA after close, then Jackson Hole), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (-1.46%, stop $160.55, ~9 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. No urgent notification warranted (PLTR -1.46% >> -8% cut, no earnings within 3 days, regime unchanged ON — silent per STEP 5). Committed and pushed per the pre-market routine.
