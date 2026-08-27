@@ -1064,3 +1064,44 @@ Recent filings (last 2 wks): Rep. David Taylor (GOOGL/IBP/PG buys, MSFT sale, 8/
 
 ### Decision
 **HOLD on new buys; executed the AMZN 15-day time-stop exit (market sell, fills at open).** Regime ON but marginal (SPY +0.44% over its 20d SMA) into a binary macro week (Core PCE + Q2 GDP + NVDA Wed 8/26, Jackson Hole 8/27–29), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (+2.79%, stop $160.55, ~7 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. Sent a Discord note flagging the executed time-stop exit. Committed and pushed to main per the pre-market routine.
+
+## 2026-08-27 (Thu) — Pre-Market Routine
+
+**Decision: HOLD — no new buys. Market regime filter flipped ON → OFF.** The single actionable read this session: SPY closed **765.94** vs its **20-day SMA 766.58** → **765.94 < 766.58 → REGIME OFF** (deterministic `buy_gate.sh`). This is the first OFF read since the filter had been compressing all week (+2.67% over SMA on 8/17 → +0.44% on 8/24 → **now below**). Per the strategy's highest-priority rule, **no new long entries today**; existing winners are left to their stops. Timing is unsurprising: the flip lands right into **Jackson Hole (8/27–29)** and Fed Chair Warsh's Fri 8/28 keynote, after NVDA's strong-but-subdued 8/26 print and a hotter July PCE that has re-opened the rate-hike debate. Cash is the correct posture; the book is PLTR-only + cash.
+
+### Market Regime Status — OFF (flipped from ON)
+- **Alpaca (deterministic, authoritative):** SPY last close **765.94** < **20-day SMA 766.58** (83 bars) → **REGIME OFF** by **−0.08%**. A marginal flip, but a flip: the buy gate's c1_regime = **false**, so *every* candidate FAILS the gate today regardless of setup. This is the ON→OFF transition STEP 5 flags for notification.
+- **Gemini:** could not resolve S&P levels (treated 8/27 as a future date) — deterministic Alpaca read stands alone as authoritative.
+- **Action:** No new buys. Existing positions are NOT sold on the filter alone — stops do that (strategy: "Do not close existing winning positions just because of the filter — let stops do that").
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,303.11** | Cash: **$96,827.91** | Buying power: $394,242.20 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,312.91 (balance_asof 8/26) → true session move ≈ **−$9.80 (−0.01%)**, essentially flat pre-bell.
+- Phase P&L **−$696.89 (−0.70%)** off the live $100k base.
+- **Trades this week (new buys): 0/3** (week of Mon 8/24). AMZN's 8/24 time-stop exit filled and freed the Consumer-Discretionary slot; that capital is in cash.
+
+### Market Context
+- **VIX ~15.67** (8/26 close), still contained (<16) but off the mid-14 August lows — a modest uptick consistent with event-week caution into Jackson Hole. Medium-term downtrend intact.
+- **NVDA (reported after close 8/26):** fiscal-Q2 rev ~$96.2B (+106% y/y), EPS $2.22, Q3 guide ~$108B — a strong beat, but the reaction was **subdued** (initial dip, ~+4% an hour later) on already-high expectations and pre-Jackson-Hole caution; memory-cost margin chatter noted.
+- **Macro calendar:** **Jackson Hole Symposium 8/27–29**, theme "Financial Innovation"; **Fed Chair Warsh keynote Fri 8/28** is the week's binary event — Warsh favors less explicit forward guidance, so his tone is the swing factor for rate-sensitive/AI leadership. Thu 8/27: Initial Jobless Claims. Rate path is two-sided: hotter July PCE (+0.2% headline & core) re-opened the hike debate; market had leaned toward a September hold. Next FOMC 9/16.
+- **Sector momentum (qualitative):** Health Care/biotech led early-week (MRNA melanoma-vaccine rally with MRK); Information Technology strong 8/25–26 on AI/chip strength and an 8/26 rebound; Industrials + Communication Services led 8/26; Energy firm. Choppy, event-driven leadership — no clean durable trend.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — well outside the 10-day window. No held position reports within the next 10 trading days.
+
+### Held-Position Review
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$176.80**, **+1.78%** (unrealized **+$43.35**; cost basis $2,431.85, mkt value $2,475.20; intraday −0.39% today). Well above the −8% cut and below the +15% tighten threshold (~$199.76) → **no sell-side rule triggers.** Live **12% trailing-stop GTC intact** (id **c89fba0d**, stop **$160.55**, hwm **$182.44**, trail 12%, qty_available 0 = reserved) — verified open in the orders feed. Q2 blowout thesis intact (rev +93% y/y, US-commercial +149%, Maven → ~$1B ARR run-rate/DoD program-of-record, NDR 157%, guide raised; Zacks Rank #1). News is a mix of strong fundamentals and valuation-based caution (Oppenheimer→market-perform 8/4, StockInvest→hold 8/14, an insider sale 8/6) — sentiment noise, not a thesis break. Entered 8/13 → **~11 trading days held** at a **<+5% gain**, so it is on the **15-day time-stop clock (due ~9/04)** — watch the clock at midday/EOD; if it hasn't cleared +5% by then it becomes a time-stop candidate. **HOLD** — let the trailing stop manage it.
+
+### Trade Ideas — none (regime OFF)
+No ideas generated. With the regime filter **OFF**, c1 fails for every candidate and the strategy is explicit: "When the regime filter is off, the right answer is almost always cash." Prior watchlist names (MRK, PSX, JPM) remain parked until (a) the regime flips back ON **and** (b) one offers a valid 3–8% pullback that holds support and clears the full 11-check gate. Forcing an entry into a regime-OFF, Jackson-Hole event day is exactly the low-quality trade the rules prevent.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No new actionable filings beyond the recently-assessed batch (Rep. Taylor GOOGL/IBP/PG buys 8/19–20, Rep. Case-spouse AAPL 8/17, Rep. Cohen JPM ~$175k Aug, and the stale Rep. Rulli 8/7 batch). Moot regardless — the regime is OFF, so nothing can clear the gate today. Disclosures lag up to ~45 days, omit size/exits, are often options; each name must independently clear the full gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime just flipped OFF (−0.08% vs SMA) into Jackson Hole.** A hawkish Warsh keynote (Fri 8/28) could deepen the break and pressure the AI/cyclical leadership (and PLTR); a dovish tone could flip the filter back ON just as quickly. Two-sided and binary — no reason to add exposure; cash is defensive and correct.
+- **PLTR time-stop clock.** ~11 of 15 trading days held at <+5% — if it doesn't clear +5% by ~9/04 it's a time-stop close candidate. Its 12% trailing stop ($160.55) caps downside in the meantime.
+- **Post-NVDA / re-opened rate-hike debate.** Hotter July PCE + a subdued NVDA reaction leave the tape vulnerable to disappointment; high-variance week argues for patience.
+
+### Decision
+**HOLD — no new trades. Regime filter flipped ON → OFF** (SPY 765.94 < 20d SMA 766.58, −0.08%) after a week of compression, landing into Jackson Hole (8/27–29) / Warsh keynote (8/28) and a re-opened rate-hike debate. Per the highest-priority rule, no new longs today; freed capital stays in cash. Hold **PLTR** (+1.78%, stop $160.55, ~11 of 15 time-stop days, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop — the filter does not force a sale of a winner. Trades this week (new buys) 0/3. **Sent a Discord alert** flagging the ON→OFF regime flip (the STEP 5 trigger). Committed and pushed to main per the pre-market routine.
