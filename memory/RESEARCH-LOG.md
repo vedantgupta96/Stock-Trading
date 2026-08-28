@@ -1064,3 +1064,46 @@ Recent filings (last 2 wks): Rep. David Taylor (GOOGL/IBP/PG buys, MSFT sale, 8/
 
 ### Decision
 **HOLD on new buys; executed the AMZN 15-day time-stop exit (market sell, fills at open).** Regime ON but marginal (SPY +0.44% over its 20d SMA) into a binary macro week (Core PCE + Q2 GDP + NVDA Wed 8/26, Jackson Hole 8/27–29), and no leader offers a valid gate-clearing pullback — so freed capital sits in cash. Hold **PLTR** (+2.79%, stop $160.55, ~7 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watchlist MRK/PSX/JPM for a post-event pullback. Trades this week (new buys) 0/3. Sent a Discord note flagging the executed time-stop exit. Committed and pushed to main per the pre-market routine.
+
+## 2026-08-28 (Fri) — Pre-Market Routine
+
+**Decision: HOLD — no new buys.** Regime is **ON but marginal** (SPY 771.18 > 20d SMA 768.06, **+0.41%** — essentially unchanged from +0.44% on 8/24) directly into today's **Jackson Hole Fed Chair keynote (Kevin Warsh, 10:00 ET)** plus Chicago PMI (9:45) and UMich final (10:00). The persistent condition still holds — no leader offers a valid 3–8% pullback that clears the full 11-check gate — so cash stays parked into the event. Book is **PLTR-only + cash**; PLTR (+6.43%) is working cleanly with its live 12% trailing stop and triggers no sell-side rule. Nothing urgent → silent per STEP 5.
+
+### Market Regime Status — ON (marginal)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **771.18** vs **20-day SMA 768.06** (83 bars) → **771.18 > 768.06 → REGIME ON**, but only **+0.41%** — the same thin cushion as 8/24 (+0.44%). New longs are permitted but the filter is one modest down day from flipping OFF, and the Fed Chair keynote sits directly ahead. This deterministic Alpaca read is authoritative.
+- **Gemini:** could not resolve S&P levels (treated 8/28 as a future date) — Alpaca read governs. Corroborating color: tech firmed Thu 8/27 on NVDA, fear readings fell.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,416.23** | Cash: **$96,827.91** | Buying power: $394,558.94 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,430.93 (balance_asof 8/27) → true session move ≈ **-$14.70 (-0.01%)**, flat pre-bell; matches PLTR's intraday P&L (-$14.70) exactly.
+- Phase P&L **-$583.77 (-0.58%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 8/24). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~14.5** (down ~4.7% on the day, from ~14.9 on 8/27) — contained, complacent; fear eased after NVDA earnings.
+- **WTI crude ~$83.10/bbl**, down ~0.5% on the day (traders watching Middle East / Strait of Hormuz reopening). *(oil via WebSearch fallback — Gemini hit HTTP 429.)*
+- **Macro calendar (Fri 8/28):** **Jackson Hole Symposium 8/27–29 — Fed Chair Kevin Warsh keynote 10:00 ET** (theme: "Financial Innovation: Implications for Payments and Policy"); **Chicago PMI 9:45 ET**; **UMich Consumer Sentiment (final) 10:00 ET**. No CPI/PPI/FOMC/jobs today (CPI 9/11, PPI 9/10, jobs 9/4, next FOMC 9/16). NVDA fiscal-Q2 earnings landed positive after Wed's close — no fresh binary this session beyond the keynote.
+
+### Sector Momentum
+- **Leading this week:** Financials (XLF ~+2.1%), Industrials (XLI ~+1.8%), Consumer Discretionary (XLY ~+1.8%); Technology firmed Thu on NVDA. Month-to-date leaders per Gemini: Financial Services, Healthcare, Technology (cited %s unreliable — treat qualitatively). Read: cyclical/financial leadership with tech re-steadying post-NVDA; no single clean durable leader offering an entry.
+- **Fresh-high idea pool (unchanged):** MRK remains the closest prior gate-clearer; JPM/PNC/PSX still lack valid pullbacks.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold. No held position reports within the next 10 trading days.
+
+### Held-Position Review + Action
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$184.88**, **+6.43%** (unrealized +$156.47; cost basis $2,431.85, mkt value $2,588.32). Below the +15% tighten threshold → no stop change. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$164.44**, hwm **$186.86**, qty reserved, expires 11/11). Entered 8/13 → **~12 trading days held** (inside the 15-day time stop, and well above +5% so the time stop is moot). Thesis intact: Q2 blowout (rev +93% y/y, US-commercial +149%, FY guide raised to ~$8.15B), JPMorgan disclosed a ~$924M stake in Q2; the bearish "$107 by year-end" technical calls and the 8/6 Sankar insider sale are sentiment/noise, not a thesis break. **HOLD** — let it work; watch for **+15%** to tighten the trailing stop to 7%.
+
+### Trade Ideas (regime ON) — no new buys
+No candidate clears both the 11-check hard gate **and** the 3–8% entry-timing band — the persistent condition of recent weeks. As a market read, `buy_gate.sh` on the leading momentum name PLTR (already held) returns FAIL on **c8 catalyst (no fresh present-tense catalyst)** and **c10 volume (last-5 max 1.30M vs 2.18M threshold — no ≥1.5x breakout-day volume)** at a 0.5% pullback (pinned to its high). The watchlist leaders (MRK/JPM/PSX) still lack valid 3–8% pullbacks. Today's pre-market high-volume movers are junk micro-caps (PPCB, VNRX, MERC, WHLR) plus earnings gappers (AFRM +12%, SOLS +12%) — none is a clean momentum-breakout swing setup. With the regime cushion thin (+0.41%) and the **Fed Chair keynote 10:00 ET**, forcing an entry is exactly the low-quality trade the rules prevent. Cash stays parked.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+WebSearch fallback (Gemini 429) surfaced only general context — active House/Senate legislative debate on a congressional trading ban (July House package 232–198, uncertain in Senate), no specific fresh actionable purchase disclosures in the last two weeks worth a watchlist add. **Nothing actionable** — disclosures lag up to ~45 days, omit size/exits, are frequently options, and each name must independently clear the full 11-check gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Jackson Hole Fed Chair keynote (10:00 ET) is today's binary.** A hawkish Warsh tone could pressure the record-high, rate-sensitive cyclical rotation and flip the marginal regime OFF; nothing to pre-position for — cash is the right posture.
+- **Regime is thin (+0.41% vs SMA).** A single modest down day flips the filter OFF — no reason to add exposure ahead of the keynote.
+- **PLTR is extended** (+6.43%, high-beta AI momentum name at a ~152 P/E). A risk-off keynote reaction could give back the gain fast, but the 12% trailing stop ($164.44) defines the downside and no thesis break is present.
+
+### Decision
+**HOLD — no new trades.** Regime ON but marginal (SPY +0.41% over its 20d SMA) into today's Jackson Hole Fed Chair keynote (Warsh, 10:00 ET), and no leader offers a valid gate-clearing 3–8% pullback (PLTR itself fails c8/c10; MRK/JPM/PSX lack pullbacks) — so cash stays parked. Hold **PLTR** (+6.43%, stop $164.44, ~12 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watch for +15% to tighten to 7%. New buys this week 0/3, day-trades 0/3. No urgent notification warranted (PLTR far above the -8% cut, no earnings within 3 days, regime unchanged ON — silent per STEP 5). Committed and pushed to main per the pre-market routine.
