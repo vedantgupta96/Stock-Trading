@@ -1107,3 +1107,46 @@ WebSearch fallback (Gemini 429) surfaced only general context — active House/S
 
 ### Decision
 **HOLD — no new trades.** Regime ON but marginal (SPY +0.41% over its 20d SMA) into today's Jackson Hole Fed Chair keynote (Warsh, 10:00 ET), and no leader offers a valid gate-clearing 3–8% pullback (PLTR itself fails c8/c10; MRK/JPM/PSX lack pullbacks) — so cash stays parked. Hold **PLTR** (+6.43%, stop $164.44, ~12 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watch for +15% to tighten to 7%. New buys this week 0/3, day-trades 0/3. No urgent notification warranted (PLTR far above the -8% cut, no earnings within 3 days, regime unchanged ON — silent per STEP 5). Committed and pushed to main per the pre-market routine.
+
+## 2026-08-31 (Mon) — Pre-Market Routine
+
+**Decision: HOLD — no new buys.** Regime is **ON but razor-thin** (SPY 769.28 > 20d SMA 769.18, **+0.013%** — just +0.10 pt above the line, the thinnest cushion in weeks, down from +0.41% on 8/28). The persistent condition holds — no leader offers a valid 3–8% pullback that clears the full 11-check gate — and NFP week (Fri 9/4) sits directly ahead. Book is **PLTR-only + cash**; PLTR (+5.73%) triggers no sell-side rule with its live 12% trailing stop. Nothing urgent → silent per STEP 5.
+
+### Market Regime Status — ON (razor-thin)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **769.28** vs **20-day SMA 769.18** (82 bars) → **769.28 > 769.18 → REGIME ON**, but only **+0.013%** (+0.10 pt) — the filter is one modest down day from flipping OFF, and NFP lands Fri 9/4. This deterministic Alpaca read is authoritative.
+- **Gemini:** corroborating color only — VIX contained ~14.4, tech firm (XLK +3.2% today), benchmarks positive on the week. Regime governs off the Alpaca read.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,399.15** | Cash: **$96,827.91** | Buying power: $394,511.11 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,435.97 (balance_asof 8/28) → true session move ≈ **-$36.82 (-0.04%)**, essentially flat pre-bell; matches PLTR's intraday P&L (-$36.82) exactly.
+- Phase P&L **-$600.85 (-0.60%)** off the live $100k base.
+- **New buys this week: 0/3** (new week from Mon 8/31). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~14.43** (down ~0.6% on the day) — contained, complacent; no fear bid despite the thin regime and NFP week ahead.
+- **WTI crude ~$85/bbl**, up ~2% on the day (~$85.14–$85.45 across sources) — Energy tailwind, but no Energy name in the book or on a valid setup.
+- **Macro calendar (week of 8/31):** **No CPI/PPI/FOMC this week.** JOLTS (Jul) Tue 9/1 10:00 ET; **ISM Manufacturing PMI** Tue 9/1; ADP employment Wed 9/2; BoC + RBNZ rate decisions Wed 9/2; **US Non-Farm Payrolls (Aug) Fri 9/4 8:30 ET** — the week's binary. Today (Mon) is light domestically (China PMI, German CPI, UK house prices only).
+
+### Sector Momentum
+- **Week (8/24–8/30):** Communication Services (+1.4%) and Technology (+1.3%) led on mega-cap strength. **Today (8/31):** XLK +3.2% (tech extending), XLC -1.1% (giving back). Read: tech leadership intact but concentrated/extended; no single durable leader offering a fresh 3–8% pullback entry.
+- **Fresh-high idea pool (unchanged):** MRK remains the closest prior gate-clearer; JPM/PNC/PSX still lack valid pullbacks.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold. No held position reports within the next 10 trading days.
+
+### Held-Position Review + Action
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$183.66**, **+5.73%** (unrealized +$139.39; cost basis $2,431.85, mkt value $2,571.24). Down -$36.82 (-1.41%) intraday off Friday's $186.29 close, but far above the -8% cut and below the +15% tighten threshold → no stop change. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$165.77**, hwm **$188.37**, qty reserved, expires 11/11) — verified open in the orders feed. Entered 8/13 → **~13 trading days held** (inside the 15-day time stop, and comfortably >+5% so the time stop is moot). Thesis intact: Q2 blowout (rev +93% y/y to $1.94B, US-commercial +149%, FY guide raised to ~$8.15–8.16B); analysts split (BofA PT $255, Goldman $204). The 8/20 Karp insider sale (492k sh, ~$86M) is sentiment/noise, not a thesis break. **HOLD** — let it work; watch for **+15%** to tighten the trailing stop to 7%.
+
+### Trade Ideas (regime ON) — no new buys
+No candidate clears both the 11-check hard gate **and** the 3–8% entry-timing band — the persistent condition of recent weeks. As a market read, `buy_gate.sh` on the leading momentum name PLTR (already held) returns FAIL on **c8 catalyst (no fresh present-tense catalyst)** and **c10 volume (last-5 max 1.04M vs 2.18M threshold — no ≥1.5x breakout-day volume)** at a ~1.1% pullback (pinned to its high). Watchlist leaders (MRK/JPM/PSX) still lack valid 3–8% pullbacks. Today's pre-market high-volume movers are junk micro-caps (FNGR +130%, CHAI, WCT, CYAB, SWVL) plus split/rating names (TXT +4.5% on a 3:2 split, DTE, HUBB, SAIA on a DB "catalyst call buy") — none is a clean momentum-breakout swing setup. With the regime cushion razor-thin (+0.013%) and **NFP Fri 9/4** directly ahead, forcing an entry is exactly the low-quality trade the rules prevent. Cash stays parked.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Recent filings (8/17–8/31): **Sen. Dave McCormick** — multiple **Goldman Sachs (GS)** purchases (trade dates 8/16–8/17, ranges up to $250k–$500k); **Sen. David Taylor** — PG, IBP, GOOGL, AAPL (small $1k–$15k ranges, trade dates 8/11–8/14). **Nothing actionable** — disclosures lag up to ~45 days, omit size/exits, are frequently options, and each name must independently clear the full 11-check gate. GS/GOOGL/AAPL are watchlist candidates at most; none presents a valid breakout-on-volume 3–8% pullback today. Dropped — no gate impact.
+
+### Risk Factors
+- **NFP week into a razor-thin regime (+0.013%).** A single modest down day flips the filter OFF before Friday's payrolls; a hot/cold NFP could whipsaw the marginal tape hard — no reason to add exposure ahead of the print.
+- **Tech leadership is concentrated/extended.** XLK +3.2% today is mega-cap-driven; breadth is narrow, so a rotation could pressure the record-high names (PLTR included) quickly — but PLTR's 12% trailing stop ($165.77) defines the downside and no thesis break is present.
+- **PLTR is extended** (+5.73%, high-beta AI momentum name at a rich multiple). A risk-off NFP reaction could give back the gain fast; the trailing stop is the defense.
+
+### Decision
+**HOLD — no new trades.** Regime ON but razor-thin (SPY +0.013% over its 20d SMA) into NFP week (Fri 9/4), and no leader offers a valid gate-clearing 3–8% pullback (PLTR itself fails c8/c10; MRK/JPM/PSX lack pullbacks) — so cash stays parked. Hold **PLTR** (+5.73%, stop $165.77, ~13 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watch for +15% to tighten to 7%. New buys this week 0/3, day-trades 0/3. No urgent notification warranted (PLTR far above the -8% cut, no earnings within 3 days, regime still ON — silent per STEP 5). Committed and pushed per the pre-market routine.
