@@ -1144,3 +1144,40 @@ No fresh actionable purchase disclosures worth a watchlist add since the prior r
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER OFF.** SPY (766.105) closed **below** its 20-day SMA (769.60), so buy-gate #1 fails for every candidate and the right answer is cash — the thin +0.41% cushion from Friday gave way to -0.45%. Notably, watchlist leader MRK finally cleared checks 2–11 (fresh breakout-on-volume, 6.1% pullback in band) but is blocked solely by the regime filter — a live candidate the day the regime turns back ON. Hold **PLTR** (+6.62%, stop $165.77, ~12 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop. New buys this week 0/3, day-trades 0/3. No commit (no trades placed, per routine STEP 7). Sent the Discord decision summary; no urgent phone alert warranted (regime OFF → cash is the healthy, designed outcome; PLTR well above the -8% cut with no earnings within the window).
+
+## 2026-09-01 (Tue) — Market-Open Routine (pre-market entry was missing; run inline)
+
+**Decision: HOLD — no new buys. MARKET REGIME FILTER OFF (deepening).** The deterministic Alpaca read keeps the regime **OFF** and pushed further below since Monday: SPY last close **761.625** < **20-day SMA 769.16** (**-0.98% below**, down from -0.45% on 8/31 and +0.41% *above* on 8/28). Per the highest-priority rule, **no new long entries today** regardless of any candidate's merits. Book is **PLTR-only + cash**; PLTR (+5.53%) triggers no sell-side rule and keeps its live 12% trailing stop. No trades → no commit (per routine STEP 7).
+
+### Market Regime Status — OFF (deepening)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY **761.625** vs **20d SMA 769.16** (84 bars) → **761.625 < 769.16 → REGIME OFF** (-0.98%). The filter has now been OFF two straight sessions and is pulling further from the mean, not recovering. This deterministic read is authoritative.
+- **Gemini (corroborating):** S&P 500 closed Mon **7,686.14** vs 20-day SMA **~7,709** → below; Tue futures ~0.5% lower pre-bell. Agrees with the Alpaca read (price < 20d SMA). Calendar was usable this run.
+- **Consequence:** buy-gate check #1 fails for every candidate → no names evaluated for entry. When the regime filter is off, the right answer is cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,395.16** | Cash: **$96,827.91** | Buying power: $394,499.94 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,437.23 (balance_asof 8/31) → true session move ≈ **-$42.07 (-0.04%)**, ~flat pre-bell (matches PLTR intraday -$43.12).
+- Phase P&L **-$604.84 (-0.60%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 8/31). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~15.90** (+6.57%, up from 14.92 on 8/31) — still contained (<20) but ticking up two sessions in a row as the tape slips below its SMA; no longer at the late-Aug complacency lows (YTD low 14.13 on 8/30).
+- **WTI crude ~$87.92/bbl**, up ~2.5% on the day on **renewed US/Iran hostilities and Strait of Hormuz supply-disruption fears** — a re-pricing geopolitical risk premium, now testing multi-week resistance near $88.
+- **Macro (Tue 9/1):** ISM Manufacturing PMI (Aug), JOLTS job openings (Jul), Construction Spending — all 10:00 ET; S&P Global Mfg PMI final 9:45 ET; **Fed Gov. Barr speech 9:05 ET.** Jobs report Fri 9/4, PPI 9/10, CPI 9/11, next FOMC 9/16 (blackout 9/5–17). Labor Day was Mon 9/7... (holiday next Mon).
+
+### Held-Position Review
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$183.30** (bid $183.30-ish), **+5.53%** (unrealized +$134.35; cost basis $2,431.85, mkt value $2,566.20). Below the +15% tighten threshold ($199.76) → no stop change. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$165.77**, hwm **$188.37**, qty reserved, expires 11/11). Entered 8/13 → **~13 trading days held** (inside the 15-day time stop, and moot above +5%). Next earnings ~**Nov 2, 2026** — outside the 10-day window. News remains valuation/insider-selling noise, not a thesis break. **HOLD** — watch for +15% to tighten the trailing stop to 7%; note the 15-day time stop lands ~9/3 (moot while above +5%).
+
+### Trade Ideas — regime OFF, none evaluated for entry
+Buy gate #1 (regime) fails for everything, so no order is possible today. As a market read, watchlist leader **MRK** — which cleared checks 2–11 on 8/31 — has now **rolled off its high**: `buy_gate.sh` returns FAIL on **c9 breakout** (last-5 high 155.08 vs prior 156.90 — no fresh 3-mo high in the last 5 days) and **c10 volume** (last-5 max 411,978 vs 606,019 threshold), with the pullback shrunk to 2.6% (below the 3% band). So even setting aside the regime, the one setup we were tracking has cooled. JPM/PSX/PNC still lack volume + valid pullbacks. Force nothing while the filter is OFF.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No fresh actionable purchase disclosures worth a watchlist add since the prior run. Moot regardless — regime OFF blocks all entries, and each name must independently clear the full 11-check gate. Dropped.
+
+### Risk Factors
+- **Regime OFF and deepening (-0.98% vs SMA).** Two straight sessions below the mean with VIX ticking up; cash is the right posture. Don't anticipate a flip back ON — re-check each session.
+- **PLTR is extended** (+5.53%, high-beta AI name at ~155x earnings). A broad risk-off leg could give back the gain fast, but the 12% trailing stop ($165.77) defines the downside and no thesis break is present.
+- **US/Iran / Strait of Hormuz escalation** driving oil +2.5%; a two-sided geopolitical shock into a data-heavy week (ISM/JOLTS today, jobs Fri 9/4) ahead of the FOMC blackout.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER OFF.** SPY (761.625) closed **below** its 20-day SMA (769.16) for a second straight session and pulled further from the mean (-0.98%), so buy-gate #1 fails for every candidate and the right answer is cash. The one tracked setup (MRK) has also rolled off its high (fails c9/c10), so nothing is a live candidate even setting the regime aside. Hold **PLTR** (+5.53%, stop $165.77, ~13 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop. New buys this week 0/3, day-trades 0/3. No commit (no trades placed, per routine STEP 7). Sent the Discord decision summary; no urgent phone alert warranted (regime OFF → cash is the healthy, designed outcome; PLTR well above the -8% cut with no earnings within the window).
