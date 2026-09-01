@@ -1144,3 +1144,47 @@ No fresh actionable purchase disclosures worth a watchlist add since the prior r
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER OFF.** SPY (766.105) closed **below** its 20-day SMA (769.60), so buy-gate #1 fails for every candidate and the right answer is cash — the thin +0.41% cushion from Friday gave way to -0.45%. Notably, watchlist leader MRK finally cleared checks 2–11 (fresh breakout-on-volume, 6.1% pullback in band) but is blocked solely by the regime filter — a live candidate the day the regime turns back ON. Hold **PLTR** (+6.62%, stop $165.77, ~12 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop. New buys this week 0/3, day-trades 0/3. No commit (no trades placed, per routine STEP 7). Sent the Discord decision summary; no urgent phone alert warranted (regime OFF → cash is the healthy, designed outcome; PLTR well above the -8% cut with no earnings within the window).
+
+## 2026-09-01 (Tue) — Pre-Market Research
+
+**Decision: HOLD — no new buys. MARKET REGIME FILTER OFF (2nd session).** The deterministic Alpaca read keeps the regime **OFF**: SPY last close **766.87** < **20-day SMA 769.64** (**-0.36% below**, a shade less negative than 8/31's -0.45% but still under the line). Per the highest-priority rule, **no new long entries** regardless of any candidate's merits. Book is **PLTR-only + cash**; PLTR (+5.70%) triggers no sell-side rule and keeps its live 12% trailing stop. Regime did **not** flip since the prior read (OFF→OFF), so STEP 5 stays silent.
+
+### Market Regime Status — OFF (holding below the line)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** SPY **766.87** vs **20d SMA 769.64** (83 bars) → **766.87 < 769.64 → REGIME OFF** (-0.36%). Second straight session below; the filter has not recovered.
+- **Gemini (advisory, unreliable):** reported SPX 7,711.76 vs a 20d SMA it now quotes as 7,709.15 → "above." Gemini's SMA figure keeps drifting run-to-run (7,712.58 on 8/28, 7,709.15 today) and disagrees with the deterministic ETF-bar read; per standing practice the **Alpaca read governs**. Both agree the tape is hugging its 20-day line — a coin-flip regime, currently on the OFF side.
+- **Consequence:** buy-gate check #1 fails for every candidate → no names evaluated for entry. Regime OFF → cash is the right answer.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,398.31** | Cash: **$96,827.91** | Buying power: $394,508.76 | Positions: **1 (PLTR)** | Day trades: **0/3** | PDT: false
+- last_equity $99,437.23 (balance_asof 8/31) → true session move ≈ **-$38.92 (-0.04%)**, flat pre-bell; matches PLTR's intraday P&L (-$38.92) exactly.
+- Phase P&L **-$601.69 (-0.60%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 8/31). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~14.9** (up ~3.4% from 14.43 on 8/28) — still contained (<20) but ticking up off its YTD lows (14.13 on 8/28); consistent with a tape compressing at its 20-day SMA into Friday's jobs print.
+- **WTI crude ~$85.76** (Oct contract settle 8/31, +2.8%; ~$86 area today, +~1%) — **Middle East / US–Iran tensions** driving a geopolitical risk premium; overbought near ~$87.30 resistance. Energy is the one sector bid on this.
+- **Macro (event-dense, jobs week):** Today 9/1 — **ISM Manufacturing, Construction Spending, JOLTS (Jul)**. Wed 9/2 — **ADP employment**. **Fri 9/4 — Nonfarm Payrolls (Aug)**, the week's binary. Labor Day holiday Mon 9/7. Then PPI 9/10, CPI 9/11, FOMC 9/16.
+
+### Sector Momentum
+- **Leading:** Energy (oil bid on Middle East tensions; XOM/CVX up) — essentially the only green as most S&P sectors sold off Mon/Tue. Defensive/utility-real-estate-staples showed relative strength over the prior stretch. **Read: risk-off, energy-only leadership** — no clean durable momentum leader offering a swing entry, and it wouldn't matter with the regime OFF.
+- **Watchlist:** MRK still the closest prior gate-clearer but now **also fails c10 volume** (last-5 max 617,216 vs 630,523 threshold) in addition to c1 regime — the volume that qualified it on 8/31 has faded. JPM/PSX/PNC still lack valid pullbacks.
+
+### Earnings Watch (held positions)
+- **PLTR** next earnings ~**Nov 2, 2026** — outside the 10-day window; safe to hold. No held position reports within the next 10 trading days. (CRWD/ZS/MDT/SIG report today but none is held.)
+
+### Held-Position Review + Action
+- **PLTR** (Technology, 14 sh @ $173.70) — current **$183.60** (lastday $186.38, -1.49% on the day), **+5.70%** (unrealized +$138.55; cost basis $2,431.85, mkt value $2,570.40). Below the +15% tighten threshold (~$199.76) → no stop change. Live 12% trailing-stop GTC intact (id **c89fba0d**, stop **$165.77**, hwm **$188.37**, qty reserved, expires 11/11). Entered 8/13 → **~14 trading days held** (inside the 15-day time stop, and moot above +5% gain). Thesis intact: Q2 blowout (rev +93% y/y to $1.94B, US-commercial +149%, FY guide raised to ~$8.15B, 12th straight quarter of accelerating growth); ~10% below its $207.52 ATH; analyst median PT ~$204. The valuation/insider-selling chatter (~149x trailing P/E, Karp/Thiel trims, "$107 by year-end" technical call) is sentiment/noise, not a thesis break. **HOLD** — let it work; watch for +15% (~$199.76) to tighten the trailing stop to 7%.
+
+### Trade Ideas — regime OFF, none evaluated for entry
+Buy gate #1 (regime) fails for everything, so no order is possible today. As a market read, `buy_gate.sh MRK` returns **GATE: FAIL — c1_regime, c10_volume** (fresh 3-mo high $156.90 in last 5d PASS and a 5.8% pullback in-band, but breakout-day volume faded below the 1.5x threshold). No other watchlist name (JPM/PSX/PNC) offers a valid 3–8% pullback on qualifying volume. Today's high-volume movers are earnings gappers (CRWD/ZS/MDT reporting) and micro-cap noise — none a clean momentum-breakout swing setup. Force nothing while the filter is OFF and the market waits on Friday's jobs print.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Recent filings: Sen. Boozman (R-AR) purchases in July (PYPL 7/29, APTV 7/8, EL 7/1, CVX 7/1; GOOGL in the 8/15–22 batch) and Sen. Blumenthal (D-CT) spousal **sales** (TKNO, CVRX, filed 8/26). Idea-generation only — disclosures lag up to ~45 days, omit size/exits, are frequently options, and each name must independently clear the full 11-check gate. **Nothing actionable**, and moot regardless: regime OFF blocks all entries. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime is OFF and the tape is hugging its 20-day SMA** — a coin-flip that could resolve either way on Friday's jobs number. Don't anticipate a flip; re-check each session. Cash is the designed posture here.
+- **Jobs week is binary.** ADP (Wed) and Nonfarm Payrolls (Fri 9/4) can swing the regime hard in a holiday-shortened week; no reason to add exposure ahead of it.
+- **PLTR is extended** (+5.70%, high-beta AI name at ~149x trailing earnings). A broad risk-off leg could give back the gain fast, but the 12% trailing stop ($165.77) defines the downside and no thesis break is present.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER OFF.** SPY (766.87) closed **below** its 20-day SMA (769.64) for a second straight session, so buy-gate #1 fails for every candidate and cash is the right answer. Watchlist leader MRK, which cleared checks 2–11 on 8/31, has now also lost its volume qualification (c10 FAIL) — no candidate is even a live-on-regime-flip name today. Hold **PLTR** (+5.70%, stop $165.77, ~14 days held, next earnings ~11/02) under standard sell-side rules with its live 12% trailing stop; watch for +15% to tighten to 7%. New buys this week 0/3, day-trades 0/3. No urgent notification warranted (regime unchanged OFF — no flip; PLTR well above the -8% cut with no earnings within 3 days) — STEP 5 silent. Committed and pushed per the pre-market routine.
