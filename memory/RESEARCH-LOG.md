@@ -1184,3 +1184,56 @@ Recent disclosures (8/20–9/3) were **not actionable**: Sen. McCormick's filing
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER OFF (2nd session).** SPY (765.13) closed **below** its 20-day SMA (768.93, -0.49%), so buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** after the 9/2 PLTR stop exit. There is no held position to review and no gate-clearing candidate (prior leader MRK has faded on c9/c10; movers are junk/earnings gaps). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days, and the regime was already OFF (no fresh ON→OFF flip today). Cash sits at $99,147.92 awaiting a post-jobs-report setup once the regime turns back ON. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-04 (Fri) — Pre-Market Routine
+
+**Decision: HOLD into the 8:30 ET jobs report — no new buy placed in this pre-market run. MARKET REGIME FILTER FLIPPED BACK ON.** The deterministic Alpaca read flipped the regime **ON** after two sessions OFF: SPY last close **773.115** > **20-day SMA 769.16** (**+0.51% above**, up from -0.49% on 9/3). Book is **FLAT — all cash, 0 positions, 0 open orders**, so there is nothing to hold and no sell-side review. Screening surfaced one candidate — **$SLB** — that clears **all 11 buy-gate checks AND has a valid 5.0% entry-timing pullback**. But this run fires on Aug-jobs-report morning (NFP 8:30 ET, a binary macro event) on a *fresh, thin* regime flip (+0.51% — the same slim cushion that flipped OFF on one down day 8/31), so per "don't anticipate the data / patience beats activity," no entry is front-run ahead of the print. **$SLB is primed as the lead live candidate for the midday scan if the regime holds ON post-jobs-report and the pullback holds support.** Research log committed per routine STEP 6.
+
+### Market Regime Status — ON (just flipped OFF→ON)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY **773.115** vs **20d SMA 769.16** (83 bars) → **773.115 > 769.16 → REGIME ON** (+0.51%). The filter was OFF on 8/31 and 9/3; a rebound session pushed price back above the SMA. This deterministic read is authoritative and governs.
+- **Gemini (corroborating):** Markets pre-open at query time; Gemini could not give a live index/SMA read this morning. Deterministic Alpaca read stands.
+- **Consequence:** buy-gate check #1 now **passes**, so candidates can be evaluated — but the flip is fresh and thin (+0.51%) into a binary jobs print. A soft NFP could flip it right back OFF, exactly as happened 8/31.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/3) → flat (no positions to mark; nothing traded overnight).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 8/31). Day-trade count 0/3. Full room to trade.
+
+### Market Context
+- **VIX ~14.32**, down ~5.8% on the day (from 15.20 on 9/3), near YTD lows — calm/complacent tape, consistent with the index reclaiming its 20d SMA.
+- **WTI crude ~$91/bbl** (~$90.65–$91.67 across sources, roughly flat), holding an elevated level after the recent Iran/Strait-of-Hormuz-driven rally. Energy remains the geopolitically-supported leadership.
+- **Macro (today is the week's binary):** **Aug Jobs Report 8:30 ET** (NFP consensus ~+55–65k rebounding from -23k in July; unemployment ~4.1–4.2%; ADP was soft at +38k on 9/2). Also 8:30 ET: Trade Balance, Jobless Claims, Productivity & Costs. **ISM Services 10:00 ET.** Labor Day holiday Mon 9/7 (market closed). PPI 9/10, CPI 9/11, next FOMC 9/16.
+
+### Sector Momentum
+- **Leading:** Technology (AI-led), Health Care, Financials, Basic Materials, and **Energy** (oil rally + geopolitics). **Lagging:** Utilities, Real Estate, Consumer Staples, Communication Services. Energy and Health Care leadership lines up with the gate-clearing names below (SLB energy; JNJ health care).
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime ON; deterministic gate screen run on breakout names
+Screened DE, JNJ, KO, MPC, VLO, SLB through `buy_gate.sh` (Alpaca-deterministic c1/c9/c10/c11):
+
+- **$SLB (Schlumberger) — Energy — LEAD LIVE CANDIDATE. GATE: PASS (all 11) + valid pullback.**
+  - **Catalyst (present-tense, documented):** Kelvion **$4.1B acquisition announced 9/1/2026** (data-center/AI-infrastructure expansion; SLB data-center revenue guided >$2B in 2026 → $4.5–5B by 2028), stacked on the **oil rally** (WTI ~$91 on Iran/Hormuz tensions) lifting oilfield-services. Analyst targets raised to $62 (Susquehanna) / $67 (Barclays OW).
+  - **Breakout:** fresh **52-week high $58.86 on 8/31** (last-5 high 60.46 > prior high 58.815) — within last 5 sessions. ✓ c9
+  - **Volume:** last-5 max **1.84M** vs 1.5x-20d threshold **1.01M**. ✓ c10
+  - **Pullback:** close **$57.44** vs $60.46 high → **5.0% pullback — squarely in the 3–8% entry band.** ✓ entry-timing
+  - **Earnings:** next **~Oct 16, 2026 (Q3)** — ~30 trading days out, well outside the 10-day window. ✓ c7
+  - **Sizing:** equity $99,147.92 → risk capped **$200**; $200 / 8% = **$2,500 max notional** → **43 shares @ ~$57.44 = ~$2,470 cost**. Cash $99,147.92 ≫ cost ✓ c5. Stop (8% init) $52.84; **12% trailing GTC $50.55**; target (×1.24) $71.23.
+  - **All 11 checks:** c1 regime ON ✓ · c2 positions (0→1≤5) ✓ · c3 sector (0→1 energy ≤2) ✓ · c4 trades (0→1≤3) ✓ · c5 cash ✓ · c6 PDT (0/3) ✓ · c7 earnings (~30d) ✓ · c8 catalyst (Kelvion+oil) ✓ · c9 breakout ✓ · c10 volume ✓ · c11 stock ✓. **GATE: PASS.**
+  - **Why not entered in this run:** pre-market fires *before* the 8:30 NFP on a fresh +0.51% regime cushion; entry-timing also wants intraday confirmation the pullback holds support on drying volume. Primed for the **midday scan** if regime holds ON post-jobs-report.
+- **$DE / $JNJ** — clear the mechanical gate (c9✓ c10✓) but pullbacks are **too shallow** (DE 1.5%, JNJ 0.9% — below the 3% floor). Entry-timing FAIL → watchlist only; wait for a 3–8% pullback.
+- **$MPC** — c9✓ c10✓ but pullback **2.6%** (just under the band). Watchlist; a touch more pullback makes it live (2nd energy name — would still fit ≤2 sector).
+- **$KO** (c9/c10 FAIL — no fresh breakout on volume) and **$VLO** (c10 FAIL — volume 121k < 143k threshold) → drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No fresh actionable purchase disclosures (8/21–9/4): Sen. McCormick's spouse bought **GS structured notes** (not stocks — we don't trade them); other recent items were amendments or sales. Nothing tradable surfaced; moot regardless — any name must independently clear the full 11-check gate. Dropped.
+
+### Risk Factors
+- **Fresh, thin regime flip (+0.51%) into a binary jobs print.** A soft Aug NFP (ADP already +38k) could flip the filter right back OFF intraday — the exact thin-cushion dynamic that flipped it OFF on 8/31. Don't pre-position; let the 8:30 print settle.
+- **SLB is energy/oil-beta.** Its breakout rests partly on an oil rally driven by Iran/Hormuz geopolitics — a two-sided risk; a de-escalation or oil reversal could sap the move. The Kelvion/AI-data-center leg is the more durable catalyst.
+- **Holiday-shortened setup:** Labor Day Mon 9/7 closed; thin post-report liquidity Friday afternoon can exaggerate moves.
+
+### Decision
+**HOLD into the 8:30 ET jobs report — no buy front-run in this pre-market run; MARKET REGIME FILTER FLIPPED BACK ON (+0.51%).** SPY (773.115) reclaimed its 20-day SMA (769.16) after two sessions OFF, re-opening the buy gate. **$SLB clears all 11 checks with a valid 5.0% entry-timing pullback** (Kelvion $4.1B AI/data-center deal 9/1 + oil rally; fresh 52-wk high on 1.8x volume; earnings ~30d out) — it is the primed lead candidate for the **midday scan** if the regime holds ON after the jobs report and the pullback holds support. Entering ahead of a binary NFP on a fresh thin +0.51% cushion would violate "don't anticipate the data," so cash stays parked this run. Watchlist: MPC/DE/JNJ (need a deeper pullback). New buys this week 0/3, day-trades 0/3. Sent a Discord alert on the OFF→ON regime flip per STEP 5. Committed and pushed to main per the pre-market routine.
