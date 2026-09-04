@@ -1184,3 +1184,49 @@ Recent disclosures (8/20–9/3) were **not actionable**: Sen. McCormick's filing
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER OFF (2nd session).** SPY (765.13) closed **below** its 20-day SMA (768.93, -0.49%), so buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** after the 9/2 PLTR stop exit. There is no held position to review and no gate-clearing candidate (prior leader MRK has faded on c9/c10; movers are junk/earnings gaps). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days, and the regime was already OFF (no fresh ON→OFF flip today). Cash sits at $99,147.92 awaiting a post-jobs-report setup once the regime turns back ON. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-04 (Fri) — Market-Open Routine (pre-market entry was missing; run inline)
+
+**Decision: HOLD — no new buys. REGIME FLIPPED BACK ON, but the sole gate-clearer (MPC) fails the fresh-quote execution re-validation.** After two sessions OFF (8/31, 9/3), the deterministic Alpaca read flipped the regime **ON** today: SPY **772.505** > **20d SMA 769.12** (**+0.44%**). New buys are permitted again. Screening the energy/refiner breakout names that hit fresh 52-week highs on the oil rally, **MPC (Marathon Petroleum) is the only name that passes all 11 deterministic gate checks** — but its live bid/ask is an unreliable **~11% spread** and it is parabolically extended (+30% in a month), so a market order risks filling near the ask (~$405) ABOVE the 9/3 breakout high, which STEP 3 says to skip. Book is **FLAT — all cash, 0 positions, 0 open orders**; no sell-side review to run. No trades placed → no commit (routine STEP 7).
+
+### Market Regime Status — ON (flipped back on, +0.44%)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY **772.505** vs **20d SMA 769.12** (84 bars) → **772.505 > 769.12 → REGIME ON** (+0.44%). The filter was OFF 8/31 & 9/3; the hot jobs print (see below) snapped the tape back above its SMA. This deterministic read is authoritative.
+- **Consequence:** buy-gate check #1 now PASSES for candidates → names are evaluated for entry for the first time in over a week.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/3) → flat vs prior session (no positions to mark).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 8/31). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~14.1–14.2** (down ~5.8% on the day, from 14.32 on 9/3; briefly under 14 this morning) — very contained/complacent, near YTD lows.
+- **Aug jobs report (released 8:30 ET today):** NFP **+162k** — a large **beat** (consensus ~55–65k); unemployment held **4.1%**; AHE +0.3% m/m (+3.1% y/y); prior months revised **+55k** net. **Hawkish market reaction:** dollar up, 2y yield >4.39% / 10y >4.78%, gold −$80, and increased odds of a **September rate hike**. Rate-sensitive risk faces a headwind even as the index sits above its SMA.
+- **WTI crude ~$91/bbl**, steadying after a ~9% three-day rally on renewed Iran / Strait-of-Hormuz strike risk — the catalyst driving refiners/energy to fresh highs.
+- **Macro:** Labor Day holiday Mon 9/7 (market closed). PPI 9/10, CPI 9/11, next FOMC 9/16.
+
+### Sector Momentum
+- Energy names (PSX, MPC, VLO, COP, FCX) printed fresh 52-week/multi-month highs on the oil rally; Energy leads YTD (~+43%). This week's tape leadership was mixed (Comm Services/Tech firm; Energy this week's read varied by source). Refiners are the cleanest momentum-breakout cohort right now.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime ON; deterministic gate run on energy breakout cohort
+Ran `buy_gate.sh` (all fail-closed research inputs substantiated where noted) on the fresh-high energy names:
+- **MPC — GATE: PASS (all 11).** c9 breakout PASS (last5 high 398.005 vs prior 369.01), c10 volume PASS (9/1 vol 168,465 vs 158,633 threshold), c12 shadow pullback 4.1% (in band). Earnings **Nov 3, 2026** verified (WebSearch, ~40 trading days out → c7 clears). Catalyst: oil/Hormuz rally lifting refining margins (c8). Sizing: 6 sh @ ~$381.78, cost ~$2,291, stop $351.24 (−8%), target $473.41. **BUT skipped on STEP 3 fresh-quote re-validation:** live quote **bid $364.85 / ask $405.41 (~11% spread, identical on repeat = stale single-venue print), thin tape (~4.7k sh so far)**. A market buy (routine's only buy path) risks filling near the ask ~$405 — above the 9/3 high ($398) and ~6% over the planned $381.78 entry; STEP 3 says skip when gapped/priced >5% above plan and requires spread <0.5%. MPC is also parabolic (+30% in a month), so a 4% dip off a vertical spike is a one-day pause, not a healthy sellers-drying-up pullback. **Skip — do not chase via market order into an 11% spread.**
+- **PSX — FAIL c10 volume** (last5 maxvol 148,181 vs 186,019 threshold). Breakout + 4.5% pullback present but no ≥1.5x volume confirmation.
+- **VLO — FAIL c10 volume** (120,785 vs 135,663). Breakout + 3.4% pullback but volume light.
+- **COP — FAIL c10 volume** (334,960 vs 492,741). Breakout + 3.2% pullback but volume light.
+- **FCX — FAIL c9 breakout & c10 volume** (no fresh 5-day high; volume light).
+- **MRK (prior watchlist leader) — FAIL c9 breakout & c10 volume** (setup faded; pullback collapsed to 0.6%). No longer a candidate.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No fresh actionable purchase disclosures worth a watchlist add since the prior run; moot regardless, as each name must independently clear the full 11-check gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Hot jobs print is hawkish for rate-sensitive risk.** Yields up, rate-hike odds up, into a holiday-shortened week and CPI (9/11). Regime is ON but only +0.44% — a thin cushion; a risk-off leg could flip it OFF again.
+- **MPC is parabolic (+30% in a month) and illiquid intraday.** Chasing a vertical move via a market order into an 11% spread is exactly the overpay-the-breakout error the strategy warns against.
+- **Oil/geopolitics two-sided:** WTI ~$91 on Hormuz risk; an energy spike is inflationary into CPI and a macro wildcard.
+
+### Decision
+**HOLD — no new trades.** Regime flipped back **ON** (SPY 772.505 > 20d SMA 769.12, +0.44%) after two sessions OFF, and for the first time in over a week a name cleared the full deterministic gate: **MPC passes all 11 checks** (fresh breakout on ≥1.5x volume, 4.1% pullback, earnings 11/03 verified, oil catalyst). It was **skipped on execution quality**, not on the gate: the live quote is an unreliable ~11% spread (bid $364.85 / ask $405.41, thin tape), so a market buy risks filling near ~$405 — above the 9/3 high and >5% over the planned entry (STEP 3 skip) — and MPC is parabolically extended (+30% in a month) into a hawkish hot-jobs Friday. Patience over a bad fill. The other energy breakouts (PSX/VLO/COP) fail c10 volume; FCX/MRK have faded. Book stays flat, all cash ($99,147.92). New buys this week 0/3, day-trades 0/3. No commit (no trades placed, per routine STEP 7). MPC/PSX/VLO stay on the watchlist for a clean entry (tighter spread / genuine sub-average-volume pullback) once the tape settles.
