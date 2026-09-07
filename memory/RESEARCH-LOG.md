@@ -1184,3 +1184,47 @@ Recent disclosures (8/20–9/3) were **not actionable**: Sen. McCormick's filing
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER OFF (2nd session).** SPY (765.13) closed **below** its 20-day SMA (768.93, -0.49%), so buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** after the 9/2 PLTR stop exit. There is no held position to review and no gate-clearing candidate (prior leader MRK has faded on c9/c10; movers are junk/earnings gaps). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days, and the regime was already OFF (no fresh ON→OFF flip today). Cash sits at $99,147.92 awaiting a post-jobs-report setup once the regime turns back ON. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-07 (Mon) — Pre-Market Routine — LABOR DAY (market closed)
+
+**Decision: HOLD — no trades possible (market closed for Labor Day). REGIME FLIPPED BACK ON.** Today is the Labor Day holiday; US equity markets are closed, so no order can be placed regardless of any signal. This run's material finding: the market-regime filter has flipped **OFF → ON** on Friday's (9/4) close. The deterministic Alpaca read shows SPY **770.18 > 20-day SMA 769.01** (+0.15%), reversing the three-session OFF stretch (8/31–9/4). Book is **FLAT — all cash, 0 positions, 0 open orders** since the 9/2 PLTR trailing-stop exit, so there is no held position to review and no sell-side maintenance. No trades placed → commit the research log per routine STEP 6. Next actionable session: **Tue 9/9** pre-market.
+
+### Market Regime Status — ON (flipped OFF→ON on 9/4 close)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **770.18** vs **20d SMA 769.01** (82 bars) → **770.18 > 769.01 → REGIME ON** (+0.15%). Authoritative read. The filter was OFF 8/31–9/4 (last committed pre-market 9/3: SPY 765.13 < 768.93); Friday's Aug jobs report pushed the tape back above the line.
+- **Gemini (corroborating):** S&P 500 **7,718.60** (9/4 close) vs 20d SMA **7,708.67** → above. Agrees with the Alpaca read.
+- **Consequence:** buy-gate check #1 now PASSES. But the cushion is thin (+0.15%) and today is a holiday — no entry is possible, and any Tuesday entry needs a fresh confirming read plus the full 11-check gate on live data.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/4) → flat vs prior (no positions to mark; book all cash since the 9/2 PLTR exit booked -$111.77 realized).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (new week from Tue 9/8, since Mon 9/7 is a holiday). Day-trade count 0/3.
+
+### Market Context (as of last session, Fri 9/4)
+- **VIX ~14.5** (9/4 close 14.53, up slightly from 14.32; briefly touched ~16–17 midweek before cooling). Subdued (<20), well below its ~18.3 200-day MA — a benign vol backdrop consistent with the tape reclaiming its 20d SMA.
+- **WTI crude ~$92/bbl** ($91.7–$92.6, testing channel top ~$93), still elevated on **Iran / Strait-of-Hormuz** strike risk. Energy remains a leadership tilt and a two-sided oil/inflation wildcard into CPI.
+- **Macro (heavy cluster ahead):** Mon 9/7 Labor Day (closed). Tue 9/8 NFIB, Consumer Credit. **Thu 9/10 PPI (Aug), Wed/Thu jobless claims.** **Fri 9/11 CPI (Aug)** — the week's binary. **FOMC 9/15–16** (Gemini flags a non-trivial hawkish/rate-hike probability). A dense, two-sided macro run — a reason for caution on any Tuesday entry even with the regime back ON.
+
+### Sector Momentum (Fri 9/4)
+- **Leading:** Materials (+1.7% on 9/4), Communication Services (+1.4%), Technology (software-led rebound). **Mixed/soft:** Dow (-0.3% on the week) with Industrials/cyclicals uneven. Energy firm on the oil bid. No single clean, durable momentum leader offering a textbook 3–8% pullback swing entry.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (-$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime ON, but market closed today; evaluate live on 9/9
+Regime check now passes, so candidates are screened as market reads for Tuesday. **No order is placed today (holiday).**
+
+- **$CHPT (ChargePoint, Consumer Discretionary/EV-charging)** — deterministic `buy_gate.sh` returns **GATE: PASS (all 11 checks)** at entry ~$9.91: c9 breakout (last-5 high $10.235 > prior $8.47), c10 volume (last-5 max 632,762 vs 79,773 threshold — huge), pullback 3.2% (in band), c7 earnings none (reported 9/2, next ~90d out), sizing 252 sh @ ~$9.91, notional $2,497, risk $200, stop $9.12, target $12.29. **JUDGMENT: NOT a quality entry — watchlist only, re-evaluate 9/9.** The "breakout" is a **~75% single-session earnings gap + short squeeze** (traded $5–6 all August, spiked to $10.28 on 9/3–9/4), a ~$10 high-volatility name — a parabolic squeeze, not the clean breakout-and-orderly-pullback the strategy trades. The pullback is off a 1–2 day parabola and still on heavy (not drying-up) volume, failing the entry-timing spirit ("volume on the pullback below average / sellers drying up / holds key support"). This is the same post-earnings-gap pattern the 9/3 run rejected for SNOW (+23.6%), only more extreme. A mechanical PASS is a necessary, not sufficient, condition — patience wins here. Re-screen on live data Tuesday; these squeeze names can move 20%+/day and the setup may not exist by then.
+- **$MRK (Merck, Health Care)** — prior watchlist leader; `buy_gate.sh` **FAIL**: c9 breakout (last-5 high 152.54 < prior 156.90 high), c10 volume (last-5 max 425,450 < 629,646 threshold), pullback only 1.4% (out of band). The setup that was one regime-flip away on 8/31 has **fully faded** and is no longer a live candidate.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No fresh actionable purchase disclosures since the prior run; recent items were sales, structured notes (GS notes — not stocks), or municipal bonds — none tradable under our stocks-only rule. Moot regardless: each name must independently clear the full 11-check gate, and the market is closed today. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime cushion is thin (+0.15%) and just flipped.** One modest down day flips it OFF again; don't over-anticipate. Confirm with a fresh read Tuesday before any entry.
+- **Dense two-sided macro this week:** PPI (9/10), CPI (9/11), FOMC (9/15–16) with a live hawkish/rate-hike risk. Forcing a low-quality entry (e.g. a CHPT squeeze) into this cluster is exactly the trade the discipline prevents.
+- **Oil/geopolitics:** WTI ~$92 on Hormuz strike risk — an energy spike is inflationary into CPI and a macro wildcard.
+- **No clean gate-clearing quality candidate exists yet:** CHPT passes mechanically but is a squeeze; MRK has faded. Nothing to force even with the regime back ON.
+
+### Decision
+**HOLD — no trades (market closed for Labor Day). Regime flipped OFF→ON on the 9/4 close (SPY 770.18 > 20d SMA 769.01).** Book is flat, all cash ($99,147.92); no held position to manage. The regime filter passing re-opens the buy side for Tuesday 9/9, but (a) no order is possible today, and (b) the only gate-passing name, CHPT, is a ~75% earnings short-squeeze parabola I decline on judgment — a mechanical PASS is not a mandate to buy, and patience beats a low-quality entry into a PPI/CPI/FOMC week. MRK has faded off the gate. New buys this week 0/3, day-trades 0/3. Watchlist for the 9/9 pre-market: re-screen CHPT on fresh data (only if it forms a real pullback that holds, not a squeeze fade) and hunt for a clean breakout-on-volume leader offering a valid 3–8% pullback. Committed and pushed to main per the pre-market routine.
