@@ -1228,3 +1228,45 @@ No fresh actionable purchase disclosures since the prior run; recent items were 
 
 ### Decision
 **HOLD — no trades (market closed for Labor Day). Regime flipped OFF→ON on the 9/4 close (SPY 770.18 > 20d SMA 769.01).** Book is flat, all cash ($99,147.92); no held position to manage. The regime filter passing re-opens the buy side for Tuesday 9/9, but (a) no order is possible today, and (b) the only gate-passing name, CHPT, is a ~75% earnings short-squeeze parabola I decline on judgment — a mechanical PASS is not a mandate to buy, and patience beats a low-quality entry into a PPI/CPI/FOMC week. MRK has faded off the gate. New buys this week 0/3, day-trades 0/3. Watchlist for the 9/9 pre-market: re-screen CHPT on fresh data (only if it forms a real pullback that holds, not a squeeze fade) and hunt for a clean breakout-on-volume leader offering a valid 3–8% pullback. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-08 (Tue) — Pre-Market Routine — first actionable session post-Labor-Day
+
+**Decision: HOLD — no trades. Regime ON but no quality setup; two mechanical GATE PASSes (CHPT, DG) both declined on entry-timing/quality.** Book is FLAT — all cash ($99,147.92), 0 positions, 0 open orders — since the 9/2 PLTR trailing-stop exit, so no held-position review or stop maintenance. The regime filter is ON (SPY 770.18 > 20d SMA 769.01, +0.15%) but the cushion is thin, and no candidate offers the clean breakout + orderly 3–8% pullback the strategy trades. New buys this week 0/3; day-trades 0/3.
+
+### Market Regime Status — ON (thin, +0.15%)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **770.18** vs **20d SMA 769.01** (82 bars) → **770.18 > 769.01 → REGIME ON** (+0.15%). Authoritative read; unchanged from the 9/7 read (last close is still Fri 9/4 — Mon 9/7 was Labor Day, market closed). Buy-gate check #1 PASSES, but a single modest down day flips it OFF again.
+- **Gemini:** could not return live SPY/SMA data (no market-data access) — the deterministic Alpaca read stands as authoritative.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/4) → flat vs prior (all cash since the 9/2 PLTR exit booked -$111.77 realized).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week of Mon 9/7; Mon was a holiday). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~15.9** (9/8 spot 15.89; 9/7 close 15.30, up from 14.53 on 9/4) — still subdued (<20) and ~22% below its ~18.6 long-run average, but ticking up off its early-Sept YTD lows into the inflation data. Benign but firming.
+- **WTI crude ~$93–94/bbl** (~$93.7) — elevated and testing the channel top on continued Iran / Strait-of-Hormuz strike risk. Energy stays a leadership tilt and a two-sided oil/inflation wildcard into CPI.
+- **Macro (dense, two-sided week):** Today 9/8 — Consumer Credit (3:00 ET), light. **Thu 9/10 PPI (Aug), 8:30 ET.** **Fri 9/11 CPI (Aug), 8:30 ET** — the week's binary, the last major inflation print before the Fed. **FOMC 9/15–16** (decision + SEP/dot-plot Wed 9/16). Aug jobs (released 9/4) were soft-ish: +162k NFP, unemployment 4.1%. A genuinely two-sided cluster — a reason for caution on any entry even with the regime ON.
+
+### Sector Momentum
+- **Leading (early Sept):** Industrials (+2.6% median through 9/4, XLI leading), Energy (firm on the oil bid), Technology (software/chip rebound). **August leaders:** Energy +7.4%, InfoTech +6.4%, Health Care +4.9%, Materials +4.5%. Energy is the YTD standout (~+41%). No single clean, durable leader is offering a textbook 3–8% pullback swing entry right now.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (-$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime ON; two mechanical GATE PASSes, both DECLINED on judgment
+- **`$CHPT` (ChargePoint, Consumer Discretionary / EV-charging)** — `buy_gate.sh` returns **GATE: PASS (all 11 checks)** at entry ~$9.91: c9 breakout (last-5 high $10.235 > prior $8.47), c10 volume (last-5 max 632,762 vs 79,773 threshold — huge), pullback 3.2% (shadow check, in band), c7 earnings none (reported 9/2, next ~90d out); sizing 252 sh @ ~$9.91, notional $2,497, risk $200, stop $9.12, target $12.29. **JUDGMENT: DECLINE — watchlist only, unchanged from the 9/7 read.** The "breakout" is a **~75% single-session earnings gap + short squeeze** on a ~$10 high-volatility name (traded $5–6 all August, spiked to $10.28 on 9/3–9/4). It is a parabola on heavy — not drying-up — volume, which fails the entry-timing spirit ("volume on the pullback below average / sellers drying up / holds key support"). A mechanical PASS is necessary, not sufficient; this is the same post-earnings-gap pattern rejected for SNOW (9/3) and CHPT itself (9/7). Patience wins.
+- **`$DG` (Dollar General, Consumer Staples)** — `buy_gate.sh` returns **GATE: PASS (all 11 checks)**: c9 breakout (last-5 high $133.825 > prior $132.32 — a marginal +1.1% new high), c10 volume (last-5 max 208,429 vs 199,539 threshold), c7 earnings clear (reported **8/27**, next ~**12/3**, outside the 10-day window); sizing 18 sh @ ~$133.12, cost $2,396, risk $200, stop $122.47, target $165.07. **JUDGMENT: DECLINE — no pullback / chasing.** The **pullback shadow check FAILS at 0.5%** (pinned at its highs), and DG is gapping **+5.2% pre-market to ~$140** today — i.e. it is *extending*, not offering the "first pullback of 3–8%" the entry rules require. Buying a +5% gap with no pullback is chasing the move ("do not buy breakouts the moment they happen — you will overpay"). Not a valid entry.
+- **`$MRK` (Merck)** — prior watchlist leader; `buy_gate.sh` still **FAIL** (c9 breakout: last-5 high 152.54 < prior 156.90; pullback collapsed). Fully faded, no longer a live candidate.
+- Screened and rejected mechanically: `$NVDA` (FAIL c9/c10 — no fresh breakout, volume light), `$LRCX` (FAIL c9), `$PHM` (FAIL c9/c10), `$MCO` (FAIL c9), `$HAS` (FAIL c9/c10). Today's other high-volume movers were junk micro-caps (BNC +82%, GMEX, ISPC, WYHG, SLE) plus post-earnings/news gaps (ORCL — reports earnings today, disqualified on c7 anyway) — none a clean momentum-breakout swing setup.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Recent disclosures (8/25–9/8): Rep. Cleo Fields → AAPL ($1–15k, traded 8/12, filed 9/2); Rep. John McGuire → NVDA ($1–15k, traded 8/18, filed 9/2); Sen. Whitehouse → LRCX ($1–15k, traded 8/12, filed 9/1); Pelosi household → BE (Bloom Energy, multi-million, traded 7/24–7/28, filed 8/21 — BE joining the S&P 500). **Not actionable:** disclosures lag ~45d and omit size/exits; each name must independently clear the full 11-check gate. NVDA and LRCX both FAIL the gate today (above); AAPL/BE not evaluated as buys — no gate-clearing quality setup, and STOCK-Act names are never a buy reason. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime cushion is razor-thin (+0.15%).** One modest down day flips the filter OFF again; don't over-anticipate — confirm a fresh read before any entry.
+- **Dense two-sided macro:** PPI (9/10), CPI (9/11), FOMC (9/15–16). Forcing a low-quality entry (a CHPT squeeze, a DG chase) into this cluster is exactly the trade the discipline prevents.
+- **No clean quality candidate exists.** The only two gate-PASS names are a parabolic squeeze (CHPT) and a no-pullback gap-extension (DG); MRK has faded. Nothing to force even with the regime ON.
+
+### Decision
+**HOLD — no new trades.** Regime is ON (SPY 770.18 > 20d SMA 769.01, +0.15%) but no candidate offers a clean breakout + orderly 3–8% pullback: CHPT is a ~75% EV earnings-squeeze parabola (declined, same as 9/7) and DG has no pullback (0.5%, gapping +5% — chasing), both declined on entry-timing/quality despite mechanical GATE PASSes; MRK has faded off the gate. Book stays flat, all cash ($99,147.92). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days on any holding (there are none), and no regime flip today (already ON since 9/4). Watchlist for the next pre-market: re-screen CHPT only if it forms a *real* pullback that holds (not a squeeze fade), DG only on a genuine 3–8% pullback to support, and hunt for a clean breakout-on-volume leader in the Industrials/Energy/Tech leadership. Force nothing into the PPI/CPI/FOMC week. Committed and pushed to main per the pre-market routine.
