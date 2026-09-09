@@ -1270,3 +1270,43 @@ Recent disclosures (8/25–9/8): Rep. Cleo Fields → AAPL ($1–15k, traded 8/1
 
 ### Decision
 **HOLD — no new trades.** Regime is ON (SPY 770.18 > 20d SMA 769.01, +0.15%) but no candidate offers a clean breakout + orderly 3–8% pullback: CHPT is a ~75% EV earnings-squeeze parabola (declined, same as 9/7) and DG has no pullback (0.5%, gapping +5% — chasing), both declined on entry-timing/quality despite mechanical GATE PASSes; MRK has faded off the gate. Book stays flat, all cash ($99,147.92). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days on any holding (there are none), and no regime flip today (already ON since 9/4). Watchlist for the next pre-market: re-screen CHPT only if it forms a *real* pullback that holds (not a squeeze fade), DG only on a genuine 3–8% pullback to support, and hunt for a clean breakout-on-volume leader in the Industrials/Energy/Tech leadership. Force nothing into the PPI/CPI/FOMC week. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-09 (Wed) — Market-Open Routine — pre-market entry missing, research run inline
+
+**Decision: HOLD — no new trades; MARKET REGIME FILTER OFF. Regime flipped ON→OFF on the 9/8 close.** Today's pre-market entry was missing (pre-market routine did not produce a 9/9 entry), so the research steps were run inline before any decision, per market-open STEP 1. The deterministic Alpaca read shows SPY **763.85 < 20-day SMA 768.33 (-0.58%)**, so buy-gate check #1 fails for every candidate and no order is possible — the right answer is cash, and the book is already **flat, all cash**. Book is FLAT (0 positions, 0 open orders) since the 9/2 PLTR trailing-stop exit, so there is no held-position review or stop maintenance. New buys this week 0/3; day-trades 0/3. No commit (no trades placed) per routine STEP 7.
+
+### Market Regime Status — OFF (flipped ON→OFF on 9/8 close)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **763.85** vs **20d SMA 768.33** (83 bars) → **763.85 < 768.33 → REGIME OFF** (-0.58%). Authoritative read. The thin ON stretch (9/4–9/8, cushion only +0.15%) has reversed; one modest down day flipped it back OFF as flagged in the 9/8 risk note.
+- **Gemini (corroborating):** S&P 500 **7,673.52** (9/8 close) vs 20d SMA **7,714.72** → below. Agrees with the Alpaca read (both say price < 20d SMA).
+- **Consequence:** buy-gate check #1 fails for every candidate → no names evaluated for entry. When the regime filter is off, the right answer is cash — and the book is already all cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/8) → flat vs prior (no positions to mark; all cash since the 9/2 PLTR exit booked -$111.77 realized).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week of Mon 9/7; Mon was Labor Day holiday). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~15.7** (9/9 spot ~15.72, +2.75% on the day; 9/8 close 15.72, up from 15.30 on 9/7 and 14.53 on 9/4). Still subdued (<20) but firming off the early-Sept YTD lows — vol ticking up as the tape slips back below its 20d SMA into the inflation data.
+- **WTI crude ~$95/bbl** (~$95.12, +2.25% on the day, +15.8% over the month) — breaking out of a months-long triangle toward the $100 psychological level on Iran / Strait-of-Hormuz strike risk (strikes on Iranian tankers, limited Hormuz traffic). Energy is the clear leadership and a two-sided oil/inflation wildcard into CPI.
+- **Macro (dense, two-sided week):** **Thu 9/10 PPI (Aug) + jobless claims, 8:30 ET.** **Fri 9/11 CPI (Aug), 8:30 ET** — the week's binary, the last major inflation print before the Fed. **FOMC 9/15–16** (decision Wed 9/16, 2:00 ET). A genuinely two-sided cluster; with the regime now OFF, cash is the designed posture — don't pre-position for the data.
+
+### Sector Momentum
+- **Leading:** Energy (+1.03% on 9/8; TPL +5.4%, VLO +3.3%, MPC +2.3%) on the oil breakout toward $100. **Lagging:** Health Care (-2.55% on 9/8) — AMGN -10%+ after Novartis' pelacarsen Phase 3 miss hit its olpasiran read-through; SYK to a 52-wk low on supply-chain warnings; BSX -5.9%, ISRG -4.5%, BAX -3.7%. Energy-led tape with broad weakness elsewhere — consistent with a sub-SMA index. No clean, durable momentum leader offering a textbook 3–8% pullback swing entry.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (-$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime OFF, none evaluated for entry
+Buy gate #1 (regime) fails for everything, so no order is possible today — no candidates evaluated for entry. Prior watchlist names (CHPT — a ~75% EV earnings-squeeze parabola; DG — no pullback, gap-extension; MRK — faded off c9/c10) were all declined on 9/8 and are moot regardless with the regime OFF. Force nothing.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No fresh actionable purchase disclosures beyond the 9/8 items (AAPL/NVDA/LRCX small buys, Pelosi household BE) — all lag ~45d, omit size/exits, and each must independently clear the full 11-check gate. Moot: regime OFF blocks all entries. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime flipped OFF (-0.58% vs SMA) into PPI (9/10) / CPI (9/11) / FOMC (9/15–16).** The razor-thin +0.15% ON cushion gave way exactly as flagged; don't anticipate the data either way — cash is the designed posture.
+- **Oil/geopolitics two-sided:** WTI ~$95 breaking toward $100 on Hormuz strike risk — an energy spike is inflationary into CPI and a macro wildcard.
+- **No candidate clears the gate even setting the regime aside** (CHPT squeeze, DG chase, MRK faded). Nothing to force even if the regime flips back ON.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER OFF.** SPY (763.85) closed **below** its 20-day SMA (768.33, -0.58%), reversing the thin 9/4–9/8 ON stretch, so buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** ($99,147.92). No held position to review; no gate-clearing candidate exists (CHPT/DG/MRK all declined or faded). New buys this week 0/3, day-trades 0/3. Detailed Discord decision summary sent per market-open STEP 6. No commit — no trades placed (routine STEP 7). Cash awaits a post-CPI/FOMC setup once the regime turns back ON.
