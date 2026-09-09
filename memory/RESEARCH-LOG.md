@@ -1270,3 +1270,42 @@ Recent disclosures (8/25–9/8): Rep. Cleo Fields → AAPL ($1–15k, traded 8/1
 
 ### Decision
 **HOLD — no new trades.** Regime is ON (SPY 770.18 > 20d SMA 769.01, +0.15%) but no candidate offers a clean breakout + orderly 3–8% pullback: CHPT is a ~75% EV earnings-squeeze parabola (declined, same as 9/7) and DG has no pullback (0.5%, gapping +5% — chasing), both declined on entry-timing/quality despite mechanical GATE PASSes; MRK has faded off the gate. Book stays flat, all cash ($99,147.92). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days on any holding (there are none), and no regime flip today (already ON since 9/4). Watchlist for the next pre-market: re-screen CHPT only if it forms a *real* pullback that holds (not a squeeze fade), DG only on a genuine 3–8% pullback to support, and hunt for a clean breakout-on-volume leader in the Industrials/Energy/Tech leadership. Force nothing into the PPI/CPI/FOMC week. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-09 (Wed) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. Market regime filter just flipped ON→OFF (SPY 766.06 < 20d SMA 768.66, −0.34%), so the buy side is CLOSED today.** Book is FLAT — all cash ($99,147.92), 0 positions, 0 open orders — so no held-position review or stop maintenance. No trade ideas are screened today: the strategy generates ideas only when regime is ON, and it isn't. New buys this week 0/3; day-trades 0/3.
+
+### Market Regime Status — OFF (flipped ON→OFF)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **766.06** vs **20d SMA 768.66** → **766.06 < 768.66 → REGIME OFF** (−0.34%). Authoritative read. This is a **flip from ON→OFF**: the prior three reads (9/4, 9/7, 9/8) all showed SPY 770.18 > SMA 769.01 (+0.15%) with a razor-thin cushion I flagged as one down day from flipping — it has now flipped. Buy-gate check #1 FAILS → no new buys today.
+- **Gemini (index-level cross-check, non-authoritative):** S&P 500 index closed **7,675.28** vs its 20-day SMA **7,714.72** → also **below** (−0.51%). Agrees with the deterministic Alpaca SPY read. Regime is OFF on both the ETF (authoritative) and index reads.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-09-08
+- last_equity $99,147.92 → flat vs prior committed read (all cash since the 9/2 PLTR trailing-stop exit; nothing traded 9/7–9/8).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week of Mon 9/7; Mon was Labor Day). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~15.8** (9/9 spot 15.79, +0.45%) — still subdued (<20) but ticking up off its early-Sept lows into the inflation data. Benign but firming, consistent with the regime softening.
+- **WTI crude ~$94–95/bbl** (~$94.6, +1.7%) — elevated and breaking out of a symmetrical triangle, testing ~$94.4 with $95/$100 upside targets on continued Strait-of-Hormuz strike risk. An energy/oil spike is inflationary directly into Thursday's PPI and Friday's CPI — a two-sided macro wildcard.
+- **Macro (dense, two-sided week):** Today 9/9 is light (ADP weekly, ECB speakers). **Thu 9/10 PPI (Aug), 8:30 ET** — consensus looking for a *stronger rebound* (~5.3% y/y headline chatter). **Fri 9/11 CPI (Aug), 8:30 ET** — the week's binary, consensus +0.4% m/m / ~3.4% y/y, the last major inflation print before the Fed. **FOMC 9/15–16** (decision + SEP/dot-plot 9/16) with a live 25bp *hike* being debated. Aug NFP (released 9/4) was soft-ish (+162k, u-rate 4.1%). The regime flipping OFF right ahead of this cluster reinforces caution.
+
+### Sector Momentum
+- **Weekly (through 9/8):** Utilities +1.76%, Info Tech +1.29%, Industrials +0.93%, Real Estate +0.43% leading; **Health Care −3.38%**, Materials −1.78%, Consumer Staples −1.46%, Energy −0.69%, Financials −0.66% lagging. 9/8 single day: Info Tech best (+0.89%), Health Care worst (−0.84%). Rotation is defensive/mixed (Utilities leading), not a clean risk-on leadership tape — another sign the market is losing momentum. Moot for entries today with the regime OFF.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas
+- **None screened.** Per strategy, ideas are generated only when the regime filter is ON. It flipped OFF today, so the correct answer is cash — no candidates evaluated. Prior watchlist names (CHPT squeeze, DG gap-extension, MRK faded) remain non-entries regardless and are now moot under the OFF filter.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Not run for entries — regime is OFF and no idea can clear check #1 today. STOCK-Act names are never a buy reason and must independently pass the full 11-check gate, which is impossible with the regime filter failing. No gate impact.
+
+### Risk Factors
+- **Regime is now OFF into the biggest macro week of the month** (PPI 9/10, CPI 9/11, FOMC 9/15–16). The temptation is to anticipate a bounce and pre-position — don't. Wait for a confirmed flip back ON on a fresh read.
+- **Oil breaking higher (~$94–95, Hormuz risk)** feeds directly into PPI/CPI — a hotter print + a possible Fed hike is a genuine two-sided downside catalyst for equities this week.
+- **Defensive rotation** (Utilities leading, Health Care −3.4% on the week) signals the tape is de-risking, corroborating the regime flip.
+
+### Decision
+**HOLD — no new trades. The market regime filter flipped ON→OFF today (SPY 766.06 < 20d SMA 768.66, −0.34%; index cross-check 7,675.28 < 7,714.72 agrees), closing the buy side.** Book stays flat, all cash ($99,147.92); there is no held position to manage or protect. With the regime OFF, cash is the correct posture — and it is the *right* posture heading into a PPI/CPI/FOMC cluster with oil breaking higher. New buys this week 0/3, day-trades 0/3. Per STEP 5, a regime flip ON→OFF is a notify-worthy event: sending one Discord alert. Watchlist for the next pre-market: confirm whether the filter flips back ON on a fresh read before generating any ideas; force nothing into this week's inflation data. Committed and pushed to main per the pre-market routine.
