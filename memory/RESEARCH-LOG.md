@@ -1270,3 +1270,42 @@ Recent disclosures (8/25–9/8): Rep. Cleo Fields → AAPL ($1–15k, traded 8/1
 
 ### Decision
 **HOLD — no new trades.** Regime is ON (SPY 770.18 > 20d SMA 769.01, +0.15%) but no candidate offers a clean breakout + orderly 3–8% pullback: CHPT is a ~75% EV earnings-squeeze parabola (declined, same as 9/7) and DG has no pullback (0.5%, gapping +5% — chasing), both declined on entry-timing/quality despite mechanical GATE PASSes; MRK has faded off the gate. Book stays flat, all cash ($99,147.92). New buys this week 0/3, day-trades 0/3. Silent per routine STEP 5 — no held position at risk, no earnings within 3 days on any holding (there are none), and no regime flip today (already ON since 9/4). Watchlist for the next pre-market: re-screen CHPT only if it forms a *real* pullback that holds (not a squeeze fade), DG only on a genuine 3–8% pullback to support, and hunt for a clean breakout-on-volume leader in the Industrials/Energy/Tech leadership. Force nothing into the PPI/CPI/FOMC week. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-14 (Mon) — Pre-Market Routine
+
+**Decision: HOLD — no trades. Regime flipped ON→OFF (SPY 764.14 < 20d SMA 766.84, −0.35%); buy side is CLOSED today.** Book is FLAT — all cash ($99,147.92), 0 positions, 0 open orders — since the 9/2 PLTR trailing-stop exit, so no held-position review or stop maintenance. With the regime filter OFF, no candidate is even screened for entry (the highest-priority rule fails check #1), and the FOMC decision lands in 2 days (Wed 9/16). New buys this week 0/3; day-trades 0/3. The right answer when the regime is off is cash.
+
+### Market Regime Status — OFF (flipped ON→OFF)
+- **Alpaca (deterministic, `buy_gate.sh`):** SPY last close **764.14** (Fri 9/11) vs **20d SMA 766.84** → **764.14 < 766.84 → REGIME OFF** (−0.35%). Authoritative read. This is a **flip from ON→OFF** versus the last committed pre-market (9/8: SPY 770.18 > 769.01, +0.15%). The razor-thin +0.15% cushion flagged on 9/8 gave way — the tape sold off through the 9/10 PPI / 9/11 CPI week and closed back below its 20-day line. Buy-gate check #1 now FAILS → no new buys today.
+- **Consequence:** buy side closed. No entry is possible regardless of setup quality; per strategy, do not close winners on the filter alone (moot — book is flat).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 2026-09-11) → flat vs prior (all cash since the 9/2 PLTR exit booked −$111.77 realized; no marks to move the book).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week of Mon 9/14). Day-trade count 0/3.
+
+### Market Context
+- **VIX ~15.84** (9/11 close 15.84, down 11% after the CPI print). It spiked to **~17.89 on 9/10** — its first close above 17 in 28 sessions — on oil/inflation worries, then cooled post-CPI. Still <20 but firmer and more two-sided than the mid-14s of late August; consistent with a tape that has slipped below its 20d line.
+- **WTI crude ~$102–103/bbl** — a sharp **+2% jump today and up hard from ~$93 last week** on renewed Middle East supply worries / infrastructure bottlenecks. A ~$10 oil move in a week is a real inflationary impulse and a headwind into the FOMC — reinforces the risk-off/regime-off read.
+- **Macro (FOMC week):** **FOMC 9/15–16 — decision Wed 9/16 2:00 PM ET with the SEP/dot-plot + Chair press conference** — the week's binary. Also **Retail Sales + Import/Export Prices Wed 9/16**, **Empire State Manufacturing today 9/14**. CPI (Aug, 9/11), PPI (Aug, 9/10) and Aug jobs (9/4) are already out. The big event risk is 2 days ahead.
+
+### Sector Momentum
+- **Leading (week ending 9/11):** Energy (+2.0%, on the oil bid), Communication Services (+1.1%), Technology (+1.1% median for September). YTD leadership stays Tech / Financials / Energy. No single clean, durable leader offering a textbook 3–8% pullback swing entry — and moot with the regime off.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — NONE (regime OFF)
+Regime filter is OFF, so no ideas are screened for entry today — the highest-priority rule (buy-gate check #1) fails, and a mechanical gate PASS would be irrelevant. Pre-market movers were junk microcaps (SCNI, NCT, ELMT, LHSW, SOAR, CRBP) and software gaps (CRWD +5.3%, OKTA +4.95%, PANW +4.66%) — none a clean momentum-breakout swing setup, and all moot with the buy side closed. Prior watchlist names (CHPT squeeze, DG gap, MRK faded) are not re-screened while the regime is off.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+No actionable purchase disclosures 8/31–9/14 — only vague filings (Sen. Whitehouse 9/2, Sen. Blumenthal 8/31) with no ticker/direction surfaced. Moot regardless: regime OFF closes the buy side, and any name must independently clear the full 11-check gate. Dropped — no gate impact.
+
+### Risk Factors
+- **Regime is OFF and event risk is imminent.** SPY below its 20d line into an **FOMC decision + dot-plot (Wed 9/16)** is exactly the environment to hold cash — an overnight/decision gap is the largest single two-sided risk this week.
+- **Oil spike (~+2% to ~$102–103, up from ~$93 last week).** A fast oil move is inflationary and a hawkish-Fed input right before the FOMC — a fresh macro wildcard versus last week.
+- **Firming volatility.** VIX printed >17 on 9/10 for the first time in 28 sessions; the calm mid-14s regime has broken, corroborating the sub-SMA tape.
+
+### Decision
+**HOLD — no new trades.** The market regime filter has flipped **ON→OFF** (SPY 764.14 < 20d SMA 766.84, −0.35%), which closes the buy side outright — no candidate is screened, no order is possible. Book stays FLAT, all cash ($99,147.92); nothing to manage (no positions, no stops, no earnings/time clocks). Regime off + an FOMC decision two days out (Wed 9/16) + a sharp oil spike = a textbook cash environment; patience is the edge. New buys this week 0/3, day-trades 0/3. **Discord alert sent per STEP 5** (regime filter flipped ON→OFF — an enumerated urgent trigger). Watchlist for the next pre-market: reconfirm the regime read first — only if SPY reclaims its 20d SMA does the buy side reopen — then hunt for a clean breakout-on-volume leader offering a valid 3–8% pullback in the Energy/Comm-Services/Tech leadership, and force nothing around the FOMC. Committed and pushed per the pre-market routine.
