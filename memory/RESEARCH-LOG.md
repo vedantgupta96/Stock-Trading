@@ -1312,3 +1312,29 @@ Not run for candidate generation this session — the regime is OFF (buy-gate #1
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED OFF.** SPY (760.76) closed **below** its 20-day SMA (766.06, -0.69%) per the deterministic `buy_gate.sh` read, flipping the filter ON→OFF vs 9/8's razor-thin +0.15%. Buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** since the 9/2 PLTR stop exit. No held position to review, no gate-clearing candidate, and the day sits directly ahead of the **FOMC decision Wed 9/16**. New buys this week 0/3, day-trades 0/3. **Discord alert sent** per routine STEP 5 — the regime just flipped ON→OFF (a genuine ON→OFF transition), which is the one notify-worthy event this run. Cash sits at $99,147.92 awaiting a clean post-FOMC setup once a fresh pre-market read confirms the regime back ON. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-16 (Wed) — Market-Open Routine — REGIME STILL OFF; FOMC DECISION DAY
+
+**Decision: HOLD — no new buys. Market regime filter OFF.** Deterministic Alpaca read (`buy_gate.sh`): **SPY last close 758.94 < 20-day SMA 764.88 (-0.78% below)** → buy-gate #1 FAILS for every candidate. The filter stays OFF and drifts deeper vs 9/15 (-0.69%). Per the highest-priority rule, no new long entries today. Book is **FLAT — all cash $99,147.92, 0 positions, 0 open orders** (unchanged since the 9/2 PLTR trailing-stop exit), so no held-position review or stop maintenance. No trades placed → per market-open routine STEP 7, no commit needed (routine commits only if trades were placed).
+
+### Market Regime Status — OFF (buy-gate #1 FAILS, -0.78%)
+- **Alpaca (deterministic, `buy_gate.sh`):** `1. Regime (SPY > 20d SMA) FAIL [SPY 758.94 vs SMA20 764.88]` → **REGIME OFF (-0.78%)**. Authoritative. Deeper below the line than 9/15's -0.69% — the sub-SMA drift continues into the Fed.
+- SPY also FAILS c9 breakout (last-5 high 766.35 < prior 779.37) and c10 volume — no leadership even setting the regime block aside.
+- **Consequence:** buy-gate #1 fails for every name → no candidates evaluated for entry. Right answer with the regime OFF is cash — book is already all cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false. New buys this week 0/3.
+
+### Market Context
+- **VIX ~17.1–17.2** (firming, ~+0.6% on the day) — bracing for the Fed, below 20 but off its early-Sept lows.
+- **WTI crude ~$103/bbl** (-2.3% from ~$105.83 prior close) — still elevated on Iran/Hormuz risk but pulling back today.
+- **Macro — FOMC DECISION TODAY:** rate decision + SEP/dot-plot Wed 9/16 2:00pm ET. Futures price **>90% for a 25bp hike** to 3.75–4.00% (first hike since Jul 2023). The week's binary event — exactly what the discipline says not to trade into.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks.
+
+### Trade Ideas — regime OFF, none evaluated
+Buy gate #1 fails for everything; no order possible. Forcing an entry into a live FOMC decision + dot-plot with VIX firming and the tape below its 20d SMA is the exact event-risk trade the discipline prevents. Force nothing.
+
+### Decision
+**HOLD — no new trades; regime filter OFF (SPY 758.94 < 20d SMA 764.88, -0.78%).** Book stays flat, all cash ($99,147.92). No held position to manage, no gate-clearing candidate, and the FOMC decision lands today at 2pm ET (>90%-priced 25bp hike). Cash is the designed posture. New buys this week 0/3, day-trades 0/3. Discord decision summary sent per routine STEP 6. No commit per STEP 7 (no trades placed).
