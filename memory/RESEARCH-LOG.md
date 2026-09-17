@@ -1312,3 +1312,45 @@ Not run for candidate generation this session — the regime is OFF (buy-gate #1
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED OFF.** SPY (760.76) closed **below** its 20-day SMA (766.06, -0.69%) per the deterministic `buy_gate.sh` read, flipping the filter ON→OFF vs 9/8's razor-thin +0.15%. Buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** since the 9/2 PLTR stop exit. No held position to review, no gate-clearing candidate, and the day sits directly ahead of the **FOMC decision Wed 9/16**. New buys this week 0/3, day-trades 0/3. **Discord alert sent** per routine STEP 5 — the regime just flipped ON→OFF (a genuine ON→OFF transition), which is the one notify-worthy event this run. Cash sits at $99,147.92 awaiting a clean post-FOMC setup once a fresh pre-market read confirms the regime back ON. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-17 (Thu) — Pre-Market Routine — REGIME STAYS OFF (deepened post-FOMC hike)
+
+**Decision: HOLD — no new buys. MARKET REGIME FILTER REMAINS OFF (no flip).** The deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY last close 754.05 < 20-day SMA 764.63 (-1.38% below)**. The filter was already OFF on the last committed read (9/15 pre-market: SPY 760.755 < SMA 766.06, -0.69%); today it stays OFF and **deepens** (-0.69% → -1.38%) after the FOMC's 9/16 rate hike. Per the highest-priority rule, **no new long entries today** regardless of any candidate's merits. Book is **FLAT — all cash, 0 positions, 0 open orders** (unchanged since the 9/2 PLTR trailing-stop exit), so there is nothing to hold and no sell-side review to run. Cash is the designed posture with the regime OFF. No trades placed → commit the research log per routine STEP 6.
+
+### Market Regime Status — OFF (stays OFF; no flip; buy-gate #1 FAILS)
+- **Alpaca (deterministic, `buy_gate.sh`):** `1. Regime (SPY > 20d SMA) FAIL [SPY 754.05 vs SMA20 764.63]` → **REGIME OFF (-1.38%)**. This deterministic read is authoritative. It is a **deepening**, not a flip: last committed read was OFF at -0.69% (9/15); the FOMC hike (9/16) pushed SPY from 760.755 → 754.05, widening the gap below the line. Buy-gate check #1 fails for every candidate → **no names evaluated for entry.**
+- **Gemini (corroborating):** returned live index figures this run — SPX ~7,551.81 vs a computed 20-day MA ~7,659.21 → **below the 20-day average**, directionally agreeing with the authoritative Alpaca read (the two use different SPX vs SPY-ETF series and MA windows, but both say sub-SMA).
+- **Consequence:** when the regime filter is off, the right answer is cash — and the book is already all cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/16) → flat vs prior session (no positions to mark; the account has printed the same $99,147.92 every session since the 9/2 PLTR exit).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 9/14). Day-trade count 0/3.
+- Risk budget (if a setup existed): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**. Moot — regime OFF.
+
+### Market Context
+- **FOMC (9/16) — the driver of the deepening OFF read.** The Fed **raised the funds rate 25bp to 3.75–4.00%** — its first hike since 2023 — on persistently above-target inflation, with a hawkish "higher-for-longer" dot plot (median end-2026 ~4.1–4.4%, inflation not back to 2% until ~2029) under new chair Warsh. Stocks initially ticked up (S&P +0.3%) then rolled over into/after the Warsh presser (Dow -500+); market-implied odds of another hike at the late-Oct meeting rose to ~56%. Hawkish surprise → risk-off, exactly what the sub-SMA tape now reflects.
+- **VIX:** Gemini's date-guard refused a live figure this run; last read ~17.6 and firming into the Fed (9/15). A hawkish hike + a tape selloff is consistent with vol staying elevated (>15, likely firmer) — risk-off posture, not an all-clear. Treat as elevated pending the next clean read.
+- **Rates/oil:** 10-yr ~4.96%, 2-yr +5bp to ~4.71% post-decision; WTI stayed elevated (~$100+/bbl) on Iran/Strait-of-Hormuz risk — a two-sided oil/inflation wildcard reinforcing the hawkish Fed backdrop.
+- **Today's calendar (9/17):** New Residential Sales (Aug), steel-import prelim — light/second-tier; the market is still digesting yesterday's Fed, no major binary today.
+
+### Sector Momentum
+- Post-hike tape is defensive/energy-tilted with rate-sensitive growth (Technology, high-multiple names) under pressure — consistent with a sub-SMA, hawkish-Fed backdrop. No clean, durable momentum leader is offering a textbook 3–8% pullback swing entry, and it is moot with the regime OFF.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (-$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime OFF, none evaluated for entry
+Buy gate #1 (regime) fails for everything, so no order is possible today, and STEP 4 only generates ideas when the regime is ON. **No names evaluated.** Even setting the regime block aside, chasing an entry the day after a hawkish FOMC hike — with the tape rolling over and vol firm — is exactly the low-quality, event-driven trade the discipline exists to prevent. Force nothing.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Not run for candidate generation this session — the regime is OFF (buy-gate #1 fails for every name) and any surfaced disclosure would still need to independently clear the full 11-check gate, which is impossible with #1 failing. Moot; no gate impact.
+
+### Risk Factors
+- **Regime OFF and deepening (-1.38% vs SMA) after a hawkish rate hike.** The path of least resistance is a continued sub-SMA drift; don't anticipate a snap-back — wait for a fresh read to confirm the regime back ON before any entry.
+- **"Higher-for-longer" + ~56% odds of another hike (late Oct)** keeps pressure on rate-sensitive growth and multiples — a poor backdrop for momentum-breakout longs.
+- **Oil ~$100+/bbl on Hormuz risk** is inflationary and two-sided into a Fed already hiking — a further energy spike is a macro wildcard for the whole tape.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER REMAINS OFF (no flip).** SPY (754.05) closed **below** its 20-day SMA (764.63, -1.38%) per the deterministic `buy_gate.sh` read — the filter was already OFF on 9/15 (-0.69%) and deepened after the 9/16 FOMC 25bp hike. Buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** since the 9/2 PLTR stop exit. No held position to review, no gate-clearing candidate. New buys this week 0/3, day-trades 0/3. **Silent per routine STEP 5** — no held position at risk (there are none), no earnings within 3 days on any holding, and **no regime flip today** (it stayed OFF; the ON→OFF transition was already alerted on 9/15). Cash sits at $99,147.92 awaiting a clean setup once a fresh pre-market read confirms the regime back ON and a leader offers a valid, orderly 3–8% pullback that clears the full 11-check gate. Force nothing. Committed and pushed to main per the pre-market routine.
