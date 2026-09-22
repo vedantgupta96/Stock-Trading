@@ -1396,3 +1396,50 @@ Not run for candidate generation this session — the regime is OFF (buy-gate #1
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER REMAINS OFF (no flip).** SPY (761.62) closed **below** its 20-day SMA (764.26, -0.35%) per the deterministic `buy_gate.sh` read — the filter was already OFF on 9/17 (-1.38%) and today narrows toward the line on a post-FOMC rebound but stays sub-SMA. Buy-gate #1 fails for every candidate and the right answer is cash — and the book is already **flat, all cash** since the 9/2 PLTR stop exit. No held position to review, no gate-clearing candidate; macro is quiet all week (next binary is PCE 9/30). New buys this week 0/3, day-trades 0/3. **Silent per routine STEP 5** — no held position at risk (there are none), no earnings within 3 days on any holding, and **no regime flip today** (it stayed OFF; the ON→OFF transition was already alerted on 9/15). Cash sits at $99,147.92 awaiting the regime to confirm back ON and a leader to offer a valid, orderly 3–8% pullback that clears the full 11-check gate. Force nothing. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-22 (Tue) — Pre-Market Routine — REGIME FLIPPED OFF→ON (no valid pullback entry — HOLD)
+
+**Decision: HOLD — no new buys. MARKET REGIME FILTER FLIPPED OFF→ON.** The deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY last close 773.52 > 20-day SMA 764.65 (+1.16% above)**. The filter was OFF on the last committed read (9/21 pre-market: SPY 761.62 < SMA 764.26, -0.35%); today it **flips ON** after 9/21's broad rally (SPY +1.5%, its best day since early August, led by Communication Services +3.84% and Technology +2.83%). Per STEP 5 a regime flip was alerted to Discord. Despite the ON flip, **no new entry today**: the only two gate-PASS names (META, AMD) just gapped +10–12% on 9/21 and sit <1.5% off their highs — no orderly 3–8% pullback, so entry-timing discipline says wait (chasing a one-day vertical extension is exactly the low-quality entry the strategy prohibits). Book is **FLAT — all cash, 0 positions, 0 open orders** (unchanged since the 9/2 PLTR trailing-stop exit), so nothing to hold and no sell-side review. No trades placed → commit the research log per routine STEP 6.
+
+### Market Regime Status — ON (FLIPPED OFF→ON; buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`):** `1. Regime (SPY > 20d SMA) PASS [SPY 773.52 vs SMA20 764.65]` → **REGIME ON (+1.16%)**. This deterministic read is authoritative. It is a genuine **OFF→ON flip**: last committed read OFF at -0.35% (9/21); SPY rallied 761.62 → 773.52 (~+11.9 pts) on the 9/21 broad advance, clearing the line by +1.16%.
+- **Full gate on SPY (illustrative):** still FAILs c8_catalyst, c9_breakout (last-5 high 774.89 vs prior 779.37 — no fresh 3-month index high), c10_volume (last-5 maxvol 1.68M vs 1.88M threshold). The index is back above its SMA but is *repairing*, not itself breaking out to new highs on volume.
+- **Consequence:** buy-gate #1 now PASSES, so candidates may be evaluated — but every other gate + entry-timing check must still clear on judgment. One down day of ~-9 pts would re-flip it OFF; the flip is real but thin.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false
+- last_equity $99,147.92 (balance_asof 9/21) → flat vs prior session (no positions to mark; the account has printed the same $99,147.92 every session since the 9/2 PLTR exit).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 9/21). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional** (≈$2,200–2,500 cost per idea below).
+
+### Market Context
+- **VIX ~14.9, subdued** — 14.87 (9/21), holding the mid-14s it settled into post-FOMC (17.7 on 9/16 → 14.8 by 9/18). ~20% below its long-run ~18.6 average; short-term technicals lean lower. Calm tape supports the regime flip but does not itself signal a breakout entry.
+- **WTI crude ~$90–93/bbl, softening** — ~$90–91 spot (-2% on the day), down from the $100+/bbl Hormuz-risk spike into the FOMC. Easing geopolitical risk and softer demand forecasts; a disinflationary tailwind that helped Monday's rally (and pressured Energy).
+- **Macro — QUIET week.** No CPI/PPI/FOMC/PCE today: Richmond Fed Manufacturing + weekly ADP pulse today (2nd-tier), S&P Global flash PMIs 9/22–23, New Home Sales 9/24. Next binary is **PCE 9/30**; CPI 10/14, PPI 10/15, next FOMC late Oct. No event to trade into this week — the market is digesting the 9/16 hawkish 25bp hike (funds 3.75–4.00%, "higher-for-longer", ~56% odds of another late-Oct hike).
+
+### Sector Momentum
+- **Leading (9/21):** Communication Services (+3.84%) and Technology (+2.83%) — the day's rally engine. Standout single-names: Meta (+11.34%, AI "Muse" optimism), Intel (+12.17%), AMD (+9.95%), Warner Bros. Discovery (+10.79%, Paramount merger settlement). **Lagging:** Energy (XLE down with oil), rate-sensitive defensives as yields eased. Read: growth/tech leadership snapped back hard in one session — the risk is these names are now *extended*, not offering the orderly pullback our entry rule requires.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas — regime ON, candidates evaluated; NONE cleared entry timing
+Regime ON, so candidates were screened. Ran the deterministic `buy_gate.sh` across the leadership set (NVDA, META, AMD, GOOGL, AVGO, PLTR, MSFT):
+
+- **$META — GATE: PASS (mechanically), but DECLINED on entry timing.** c9 breakout PASS (last-5 high 752.96 vs prior 685.98), c10 volume PASS (1.77M vs 0.99M threshold, ~2.7x). BUT shadow pullback **1.5%** vs the required 3–12% band — META gapped ~+11% on 9/21 on the AI-Muse catalyst and sits ~1.5% off its high. Entry timing rule: *do not buy the breakout the moment it happens; wait for the first 3–8% pullback.* Buying here chases a one-day vertical. Entry ~$741, stop $681.99 (-8%), target $919 (+24%), 3 sh ≈$2,224. **Watchlist — enter only on a 3–8% pullback that holds support on light volume.**
+- **$AMD — GATE: PASS (mechanically), but DECLINED on entry timing.** c9 breakout PASS (last-5 high 616.68 vs prior 584.62), c10 volume PASS (1.15M vs 0.80M threshold). BUT shadow pullback **0.2%** — AMD ran ~+10% on 9/21 and is *at* its high. Zero pullback = pure chase. Entry ~$615.54, stop $566.29 (-8%), target $763 (+24%), 4 sh ≈$2,462. **Watchlist — same condition: wait for the 3–8% pullback.**
+- **$NVDA / $GOOGL / $AVGO / $PLTR / $MSFT — GATE: FAIL.** NVDA fails c9 breakout + c10 volume (0.5% off high, below-avg vol). GOOGL fails c9 breakout (last-5 high 359 well below prior 393). AVGO fails c9 + c10. PLTR fails c9 + c10. MSFT fails c9 + c10. None made a fresh 3-month high on volume in the last 5 days.
+
+**Net: the two names that clear the mechanical gate are both post-gap extensions with <1.5% pullback, and everything else fails the breakout/volume gate. No idea offers a valid, orderly pullback entry today.**
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+Not run for candidate generation this session — the leadership screen already surfaces the momentum names, and any disclosure-surfaced ticker would still need to clear the full 11-check gate *and* the entry-timing pullback rule, which today's extended tape does not offer. Moot; no gate impact.
+
+### Risk Factors
+- **Thin, one-day regime flip.** +1.16% above the SMA came almost entirely from one big session; a single ~-9 pt SPY down day re-flips it OFF. Don't rush to deploy into a flip that could reverse — patience costs nothing with the book flat.
+- **Leaders are extended, not pulling back.** META/AMD gapped +10–12% in a session; buying at 0–1.5% off the high is exactly the overpay the entry-timing rule guards against. Wait for the pullback or skip.
+- **"Higher-for-longer" Fed (~56% odds of another late-Oct hike)** keeps structural pressure on rate-sensitive growth even as vol cools — a mediocre backdrop for chasing extended breakouts.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER FLIPPED OFF→ON.** SPY (773.52) closed **above** its 20-day SMA (764.65, +1.16%) per the deterministic `buy_gate.sh` read — a genuine OFF→ON flip vs 9/21's -0.35%, driven by Monday's broad tech/comm-services rally. Regime alerted to Discord per STEP 5. Candidates were screened: only **$META** and **$AMD** clear the mechanical 11-check gate, but both just gapped +10–12% on 9/21 and sit <1.5% off their highs — no orderly 3–8% pullback, so entry-timing discipline **declines both** (chasing a one-day vertical extension is the low-quality entry the strategy exists to prevent). Everything else fails the breakout/volume gate. Book is already **flat, all cash** since the 9/2 PLTR stop exit; macro is quiet all week (next binary PCE 9/30). New buys this week 0/3, day-trades 0/3. **$META and $AMD go on the watchlist** — enter only if one pulls back 3–8% from its high and holds support on light volume while its catalyst stays intact. Force nothing. Committed and pushed per the pre-market routine.
