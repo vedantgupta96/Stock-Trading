@@ -1490,3 +1490,49 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) |
 
 ### Decision
 **HOLD — no new trades today; MARKET REGIME FILTER REMAINS ON.** SPY (767.29) closed **above** its 20-day SMA (765.33, +0.26%) per the deterministic `buy_gate.sh` read — a second consecutive ON read after the 9/24 OFF→ON flip. Buy-gate #1 passes and candidates were evaluated, but **no name clears the full gate on quality**: the only mechanical PASS (`$AMD`) is even more extended than yesterday (0.3% pullback, still parabolic) and is declined on entry-timing, exactly as CHPT/DG were; `$AKAM` and `$AVGO` fail c9 (no fresh breakout). Book is **flat, all cash** since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. **No Discord alert — silent per STEP 5** (no held position at risk, no earnings within 3 days on any holding, no regime flip today). Cash sits at $99,147.92 awaiting an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically; the regime margin is thin (+0.26%) and month-end binaries loom (PCE 9/30, jobs 10/2), so do not force a chase. Force nothing. Committed and pushed to main per the pre-market routine.
+
+## 2026-09-29 (Tue) — Pre-Market Routine — REGIME STAYS ON (razor-thin); HOLD (no name clears full gate)
+
+**Decision: HOLD — no new buys today; MARKET REGIME FILTER REMAINS ON (no flip, but margin now razor-thin).** The deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY last close 765.49 > 20-day SMA 765.15 (+0.04% above)** — a third consecutive ON read after the 9/24 OFF→ON flip, but the margin has compressed hard (9/24 +0.35% → 9/25 +0.26% → 9/29 +0.04%). SPY sits only ~0.34 pt above its 20-day line; one down day flips it OFF. Buy-gate #1 passes, so candidates were evaluated — but **no name clears the full 11-check gate**: the closest, `$AMD`, finally offers a valid pullback (4.8%, in band) on a fresh 3-month high, yet **fails c10 volume** (breakout vol 857k vs 887k threshold — just under 1.5×), a hard gate fail. Book remains **FLAT — all cash, 0 positions, 0 open orders** (unchanged since the 9/2 PLTR trailing-stop exit), so there is nothing to hold and no sell-side review to run. **No STEP 5 alert** — no held position at risk, no earnings within 3 days on any holding, and no regime flip today (stayed ON). No trades placed → commit the research log per routine STEP 6.
+
+*Research note: Gemini wrapper returned HTTP 503 / knowledge-cutoff refusals for live-dated queries this session; fell back to native WebSearch for market context per STEP 3. Regime/breakout/volume/is-stock are the deterministic `buy_gate.sh` Alpaca reads and govern regardless.*
+
+### Market Regime Status — ON (stays ON; buy-gate #1 PASSES, but thin)
+- **Alpaca (deterministic, `buy_gate.sh`):** `1. Regime (SPY > 20d SMA) PASS [SPY 765.49 vs SMA20 765.15]` → **REGIME ON (+0.04%)**. Authoritative. Third ON read in a row, but the margin has collapsed from +0.35% (9/24) to +0.04% today — the filter is barely holding its 20-day line.
+- **Consequence:** regime ON permits new longs *iff* a candidate clears all 11 checks on judgment as well as mechanically. Today none does (see Trade Ideas). Cash remains the correct posture on quality, and the thin regime margin + month-end binary cluster argue explicitly against forcing a marginal entry.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-09-28
+- last_equity $99,147.92 → flat vs prior session (no positions to mark; account has printed the same $99,147.92 every session since the 9/2 PLTR exit).
+- Phase P&L **-$852.08 (-0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 9/28). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional** → N shares depending on entry.
+
+### Market Context (WebSearch fallback — Gemini unavailable this session)
+- **VIX ~14.9, calm.** ~14.87, down ~5% on the day — fear remains fully bled off; low-volatility, risk-supportive backdrop, but complacency into a binary-heavy week is itself a risk.
+- **Leadership: tech/semis.** QQQ leading the majors on a semiconductor rebound and continued AI-infrastructure interest; broader industrials/energy mixed-to-cautious.
+- **Rates/oil headwind.** Rising Treasury yields and firm oil are pressuring stocks with the Fed holding policy tight ("higher-for-longer," funds 3.75–4.00% post-9/16 hike) — a structural drag on rate-sensitive momentum even with vol low.
+- **Macro — binary cluster this week.** **JOLTS today (9/29)**, **PCE 9/30** (same day as MU earnings), **Sep jobs report 10/2**. A dense run of market-moving prints that can whip the tape; another reason not to force a marginal entry today.
+
+### Sector Momentum
+- **Leading:** Technology/Semis (AI-infra pocket), with Health Care/Financials/Energy the September-to-date defensives-and-financials leadership. The individual-name momentum lives in AI/semis, but those names are extended and only now beginning to offer pullbacks (AMD 4.8%), and the one that has pulled back lacks volume confirmation.
+
+### Held-Position Review
+- **None.** Book is flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (avoid names reporting within 10 trading days, i.e. before ~10/13)
+- **$MU Micron reports TODAY 9/29 after the close** — hard avoid (earnings in window + not a fresh breakout anyway). Others in-window: **$CAG/$JBL/$FDS (9/30), $ACN/$MKC/$NKE (10/1), $STZ/$MTN (10/5), $PEP/$DAL (10/8)**. Any candidate must have earnings > 10 trading days out (after ~10/13).
+
+### Trade Ideas — regime ON; evaluated, none clears the full gate
+1. **`$AMD` (Technology/Semis) — closest to a setup, but FAILS c10 volume.** `buy_gate.sh`: c9_breakout **PASS** (last-5 high 638.79 > prior 616.68 — fresh 3-month high), **c12 pullback PASS (4.8%, in the 3–8% band)** — the orderly pullback that was missing on 9/24–9/25 (then 0.3–1.5% off high, parabolic) has finally arrived. But **c10_volume FAIL** — breakout-day volume 857,043 vs the 887,107 threshold (1.5× the 591,405 20-day avg), i.e. the breakout came on *below*-1.5× volume. Per the strategy, volume confirmation is a hard gate check: a breakout without ≥1.5× conviction is a low-conviction move we don't chase. **GATE: FAIL (c10).** Watchlist — revisit only if it re-breaks on ≥1.5× volume while still inside a 3–8% pullback.
+2. **`$NVDA` (Technology/Semis) — no fresh breakout.** c9_breakout **FAIL** (last-5 high 233.2 < prior 234.75 — not a fresh 3-month high in the last 5 days); c12 pullback only 1.8% (below band). Volume passes but there is no breakout to confirm. Drop.
+3. **`$MU` (Technology/Semis) — earnings today + no breakout.** Reports after the close 9/29 (c7 earnings FAIL), and c9_breakout **FAIL** (last-5 high 1108.6 << prior 1254.7) with c10 volume FAIL. Double-disqualified. Drop.
+4. **`$AVGO` (Technology/Semis) — no fresh breakout.** c9_breakout **FAIL** (last-5 high 366.5 << prior 495) and c10_volume FAIL — not making a fresh high on volume. Drop.
+
+### Risk Factors
+- **Regime margin is razor-thin (+0.04%).** SPY is only ~0.34 pt above its 20-day line; a single down day flips the filter OFF. ON is not a green light — quality governs, and there is no clean setup.
+- **Binary-heavy week.** JOLTS (9/29), PCE (9/30), Sep jobs (10/2) form a cluster of market-moving prints that can whip the tape; a marginal entry today carries elevated event risk.
+- **Semi leadership extended; the one pullback lacks volume.** AMD's 4.8% pullback is the first orderly one in the group, but it broke out on sub-1.5× volume — low conviction. Chasing semis at highs into a "higher-for-longer" Fed with firm yields/oil is high reversal risk.
+
+### Decision
+**HOLD — no new trades today; MARKET REGIME FILTER REMAINS ON (razor-thin).** SPY (765.49) closed **above** its 20-day SMA (765.15, +0.04%) per the deterministic `buy_gate.sh` read — a third consecutive ON read, but the margin has compressed to essentially flat. Buy-gate #1 passes and candidates were evaluated; **no name clears the full 11-check gate**. The closest, `$AMD`, has finally produced a valid 4.8% pullback on a fresh 3-month high but **fails c10 volume** (breakout on sub-1.5× volume) — a hard gate fail we do not override; `$NVDA`/`$AVGO`/`$MU` all fail c9 (no fresh breakout), and `$MU` also reports earnings today. Book is **flat, all cash** since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. **No Discord alert — silent per STEP 5** (no held position at risk, no earnings within 3 days on any holding, no regime flip today). Cash sits at $99,147.92 awaiting a fresh breakout leader on ≥1.5× volume with an orderly 3–8% pullback that clears the full gate on judgment as well as mechanically; the regime margin is razor-thin and a JOLTS/PCE/jobs binary cluster looms this week, so do not force a chase. Force nothing. Committed and pushed per the pre-market routine.
