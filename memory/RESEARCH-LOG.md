@@ -1525,3 +1525,40 @@ Skipped — idea-generation only, and it is moot with the regime OFF (any surfac
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER IS OFF.** SPY closed 9/29 at **$764.38, below** its 20-day SMA **$765.02 (−0.08%)** per the deterministic Alpaca read — a **flip ON → OFF** from the 9/25 ON read. Buy-gate check #1 fails, so no candidates are worked and no orders are possible today; the book is **flat / 100% cash** ($99,147.92) with nothing to hold and no sell-side review needed. New buys 0/3, day-trades 0/3. Sit in cash and reassess the regime at the next pre-market; resume idea generation only when SPY reclaims its 20-day line and a fresh breakout offers an orderly 3–8% pullback that clears the full 11-check gate. Force nothing. Committed and pushed to main per the pre-market routine.
+
+## 2026-10-01 — Pre-Market Research
+
+### Market Regime — OFF (stays OFF, 2nd day)
+Deterministic Alpaca read (SPY 1D bars, IEX): last close **2026-09-30 $762.34** vs **20-day SMA $765.06** → **BELOW by −0.36%**. **MARKET REGIME FILTER IS OFF today — no new buys.** This is **not a flip** — the regime went ON → OFF on 9/30 (SPY $764.38 < SMA $765.02, −0.08%) and today it stays OFF, with the gap *widening* from −0.08% to −0.36% as SPY slid another −$2.04 on 9/30. The thin cushion is gone; SPY is now a clear ~0.36% under its 20-day line, not a hair. The rule is binary and reads OFF for a second session.
+
+### Account Snapshot
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (flat, all cash)** | Open orders: 0
+New buys this week: **0/3** | Day-trades used: **0/3** | Book flat / 100% cash (unchanged from 9/30; equity flat day-over-day, last_equity $99,147.92).
+
+### Market Context
+- **WTI crude:** ~$88–91/bbl (mixed reads, roughly flat to modestly lower on US–Iran peace talks / recovering Gulf exports). Energy remains the month's laggard.
+- **VIX:** **16.69 (+2.14% on the day)** — still calm/low, below the ~18.6 long-run average. A tick up but no fear spike; this remains a quiet drift below the SPY line, not a risk-off flush.
+- **S&P 500:** SPY closed 9/30 at $762.34, down another ~$2 — the grind lower that widened the gap below the 20-day SMA.
+- **Event cluster:** Today (10/1) — **ISM Manufacturing** (10:00 ET), jobless claims, final mfg PMI, Challenger job cuts, and a slate of **Fed speakers** (Waller 10:00, Jefferson 13:30, Bowman 15:00, Cook 15:30). **Friday 10/2 — September jobs report / Nonfarm Payrolls** (7:30 CT), the week's main binary. Next CPI 10/14, PPI 10/15, FOMC 10/27–28.
+- **Government shutdown risk:** 10/1 is the start of FY2027; a funding lapse / shutdown is a live risk as of today. Adds headline/data-availability uncertainty (a shutdown can delay govt data releases, including potentially Friday's jobs report).
+
+### Sector Momentum
+- **Leading (this week):** Technology (AI-linked — e.g. Synopsys +4.8% on 9/30) and Industrials showed relative strength; Utilities bounced +1.2% on 9/30.
+- **Lagging:** Energy (geopolitics + elevated crude, XLE −0.9% multiple days), Financials, Real Estate, Communication Services, Materials, Consumer Staples all under pressure this week.
+
+### Trade Ideas
+**None — market regime filter is OFF.** Per the strategy, when SPY is below its 20-day SMA we place no new buys and the right answer is almost always cash. No candidates evaluated; idea generation resumes only when the regime reclaims the line and a fresh breakout offers an orderly 3–8% pullback clearing the full 11-check gate.
+
+### STOCK Act scan
+Skipped — idea-generation only, and moot with the regime OFF (any surfaced name fails buy-gate check #1 regardless). Resumes when regime is ON.
+
+### Earnings Watch
+N/A — **no open positions**, so no held-name earnings exposure and no sell-side review needed.
+
+### Risk Factors
+- **Regime OFF and widening (−0.36%).** No longer a coin-flip at the line; SPY has pulled clearly under its 20-day SMA. Discipline is to sit in cash until it reclaims the line — do not front-run a bounce.
+- **Binary event week.** ISM + Fed-speaker barrage today into **Friday's payrolls**, on top of a **government-shutdown** backdrop that could delay data and whip the tape. Being flat/100% cash into that cluster is a feature, not a cost.
+- **Momentum leaders extended.** The only pockets of strength (AI/semi, industrials) are extended rather than basing — nothing offering a clean, low-risk pullback entry even if the regime were ON.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER IS OFF.** SPY closed 9/30 at **$762.34, below** its 20-day SMA **$765.06 (−0.36%)** per the deterministic Alpaca read — the regime **stays OFF** for a second session (gap widened from −0.08% on 9/30 to −0.36%). Buy-gate check #1 fails, so no candidates are worked and no orders are possible today; the book is **flat / 100% cash** ($99,147.92) with nothing to hold and no sell-side review needed. New buys 0/3, day-trades 0/3. Sit in cash through today's ISM/Fed-speaker slate and Friday's payrolls (with shutdown risk live); reassess the regime at the next pre-market and resume idea generation only when SPY reclaims its 20-day line with a fresh gate-clearing setup. Force nothing.
