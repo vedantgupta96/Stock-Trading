@@ -1525,3 +1525,47 @@ Skipped — idea-generation only, and it is moot with the regime OFF (any surfac
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER IS OFF.** SPY closed 9/29 at **$764.38, below** its 20-day SMA **$765.02 (−0.08%)** per the deterministic Alpaca read — a **flip ON → OFF** from the 9/25 ON read. Buy-gate check #1 fails, so no candidates are worked and no orders are possible today; the book is **flat / 100% cash** ($99,147.92) with nothing to hold and no sell-side review needed. New buys 0/3, day-trades 0/3. Sit in cash and reassess the regime at the next pre-market; resume idea generation only when SPY reclaims its 20-day line and a fresh breakout offers an orderly 3–8% pullback that clears the full 11-check gate. Force nothing. Committed and pushed to main per the pre-market routine.
+
+---
+
+## 2026-10-01 (Thu) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades; MARKET REGIME FILTER IS OFF (stays OFF).** Today's pre-market research entry was absent (pre-market routine did not run/record), so research was generated inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 764.88 vs 20-day SMA 765.04 → BELOW by −0.02%** → **REGIME OFF**. This is the **second consecutive OFF read** (9/30 −0.08% → 10/1 −0.02%; the margin narrowed but has not reclaimed the line). Buy-gate check #1 fails for everything, so no candidates are worked and no orders are possible today. Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → the market-open commit is for the research log only.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 764.88 vs SMA20 765.04]` → **REGIME OFF (−0.02%)**. Governs per strategy.
+- **Gemini (differs, non-authoritative — index/intraday series + window mismatch):** reads SPY ~$767.21 intraday vs ~$765.06 MA → marginally *above* on the cash-index series. The recurring SPX-cash vs SPY-ETF / MA-window divergence; the deterministic Alpaca SPY-ETF close governs and it is OFF by a hair.
+- **Consequence:** regime OFF → no new longs today regardless of any name's merits. The right posture when the filter is off is almost always cash.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-09-30
+- last_equity $99,147.92 → flat vs prior session; the account has printed $99,147.92 every session since the 9/2 PLTR exit (no positions to mark).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 9/28). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**. Moot today (regime OFF).
+
+### Market Context
+- **VIX ~16.7, calm.** ~16.69, +2.14% on the day — still below the ~18.6 long-run average and well under October's seasonal ~21+ average. No fear spike; this is a drift under the line, not a risk-off flush.
+- **WTI crude ~$92.3/bbl, +2.1%.** Up ~2% (prev settle $90.42) on Middle-East security concerns, tight supply, strong refinery utilization, and China halting most fuel exports for October. Two-sided oil/inflation input, currently benign.
+- **Macro — data-heavy, major binary tomorrow.** Today (10/1): **ISM Manufacturing** (10:00 ET), plus Chicago PMI, Personal Income & Outlays, trade/inventories, EIA petroleum status. **ADP (9/30)** came in soft at **+90k** private jobs. **Sep Nonfarm Payrolls lands tomorrow 10/2** — the week's key binary. CPI 10/14, PPI 10/15.
+- **Rates backdrop:** post-9/16 hawkish hike (funds 3.75–4.00%, "higher-for-longer," ~56% implied odds of another late-Oct hike) remains a structural headwind for rate-sensitive momentum.
+
+### Sector Momentum
+- **September:** Technology was the *only* sector positive (XLK +5.08%; SMH +9.41% — AI/semis the momentum pocket). Utilities (−6.61%), Real Estate (−7.25%), Consumer Staples (−5.15%), Financials and Materials all fell — the rate-hike hangover. This week early (thru 9/29): Utilities +1.17% led, Energy −0.90% lagged. Read: AI/semis still the only momentum pocket, but extended; defensives repairing modestly off oversold.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Trade Ideas
+- **None evaluated — market regime filter is OFF.** Buy-gate #1 fails for every candidate, so no name can clear the gate today. (The regime probe `buy_gate.sh AMD` returned GATE: FAIL on c1_regime *and* c10_volume — last-5 maxvol 628k vs 871k threshold — so even mechanically AMD does not clear; its shadow pullback is 4.4%, in-band, but moot.) Idea generation resumes when SPY reclaims its 20-day line.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Skipped — moot with the regime OFF (any surfaced name fails buy-gate #1 regardless). Resumes when regime is ON.
+
+### Risk Factors
+- **Regime OFF by a hair (−0.02%).** Whippy — a single green day could flip it back ON — but the rule is binary and today reads OFF; do not front-run the line.
+- **NFP tomorrow (10/2).** A major binary into a weak-ADP (+90k) print; being flat/cash into it is a feature, not a cost.
+- **Rate-hike hangover + extended AI/semi leadership.** "Higher-for-longer" is pressuring rate-sensitives and raising reversal risk in the only momentum pocket (semis), which is parabolic with no clean pullbacks.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER IS OFF (stays OFF, 2nd consecutive).** SPY 764.88 < 20-day SMA 765.04 (−0.02%) on the deterministic Alpaca read — buy-gate #1 fails, so no candidates are worked and no orders are possible. Book is **flat / 100% cash** ($99,147.92), nothing to hold, no sell-side review. New buys 0/3, day-trades 0/3. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed). Sit in cash and reassess at the next pre-market; resume idea generation only when SPY reclaims its 20-day line and a fresh breakout offers an orderly 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
