@@ -100,3 +100,56 @@
 - **Process focus:** (1) log each order at fill time; (2) run a fresh pre-market + midday gate screen every regime-ON session; (3) operator to confirm the JPM (and prior CVX) exit records.
 
 ### Grade: C
+
+---
+
+## Week of SEP 28 – OCT 02
+
+*S&P figure is an SPY proxy from Alpaca's IEX feed — `gemini.sh` declined the dated query ("future date, no real-time data"). Book has been 100% cash the entire week (and since the 9/2 PLTR trailing-stop exit, realized −$111.77); equity has printed $99,147.92 every session since.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(no 9/28 snapshot committed; last committed EOD 9/22 = same — equity unchanged since the 9/2 PLTR exit)* |
+| Ending equity (Fri close) | $99,147.92 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | ≈ −0.22% (SPY Fri/Fri proxy: 771.35 → 769.65) / +0.16% (Mon-open→Fri-close) — roughly flat |
+| Trades taken | 0 (0 closed, 0 new buys) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A |
+| Worst trade | N/A |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 1 ON / 2 OFF documented (9/30 OFF −0.08%, 10/1 OFF −0.02%, 10/2 ON +0.80%); 9/28–9/29 no committed regime read |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92).*
+
+### What Worked
+- **Capital fully preserved.** Equity exactly flat ($99,147.92), zero drawdown, zero rule violations, through a choppy, event-heavy week (Sep NFP missed badly +29k vs +90k on 10/2; post-9/16 "higher-for-longer" hike backdrop).
+- **Regime discipline was correct, not costly.** The filter read sub-SMA (OFF) on 9/30 and 10/1 and no buys were forced below the line — and because the benchmark itself was roughly flat (≈ −0.2%), sitting in cash cost nothing this week (unlike the Jun 29–Jul 03 all-cash week that lagged a +1.76% tape).
+- **Entry-timing discipline held on Friday's ON flip.** On the 10/2 OFF→ON flip, `$NVDA` was the only mechanical full-gate PASS but was correctly declined — price was ~0.1% off its high, not the required 3–8% pullback. Chasing a parabolic megacap semi into a live NFP-miss tape was refused, consistent with the prior CHPT/DG/AMD declines.
+
+### What Didn't Work
+- **Weekly-review cadence has lapsed badly.** This is the first committed weekly review since the week of Jun 29–Jul 03 — roughly 13 weeks (≈ all of Q3) with no Friday recap committed to `WEEKLY-REVIEW.md`, even though daily EOD snapshots kept running. The weekly-level audit trail and reflection cadence is broken.
+- **Thin idea flow; nothing clears on quality.** Regime was ON only on Friday, and the single momentum pocket (AI/semis — NVDA/AVGO/AMD) is extended/parabolic with no orderly 3–8% pullbacks; every evaluated name failed the gate on breakout (c9), volume (c10), or entry-timing. A familiar pattern across recent weeks that leaves the book idle.
+- **Missing pre-market / regime reads.** Several sessions committed no pre-market read (9/28, 9/29, and the 9/23–9/30 gap), and Friday's regime read had to be produced inline because the pre-market entry was missing — a recurring process gap.
+
+### Key Lessons
+- **Flat is only costless when the market is flat.** Being 100% cash cost nothing this week (benchmark ≈ −0.2%); the discipline is sound and the real differentiator is whether a clean gate-clearing setup actually existed (it didn't) — not the cash posture itself.
+- **The weekly review must fire and commit every Friday.** A 13-week gap means no trend-level reflection and no rule-review cadence; the daily routine persisted but the weekly one silently did not.
+
+### Adjustments for Next Week
+- **No rule changes.** Nothing this week (or the idle Q3 stretch) has proven out or failed for 2+ consecutive weeks with data that would justify a rulebook edit; `TRADING-STRATEGY.md` left unchanged.
+- **Process focus:** (1) ensure the weekly-review routine actually fires and commits every Friday going forward; (2) run a fresh pre-market regime + gate screen every session — no missing pre-markets; (3) with the regime back ON into earnings season, prioritize fresh breakout leaders offering an orderly 3–8% pullback outside the 10-trading-day earnings window — but force nothing.
+
+### Grade: B
