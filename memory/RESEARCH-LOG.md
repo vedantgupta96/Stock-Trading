@@ -1621,3 +1621,59 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED BACK ON (+0.80%).** SPY (771.02) is **above** its 20-day SMA (764.90, +0.80%) per the deterministic `buy_gate.sh` read — an **OFF → ON flip** after two OFF sessions (9/30, 10/1). Buy-gate #1 passes and candidates were evaluated, but **no name clears the full gate on quality**: the only mechanical PASS (`$NVDA`) is parabolic at fresh highs (0.1% pullback) and is declined on entry-timing, exactly as CHPT/DG/AMD were; `$FICO/$ANET/$AVGO/$AMD` fail c9 (no fresh breakout), `$PLTR/$AVGO` fail c10 (volume). Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. The September jobs report just missed badly (+29k vs +90k, u-rate 4.2%), leaving a whippy risk-event tape — another reason not to force a chase. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed).
+
+---
+
+## 2026-10-05 (Mon) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades; MARKET REGIME FILTER IS ON (+0.73%), but nothing clears on entry-timing/quality.** Today's pre-market research entry was absent (pre-market routine did not run/record), so research was generated inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 770.47–770.59 vs 20-day SMA 764.85 → ABOVE by +0.73%** → **REGIME ON** (2nd consecutive ON read; 10/2 was +0.80%). Buy-gate #1 passes and candidates were evaluated; **three names clear the gate mechanically (JCI, LITE, NTAP) but all are declined on entry-timing** (sitting 0.8–2.6% off their highs, below the 3% floor of the 3–8% pullback band), and all three show unreliable, far-too-wide opening spreads right now. Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → the market-open commit is skipped per STEP 7.
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 770.47 vs SMA20 764.85]` → **REGIME ON (+0.73%)**. Governs per strategy.
+- **Gemini (confirms):** SPY ~$769.64 vs 20-day SMA ~$764.83 → above by ~$4.81. Both reads agree the regime is ON.
+- **Consequence:** regime ON → new longs permitted *iff* a candidate clears all 11 checks on judgment as well as mechanically. Today none does on entry-timing (see Trade Ideas). Cash remains correct by quality, not by regime.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-02
+- last_equity $99,147.92 → flat vs prior session; account has printed $99,147.92 every session since the 9/2 PLTR exit (no positions to mark).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (new week from Mon 10/5). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **VIX ~16.3–17.7, ticking up.** +6.5% on the day (prior close 15.31 on 10/2). Still near/below the ~18.6 long-run average — a modest uptick, not a fear spike, but worth noting into a data-light-but-event-cluttered week.
+- **WTI crude ~$90/bbl, −1.0%.** ~$90.05–90.25, down ~1% on rising Middle-East exports and a G7 100M-bbl reserve release. Benign/two-sided oil-inflation input.
+- **Macro — ISM Services today; FOMC minutes Wed; no top-tier binary.** Mon 10/5: S&P Global Services/Composite PMI (final) + **ISM Services PMI (10:00 ET)**. Tue: ADP weekly, Aug trade balance. **Wed 10/7: FOMC minutes (Sep 15–16 meeting, 2:00 ET).** Thu: jobless claims. CPI 10/14, PPI 10/15. Last Fri's NFP missed badly (+29k vs +90k, u-rate 4.2%) — labor softening still digesting.
+- **Rates backdrop:** post-9/16 hawkish hike (funds 3.75–4.00%, "higher-for-longer") remains a structural headwind, muddied by the soft jobs print (more-cut odds).
+
+### Sector Momentum
+- **Leading:** Technology remains the momentum pocket (XLK +1.1% today, Tech +1.8% last week); Consumer Discretionary (XLY +1.4% today) and Materials (XLB +1%) firm at the month's start. Energy bounced +1.5% last week off oversold. AI/semis + cybersecurity software are the breakout clusters (AMD, PANW, CRWD, FTNT, LITE, NTAP all at/near highs) but **extended, not basing** — no clean 3–8% pullbacks on offer.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (avoid names reporting within 10 trading days, i.e. before ~10/19)
+- All evaluated candidates report comfortably beyond the window: JCI 10/27, FTNT ~10/28–11/4, AMD/LITE 11/3, PANW 11/18, KEYS 11/23, NTAP 11/24, CRWD/HPE early Dec. None blocked by earnings. (Broad-market in-window reporters to keep off the watchlist: STZ 10/5, PEP/DAL 10/8, big banks 10/13–14.)
+
+### Trade Ideas — regime ON; evaluated, none clears on entry-timing/quality
+Mechanical `buy_gate.sh` results (flat book, sector-count 0, trades-this-week 0, catalyst yes):
+1. **`$NTAP` (Technology — Infra/Storage) — GATE: PASS mechanically; DECLINED on entry-timing + unusable spread.** c9 breakout PASS (last-5 high 231.745 vs prior 208.88 — a fresh high), c10 volume PASS (last-5 maxvol 303k vs 189k threshold, ~2.4x 20d avg); sizing 11 sh @ ~$225.83, stop $207.76, target $280.03. *Declined:* the breakout was a single +5.3% surge day on 10/2 (open 216.25 → high 231.745, close 226.51); price is only **2.6% off the high** — below the 3% floor of the 3–8% entry band, i.e. buying the breakout the moment it happened with no orderly pullback. Live quote spread is unusable right now (bid 212.80 / ask 226.76 ≈ **6.2%**, >> 0.5% STEP-3 limit). Watchlist — revisit on an orderly 3–8% pullback that holds support.
+2. **`$LITE` (Technology — Optical/Semis) — GATE: PASS mechanically; DECLINED on entry-timing + wide spread.** c9 PASS (fresh high 1123.5 vs prior 1025.51 — a big +9.6% breakout), c10 PASS (236k vs 215k threshold). *Declined:* price only **0.8% off the high** — parabolic at fresh highs, no pullback; a textbook chase (same basis as the 10/2 NVDA decline). Spread ~0.8% (bid 1111 / ask 1120) also over the 0.5% limit. Watchlist.
+3. **`$JCI` (Industrials — Commercial HVAC) — GATE: PASS mechanically; DECLINED on quality + unusable spread.** c9 PASS but marginal (last-5 high 156.945 vs prior 156.92 — a $0.025 "new high", effectively a tie, not a conviction breakout), c10 PASS (243k vs 206k threshold). *Declined:* price **1.0% off the high** (no pullback) and the "breakout" is a non-event grind at prior highs; wide quote spread (bid 150.42 / ask 155.62 ≈ **3.3%**, >> 0.5%). Watchlist at best.
+4. **`$AMD` (Tech/Semis) — GATE: FAIL c10 volume.** c9 PASS (fresh high 645.37 vs 638.79) but last-5 maxvol 532k < 887k threshold — breakout lacks volume confirmation. Drop.
+5. **`$PANW` (Tech/Cyber) — GATE: FAIL c10.** c9 PASS (408.71 vs 398.52) but 245k < 323k threshold. Drop.
+6. **`$CRWD` (Tech/Cyber) — GATE: FAIL c10.** c9 PASS (273.43 vs 263.85) but 283k < 477k threshold. Drop.
+7. **`$FTNT` (Tech/Cyber) — GATE: FAIL c10.** c9 PASS (182.86 vs 181.37) but 158k < 203k threshold. Drop.
+8. **`$HPE` (Tech/IT) — GATE: FAIL c10** (1.36M < 1.49M threshold) despite the only in-band shadow pullback (3.5%). Volume shy of confirmation. Drop.
+9. **`$KEYS` (Tech) — GATE: FAIL c10** (67k < 79k threshold). Drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- 10/1 filings: Rep. David Taylor (R-OH) bought **HD, MPC, AMGN**; Rep. Cleo Fields (D-LA) bought **MSFT, AAPL, GOOG, NFLX**; Rep. Beyer (D-VA) a municipal security; Sen. Whitehouse (D-RI) **sold** JPM/V/ADI. **Idea-generation only** — disclosures lag ~45 days and each name must independently clear the full 11-check gate. None of the surfaced buys is making a fresh 3-month high on ≥1.5x volume with a present-tense catalyst and an orderly 3–8% pullback; moot, no gate impact.
+
+### Risk Factors
+- **Momentum leaders extended, not basing.** The AI/semi + cyber-software breakout cluster (NTAP/LITE/AMD/PANW/CRWD/FTNT) is at/near fresh highs with no clean 3–8% pullbacks — chasing here is the overpay/reversal risk the entry-timing rule exists to prevent.
+- **VIX ticking up into an event week.** FOMC minutes Wed, ISM Services today, on the heels of a badly-missed NFP — a whippy tape that argues for patience over a marginal chase.
+- **Rate-hike hangover.** "Higher-for-longer" keeps reversal risk elevated in extended momentum names even with the soft jobs print cutting the other way.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME FILTER IS ON (+0.73%), but nothing clears on entry-timing/quality.** SPY (770.47–770.59) is **above** its 20-day SMA (764.85) per the deterministic `buy_gate.sh` read (Gemini confirms), so buy-gate #1 passes and candidates were worked. Three names clear the gate mechanically — **`$NTAP`, `$LITE`, `$JCI`** — but all are **declined on entry-timing**: each sits only 0.8–2.6% off its high (below the 3% floor of the 3–8% pullback band), i.e. buying the breakout the moment it happens — the exact chase the entry rule and the prior NVDA/CHPT/DG/AMD declines exist to prevent — and all three show unusable/too-wide opening spreads right now (NTAP ~6.2%, JCI ~3.3%, LITE ~0.8% vs the 0.5% STEP-3 limit). The remaining candidates (AMD/PANW/CRWD/FTNT/HPE/KEYS) fail c10 volume confirmation. Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so the market-open commit is skipped per STEP 7.
