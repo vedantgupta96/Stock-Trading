@@ -1621,3 +1621,57 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED BACK ON (+0.80%).** SPY (771.02) is **above** its 20-day SMA (764.90, +0.80%) per the deterministic `buy_gate.sh` read — an **OFF → ON flip** after two OFF sessions (9/30, 10/1). Buy-gate #1 passes and candidates were evaluated, but **no name clears the full gate on quality**: the only mechanical PASS (`$NVDA`) is parabolic at fresh highs (0.1% pullback) and is declined on entry-timing, exactly as CHPT/DG/AMD were; `$FICO/$ANET/$AVGO/$AMD` fail c9 (no fresh breakout), `$PLTR/$AVGO` fail c10 (volume). Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. The September jobs report just missed badly (+29k vs +90k, u-rate 4.2%), leaving a whippy risk-event tape — another reason not to force a chase. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed).
+
+
+---
+
+## 2026-10-07 (Wed) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades; REGIME ON (widest cushion in weeks), but no name clears on entry-timing/quality.** Today's pre-market research entry was absent (pre-market routine did not run/record), so research was generated inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 775.13 vs 20-day SMA 766.36 → ABOVE by +1.14%** → **REGIME ON**. Buy-gate #1 passes and candidates were evaluated. The only full-gate mechanical PASS (`$ANET`) is declined on entry-timing (pullback 2.2%, below the required 3–8% band — a fresh-high chase). Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → the market-open commit is for the research log only (inline research persisted per CLAUDE.md).
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 775.13 vs SMA20 766.36]` → **REGIME ON (+1.14%)**. Governs per strategy. This is the **widest cushion since the regime reclaimed the line** (9/25 +0.26%, 10/2 +0.80%, 10/7 +1.14% — a steady, strengthening ON read, no longer a hair-width flip).
+- **Consequence:** regime ON → new longs permitted *iff* a candidate clears all 11 checks on judgment as well as mechanically. Today the one mechanical PASS fails entry-timing; cash remains correct by quality, not by regime.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-06
+- last_equity $99,147.92 → flat vs prior session; the account has printed $99,147.92 every session since the 9/2 PLTR exit (no positions to mark).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/5). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional** → N shares depending on entry.
+
+### Market Context
+- **VIX ~15.0, calm.** ~15.01 (10/6), down from 15.52 (10/5); below the ~18.6 long-run average and under October's seasonal ~21+. No fear spike — a contained, drift-lower read; the weak Sep jobs print has eased immediate-hike pressure.
+- **WTI crude ~$89.9/bbl, +0.47%.** ~$89.86 (10/7), consolidating/rebounding from ~$87 support toward ~$94.50 resistance; supported by renewed Houthi attacks on Saudi energy infrastructure. MTD avg ~$90.85. Two-sided oil/inflation input, currently benign-to-firm.
+- **Macro — light today, no major binary.** **FOMC Minutes (Sep 15–16 meeting) release at 2:00 PM ET today** — informational, not a surprise binary. Initial Jobless Claims Thu 10/8. **CPI (Sep) 10/14**, **PPI (Sep) 10/15** — the week's real binaries, both out next week. Next FOMC 10/27–28 (hold expected). Broad tape soft this morning on rising Treasury yields + firmer oil.
+- **Rates backdrop:** post-9/16 hawkish hike (funds 3.75–4.00%, "higher-for-longer") remains a structural headwind; the soft Sep jobs report (+29k, u-rate 4.2%) cuts the other way (more cut odds) → net ambiguous, but no near-term catalyst forcing action today.
+
+### Sector Momentum
+- **Leading:** Technology (AI / semis / cloud infrastructure) and Communication Services remain the momentum pockets MTD; Industrials (AI-infra capex, defense) and Healthcare/biotech firm. The AI/semi megacaps are **extended at or near fresh highs with no clean 3–8% pullback on offer** — the recurring problem. Energy supported by firm oil. Rate-sensitives (Utilities, some Financials) still repairing off the rate-hike hangover.
+- **Laggards today:** Consumer Durables, Electronic Tech, Finance soft on the higher-yield session.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (avoid names reporting within 10 trading days, i.e. before ~10/21)
+- In-window reporters to avoid: **PEP (10/8), DAL (10/9), banks week of 10/13 (C/GS/JPM/WFC), JNJ/UNH (10/13), BAC (10/14)**. Q3 bank/healthcare season opens next week. Any candidate must have earnings > 10 trading days out. `$ANET` earnings **11/3** (~18 trading days out) — outside the window, so earnings is NOT its blocker.
+
+### Trade Ideas — regime ON; evaluated, none clears on judgment
+1. **`$ANET` (Technology) — only full-gate mechanical PASS, but DECLINED on entry-timing.** `buy_gate.sh`: c9 breakout PASS (last-5 high 216.05 > prior 214.62 — fresh 3-month high), c10 volume PASS (last-5 maxvol 314,921 > 306,462 threshold), c11 stock PASS; earnings 11/3 clears c7. Sizing 11 sh @ ~$211.24, cost ~$2,324, stop $194.34 (−8%), target $261.94 (+24%). **GATE: PASS mechanically.** *Declined on judgment:* the shadow pullback check FAILS — price is only **2.2% off its high**, below the required 3–8% entry band. Buying a name right at a fresh high with no meaningful pullback is the overpay/reversal-risk chase the entry-timing rule ("wait for the first 3–8% pullback; do not buy breakouts the moment they happen") exists to prevent — the same call that declined NVDA (10/2, 0.1%) and CHPT/DG/AMD before it. Watchlist only — revisit on an orderly 3–8% pullback that holds support.
+2. **`$NVDA` (Technology/Semis) — c10 volume FAIL.** c9 PASS (fresh high 243.34 > 234.75) but last-5 maxvol 3.86M < 3.92M threshold — fresh high lacks volume confirmation. Pullback only 2.3% (sub-band) anyway. Drop.
+3. **`$AMD` (Technology/Semis) — c10 volume FAIL.** c9 PASS (fresh high 658.45 > 638.79) but volume 532k < 837k threshold. Pullback 2.6% (sub-band). Drop.
+4. **`$PLTR` (Technology) — c10 volume FAIL.** c9 PASS (marginal fresh high 194.72 ≈ 194.67) but volume 535k < 748k threshold. Pullback 1.3% (sub-band). Drop.
+5. **`$AVGO` (Technology/Semis) — c9 + c10 FAIL.** last-5 high 380.79 << prior 432.66 (no fresh high, ~12% below) and volume 995k < 1.01M. Drop.
+6. **`$MU` (Technology/Semis) — c9 breakout FAIL.** last-5 high 1,106.5 << prior 1,254.7 (~12% below prior high) though volume PASS and pullback 8.3% in-band — but an 8% drop off a *non-fresh* high is a downtrend pullback, not a breakout-and-pullback. Drop.
+7. **`$SMCI` (Technology) — c9 + c10 FAIL.** last-5 high 44.72 < prior 44.90 (no fresh high) and volume 1.50M < 2.08M. Drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- No fresh high-conviction single-stock disclosures surfacing a name that independently clears the full gate. Per strategy, disclosures lag ~45 days, hide size/exits, and are frequently options — idea-generation only. No name from this channel is a buy reason today; any would still have to clear all 11 checks and an orderly 3–8% pullback, which none does. Moot; no gate impact.
+
+### Risk Factors
+- **Momentum leaders extended, not basing.** The only momentum pocket (AI/semis + ANET-type networking) is at or near fresh highs with sub-3% pullbacks — every mechanical candidate is a fresh-high chase, exactly what the entry-timing rule forbids. No orderly 3–8% pullback on offer in a fresh breakout leader.
+- **CPI/PPI next week (10/14–15).** Two inflation binaries into a "higher-for-longer" Fed; entering a marginal long now, days before, adds event risk for no edge. Being patient is a feature.
+- **Soft tape today on rising yields + firmer oil.** Broad indices down this morning despite the ON regime — not the session to force a chase at highs.
+
+### Decision
+**HOLD — no new trades; REGIME ON (+1.14%, widest cushion since the reclaim) but no name clears on judgment.** SPY (775.13) is **above** its 20-day SMA (766.36, +1.14%) per the deterministic `buy_gate.sh` read — a strengthening, steady ON read (9/25 +0.26% → 10/2 +0.80% → 10/7 +1.14%), no longer a hair-width flip. Buy-gate #1 passes and candidates were evaluated. The **only full-gate mechanical PASS — `$ANET`** (c9/c10/c7 all clear, earnings 11/3) — is **declined on entry-timing**: at just 2.2% off its high it is a fresh-high chase below the required 3–8% pullback band, the identical call that declined NVDA/CHPT/DG/AMD. The rest fail c10 volume (`$NVDA/$AMD/$PLTR`) or c9 breakout (`$AVGO/$MU/$SMCI`). Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. VIX calm (~15), oil firm (~$89.9), no major binary today (FOMC minutes 2pm are informational; CPI/PPI are next week). Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed).
