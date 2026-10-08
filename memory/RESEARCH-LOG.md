@@ -1621,3 +1621,59 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED BACK ON (+0.80%).** SPY (771.02) is **above** its 20-day SMA (764.90, +0.80%) per the deterministic `buy_gate.sh` read — an **OFF → ON flip** after two OFF sessions (9/30, 10/1). Buy-gate #1 passes and candidates were evaluated, but **no name clears the full gate on quality**: the only mechanical PASS (`$NVDA`) is parabolic at fresh highs (0.1% pullback) and is declined on entry-timing, exactly as CHPT/DG/AMD were; `$FICO/$ANET/$AVGO/$AMD` fail c9 (no fresh breakout), `$PLTR/$AVGO` fail c10 (volume). Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. The September jobs report just missed badly (+29k vs +90k, u-rate 4.2%), leaving a whippy risk-event tape — another reason not to force a chase. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed).
+
+
+---
+
+## 2026-10-08 (Thu) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. Regime ON (+1.39%); `$CEG` is the first full-gate PASS in weeks on a genuine fresh catalyst, but entry timing is immature → wait for a cleaner pullback.** Book is **flat / 100% cash** — nothing to hold, no sell-side review. One name (`$CEG`, Constellation Energy) clears all 11 buy-gate checks on the deterministic Alpaca read, driven by the 10/6 Google–Constellation nuclear deal, but the breakout is only 2 sessions old and the "pullback" (3.3%, one day) is still on ~2.5x-average volume — sellers are not yet drying up, so the entry-timing rule says wait. No trade placed → this commit is for the research log only. *(Gemini market-research API returned HTTP 503 / exit 3 on the first call; per routine STEP 3, market-context queries fell back to native WebSearch. Regime, breakout, volume, and sizing are deterministic Alpaca reads via `buy_gate.sh` and are unaffected.)*
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 777.15 vs SMA20 766.46]` → **REGIME ON (+1.39%)**. Widest cushion since the regime turned back ON on 10/2 (+0.80%); stays ON (no flip from the last recorded read). Governs per strategy → new longs permitted *iff* a candidate clears all 11 checks on judgment as well as mechanically.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-07
+- last_equity $99,147.92 → flat; the account has printed $99,147.92 every session since the 9/2 PLTR stop exit (no positions to mark).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/5). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context *(VIX/oil reads are web-sourced and a few days stale — Gemini down this run)*
+- **VIX ~16.4, calm.** Latest reliable read ~16.39 (10/1) — below the ~18.6 long-run average and under October's seasonal ~21+; no fear spike. Indexes at/near record highs (S&P ~7,735–7,819 into 10/5–10/6).
+- **WTI crude ~$93/bbl.** ~$93.16 (10/1); two-sided oil/inflation input, currently benign.
+- **Rates — the structural headwind.** Treasuries sold off hard into early October: 10-yr ~5.34%, 30-yr ~5.70% (highest since ~2002), ISM Services Prices Paid 74.0 (hottest since 7/2022); market pricing ~25% odds of an Oct hike. "Higher-for-longer" keeps pressuring rate-sensitive momentum — and makes a power/utility name's entry timing matter more.
+- **Macro calendar:** No FOMC today (next 10/27–28, hold base case). CPI 10/14, PPI 10/15 are the week's forward binaries. Q3 bank earnings open 10/13–14.
+
+### Sector Momentum
+- **Leading:** Technology/semis remain the momentum pocket (NVDA at fresh highs) but are **extended, not basing** — no clean 3–8% pullbacks (NVDA 2.4% off high, PLTR 0.3%, ANET 0.7%). **Utilities / nuclear-for-AI-power** is the fresh breakout pocket this week on the 10/6 Google–Constellation deal (`$CEG` +~12% on the news). Energy firm.
+- **Lagging / no fresh breakout:** the names that *have* pulled back into the band (`$MU`, `$AVGO`, `$GOOGL`, `$META`, `$COIN`, `$HOOD`) have **not** made fresh 3-month highs (c9 FAIL) — pullbacks without a breakout, not setups.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit. No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (avoid names reporting within 10 trading days, i.e. before ~10/23)
+- `$CEG` next earnings **estimated 11/5–11/9** (Q2 was 8/6; not yet company-confirmed) → **~19–20 trading days out → c7 PASS** comfortably. Reporting in-window to avoid for other ideas: big banks 10/13–14, PEP/DAL 10/8.
+
+### Trade Ideas — regime ON; one full-gate PASS (`$CEG`), held on entry-timing; others fail
+1. **`$CEG` (Constellation Energy — Utilities / nuclear power) — FULL GATE: PASS (lead candidate); HELD today on entry-timing.**
+   - **Catalyst (specific, dated, intact):** On **10/6/2026** Google and Constellation announced a **landmark 20-year agreement to add 890 MW of new nuclear capacity to the PJM grid**, part of a broader long-term power deal (reports cite up to ~3.59 GW total) plus a **$4.3B investment to uprate 11 reactors across three states**, and an "AI-for-energy" tech alliance. Stock gapped ~12% on the news. The catalyst is 2 days old and intact — exactly the durable momentum catalyst the strategy wants.
+   - **Price action (Alpaca bars):** ranged $254–271 through 10/5, then **gapped 10/6** (O 291.9 / H 309.74 / C 300.4) on **508k volume (~3.5x the ~146k 20-day avg)**; held 10/7 (C 299.53, 363k vol).
+   - **Gate (`buy_gate.sh CEG`): GATE: PASS.** c1 regime PASS; c2 pos 0; c3 sector 0 (no utility holdings); c4 trades 0/3; c5 cost $2,396 ≤ cash; c6 PDT 0; c7 earnings ~19–20d out; c8 catalyst (Google deal 10/6); c9 fresh 3-mo high (309.74 > prior 305.64, within last 5d); c10 volume 508k vs 218k threshold (3.5x avg); c11 stock. Shadow c12 pullback 3.3% — **in band**.
+   - **Sizing (if/when entered):** 8 sh @ ~$299.53 → cost ~$2,396; stop $275.57 (−8%); target $371.42 (+24%); 12% GTC trailing on fill (fallback: fixed 8% + queue trailing next AM if same-day PDT rejects).
+   - **Why HELD today (entry-timing, not gate):** the breakout is only 2 sessions old and the pullback is just **one day / 3.3%** (bottom of the 3–8% band) on **~2.5x-average volume** — the entry rule's "wait for the first 3–8% pullback with volume **below** average (sellers drying up)" is **not** met; volume is still hot and gap-up momentum names often fill some of the gap. Forcing an entry at the very start of a hot gap risks the gap-fill for no reward (we're flat/cash). **Plan:** enter on a more mature pullback toward support (~$285, or the pre-gap pivot ~$270–280) on **contracting** volume that holds above the 8/21-EMA, provided the Google-deal catalyst stays intact and earnings stay >10 trading days out. Re-probe next pre-market.
+2. **`$CRWD` (Technology) — c9 PASS, c10 FAIL (just short).** Fresh 3-mo high (286.94 > prior 268.92) with a clean 7.5% pullback (c12 PASS), but last-5 maxvol 436k < 519k threshold (1.5x avg) — breakout lacks volume confirmation. Secondary watchlist; drop today.
+3. **`$NVDA` / `$PLTR` / `$ANET` — c9 PASS, c10 FAIL + no pullback.** Fresh highs but on sub-threshold volume and parabolic (pullbacks 2.4% / 0.3% / 0.7% — below band). Chasing risk; drop.
+4. **`$MU` / `$AVGO` / `$GOOGL` / `$META` / `$COIN` / `$HOOD` / `$UBER` / `$TSLA` / `$ORCL` / `$APP` — c9 FAIL.** Pulled back but no fresh 3-month high — pullback without a breakout. Drop.
+5. **`$VST` / `$SMCI` / `$CEG`-adjacent power names — c9/c10 mixed, no valid pullback.** VST c9 FAIL; SMCI c9 PASS/c10 FAIL. Drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- No fresh, actionable disclosures in the window. Coverage was dominated by **Sen. Alan Armstrong (R-OK)** filing ~700 **late** disclosures (trades months old — stale by design) and the House passing a member-stock-trading ban bill. **Idea-generation only;** disclosures lag ~45 days and any surfaced name must independently clear all 11 gate checks. None presents a fresh 3-month-high-on-volume setup with a present-tense catalyst. Moot; no gate impact.
+
+### Risk Factors
+- **Rates at ~2002 highs (10-yr ~5.34%).** A genuine headwind for rate-sensitive momentum — and utilities/IPPs like CEG are capital-intensive; the Google-deal re-rating has to fight the rate backdrop. Another reason not to chase the gap.
+- **Gap-fill risk on `$CEG`.** A 2-day-old ~12% gap on still-elevated volume frequently retraces part of the move; patience for a lower-risk entry costs nothing from cash.
+- **Indices at record highs into CPI (10/14) / PPI (10/15) and bank earnings (10/13–14).** Narrowing clean-candidate set and a forward binary — favors measured entries over chasing extended leaders.
+
+### Decision
+**HOLD — no new trades. Regime ON (+1.39%, SPY 777.15 vs 20-day SMA 766.46 on the deterministic `buy_gate.sh` read).** For the first time in weeks a name clears the full 11-check gate on a genuine fresh catalyst: **`$CEG`** (GATE: PASS) on the **10/6 Google–Constellation 890 MW nuclear deal** — a real breakout (fresh 3-mo high on 3.5x volume) with a textbook 3.3% pullback. It is held **not on the gate but on entry-timing**: the breakout is only 2 sessions old and the pullback is one day at the band's low end on ~2.5x-average volume (sellers not yet drying up), and chasing a hot 12% gap risks the gap-fill for no edge from a flat/cash book. `$CEG` is the primed lead watchlist candidate — enter on a cleaner, more mature pullback toward support (~$285 / pre-gap pivot ~$270–280) on contracting volume with the catalyst intact and earnings >10 trading days out. All other ideas fail the gate (c9 or c10). Book is **flat / 100% cash** ($99,147.92); new buys 0/3, day-trades 0/3. Patience beats activity — wait for the better fill. Re-probe `$CEG` next pre-market.
