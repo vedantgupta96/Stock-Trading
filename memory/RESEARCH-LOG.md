@@ -1621,3 +1621,55 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; MARKET REGIME FILTER FLIPPED BACK ON (+0.80%).** SPY (771.02) is **above** its 20-day SMA (764.90, +0.80%) per the deterministic `buy_gate.sh` read — an **OFF → ON flip** after two OFF sessions (9/30, 10/1). Buy-gate #1 passes and candidates were evaluated, but **no name clears the full gate on quality**: the only mechanical PASS (`$NVDA`) is parabolic at fresh highs (0.1% pullback) and is declined on entry-timing, exactly as CHPT/DG/AMD were; `$FICO/$ANET/$AVGO/$AMD` fail c9 (no fresh breakout), `$PLTR/$AVGO` fail c10 (volume). Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. The September jobs report just missed badly (+29k vs +90k, u-rate 4.2%), leaving a whippy risk-event tape — another reason not to force a chase. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1 and is committed to persist it (no trades were placed).
+
+
+---
+
+## 2026-10-09 (Fri) — Pre-Market Routine
+
+**Decision: HOLD — no new trades; MARKET REGIME ON (+0.86%), but nothing clears on quality.** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 773.88 vs 20-day SMA 767.26 → ABOVE by +0.86%** → **REGIME ON** (holds ON since the 10/2 OFF→ON flip). Buy-gate #1 passes and a full sweep of momentum leaders was evaluated. **One name — `$NET` (Cloudflare) — is the only clean mechanical full-gate PASS** (fresh breakout + volume + an ideal 7.6% pullback), but it is **declined on judgment** (marginal volume, heavy insider selling into the highs, nosebleed valuation after a parabolic run). Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → the pre-market commit is for the research log only.
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 773.88 vs SMA20 767.26]` → **REGIME ON (+0.86%)**. Governs per strategy. Second consecutive ON read (10/2 +0.80% → today +0.86%); the cushion widened slightly.
+- **Gemini cross-check (context only):** S&P 500 cash index ~7,819 vs 20-day SMA ~7,793.6 → above (consistent with the SPY read). The deterministic SPY read is authoritative.
+- **Consequence:** regime ON → new longs permitted *iff* a candidate clears all 11 checks on judgment as well as mechanically. Today none does on quality (see Trade Ideas). Cash remains correct by quality, not by regime.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Non-marginable: $99,147.92 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-08
+- last_equity $99,147.92 → flat vs prior session; the account has printed $99,147.92 every session since the 9/2 PLTR exit (no positions to mark).
+- Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/5). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional** → N shares depending on entry.
+
+### Market Context
+- **VIX ~15.2–15.4, calm.** 15.41 prior close (10/8), ~15.2 early 10/9 (range 15.15–16.46). Well below the ~18.6 long-run average and October's seasonal ~21+; no fear despite earnings season opening. A drift-lower-vol tape, not risk-off.
+- **WTI crude ~$90.9/bbl, −0.7 to −1%.** ~$90.6–90.9 (Nov futures). Down on Trump ruling out new Iran strikes before the midterms (easing Middle-East supply fear), partly offset by a Gulf hurricane and regional tension. Benign/two-sided oil-inflation input.
+- **Macro — quiet today, binaries next week.** **No major release today (10/9)**; only Michigan Consumer Sentiment/Expectations (2:00 PM ET). FOMC *minutes* landed 10/7. **CPI (Sep) lands Wed 10/14 8:30 ET; PPI (Sep) Thu 10/15.** Next FOMC 10/27–28 (decision 10/28; a hold with a possible cut/hike debate in play). A calm macro day sitting between a soft 10/2 jobs print (+29k, u-rate 4.2%) and next week's CPI.
+
+### Sector Momentum
+- **This week (early):** Health Care led Wednesday 10/8 (XLV +1.1%); Industrials weak (XLI −2.1% on 10/8). Prior week (ended 10/2): Energy +1.59%, Info Tech +1.37%, Utilities +0.79%. Read: leadership is rotating/choppy — Tech/semis still the structural momentum pocket but *extended, not basing*; Energy and defensives (Health Care) firming. No clean, broad new leadership group with orderly pullbacks.
+
+### Held-Position Review
+- **None.** Book flat (all cash) since the 9/2 PLTR trailing-stop exit (−$111.77). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (avoid names reporting within 10 trading days, i.e. before ~10/23)
+- In-window reporters to avoid: **DAL (10/9), FDX (10/12), UNH/JPM/GS/WFC/JNJ/C/DPZ (10/13), ASML/BAC/MS/BLK/PGR/FAST (10/14), TSM/SCHW/PNC (10/15)**. Q3 bank/semi season is opening 10/13–15 — it narrows the clean (earnings > 10 trading days out) candidate set sharply through next week.
+
+### Trade Ideas — regime ON; evaluated, none clears on quality
+1. **`$NET` (Cloudflare, Technology) — ONLY clean mechanical full-gate PASS; DECLINED on judgment.** `buy_gate.sh`: c9 breakout PASS (last-5 high 369.94 > prior 367.31 — fresh ~52-wk high; 52-wk high ~$370.35), c10 volume PASS **but marginal** (last-5 maxvol 264,256 vs 255,653 threshold — only ~3% over the 1.5x line), c11 stock PASS, **c12 pullback 7.6% — squarely in the ideal 3–8% band.** Earnings estimated **~10/29** (≈14 trading days out → outside the 10-day window, PASS, ~3–4 day cushion, unconfirmed). Catalyst real and present-tense: **"Birthday Week 2026" product blitz** (Basin data platform 10/1, public Certificate Authority, Kitesurf AI-agent browser, Cloudflare Wallets for agent payments) + **BTIG raised PT $382→$413, Buy, 10/6**. Sizing: 7 sh @ ~$341.75, cost ~$2,392, stop $314.41 (−8%), target $423.77 (+24%). **Mechanically GATE: PASS.** *Declined on judgment* — three concrete disqualifiers: (a) **volume confirmation is marginal** (breakout barely clears 1.5x — weak conviction); (b) **heavy insider distribution into the highs** — President Michelle Zatlyn sold ~$35.2M 10/5–10/7 near the 52-wk high; quarterly insider sales ~$115–186M; (c) **nosebleed valuation** (fwd P/E >270x, P/S ~27–49x, GAAP net losses, ~76% above GF Value) after a **parabolic +25–33% one-month run** (fell 3.4% on 10/7 profit-taking). A −8% stop on a 270x-P/E name that just ran 30% is exposed to overnight gap risk the stop can't protect. This is a high-reversal-risk chase, not a low-risk pullback entry. **Watchlist leader** — revisit on a tighter, volume-backed hold of support with insider selling abating and earnings still clear.
+2. **`$PLTR` (Technology) — mechanical PASS, DECLINED on entry-timing.** c9/c10/c11 PASS (fresh high, volume 903k vs 803k threshold) but **c12 pullback only 2.7%** (below the 3–8% band) — buying essentially at a fresh high with no pullback, exactly the overpay/reversal chase the entry-timing rule and the prior NVDA/CHPT/DG/AMD declines exist to prevent. Watchlist only — revisit on an orderly 3–8% pullback.
+3. **`$NVDA` (Semis) — c10 volume FAIL.** c9 PASS (fresh high 243.34 > 234.75), pullback 5.2% (in band), but last-5 maxvol 3.86M < 4.17M threshold — the marginal new high lacks volume confirmation. Drop.
+4. **`$AMD` (Semis) — c10 volume FAIL.** c9 PASS (658.45 > 638.79), pullback 5.7%, but maxvol 584k < 879k threshold. Drop.
+5. **`$ANET` (Technology) — c10 FAIL + c12 FAIL.** c9 PASS (217.29 > 214.62) but volume 315k < 339k and pullback only 2.9% (below band). Drop.
+6. **`$AVGO` / `$MU` / `$MRVL` / `$SMCI` / `$CRWD` / `$COIN` — c9 breakout FAIL (no fresh 3-mo high) and/or c10 volume FAIL / c12 out of band.** AVGO 380.79<<432.66; MU 1106<<1254; MRVL 301<<329 (though volume strong, no fresh high); SMCI volume 1.66M<2.23M; CRWD volume 436k<533k; COIN no fresh high + pullback 14.1% (setup broken, >10%). All drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Recent filings (9/21–10/1): Rep. David Taylor (R-OH) — buys **HD, AMGN**, sale MPC (filed 10/1); Rep. Cleo Fields (D-LA) — buys **MSFT, AAPL, GOOG, NFLX** (filed 10/1); Sen. Whitehouse (D-RI) — *sales* JPM/V/ADI (10/1); Sen. Blumenthal (D-CT) 9/28; Sen. McConnell (R-KY) 9/21. **Idea-generation only.** Disclosures lag ~45 days, hide size/exits, often options — each name must independently clear the full 11-check gate. None of the surfaced buys (HD, AMGN, MSFT, AAPL, GOOG, NFLX) is making a fresh 3-mo high on ≥1.5x volume with a present-tense catalyst and an orderly 3–8% pullback; the Whitehouse names are sales. Moot — no gate impact.
+
+### Risk Factors
+- **Leadership is extended, not basing.** The only momentum pocket (semis NVDA/AMD) can't confirm its marginal new highs on volume; the one clean pullback (NET) is a 270x-P/E parabolic name with insiders selling into it. Chasing either is high reversal risk.
+- **Earnings season opens next week** (banks + ASML/TSM 10/13–15), sharply narrowing the clean (earnings > 10 trading days out) candidate set and adding single-name gap risk.
+- **CPI 10/14 / PPI 10/15 binaries** into a "data-dependent" Fed (10/27–28). A hot CPI could pressure rate-sensitive momentum; being flat/cash into it is a feature, not a cost.
+
+### Decision
+**HOLD — no new trades; MARKET REGIME ON (+0.86%).** SPY (773.88) is **above** its 20-day SMA (767.26, +0.86%) per the deterministic `buy_gate.sh` read — regime holds ON (2nd consecutive). Buy-gate #1 passes and a full momentum-leader sweep was evaluated. The **only** clean mechanical full-gate PASS, `$NET`, has the ideal 7.6% pullback but is **declined on judgment**: marginal volume confirmation, President selling ~$35M into the 52-wk-high rally (10/5–7), and a 270x-fwd-P/E / GAAP-loss valuation after a parabolic +25–33% monthly run — a high-reversal-risk chase, not a low-risk entry. `$PLTR` passes mechanically but its 2.7% pullback means buying at a fresh high → declined on entry timing. All other leaders (NVDA/AMD/ANET volume-FAIL; AVGO/MU/MRVL/SMCI/CRWD/COIN breakout- or volume-FAIL) drop. Book is **flat / 100% cash** ($99,147.92) since the 9/2 PLTR stop exit — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. **`$NET` is the watchlist leader** for the next session; revisit on a tighter, volume-backed hold of support with insider selling abating and earnings (~10/29) still clear. Cash awaits an orderly 3–8% pullback in a fresh breakout leader that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
