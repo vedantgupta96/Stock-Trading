@@ -100,3 +100,57 @@
 - **Process focus:** (1) log each order at fill time; (2) run a fresh pre-market + midday gate screen every regime-ON session; (3) operator to confirm the JPM (and prior CVX) exit records.
 
 ### Grade: C
+
+---
+
+## Week of OCT 05 – OCT 09
+
+*First weekly review committed since the week of Jun 29 – Jul 03; the intervening weeks ran daily routines (logged in TRADE-LOG / RESEARCH-LOG) but no Friday recap was committed. Book has been flat / 100% cash since the 9/2 PLTR trailing-stop exit — equity has printed the identical $99,147.92 every session for ~5 weeks.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(first snapshot this week, 10/6; unchanged since the 9/2 exit — no committed 10/5 snapshot)* |
+| Ending equity (Fri close) | $99,147.92 |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | +1.14% *(7,722.72 on 10/2 → 7,810.76 on 10/9, Gemini)* |
+| Trades taken | 0 (0 new buys, 0 closed) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no trades) |
+| Worst trade | N/A (no trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 5 ON / 0 OFF *(last-read ON carried from the 10/2 OFF→ON flip Mon–Thu; fresh read ON Fri 10/9, SPY 776.49 > 20d SMA 767.88, +1.11%)* |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week (last close was PLTR on 9/2, realized -$111.77). |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92).*
+
+### What Worked
+- **Capital fully preserved — zero drawdown, zero rule violations.** Equity flat (0.00%) with no losing trade, no stop breach, no gate violation; the account carries a clean risk record for a fifth straight week.
+- **The volume gate did its job.** Regime was ON all week, yet every candidate worked on 10/9 (OKTA, META, DINO, PBF, NVDA, AMD) failed c10 (breakout volume ≥ 1.5× 20-day avg); even SPY itself failed c10. Low-conviction breakouts are exactly what that filter exists to reject — none were forced.
+- **Entry-timing discipline held.** The AI/semi pullbacks (NVDA ~4.8%, AMD ~5.8%) finally landed in the 3–8% entry band this week, but without volume confirmation they stayed watchlist, not buys — no chasing extended, parabolic names at fresh highs.
+
+### What Didn't Work
+- **Lagged an up market again — the recurring cost.** S&P +1.14% while we sat 100% cash the entire week with the regime ON all five sessions; this is the same opportunity-cost pattern flagged in the Jul 2 review, now in its fifth consecutive flat week since the 9/2 exit.
+- **Idea flow is persistently thin.** For ~5 weeks no name has cleared the full 11-check gate on judgment as well as mechanically; the failures rotate (entry-timing on parabolic leaders, c9 no-fresh-breakout, c10 volume) but the net result is an unbroken cash position through both OFF and ON regimes.
+- **Cadence gaps persist.** Several sessions this week (10/5, 10/7, 10/8) committed no EOD snapshot, and multiple pre-market entries were "MISSING / run inline per market-open STEP 1." Equity was unchanged across the gaps, but the audit trail still has holes — the same process weakness noted in July.
+
+### Key Lessons
+- **Flat in an ON-regime up week is a real cost, not neutrality.** Five straight weeks of 100% cash while the S&P grinds higher is defensible only if the gate is genuinely finding nothing — and it is (c10 volume is the binding failure). The lesson is to keep screening every ON session and be ready to act the moment a fresh breakout prints on ≥1.5× volume, not to lower the bar.
+- **Volume, not price level, is the current bottleneck.** Pullbacks are finally reaching the entry band, but conviction volume is absent. Watch NVDA/AMD specifically for a fresh high on ≥1.5× 20-day volume — that is the single trigger most likely to end the cash stretch cleanly.
+
+### Adjustments for Next Week
+- **No rule changes.** No rule has proven out for 2+ consecutive weeks or failed badly with data to justify a rulebook edit; the gate is working as designed (preserving capital, rejecting low-conviction breakouts), so `TRADING-STRATEGY.md` is left unchanged. The five-week cash stretch is an idea-supply/market-quality outcome, not a rule failure.
+- **Event-risk map:** CPI Wed 10/14 and PPI Thu 10/15 are next week's binaries; bank earnings open the week (JPM/WFC/C/GS 10/13, BAC/MS 10/14), which narrows the clean (earnings >10 trading days out) candidate set. Do not force an entry into the CPI print.
+- **Watchlist:** NVDA, AMD — in the 3–8% pullback band, awaiting a volume-confirmed fresh high. Keep running a fresh pre-market + midday gate screen every regime-ON session and commit an EOD snapshot every session to close the audit-trail gaps.
+
+### Grade: C
