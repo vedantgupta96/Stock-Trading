@@ -1671,3 +1671,50 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME ON (+1.11%) but nothing clears the full gate.** SPY (776.49) is **above** its 20-day SMA (767.88, +1.11%) on the deterministic `buy_gate.sh` read — regime remains ON (since the 10/2 flip). Buy-gate #1 passes and six candidates were evaluated, but **every one fails c10 (breakout volume ≥ 1.5× 20-day avg)**; META additionally fails c9 (not a fresh high). The AI/semi pullbacks (NVDA 4.8%, AMD 5.8%) are finally in the entry band but their breakouts lacked volume confirmation — watchlist, not buys. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. Cash awaits a fresh breakout that clears the volume gate on an orderly 3–8% pullback and the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so no commit is made this run per STEP 7.
+
+## 2026-10-14 (Wed) — Pre-Market Research (CPI day)
+
+**Decision: HOLD — no new trades; REGIME ON (+1.06%) but NO name clears the full gate — every candidate fails volume confirmation (c10).** This is a genuine pre-market run. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 778.03 vs 20-day SMA 769.87 → ABOVE by +1.06%** → **REGIME ON** (ON since the 10/2 flip, holding). Buy-gate #1 passes, but **no name clears the full 11-check gate** — the universal failure remains **c10 (breakout volume ≥ 1.5× 20-day avg)**: breakouts keep printing without conviction volume. Book is **flat / 100% cash** — nothing to hold, no sell-side review. And **Sep CPI landed today at 8:30 ET** — the week's binary, digesting in real time → whippy, two-sided tape; forcing an entry into a live CPI print is exactly the event-risk the discipline sidesteps.
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 778.03 vs SMA20 769.87]` → **REGIME ON (+1.06%)**. Governs per strategy.
+- **Cross-check (Gemini):** S&P 500 cash index ~7,824 above its 20-day SMA ~7,726 — agrees, regime ON. The deterministic SPY read is authoritative.
+- **Consequence:** new longs permitted *iff* a candidate clears all 11 checks. Today none does — cash remains correct by quality, not by regime.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-13
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/12). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **VIX ~15.2, calm** — ~18% below the ~18.6 long-run average; no fear, no stress.
+- **WTI crude ~$94/bbl, +1.3%** — firm at a two-week high (Brent back near $100 on Middle East geopolitical tension). Modestly higher energy is a two-sided inflation input into today's CPI.
+- **Macro — CPI DAY:** **Sep CPI released today 8:30 ET** (headline expected ~3.6–3.7% y/y on energy; core expected to moderate ~0.2% m/m). The week's binary into the Oct 27–28 FOMC. Fed **Beige Book** also today; Lagarde/Bowman/Barkin speak. **PPI + jobless claims land tomorrow 10/15.** Sep payrolls (10/2) already printed a big miss (+29k, u-rate 4.2%), muddying the late-Oct hike path.
+- **Rates backdrop:** post-9/16 hike (3.75–4.00%, "higher-for-longer") still structural; softening data has cut hike urgency but today's CPI can swing it either way.
+
+### Sector Momentum
+- **Leading this week:** Energy (+1.6% on 10/13; ~+4% MTD), Communication Services, Utilities, Materials firm; Technology/Comm Services remain the YTD AI-driven leaders. The AI/semi pocket is still the leader but **extended, not basing** — and today it again fails the volume gate.
+
+### Held-Position Review
+- **None.** Book flat (all cash). No earnings watch, no stop maintenance, no time-stop clocks.
+
+### Earnings Watch (avoid names reporting before ~10/28, i.e. within 10 trading days)
+- **Today 10/14:** UNH, ASML, BAC, MS, BLK, STT, PGR, FAST report. **10/15:** TSM, IBKR, SCHW. Later: RTX/Tesla (10/20–21), HON/SPOT (10/22) — these are > 10 trading days out. Bank-season crowding narrows the clean (earnings >10 days out) candidate set this week.
+
+### Trade Ideas — regime ON; evaluated, none clears (all fail c10 volume)
+1. **`$FTNT` (Technology/Cybersecurity) — c10 volume FAIL.** Near 1-yr high; Barclays raised PT $190→$210 (AI-cybersecurity). c9 breakout PASS (last-5 high 196.68 > prior 192.23 — fresh high in last 5 days), pullback **3.1% (in the 3–8% band)**, earnings >10d out — but last-5 maxvol 132,288 < 190,579 threshold (1.5× avg 127,053). Cleanest-looking setup on the board but the breakout lacked volume conviction; an analyst PT raise is not a hard catalyst breakout. Watchlist — revisit if volume re-expands on a hold of support.
+2. **`$NVDA` (Technology/Semis) — c9 breakout FAIL + c10 FAIL.** last-5 high 239.08 < prior 243.34 (no fresh high in last 5 days); pullback 4.4% in-band but last-5 maxvol 3,598,041 < 4,188,153 threshold. Watchlist.
+3. **`$AMD` (Technology/Semis) — c9 breakout FAIL + c10 FAIL.** last-5 high 648.31 < prior 658.45 (no fresh high); pullback 6.6% in-band but volume 583,597 < 838,304 threshold. Watchlist.
+- **Pre-market mover scan** surfaced mostly sub-$2 micro-cap junk (TGL +306%, AEHL, NIVF, etc.) — not stocks we trade; no gate-quality breakout-and-pullback among them. Financials (BLK/STT/BAC) are up on earnings — earnings-day names, excluded by #7.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Last 2 weeks: Sen. Fetterman (DELL/EMC **corporate bonds**, not stock); Sen. Whitehouse **sales** (BSX/DVN/HD); Sen. King **sale** (EA); Sen. McConnell WFC purchase (filed ~9/21, outside window). All are bonds, sales, or financials reporting earnings today — none is a fresh 3-month high on ≥1.5× volume with a present catalyst and orderly pullback. **Idea-generation only**; moot, no gate impact.
+
+### Risk Factors
+- **CPI is live today.** A hot core print puts another hike back on the table and can whipsaw momentum violently; a cool print could gap leaders higher and away from clean entries. Being flat/cash into the print is a feature, not a cost.
+- **Volume is still the tell.** Multiple names at/near fresh highs, none on ≥1.5× average volume — low-conviction breakouts are exactly what the volume filter rejects. Even SPY itself fails c10.
+- **AI/semi leadership extended.** NVDA/AMD pullbacks are in-band but their breakouts are no longer fresh highs and lacked volume — not a clean, confirmed setup. FTNT is the only fresh-high + in-band-pullback name and it fails volume.
+
+### Decision
+**HOLD — no new trades; REGIME ON (+1.06%) but nothing clears the full gate.** SPY (778.03) is **above** its 20-day SMA (769.87, +1.06%) on the deterministic `buy_gate.sh` read — regime remains ON (since the 10/2 flip). Buy-gate #1 passes and the board was evaluated (FTNT, NVDA, AMD + mover/STOCK-Act scans), but **every candidate fails c10 (breakout volume ≥ 1.5× 20-day avg)**; NVDA and AMD additionally fail c9 (no fresh high in last 5 days). FTNT is the only fresh-high name with an in-band (3.1%) pullback but its breakout lacked volume — watchlist, not a buy. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. With **Sep CPI landing live today**, forcing an entry is exactly the event-risk the discipline sidesteps. Cash awaits a fresh breakout that clears the volume gate on an orderly 3–8% pullback and the full 11-check gate on judgment as well as mechanically. Force nothing.
