@@ -1671,3 +1671,55 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME ON (+1.11%) but nothing clears the full gate.** SPY (776.49) is **above** its 20-day SMA (767.88, +1.11%) on the deterministic `buy_gate.sh` read — regime remains ON (since the 10/2 flip). Buy-gate #1 passes and six candidates were evaluated, but **every one fails c10 (breakout volume ≥ 1.5× 20-day avg)**; META additionally fails c9 (not a fresh high). The AI/semi pullbacks (NVDA 4.8%, AMD 5.8%) are finally in the entry band but their breakouts lacked volume confirmation — watchlist, not buys. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. Cash awaits a fresh breakout that clears the volume gate on an orderly 3–8% pullback and the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so no commit is made this run per STEP 7.
+
+---
+
+## 2026-10-14 (Wed) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades; REGIME ON (+0.6%) but NO name clears the full gate — every candidate fails volume confirmation (c10); the tech leaders also fail c9.** Today's pre-market research entry was absent, so research was generated inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY ~775.5 vs 20-day SMA 770.95 → ABOVE by ~+0.6%** → **REGIME ON** (since the 10/2 flip). Buy-gate #1 passes and candidates were evaluated, but **no name clears the full 11-check gate** — the universal failure is **c10 (breakout volume ≥ 1.5× 20-day avg)**: breakouts are printing without conviction volume, and this lands on a **hot-CPI morning**. Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → no commit per STEP 7.
+
+### Market Regime Status — ON (buy-gate #1 PASSES)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 775.535 vs SMA20 770.95]` → **REGIME ON (~+0.6%)**. Governs per strategy. Narrower cushion than 10/9's +1.11%.
+- **Consequence:** new longs permitted *iff* a candidate clears all 11 checks. Today none does — cash remains correct by quality, not by regime.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-13
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/12). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **MACRO — HOT CPI THIS MORNING (the day's binary).** September CPI (released Wed 10/14) **+0.6% MoM** (vs +0.4% Aug); **headline +3.7% YoY** (up from 3.4% — reaccelerating); **core +0.3% MoM, +2.6% YoY** (up from 2.4%). Gasoline +9.1% MoM drove >half the headline gain; energy +5.2% MoM / +20.4% YoY. A hot print into a "higher-for-longer" Fed (funds 3.75–4.00% post-9/16 hike) — inflation moving the wrong way, cutting against the recent soft-jobs cut-odds narrative. Whippy, two-sided tape digesting it. FOMC 10/27–28 (hold expected).
+- **VIX ~15.3, calm** (10/13 15.27; 10/14 ~15.27–15.32, futures down) — ~18% below the 18.62 long-run average. No fear despite the hot CPI, but "moderate caution" with tech/small-caps soft.
+- **WTI crude ~$95.4/bbl, +1.3%** — up on renewed supply-disruption fears (attacks on Saudi energy infrastructure / shipping near the Strait of Hormuz; Saudi–Houthi escalation). Bullish technical setup. This is lifting energy names AND is itself the gasoline-driven inflation input in today's CPI.
+
+### Sector Momentum
+- **Leading this week:** Energy (+1.3%), Consumer Staples (+1.1%), Health Care (+0.7%), Financials (+0.6%), Real Estate (+0.5%), Utilities (+0.5%) — a defensive/energy rotation. **Technology was the WEAKEST major sector, −1.3% on the week** — the AI/semi momentum pocket is rolling over, not basing. MTD leaders cited: Industrials, Technology, Healthcare (mixed with the weekly read). Cyber (CRWD/FTNT/PANW) has strong YTD but is pulling back, not breaking out.
+
+### Held-Position Review
+- **None.** Book flat (all cash). No earnings watch, no stop maintenance, no time-stop clocks.
+
+### Earnings Watch (avoid names reporting before ~10/28, i.e. within 10 trading days)
+- In-window reporters to avoid: NFLX/MMM/COF/ISRG (10/20), ABT/NEE/DHR/TSLA/IBM/META/TXN/LRCX (10/21); week of 10/26: HON/CDNS (10/26), V/GLW/PYPL/BA (10/27), MSFT/GOOGL/STX (10/28). Q3 season in full swing — narrows the clean (earnings >10 trading days out) candidate set.
+
+### Trade Ideas — regime ON; evaluated, none clears (all fail c10 volume; tech leaders also fail c9)
+1. **`$DINO` (Energy) — c10 volume FAIL + no pullback.** c9 PASS (fresh high 129.35 > prior 118.01) but last-5 maxvol 124,572 < 172,577 threshold; c12 pullback 0.9% (right at the high, not an orderly 3–8% entry). Drop.
+2. **`$PBF` (Energy) — c10 volume FAIL + thin pullback.** c9 PASS (fresh high 92.04 > prior 85.73) but volume 167,005 < 179,528; pullback 2% (below band). Drop.
+3. **`$XOM` (Energy) — c10 volume FAIL + no pullback.** c9 PASS (175.48 > 169.63) but volume 485,666 < 544,147; pullback 0.5%. Drop.
+4. **`$COP` (Energy) — c10 volume FAIL + no pullback.** c9 PASS (142.40 > 141.62, marginal) but volume 282,237 < 392,956; pullback 0.6%. Drop.
+5. **`$OKTA` (Technology) — c10 volume FAIL.** c9 PASS (fresh high 234.6 > prior 226.19), c12 pullback 4.6% (in-band — best entry timing of the set), but last-5 maxvol 139,503 < 241,848 threshold. Breakout lacks volume conviction. Watchlist — revisit if volume re-expands on a hold of support.
+6. **`$NVDA` (Technology/Semis) — c9 + c10 FAIL.** last-5 high 237.05 < prior 243.34 (no fresh high — rolled off its high) and volume 3.60M < 4.01M. Pullback 5.2% but below a non-fresh high. Drop.
+7. **`$AMD` (Technology/Semis) — c9 + c10 FAIL.** last-5 high 643.44 < prior 658.45 and volume 583,597 < 799,339. Pullback 9.1% but non-fresh high. Drop.
+8. **`$PANW` (Technology/Cyber) — c9 + c10 FAIL.** 421.45 < 432.02, volume 215k < 287k. Pullback 11.1% is a decline, not a breakout-and-pullback. Drop.
+9. **`$CRWD` (Technology/Cyber) — c9 + c10 FAIL.** 276.29 < 286.94, volume 406k < 434k. Pullback 9.2% below a non-fresh high. Drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- No fresh high-conviction congressional disclosures surfaced that are independently making a fresh 3-month high on ≥1.5× volume with a present-tense catalyst and an orderly pullback today. **Idea-generation only** — disclosures lag ~45 days and each name must clear the full 11-check gate regardless. Moot; no gate impact.
+
+### Risk Factors
+- **Hot CPI just landed (headline 3.7% YoY, core 2.6%, both reaccelerating).** A hawkish inflation surprise into a "higher-for-longer" Fed → whippy, two-sided tape. Not the session to force an entry.
+- **Tech leadership rolling over (−1.3% on the week, weakest sector).** The former momentum pocket (NVDA/AMD/cyber) is no longer at fresh highs (c9 fails) — breakouts are breaking down, not pulling back.
+- **Energy makes fresh highs but on thin volume and no pullback.** The leadership rotation into energy is real (WTI +1.3% on Hormuz/Saudi supply fears), but every energy name fails c10 (volume) and sits right at its high (no orderly 3–8% pullback). Low-conviction breakouts are exactly what c10 and the entry-timing rule exist to reject; chasing geopolitically-driven oil spikes at the high invites whipsaw.
+
+### Decision
+**HOLD — no new trades; REGIME ON (~+0.6%) but nothing clears the full gate.** SPY (~775.5) is **above** its 20-day SMA (770.95) on the deterministic `buy_gate.sh` read — regime remains ON (since the 10/2 flip). Buy-gate #1 passes and nine candidates were evaluated across the two live pockets, but **every one fails c10 (breakout volume ≥ 1.5× 20-day avg)**; the tech leaders (NVDA/AMD/PANW/CRWD) additionally fail c9 (no longer fresh highs — rolling over). The energy names make fresh highs but on thin volume and with no orderly pullback (at-the-high, 0.5–2%); `$OKTA` has the only in-band pullback (4.6%) but fails volume. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. A **hot CPI this morning** (inflation reaccelerating 3.4→3.7% headline, 2.4→2.6% core) into a higher-for-longer Fed leaves a whippy risk-event tape — another reason not to force a chase. Cash awaits a fresh breakout that clears the volume gate on an orderly 3–8% pullback and the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so no commit is made this run per STEP 7.
