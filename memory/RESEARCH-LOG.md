@@ -1768,3 +1768,49 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.13%).** SPY (769.65) is **below** its 20-day SMA (770.65) on the authoritative deterministic `buy_gate.sh` read, flipping the market regime filter **ON → OFF** after an ON stretch since 10/2. Buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX is rising (~17.4, +~10%) amid a global AI/semi selloff and a defensive sector rotation, one day after a hot CPI and into this morning's PPI — a tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-10-16 (Fri) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades. REGIME BORDERLINE/ON-THE-LINE and nothing clears the full gate.** Today's pre-market research entry was absent, so research was generated inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) is **oscillating right across the 20-day SMA**: one call returned `SPY 771.84 vs SMA20 771.62` (PASS, +0.03%), a call seconds later returned `SPY 771.52 vs SMA20 771.61` (FAIL, −0.01%). SPY is sitting essentially **exactly on its 20-day line** — a knife-edge regime a day after yesterday's narrow OFF (−0.13%). Even granting a marginal ON, **no candidate clears the full 11-check gate**: OKTA's pullback is a 14% breakdown (out of band, broken setup); NVDA and AMD are no longer at fresh highs (c9 fails). Book is **flat / 100% cash** — nothing to hold, no sell-side review. No trades → no commit per STEP 7.
+
+### Market Regime Status — BORDERLINE (buy-gate #1 flickering PASS/FAIL on the line)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** reads straddling the SMA within one routine run — `SPY 771.84 vs SMA20 771.62` PASS then `SPY 771.52 vs SMA20 771.61` FAIL. SPY is **on its 20-day SMA (±0.03%)**. Not a clean, durable ON.
+- **Gemini concurs on proximity:** SPY ~$777.95 vs 20-day SMA ~$772.23 (reads above by a hair; intraday Alpaca read is tighter/right on the line).
+- **Consequence:** regime is marginal at best — a day after the 10/15 ON→OFF flip (−0.13%). Per strategy, a borderline regime is not a green light to force activity. New longs permitted only if a candidate independently clears all 11 checks — today none does.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-15
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/12). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **VIX ~16.2, falling (−1.6% on the day)** — ~11.6% below the ~18.62 long-run average; the fear spike from yesterday's global AI/semi selloff is easing. Calm, but tech leadership remains damaged.
+- **WTI crude ~$97.3/bbl, −0.7%** — a small daily dip after a mid-week rally toward $100 on Hormuz/Saudi supply fears; underlying trend still bullish. Energy remains the leadership pocket.
+- **Backdrop:** defensive + energy rotation (Consumer Staples, Health Care, Energy, Materials leading this week) while Information Technology/semis roll over off their highs. Q3 earnings season in full swing narrows the clean (earnings >10 trading days out) candidate set.
+
+### Sector Momentum
+- **Leading this week:** Consumer Staples (~+3.7%), Health Care (~+3.6%), Energy (~+2.5%), Materials (~+1.8%), plus early-week Consumer Discretionary/Industrials strength — defensive/cyclical-value rotation.
+- **Lagging:** Information Technology / semis — former momentum leaders (NVDA/AMD) are off their highs (c9 fails), breaking down rather than basing.
+
+### Earnings Watch (avoid names reporting before ~2026-10-30, i.e. within 10 trading days)
+- Candidates evaluated are all clear of the 10-day window: **NVDA 11/17, AMD 11/3, OKTA 12/1** (all pass #7). In-window reporters to avoid: NFLX/GM (10/20), TSLA/META (10/21), PG (10/22), plus financials reporting today (TRV/TFC/MTB/CFG/RF) and the 10/27 cluster (SOFI/BA/HCA/AMT). None held, so no exit flags.
+
+### Trade Ideas — regime borderline; watchlist names evaluated, none clears
+1. **`$OKTA` (Technology) — entry-timing FAIL (pullback out of band).** c9 PASS (last5 high 234.6 > prior 232.92) and c10 PASS (maxvol 268,239 > 246,617 threshold) — the breakout had volume. BUT the stock has fallen to ~$201.83, a **14% decline from the breakout high** (shadow c12: 14% vs 3–12% band). Per strategy, a pullback exceeding ~10% from the high is a **broken setup**, not an orderly 3–8% entry — this is a breakdown. Drop.
+2. **`$NVDA` (Technology/Semis) — c9 + c10 FAIL.** last5 high 228.80 < prior 243.34 (NOT a fresh high — rolled off) and maxvol 3.96M < 4.17M threshold. Pullback reads 5.7% but it's below a non-fresh high → breakdown, not breakout-and-pullback. Drop.
+3. **`$AMD` (Technology/Semis) — c9 FAIL.** last5 high 606.19 < prior 658.45 (not a fresh high); c10 PASS (1.01M > 801k threshold) but a fresh high is the prerequisite. Pullback 10.5% below a non-fresh high → declining. Drop.
+- **Pre-market "movers" (Gemini): HODO/SXTC/RUBI/JAGX/TCRT/XLAB etc.** — low-float penny/pump names on anomalous volume, not valid momentum-breakout swing candidates (no durable 3-month/52-week-high structure, uninvestable risk). Discarded without gating.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Recent filings (per prior-day scans): Larsen (WSM/ADI), Cisneros (TSM), McClain (MSFT/CAT/IBRX), Doggett (HD/IBM/JNJ/PPG), Fields (MSFT/AAPL/GOOG/NFLX), Taylor (AMGN/HD/MPC). **Idea-generation only** — disclosures lag the trade up to ~45 days, omit size/exits, and are often options. None is independently making a fresh 3-month high on ≥1.5× volume with a present catalyst and an orderly 3–8% pullback today. Moot; no gate impact.
+
+### Risk Factors
+- **Regime is on the knife's edge.** SPY straddling its 20-day SMA (±0.03%, reads flipping PASS/FAIL) one day after a confirmed ON→OFF flip is the opposite of a durable uptrend. The regime filter exists precisely to keep capital out of chop like this — a marginal cross is not a mandate to deploy.
+- **Tech/semi leadership is rolling over, not basing.** NVDA/AMD are off their highs (c9 fails) after yesterday's global semi selloff; OKTA has shed 14% from its high. The former momentum pocket is breaking down.
+- **Q3 earnings season in full swing** narrows clean candidates and raises single-name gap risk across the tape.
+
+### Decision
+**HOLD — no new trades; regime BORDERLINE and nothing clears the full gate.** The authoritative `buy_gate.sh` read has SPY sitting **exactly on its 20-day SMA** (reads flickering 771.84 PASS / 771.52 FAIL within one run), a day after the 10/15 ON→OFF flip — a marginal, non-durable regime, not a green light. Even granting a hair's-breadth ON, **no candidate clears the full 11-check gate**: OKTA had breakout + volume but has fallen 14% from its high (broken setup, out of the entry band); NVDA and AMD are no longer at fresh highs (c9 fails) — they're breaking down, not pulling back. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review, no stop/time-stop maintenance. New buys this week 0/3, day-trades 0/3. With leadership rotating defensive while tech/semis roll over, and the index itself undecided on its trend line, cash is the correct posture by both rule and quality. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so no commit is made this run per STEP 7.
