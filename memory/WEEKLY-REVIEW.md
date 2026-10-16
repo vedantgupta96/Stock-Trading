@@ -154,3 +154,63 @@
 - **Watchlist:** NVDA, AMD — in the 3–8% pullback band, awaiting a volume-confirmed fresh high. Keep running a fresh pre-market + midday gate screen every regime-ON session and commit an EOD snapshot every session to close the audit-trail gaps.
 
 ### Grade: C
+
+---
+
+## Week of OCT 12 – OCT 16
+
+*First DOWN-market week of the recent stretch: the S&P fell -0.84% while the book sat 100% cash (0.00%), so cash OUTPERFORMED the tape by +0.84 pts this week — the opposite of the opportunity-cost pattern flagged in the prior up-weeks. The regime filter flipped ON -> OFF mid-week (Thu 10/15) into a global AI/semi selloff, validating the defensive posture. Book flat / all cash since the 9/2 PLTR exit — equity has now printed the identical $99,147.92 every session for ~6 weeks.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(first snapshot this week, 10/12 EOD; unchanged since the 9/2 exit — no committed Mon-open snapshot)* |
+| Ending equity (Fri close) | $99,147.92 *(live Alpaca, balance_asof 10/15; flat all week)* |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | **-0.84%** *(7,811.54 on 10/9 -> 7,745.95 on 10/16, Gemini)* |
+| Relative vs S&P | **+0.84 pts** (cash beat a down tape) |
+| Phase P&L (off $100k base) | -$852.08 (-0.85%) |
+| Trades taken | 0 (0 new buys, 0 closed) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no trades) |
+| Worst trade | N/A (no trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | **Flipped ON -> OFF mid-week.** ON early (10/12 carried ON from 10/9; 10/14 fresh +0.6%); OFF late (10/15 fresh -0.13% FLIP; 10/16 fresh -1.02%). 10/13 no fresh read committed. Net ~3 ON / 2 OFF. |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week (last close was PLTR on 9/2, realized -$111.77). |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92). balance_asof 10/15.*
+
+### What Worked
+- **Cash OUTPERFORMED a down tape — the regime filter earned its keep.** S&P -0.84% while the book was flat (0.00%), a +0.84-pt relative win. This is the inverse of the prior up-weeks' opportunity cost: the single highest-priority rule (SPY vs 20-day SMA) flipped the regime OFF on Thu 10/15 (-0.13%) and deepened Fri (-1.02%) — exactly into a global AI/semi selloff, keeping us out of the one tape the discipline is built to sidestep.
+- **Capital fully preserved — sixth straight week, zero drawdown, zero rule violations.** No losing trade, no stop breach, no gate violation; a clean risk record held through a mid-week regime flip and a hot CPI print.
+- **The volume gate did its job before the regime even flipped.** Early-week with the regime still ON (10/14, +0.6%), nine candidates were evaluated across the two live pockets (Energy: DINO/PBF/XOM/COP; Tech: OKTA/NVDA/AMD/PANW/CRWD) and every one failed c10 (breakout volume >= 1.5x 20-day avg); the tech leaders additionally failed c9 (rolled off their highs). Cash was correct by quality first, then by regime — no low-conviction energy chase at the highs into CPI.
+
+### What Didn't Work
+- **Event-risk tape, correctly sidestepped, but idea flow stayed barren.** For ~6 weeks no name has cleared the full 11-check gate; this week's binding failure was c10 (volume) early and then the regime flip. Defensible in a down week, but the account is generating zero alpha and will keep doing so until a volume-confirmed breakout appears.
+- **Audit-trail cadence gaps persist — the recurring process weakness.** No session entry at all for Tue 10/13; no committed EOD snapshot for Thu 10/15 or Fri 10/16; pre-market entries for 10/14 and 10/16 were MISSING (10/14 research was run inline per market-open STEP 1; 10/16 had a weekly-review regime read only). Equity was unchanged across every gap, but the trail still has holes — the same issue flagged in July and the Oct 5-9 review.
+- **Regime whipsaw risk is live.** The ON->OFF flip was a narrow -0.13% cross Thu before deepening to -1.02% Fri; a mechanical filter near its line can whip. It resolved correctly (deepened OFF, market fell), but a single-day cross is thin evidence — worth watching for a flip-back next week.
+
+### Key Lessons
+- **Being flat is not always opportunity cost — in a down week it is alpha.** The prior reviews graded cash a cost against rising markets; this week cash beat the tape by +0.84 pts because the regime filter flipped OFF ahead of the drawdown. The lesson is not to second-guess the regime rule during the quiet up-weeks: its payoff shows up precisely in weeks like this one.
+- **Volume remains the bottleneck when the regime is ON, and the regime removed the question entirely once it flipped.** Early week the binding constraint was c10 (breakouts without conviction volume); by Thu the regime filter made the point moot. Keep screening every ON session for a fresh high on >=1.5x 20-day volume, but do not fight the regime when it is OFF.
+
+### Adjustments for Next Week
+- **No rule changes.** No rule has proven out for 2+ consecutive weeks or failed badly with data to justify a rulebook edit. This week the regime filter worked exactly as designed (OFF into a -0.84% week, cash preserved and relatively outperformed), so `TRADING-STRATEGY.md` is left unchanged.
+- **Event-risk map:** FOMC 10/27-28 (hold expected) is the next macro binary. Q3 earnings in full swing narrows the clean (earnings >10 trading days out) candidate set hard — NFLX/ISRG 10/20, TSLA/META/IBM 10/21, MSFT/GOOGL 10/28, plus the broader 10/20-10/28 slate. Do not take a name reporting inside 10 trading days.
+- **Regime posture:** Entered next week with the regime OFF (-1.02% on 10/16). No new buys until a fresh pre-market read confirms SPY back above its 20-day SMA. Watch for a flip-back given the narrow Thu cross; do not anticipate it.
+- **Process focus (unchanged, still unmet):** commit an EOD snapshot EVERY session and a pre-market entry EVERY session to close the recurring audit-trail gaps (10/13 missing, 10/15 & 10/16 EOD missing this week).
+- **Watchlist:** NVDA, AMD — rolled off their highs this week (c9 now fails); re-qualify only on a fresh high with >=1.5x 20-day volume. OKTA — only in-band pullback (4.6%) seen early-week but failed volume; revisit if volume re-expands and the regime flips back ON.
+
+### Grade: B
+
+*Rationale: capital fully preserved for a sixth week with zero rule violations, and this week the discipline actively paid — the regime filter flipped OFF into a -0.84% market and the cash book beat the tape by +0.84 pts. Better than the recent C's (where cash was a cost against up-markets) because the defensive posture was correct and rewarded. Held back from an A by the persistent audit-trail cadence gaps and the reality that the book has generated zero alpha for ~6 weeks — preservation, not production.*
