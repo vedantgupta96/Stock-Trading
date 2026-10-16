@@ -1768,3 +1768,54 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.13%).** SPY (769.65) is **below** its 20-day SMA (770.65) on the authoritative deterministic `buy_gate.sh` read, flipping the market regime filter **ON → OFF** after an ON stretch since 10/2. Buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX is rising (~17.4, +~10%) amid a global AI/semi selloff and a defensive sector rotation, one day after a hot CPI and into this morning's PPI — a tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-10-16 (Fri) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. REGIME FLIPPED OFF → ON (whipsaw).** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 771.77 vs 20-day SMA 771.11 → ABOVE by +0.09%** → **REGIME ON**, reversing yesterday's razor-thin OFF read (−0.13%). Buy-gate #1 passes, so new longs are *permitted* today — but **no candidate clears the full 11-check gate on both mechanics and judgment**, so the correct answer remains cash. Book is **flat / 100% cash** — nothing to hold, no sell-side review, no stop maintenance. Three watchlist ideas documented below; all FAIL the gate (earnings-in-window and/or volume and/or no valid pullback entry). One Discord alert sent (regime flip OFF→ON, STEP 5 trigger).
+
+### Market Regime Status — ON (buy-gate #1 PASSES) — **FLIPPED OFF→ON TODAY (whipsaw)**
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 771.77 vs SMA20 771.11]` → **REGIME ON (+0.09%)**. Governs per strategy.
+- **Gemini concurs:** SPY ~$771.79 vs 20-day SMA ~$771.10 → above. A narrow but confirmed cross back above the line.
+- **State change:** Regime read OFF yesterday (10/15: −0.13%) after an ON stretch since 10/2; now crossed back above on a +0.09% hair. **This is a two-session whipsaw across a flat line — treat the "ON" as low-conviction.** Per strategy the rule is mechanical and today's read governs today (buys permitted), but do not force an entry into a tape that can't decide which side of its own 20-day average it's on.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-15
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/12). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **Regime ON (barely) + still a defensive tape.** SPY reclaimed its 20-day line by a hair; the broad risk-off character of the week (global AI/semi selloff earlier in the week) is easing but leadership remains defensive, not broad-participation growth.
+- **VIX ~16.03, falling (−2.6% on the day)** — down from 16.46 (10/15) and 16.87 (10/14). Fear is de-escalating, a mild positive, but still a decline *from* elevated, not a confirmed risk-on all-clear.
+- **WTI crude ~$97/bbl, −0.5%** — easing slightly after a +3% Thursday on a US crude-inventory draw; still elevated. Energy remains a leadership pocket.
+- **Macro — quiet day.** No major US releases today (10/16). Recent: hot September CPI (10/14, +0.6% MoM, core +2.6% YoY), September PPI (10/15). Fed Chair Warsh speaking at an IMF summit reiterated persistent-inflation concerns; no FOMC signal. Next FOMC **10/27–28** (hold expected). "Higher-for-longer" backdrop intact.
+
+### Sector Momentum
+- **Leading this week:** Consumer Staples **+3.99%**, Utilities **+3.97%**, Energy **+3.62%** — a clear **defensive + energy rotation** persists.
+- **Lagging:** Industrials **−0.40%**, Information Technology **−0.26%** — the former momentum pocket (tech/semis) is still soft, not basing into fresh leadership.
+- Takeaway: leadership is defensive (staples/utilities/energy), the signature of a late-cycle/risk-off tape — not the broad growth uptrend momentum-breakout trading wants. Any clean breakout-on-pullback leader is scarce here.
+
+### Earnings Watch (avoid names reporting before ~10/30, i.e. within 10 trading days)
+- None held — no exit flags. Q3 season in full swing and heavy: today (10/16) TRV/SLB/TFC/SCHW/TSM/PNC + regional banks; week of 10/19 UNH/JPM/GS/WFC/BAC and a wave of banks/healthcare/industrials; **10/27** KO, V, and others; **10/27–28 FOMC**. The dense calendar disqualifies a large share of otherwise-interesting names on buy-gate #7 alone.
+
+### Trade Ideas (regime ON → ideas generated; ALL fail the gate — watchlist only)
+Mechanical breakout (c9) / volume (c10) / pullback (shadow c12) computed deterministically by `buy_gate.sh`.
+
+- **`$V` (Visa) — Financials.** The only probed name clearing **both** c9 breakout (52-wk/3-mo high in last 5d: last5 403.21 vs prior 385.54) **and** c10 volume (last5 maxvol 444,729 ≥ 383,176 threshold, 1.5×avg). Catalyst: fresh 52-wk high on positive company news. **FAILS:** c7 earnings — reports **~Oct 27** (≈7 trading days out, inside 10-day window); **entry timing** — pullback only ~0.9% from high (band 3–8%), i.e. extended, no valid pullback entry. Sizing ref: entry ~$399.51, stop $367.55 (−8%), target $495.39 (+24%), ~6 sh / ~$2,397. **Verdict: FAIL (c7 earnings + no valid pullback).** Revisit only *after* its 10/27 report and on a genuine 3–8% pullback that holds support.
+- **`$KO` (Coca-Cola) — Consumer Staples (leading sector).** c9 breakout PASS (new 3-mo high, last5 94.09 vs prior 92.48). **FAILS:** c10 volume (last5 maxvol 1,219,010 < 1,571,975 threshold — grind-up, not a conviction breakout); c7 earnings — reports **~Oct 27** (≈7 trading days, inside window); entry extended (pullback ~2.3%). Sizing ref: entry ~$91.90, stop $84.54, target $113.95, ~27 sh / ~$2,481. **Verdict: FAIL (c10 volume + c7 earnings + no pullback).**
+- **`$MRNA` (Moderna) — Health Care.** c9 breakout PASS (52-wk high, last5 242.05 vs prior 212.15); real catalyst (melanoma-vaccine data / Goldman target raise); c7 earnings OK — reports **Nov 6** (≈15 trading days, OUTSIDE window → PASS). **FAILS:** c10 volume (last5 maxvol 556,237 < 742,345 threshold); entry timing — extended at highs (pullback ~2.3%, band 3–8%). Sizing ref: entry ~$236.44, stop $217.52, target $293.19, ~10 sh / ~$2,364. **Verdict: FAIL (c10 volume + no valid pullback).** Best-structured of the three (clears earnings) — watch for a 3–8% pullback on this breakout *if* volume confirms.
+
+Also probed and failing: PAYS (c10 volume fail, extended), XOM/COP/CVX (energy — all c10 volume fail, all extended <3% pullback), NEM (c9 breakout fail). The recurring pattern: leaders are at new highs but on **sub-1.5× volume and with <3% pullbacks** — a defensive grind, not a high-conviction breakout offering a disciplined pullback entry.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Filed ~10/2–10/16: Rep. Cisneros (D-CA) FSS/TSM/AEIS/ZTS/BHE; Rep. Larsen (D-WA) ADI/WSM; Rep. McClain (R-MI) IBRX/CACI/CAT/MSFT (+4); Rep. Pelosi (D-CA) a private LLC. Mostly tech/industrials/semis — the lagging pockets. **Idea-generation only** — disclosures lag the actual trade by up to ~45 days, omit size/exits, and are often options. Each name would independently need to clear the full 11-check gate; none presents a clean breakout-on-pullback setup today. No gate impact.
+
+### Risk Factors
+- **Regime "ON" is a +0.09% whipsaw across a flat 20-day line.** It flipped OFF yesterday, ON today; a close back below tomorrow flips it OFF again. Low-conviction signal — don't anticipate, don't force.
+- **Defensive leadership (staples/utilities/energy) with tech/industrials lagging.** Late-cycle/risk-off signature, not the broad-participation uptrend momentum-breakout needs — few clean leaders, and those at highs lack volume confirmation.
+- **Dense Q3 earnings season + FOMC 10/27–28.** Most interesting names report within 10 trading days (buy-gate #7), and overnight earnings gaps blow through stops — exactly what the no-hold-through-earnings rule exists to avoid.
+
+### Decision
+**HOLD — no new trades; REGIME ON (+0.09%) but no gate-clearing candidate.** SPY (771.77) reclaimed its 20-day SMA (771.11) on the authoritative `buy_gate.sh` read, flipping the regime filter **OFF → ON** — a razor-thin, two-session whipsaw, treated as low-conviction. Buys are permitted by rule, but of eight probed leaders **none clears the full 11-check gate**: the single name passing both breakout and volume (V) reports earnings ~10/27 (inside the 10-day window) and is extended with no valid 3–8% pullback entry; the rest fail on sub-1.5× volume and/or earnings and/or being extended at highs. Leadership is defensive (staples/utilities/energy) with tech/industrials lagging — a late-cycle tape, not the broad uptrend this strategy exploits. Book stays **flat / 100% cash** ($99,147.92); new buys this week 0/3, day-trades 0/3. One Discord alert sent for the regime flip (STEP 5). MRNA is the best-structured watchlist name (clears earnings, real catalyst) — revisit only on a volume-confirmed 3–8% pullback. Force nothing.
