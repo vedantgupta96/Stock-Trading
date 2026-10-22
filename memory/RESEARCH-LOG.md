@@ -1768,3 +1768,55 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.13%).** SPY (769.65) is **below** its 20-day SMA (770.65) on the authoritative deterministic `buy_gate.sh` read, flipping the market regime filter **ON → OFF** after an ON stretch since 10/2. Buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX is rising (~17.4, +~10%) amid a global AI/semi selloff and a defensive sector rotation, one day after a hot CPI and into this morning's PPI — a tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+
+---
+
+## 2026-10-22 (Thu) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. REGIME FLIPPED OFF → ON (+0.29%, thin).** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **SPY 773.13 > 20-day SMA 770.89 → ABOVE by +0.29%** → **REGIME ON**, reversing the 10/15 ON→OFF flip. This is the first fresh pre-market read since 10/15 (the 10/19 EOD was EOD-only on the stale OFF read). Buy-gate #1 passes and buys are permitted again — but of the fresh-high leaders, the cleanest (LLY, GILD, XOM, CVX) are all blocked by imminent earnings (c7), while the two names that clear all 11 checks mechanically (COST, WMT) fail the entry-timing/catalyst discipline on judgment. Book is **flat / 100% cash** — nothing to hold, no sell-side review. One urgent Discord alert sent (regime flip OFF→ON, STEP 5 trigger). Gemini was down (HTTP 503 on every query) → market-context research via native WebSearch fallback, noted per STEP 3.
+
+### Market Regime Status — ON (buy-gate #1 PASSES) — **FLIPPED OFF→ON TODAY**
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 773.13 vs SMA20 770.89]` → **REGIME ON (+0.29%)**. Governs per strategy.
+- **State change:** Last authoritative read was OFF (10/15 pre-market, −0.13%); the 10/19 EOD carried that stale OFF read forward (EOD-only, no fresh read). The market repaired over 10/16–10/21 (S&P 7,659→7,757; VIX 19.99→16.68), carrying SPY back above the line. **OFF→ON flip confirmed on today's fresh read.** Thin cushion (+0.29%) — one modest down day flips it back OFF. Per strategy: do not front-run; today's read governs today → buys permitted, but force nothing.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-21
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/19). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context (WebSearch fallback — Gemini HTTP 503)
+- **Tape repaired off the 10/16 tech rout.** S&P 500 closed **7,757.17 (+0.58%) on 10/21**, +13.1% YTD, recovering the ~2% weekly loss of 10/12–16 (which bottomed at 7,659). The sharp risk-off repricing has faded.
+- **VIX ~16.68 (−3.6% on 10/21), back toward the mid-teens** — down from the 19.99 spike on 10/16; fear is draining out, consistent with a "repricing fades" read rather than a regime change higher.
+- **WTI crude ~$98.0/bbl (−3.7% on 10/21)** — off the early-Oct Hormuz/Saudi supply-fear highs (~$99+) but still elevated. 10-year Treasury yield ~5.15% (firm/rising).
+- **Macro — quiet data week, Fed in blackout.** FOMC blackout runs 10/17–10/29 (no Fed speakers); **no CPI/PPI/PCE this week**; global flash PMIs Fri 10/23. The week's event risk is **Q3 earnings, in full swing** (TSLA/META reported after the close 10/21; MSFT/GOOGL 10/27–28). Next FOMC decision 10/28 (hold expected).
+
+### Sector Momentum
+- **Rebound led by Health Care and a tech bounce.** On 10/21: Health Care (XLV) +1.87% (leader), Technology (XLK) +1.39% (bouncing after the −7.7% rout week, now +30.7% YTD, 2nd-strongest YTD). **Energy remains the strongest YTD sector**; Consumer Staples flat-to-soft (−0.1%) as the defensive bid eases on the risk-on day. Communication Services (XLC) lagged (−1.0%).
+- Takeaway: leadership is broadening back as tech stabilizes and the defensive panic unwinds — constructive, but a one-day bounce on a thin (+0.29%) regime cushion is not a confirmed broad-participation uptrend.
+
+### Held-Position Review
+- **None.** Book flat (all cash). No earnings watch, no stop maintenance, no time-stop clocks.
+
+### Earnings Watch (avoid names reporting before ~2026-11-05, i.e. within 10 trading days)
+- Q3 season at peak — this knocks out most fresh-high leaders. In-window confirmed/expected reporters relevant to today's screen: **LLY (10/29), GILD (10/29, official), XOM (~10/30), CVX (~10/31)**; mega-cap tech MSFT/GOOGL (10/27–28). Clean (earnings >10 trading days out) fresh-high names are scarce this week.
+
+### Trade Ideas — regime ON; evaluated, none taken (cleanest names earnings-blocked; mechanical passers fail entry-timing/catalyst)
+1. **`$GILD` (Health Care) — near-perfect setup, FAILS c7 (earnings 10/29).** c9 PASS (fresh high 160.31 > prior 153.99), c10 PASS (maxvol 201,930 > 149,425 threshold), c12 pullback **4.2% — in-band, textbook entry timing**. But Gilead's official Q3 release is **Thu 10/29 (~5 trading days away)** → earnings within 10 trading days → **c7 FAIL. Never hold through earnings. Drop.** Revisit after the print if the setup survives.
+2. **`$LLY` (Health Care) — FAILS c7 (earnings 10/29).** c9 PASS (1311.09 > 1292.51), c10 PASS (201,930 > 149,425), c12 pullback 3.1% (in-band). Earnings confirmed **10/29 (~5 trading days)** → **c7 FAIL. Drop.**
+3. **`$COST` (Consumer Staples) — mechanically GATE PASS, dropped on entry-timing.** c9 PASS (1007.94 > 987.01), c10 PASS (168,490 > 150,758), c7 PASS (next earnings ~Dec 10, well outside window), all 11 checks mechanically PASS. **But c12 pullback is only 0.9% — the stock is at its high, not an orderly 3–8% pullback.** Buying here is chasing at the high (strategy entry-timing rule). Catalyst is also only a vague defensive-rotation bid, not a specific present-tense event. **Drop on judgment — no pullback entry.** Watchlist for a 3–8% pullback that holds support.
+4. **`$WMT` (Consumer Staples/Retail) — mechanically GATE PASS, dropped on conviction.** All 11 checks PASS mechanically (earnings ~Nov 19, clean on c7; c10 volume 1,358,903 > 1,282,802). **But c9 is a marginal fresh high (121.37 vs prior 120.38, only +0.8% — barely a breakout), c12 pullback ~3.0% is at the shallow edge (shadow FAIL), and there is no specific present-tense catalyst for c8** — just defensive-rotation drift. Low-conviction, marginal setup. **Drop on judgment — won't fabricate a catalyst or chase a marginal breakout.**
+5. **`$XOM` / `$CVX` (Energy) — fresh highs, FAIL c7 (earnings ~10/30–31).** Both make fresh 3-month highs (XOM 180.24 > 177.42; CVX 228.41 > 222.55) but report Q3 within the next ~6–7 trading days → earnings window → **c7 FAIL. Drop.**
+6. **Tech/other leaders (`$AVGO` `$GE` `$ANET` `$MU` `$ORCL` `$UBER` `$HD` `$TJX` `$VRTX` `$NEE` `$WM`) — FAIL c9 or c10.** AVGO/GE/ANET/MU made no fresh high in the last 5 days (hit in the rout, not yet reclaimed highs) though several pass volume; ORCL/UBER fail both. None offers a fresh-breakout-on-volume setup today. Drop.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- No fresh high-conviction congressional disclosure surfaced that is independently making a fresh 3-month high on ≥1.5× volume with a present-tense catalyst and an orderly 3–8% pullback today (and clear of the earnings window). **Idea-generation only** — disclosures lag ~45 days, omit size/exits, are often options; any name must clear the full 11-check gate regardless. No gate impact.
+
+### Risk Factors
+- **Regime cushion is razor-thin (+0.29%) and just flipped back ON.** A single modest down day re-crosses below the line. Don't treat a one-day bounce as a confirmed uptrend; don't force a chase on a fragile ON read.
+- **Peak Q3 earnings season.** The cleanest fresh-high leaders (LLY/GILD/XOM/CVX) all report inside the 10-trading-day window — overnight-gap risk is exactly what c7 exists to block. Mega-cap tech (MSFT/GOOGL) prints 10/27–28, a binary for the just-stabilizing tape.
+- **Mechanical PASS ≠ buy.** COST and WMT clear all 11 checks on the numbers but fail the entry-timing/catalyst discipline (at-the-high / marginal breakout, no specific catalyst). Buying them would be a rule-letter trade against the rule's spirit — overpaying at the high is precisely what the pullback rule prevents.
+
+### Decision
+**HOLD — no new trades; REGIME flipped OFF→ON (+0.29%) but nothing clears the full gate on judgment.** SPY (773.13) is **above** its 20-day SMA (770.89) on the authoritative deterministic `buy_gate.sh` read — regime ON, reversing the 10/15 OFF flip, so buys are permitted again. But peak Q3 earnings season blocks the cleanest fresh-high leaders on c7 — `$GILD` (a textbook 4.2%-pullback, fresh-high-on-volume setup) and `$LLY` both report **10/29 (~5 trading days)**, and `$XOM`/`$CVX` report ~10/30–31. The only two names that clear all 11 checks mechanically, `$COST` and `$WMT`, fail the entry-timing/catalyst discipline on judgment: COST sits at its high (0.9% pullback — chasing), WMT is a marginal breakout (+0.8% above prior high) on a shallow ~3% pullback with no specific present-tense catalyst. Book is **flat / 100% cash** ($99,147.92) — nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh breakout leader offering a valid, orderly 3–8% pullback that clears the volume gate, the earnings window, and the full 11-check gate on judgment as well as mechanically. Force nothing — patience beats activity.
