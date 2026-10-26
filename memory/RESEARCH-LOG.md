@@ -1768,3 +1768,43 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.13%).** SPY (769.65) is **below** its 20-day SMA (770.65) on the authoritative deterministic `buy_gate.sh` read, flipping the market regime filter **ON → OFF** after an ON stretch since 10/2. Buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX is rising (~17.4, +~10%) amid a global AI/semi selloff and a defensive sector rotation, one day after a hot CPI and into this morning's PPI — a tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-10-26 (Mon) — Market-Open Routine (pre-market entry was MISSING; research run inline)
+
+**Decision: HOLD — no new trades; REGIME OFF (−0.91%).** Today's pre-market research entry was absent (last log entry 10/15), so research was produced inline per market-open STEP 1 before any gate work. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 763.03 vs 20-day SMA 770.03 → BELOW by −0.91%** → **REGIME OFF**. Buy-gate #1 fails, so no new longs are permitted today regardless of any candidate's merits — per the strategy's highest-priority rule, when the regime filter is off the right answer is cash. No trade ideas are generated (STEP 4 generates ideas only when regime is ON). Book is **flat / 100% cash** — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop/time-stop maintenance. No trades → no commit per STEP 7. One Discord decision summary sent (amber, regime-OFF no-buy day).
+
+### Market Regime Status — OFF (buy-gate #1 FAILS)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 763.03 vs SMA20 770.03]` → **REGIME OFF (−0.91%)**. Governs per strategy. Also failed c9 (last-5 high 774.405 < prior 781.59) and c10 (last-5 maxvol 1,595,162 < 1,686,036 threshold) on SPY itself — a broad-tape read of weak, unconfirmed action.
+- **Gemini concurs:** SPY $759.97 vs 20-day SMA $765.68 (as of 10/23 close) → below by $5.71. Confirmed cross below the line.
+- **State:** Regime remains OFF (last on-record read 10/15 flipped ON→OFF at −0.13%; cushion has since widened to the downside to −0.91%). **No new buys today.** Per strategy: do not close winners on the filter alone (none held), note status in log — done.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-23
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base.
+- **New buys this week: 0/3** (week from Mon 10/26). Day-trade count 0/3. (All moot — regime OFF.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **Regime OFF into FOMC week.** FOMC meets **10/27–28**, decision Wed 10/28 2:00pm ET (funds currently 3.75–4.00% after the 9/16 hike) — the week's binary event. Sitting flat/cash into a two-day Fed meeting with the regime filter already off is doubly the designed posture.
+- **VIX ~19.14, −1.59% on the day** — above its ~18.6 long-run average (elevated, mild caution) but easing intraday. No acute fear spike, but not a calm tape either.
+- **WTI crude ~$101.06/bbl, −2.14%** — pulling back off triple-digit levels; energy had been the leadership pocket on Hormuz/Saudi supply fears, cooling today.
+- **No CPI/jobs this week** — Sept CPI landed 10/14 (hot: +0.6% MoM, +3.7% YoY headline, +2.6% core); next CPI 11/10, next jobs report 11/6. The Fed decision is the sole scheduled macro catalyst this week.
+
+### Held-Position Review
+- **None.** Book flat (all cash). No earnings watch, no stop maintenance, no time-stop clocks.
+
+### Trade Ideas
+- **None.** The market regime filter is OFF (buy-gate #1 fails), so no new longs are permitted and STEP 4 generates no ideas. Cash is the correct posture by rule, not just by setup quality. Any name will be re-evaluated only once a fresh pre-market read confirms the regime back ON *and* it clears the full 11-check gate.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Not run as a sourcing exercise today: regime is OFF, so no buys are permitted and any surfaced name would be moot regardless (disclosures lag ~45 days and each would independently need to clear the full 11-check gate). No gate impact.
+
+### Risk Factors
+- **Regime OFF (−0.91%) + FOMC 10/27–28.** The single highest-priority rule forbids buys; forcing an entry into a two-day Fed meeting while the broad tape sits below its 20-day line is exactly what the regime filter exists to prevent.
+- **SPY itself fails the breakout and volume checks** (no fresh 5-day high; below the 1.5× volume threshold) — the broad market is not making confirmed, high-conviction highs. No leadership breakout to chase even if the regime were ON.
+- **VIX elevated (~19) above its long-run average** — volatility is priced moderately high into the Fed; don't anticipate a regime flip-back.
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−0.91%).** SPY (763.03) is **below** its 20-day SMA (770.03) on the authoritative deterministic `buy_gate.sh` read — the market regime filter is OFF, so buy-gate #1 fails and no new longs are permitted today by the strategy's single highest-priority rule. No trade ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. The week's binary is **FOMC 10/27–28** (decision Wed); VIX ~19 (above average, −1.6% today), WTI ~$101 (−2.1%). New buys this week 0/3, day-trades 0/3. Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing. Today's pre-market entry was missing, so this research was produced inline per market-open STEP 1; no trades were placed, so no commit is made this run per STEP 7.
