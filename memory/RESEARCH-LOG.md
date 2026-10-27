@@ -1768,3 +1768,51 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.13%).** SPY (769.65) is **below** its 20-day SMA (770.65) on the authoritative deterministic `buy_gate.sh` read, flipping the market regime filter **ON → OFF** after an ON stretch since 10/2. Buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX is rising (~17.4, +~10%) amid a global AI/semi selloff and a defensive sector rotation, one day after a hot CPI and into this morning's PPI — a tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. One urgent Discord alert sent for the regime flip (STEP 5). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-10-27 (Tue) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. REGIME OFF (−0.64%), FOMC decision tomorrow.** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 765.225 vs 20-day SMA 770.14 → BELOW by −0.64%** → **REGIME OFF**. Still OFF since the 10/15 flip (which ended the ON stretch that ran from 10/2); the cushion has *deepened* from −0.13% (10/15) to −0.64% today — no flip this run, so STEP 5 is silent. Buy-gate #1 fails → no new longs permitted today regardless of any candidate's merits (strategy's highest-priority rule: regime OFF → cash). Book is **flat / 100% cash** — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop maintenance. No trade ideas generated (STEP 4 generates ideas only when regime is ON). Into tomorrow's FOMC rate decision (binary event), forcing an entry would be doubly wrong.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS)
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 765.225 vs SMA20 770.14]` → **REGIME OFF (−0.64%)**. Governs per strategy.
+- **Gemini concurs:** S&P 500 index 7,676.77 (10/26 close) **below** its 20-day SMA ~7,727.13 (≈−0.65%) — same read at the index level (SPY ETF ~1/10 of index). EMA(20) 7,672.66 ~ at price, but the strategy rule is the SMA, which governs: below.
+- **State:** Regime has been OFF continuously since the 10/15 flip ON→OFF. Prior reads: 10/15 −0.13%, now −0.64% — the cross below the line has deepened, not healed. SPY has fallen 769.65 → 765.225 over the stretch while the SMA20 eased 770.65 → 770.14. **No new buys today.** Per strategy: do not close winners on the filter alone (none held); note status in log — done. **No flip since last pre-market read → STEP 5 silent.**
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-26
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity unchanged (nothing marked — book all cash).
+- **New buys this week: 0/3** (week from Mon 10/26). Day-trade count 0/3. (All moot — regime OFF.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **FOMC 10/27–28 — the week's binary.** Meeting begins today; **rate decision Wed 10/28 2:00 PM ET**, Chair presser 2:30 PM ET. No new economic projections / dot plot at this meeting. Hold broadly expected off the 3.75–4.00% post-9/16-hike level, but the hot September CPI (headline 3.7% YoY, core 2.6%, both reaccelerating) keeps a hawkish tail risk live. Sit out the event.
+- **VIX ~18.39, easing** — down 5.45% from 19.45 (Fri 10/23 close), i.e. volatility cooling off recent highs but still right around the ~18.6 long-run average (vs mid-15s earlier in October). Caution, not panic.
+- **WTI crude ~$101/bbl** — up sharply from ~$94 on 10/15 (reports $100.8–$102.3; roughly flat-to-down ~0.5–1% on the day). Energy remains the leadership pocket; elevated oil also feeds the gasoline-driven inflation input.
+- **Other releases today (no top-tier macro):** Durable Goods (Sep), Consumer Confidence (Oct), Case-Shiller / FHFA home prices, Richmond Fed, New Home Sales. **No CPI/PPI/jobs this week** (next CPI 11/10, PPI 11/13, NFP 11/6); weekly jobless claims Thu 10/29.
+
+### Sector Momentum
+- **Leading:** Energy (~+1.55% on the week; led names making new 52-week highs — 5 of 14 as of 10/26). Defensive/energy rotation persists.
+- **Lagging:** **Communication Services −6.21% on the week** (weakest); Technology weak/mixed (−3.0% on 10/19, a sharp +1.67% bounce 10/21 — choppy, not basing). The former growth/AI leadership is not making clean fresh highs.
+- Takeaway: narrow, defensive/energy-led tape with the former momentum leaders rolling over — not the broad-participation uptrend momentum-breakout trading needs, and the regime filter forbids buys anyway.
+
+### Held-Position Review
+- **None.** Book flat (all cash). No earnings watch, no stop maintenance, no time-stop clocks running.
+
+### Earnings Watch (reference — avoid names reporting before ~10/29, i.e. within 10 trading days)
+- None held, so no exit flags. Q3 season at peak this week — in-window reporters include V/PYPL/BA (10/27), MSFT/GOOGL/STX (10/28), plus the mega-cap cluster through month-end — which would materially narrow any clean (earnings >10 trading days out) candidate set even if the regime were ON.
+
+### Trade Ideas
+- **None.** The market regime filter is OFF (buy-gate #1 fails), so no new longs are permitted and STEP 4 generates no ideas. Cash is correct by rule, not merely by setup quality. Any candidate will be re-evaluated only once a fresh pre-market read confirms the regime back ON *and* it independently clears the full 11-check gate — and not into tomorrow's FOMC print regardless.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Moot: regime OFF → no buys today, and any surfaced name would independently need to clear the full 11-check gate (disclosures lag the trade ~45 days, omit size/exits, and are often options). No gate impact.
+
+### Risk Factors
+- **FOMC rate decision tomorrow (10/28, 2 PM ET).** A binary policy/tone event into a reaccelerating-inflation backdrop; a hawkish surprise could extend the risk-off tape. Not a session to pre-position into.
+- **Regime OFF and deepening (−0.13% → −0.64%).** The cross below the 20-day SMA has widened, not healed — the mechanical filter says cash, and the trend of the cushion confirms it.
+- **Defensive/energy leadership with comm-services & tech rolling over.** A late-cycle/risk-off signature; former momentum leaders are not offering clean breakout-and-pullback setups. VIX right at its long-run average.
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−0.64%).** SPY (765.225) is **below** its 20-day SMA (770.14) on the authoritative deterministic `buy_gate.sh` read; Gemini concurs at the index level (7,676.77 < ~7,727 SMA20). The regime has been OFF since the 10/15 flip and the cushion has deepened to −0.64%, so buy-gate #1 fails → no new longs today, by the strategy's single highest-priority rule. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. Into **tomorrow's FOMC decision**, with VIX ~18.4 (at its long-run average) and a defensive/energy-led tape while comm-services (−6.21% wk) and tech roll over, there is no reason to force an entry — and the regime forbids one anyway. New buys this week 0/3, day-trades 0/3. **No regime flip since the last read → no urgent Discord alert (STEP 5 silent).** Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
