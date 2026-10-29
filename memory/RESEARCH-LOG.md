@@ -1811,3 +1811,54 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.09%).** SPY (769.7) is **below** its 20-day SMA (770.41) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip; this is the first pre-market read since then, as 10/19–10/27 were EOD-only). Buy-gate #1 fails → no new longs today, by the strategy's highest-priority rule, and no ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. Today is **FOMC decision day** (hold expected) with a **mega-cap earnings cluster** and **GDP tomorrow** — a two-sided event tape to sit out, not chase. VIX is calm (~17.5) but the regime has hovered trendless at its 20-day line for weeks — no durable leadership to buy. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip today, no positions). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-10-29 (Thu) — Pre-Market Routine
+
+**Decision: HOLD — no new trades. REGIME FLIPPED OFF→ON (+0.18%), but no candidate clears the full 11-check gate.** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime PASS: SPY 772.28 vs 20-day SMA 770.9 → ABOVE by +0.18%** → **REGIME ON**. This flips the market-regime filter **OFF→ON** after an OFF stretch since 10/15 (a state change → one urgent Discord alert sent, STEP 5). New longs are now *permitted* in principle, but a full-basket gate screen found **no name that clears all 11 checks on an orderly pullback**: the only breakout-on-volume leader (XOM) reports earnings tomorrow (gate #7 fail) and is over-extended; every other leader fails the breakout (#9) or volume (#10) check. Book is **flat / 100% cash** — nothing to hold, no sell-side review. Today is a **binary macro morning** (3Q GDP advance + hot core PCE + jobless claims, all 8:30 ET) one day after a **hawkish FOMC hold** — a tape to confirm, not front-run. Default HOLD stands.
+
+### Market Regime Status — ON (buy-gate #1 PASSES) — FLIPPED from OFF today
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) PASS [SPY 772.28 vs SMA20 770.9]` → **REGIME ON (+0.18%)**. Governs per strategy.
+- **Gemini cross-check (conflicts):** cited SPY ~$768.69 vs 20-day SMA ~$768.84 → narrowly *below*. As on 10/28, the deterministic Alpaca bars govern over Gemini's narrative read (likely a stale/intraday or index-vs-ETF artifact). **Authoritative read: ABOVE → ON.**
+- **State change:** OFF→ON after being OFF since the 10/15 flip. The regime has oscillated within ~±1% of the 20-day line for weeks (10/2 ON → 10/15 OFF −0.13% → 10/28 OFF −0.09% → 10/29 ON +0.18%) — a thin, choppy cross, not a decisive trend turn. Per strategy: today's read governs today → buys permitted, but the setup bar is unchanged. **One urgent Discord alert sent for the OFF→ON flip.**
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-28
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity unchanged at $99,147.92 (nothing to mark).
+- **New buys this week: 0/3** (week from Mon 10/26). Day-trade count 0/3.
+- Risk budget: 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional** (~3 sh of a $770 name, etc.).
+
+### Market Context
+- **MACRO — binary 8:30 ET morning.** 3Q GDP advance estimate (consensus ~+3.1–3.2%, up from 2.2% in Q2), **September PCE** (headline ~3.6–3.7%, **core ~3.1% — elevated/sticky**), and initial jobless claims (~198–199k, still resilient). One day after the **10/28 FOMC hold at 3.75–4.00% (10–2 vote; Cook & Hammack dissented FOR a hike)** — a hawkish hold, "higher-for-longer." Next CPI 11/10, jobs 11/6.
+- **VIX ~16.9, easing (−3.5% on the day)** — calm, below the ~18.6 long-run average. No fear priced, but also not the broad-participation surge trend-following prefers.
+- **WTI crude ~$101–102/bbl, −~1% on the day** — easing on Mideast de-escalation hopes but still elevated (~+77% YTD). Energy remains geopolitically bid.
+- **Earnings — Q3 season at peak.** Today: LLY/MA/MRK/CAT BMO, AMZN/INTC AMC. Tomorrow: XOM/CVX/ABBV/GD BMO. The in-window cluster disqualifies most large-cap leaders on gate #7.
+
+### Sector Momentum
+- **Leading this week:** Information Technology **+3.37%** (XLK +0.8% today — tech momentum reasserting), Consumer Discretionary +1.06%, Energy +0.75%, Industrials +0.68%.
+- **Lagging:** Consumer Staples −2.83%, Communication Services −2.65%, Financials −1.39%, Health Care −1.17%. (Note: 52-week-high breadth screens skew toward Energy/Health Care single names — mixed signal vs the weekly sector tape.)
+- Takeaway: tech leadership is back on top this week, but the move is early/choppy off a regime that was below the line through 10/28 — no clean, confirmed momentum-breakout pocket with orderly pullbacks yet.
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.** (Reference: the Q3 earnings cluster, below, is the binding constraint on new ideas this week.)
+
+### Trade Ideas — regime ON, so a full-gate screen was run (deterministic `buy_gate.sh`)
+Screened leaders across the strong sectors. Checks 9 (breakout), 10 (volume), 11 (stock) are computed authoritatively by the gate; #7 (earnings) from the Q3 calendar; c12 pullback is the advisory entry-timing band.
+- **$XOM** — breakout PASS (184.84 > prior 180.24), volume PASS (635k vs 556k threshold), stock PASS. **BUT reports earnings tomorrow 10/30 BMO → gate #7 FAIL**, and pullback only ~1.5% (over-extended, outside the 3–8% entry band → would overpay). **DROP.**
+- **$AAPL** — breakout PASS, **volume FAIL** (1.08M vs 1.65M threshold); also reports ~10/30. **DROP.**
+- **$LLY** — breakout PASS, **volume FAIL** (150k vs 152k); reports **today** BMO. **DROP.**
+- **$COST** — breakout PASS, pullback 3.8% (in band), **volume FAIL** (115k vs 135k). **DROP.**
+- **$NVDA / $AVGO / $DDOG / $PANW / $GE / $CAT** — **breakout FAIL** (all off their highs / below prior-period high); several also fail volume. **DROP.**
+- **Net: no idea clears the full 11-check gate.** The one breakout-on-volume name (XOM) is blocked by imminent earnings and is over-extended; everything else fails breakout or volume. Cash is correct on the gate, not just on judgment.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- Recent filings (~10/15–10/28): Rep. Cleo Fields (D) **TSM** (traded 10/9) & **NVDA** (10/1); Rep. David Taylor (R-OH) **FITB/RPM/T** (10/9); Sen. Boozman (R-AR) **CSCO** + Treasuries/ETFs; Sen. Blumenthal (D-CT) private partnerships/PE (not tradable); Rep. DelBene (D) muni bonds. **Idea-generation only** — disclosures lag the trade by up to ~45 days, omit size/exits, and are frequently options. NVDA/TSM fail the live breakout check anyway; no name clears the gate. No gate impact.
+
+### Risk Factors
+- **Regime flipped ON on a razor-thin cross (+0.18%) into a binary data morning.** GDP + a hot core-PCE print at 8:30 ET can whip the tape and un-cross the filter by the close. Today's read governs today, but chasing a thin flip the morning of a macro binary is exactly what discipline guards against — hence no forced entry even with the gate open.
+- **Hawkish FOMC hold (two dissents for a hike) + sticky core PCE (~3.1%).** "Higher-for-longer" caps the odds of a durable broad-participation uptrend; thin breakouts here are low-conviction.
+- **Q3 earnings at peak.** Nearly every would-be leader reports within 10 trading days, so even valid breakouts are gate-#7 blocked this week — the clean candidate set is structurally tiny until the cluster clears (~mid-Nov).
+
+### Decision
+**HOLD — no new trades.** The authoritative deterministic `buy_gate.sh` read flips the regime **OFF→ON (SPY 772.28 > SMA20 770.9, +0.18%)** after an OFF stretch since 10/15 — buys are permitted in principle and one urgent Discord alert was sent for the flip (STEP 5). But a full-basket gate screen produced **zero names clearing all 11 checks on an orderly pullback**: the only breakout-on-volume leader (XOM) is blocked by earnings tomorrow and is over-extended, while every other leader fails the breakout or volume check — and the Q3 earnings cluster disqualifies most large-caps on #7 regardless. The flip is a thin +0.18% cross into a binary 8:30 ET macro morning (GDP + hot core PCE) one day after a hawkish FOMC hold. Book is **flat / 100% cash** ($99,147.92); nothing to hold, no sell-side review. New buys this week 0/3, day-trades 0/3. Cash stays the posture by the gate, not merely by preference. Re-evaluate at the next pre-market: if the regime holds ON and a leader offers a valid 3–8% pullback that clears the full gate (earnings > 10 trading days out), size one entry at $200 risk. Force nothing.
