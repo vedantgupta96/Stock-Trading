@@ -1811,3 +1811,45 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.09%).** SPY (769.7) is **below** its 20-day SMA (770.41) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip; this is the first pre-market read since then, as 10/19–10/27 were EOD-only). Buy-gate #1 fails → no new longs today, by the strategy's highest-priority rule, and no ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. Today is **FOMC decision day** (hold expected) with a **mega-cap earnings cluster** and **GDP tomorrow** — a two-sided event tape to sit out, not chase. VIX is calm (~17.5) but the regime has hovered trendless at its 20-day line for weeks — no durable leadership to buy. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip today, no positions). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+---
+
+## 2026-11-02 (Mon) — Pre-Market Routine
+
+**Decision: HOLD — no new trades; REGIME OFF (−1.92%), now a decisive break lower (not a narrow cross).** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 755.72 vs 20-day SMA 770.48 → BELOW by −1.92%** → **REGIME OFF**. This is materially wider than the weeks of razor-thin ±~0.1–0.3% crosses: SPY has fallen ~14 pts from 769.7 (10/28) to 755.72 as risk came off hard into month-end. Regime was already OFF on the 10/28 pre-market, so this is **OFF → OFF (no flip)** — no urgent Discord alert (STEP 5). Buy-gate #1 fails → no new longs permitted regardless of candidate merit; STEP 4 generates no trade ideas with the regime OFF. Book is **flat / 100% cash** — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS) — unchanged (OFF since 10/15), now decisively below
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 755.72 vs SMA20 770.48]` → **REGIME OFF (−1.92%)**. Governs per strategy.
+- **State:** For the first time in weeks the gap is wide (−1.92% vs −0.09% on 10/28, −0.13% on 10/15). The prior "pinned at the 20-day line" chop has resolved to the **downside** — a clean risk-off break, not a coin-flip cross. Also note the SPY probe fails c9 (no 3-month high in last 5d; last5 high 773.33 < prior 781.59) and the shadow c12 (−2.3% pullback) — the index itself is rolling over, not basing. Per strategy: no new buys; do not close winners on the filter alone (none held); note status — done.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-10-30
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity has printed the same $99,147.92 every session since that exit (nothing to mark on an all-cash book); last_equity $99,147.92 → true single-session move $0.00.
+- **New buys this week: 0/3** (new week from Mon 11/2). Day-trade count 0/3. (All moot — regime OFF.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **MACRO — a loaded data/event week.** **Monday 11/2:** ISM Manufacturing PMI. **Tuesday 11/3: US Midterm Elections** (a political/volatility binary). **Wed 11/4:** ADP + ISM Services + Trade. **Thu 11/5:** Productivity & Costs Q3. **Friday 11/6: October Jobs report (NFP + unemployment, 8:30 ET)** — the week's key macro binary. Next CPI 11/10, PPI 11/13. **No FOMC this week** (last 10/27–28 hold at 3.75–4.00%; next 12/8–9; Oct minutes 11/18).
+- **VIX ~20.3, spiking.** Rose ~12.9% on 10/30 (to 19.42) and is now ~20.3 intraday (high ~22) — **above the ~18.6 long-run average** and clearly trending up on inflation/rate/AI-trade concerns. The fear gauge is finally confirming the risk-off tape (vs the ~17.5 calm of last week).
+- **WTI crude ~$100–104/bbl, easing (−3.4% on the day).** Pulled back from the recent spike on Iran–Qatar de-escalation talks that eased Strait-of-Hormuz supply fears; still elevated above $100 but the two-sided geopolitical premium is softening.
+- **Earnings:** Q3 season winding down but still active; mega-cap cluster (MSFT/GOOGL/META) reported 10/28–29. Intel plunged on earnings, a driver of tech-sector weakness. (Moot for a flat book.)
+
+### Sector Momentum
+- **Textbook defensive / risk-off rotation.** Leaders: **Healthcare (~+3.1–3.3%), Utilities (~+2.0%), Materials (+1.9%), Consumer Staples (~+1.1–1.7%), Real Estate, Financials** — the classic defensive/value complex. Laggards: **Communication Services (−5.5% to −7.2%, worst sector) and Information Technology (−1.8% to −3.2%)** on mega-cap/AI-trade weakness (Nasdaq −2.0% to −2.9% on the week). This is a late-cycle, risk-off signature — money fleeing growth into defensives — **not** the broad-participation uptrend momentum-breakout trading needs. No clean, durable momentum leader offering an orderly 3–8% pullback.
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.** (Moot: no ideas generated with the regime OFF.)
+
+### Trade Ideas
+- **None.** The market regime filter is **OFF** (buy-gate #1 fails), so no new longs are permitted and STEP 4 generates no ideas. Cash is the correct posture by the strategy's single highest-priority rule, not merely by setup quality — and the tape (VIX 20+, defensives leading, tech/comm rolling over, SPY decisively below its 20-day line) is exactly the environment the regime filter exists to keep us out of. Candidates will be re-evaluated only once a fresh pre-market read confirms the regime back ON *and* a leader clears the full 11-check gate on an orderly 3–8% pullback.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Moot: regime is OFF, so no buys today**, and any surfaced name would independently need to clear the full 11-check gate. Disclosures lag the actual trade by up to ~45 days, omit size/exits, and are frequently options (which we never trade). No scan run / no gate impact.
+
+### Risk Factors
+- **Risk-off has broken lower, not chopped sideways.** SPY −1.92% below its 20-day SMA (vs ~−0.1% crosses for weeks) with VIX spiking to 20+ — a genuine de-risking, the worst backdrop for buying breakouts. Don't anticipate a snap-back ON flip; the next pre-market read governs.
+- **Event wall this week: Midterm Elections (11/3) + October Jobs report (11/6).** Two binaries that can whip the tape violently; forcing an entry into them is exactly the event-risk the discipline sidesteps (and the regime forbids it anyway).
+- **Tech/AI-trade leadership unwinding (Comm Services −5 to −7%, Intel plunge).** The former momentum pocket is in active decline; nothing to chase, and defensives aren't breakout vehicles.
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−1.92%).** SPY (755.72) is **decisively below** its 20-day SMA (770.48) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip), and the prior weeks of narrow chop at the line have now resolved to the downside. Buy-gate #1 fails → no new longs today, by the strategy's highest-priority rule, and no ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. VIX has spiked to ~20.3 amid a textbook defensive rotation (Healthcare/Utilities/Staples leading, Comm Services/Tech selling off), into **Midterm Elections tomorrow and the October Jobs report Friday** — a two-sided event tape to sit out, not chase. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip today, no positions). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid, orderly 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
