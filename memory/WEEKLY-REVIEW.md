@@ -209,3 +209,60 @@
 - **Watchlist:** re-screen the AI/semi leaders (NVDA/AMD) and any energy names for a *fresh* 3-month high on ≥1.5× 20-day volume with an orderly 3–8% pullback — but only after a fresh regime read confirms ON. Force nothing.
 
 ### Grade: C-
+
+---
+
+## Week of NOV 02 – NOV 06
+
+*The week of OCT 26 – OCT 30 was not separately recapped (no committed Friday review); it ran the 10/28 pre-market + 10/27/10/28/10/29 EOD snapshots — all flat/all-cash, regime OFF. This recap covers **NOV 02 – NOV 06**. Seventh-plus consecutive flat / 100% cash week since the 9/2 PLTR trailing-stop exit — equity has printed the identical $99,147.92 every session for ~9 weeks. This week again ran **no pre-market routine** (zero research-log entries 11/2–11/6); only **one** EOD snapshot was committed (today, 11/6), with a five-session gap behind it (10/30 Fri, 11/2–11/5 Mon–Thu uncommitted). No fresh deterministic `buy_gate.sh` regime read was placed all week — the regime was carried on the stale 10/28 OFF read (SPY 769.7 < 20d SMA 770.41, −0.09%). **The distinguishing fact this week: the market fell hard (S&P −3.07%) while we sat in cash — so being flat was a clear win, not the opportunity-cost lag of the prior six weeks.***
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(unchanged since the 9/2 exit — no committed 11/2 open snapshot; first & only snapshot this week is 11/6 EOD)* |
+| Ending equity (Fri close) | $99,147.92 *(live Alpaca, balance_asof 11/5; portfolio_value $99,147.92, 100% cash, 0 positions, 0 orders)* |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | **−3.07%** *(index 7,610.83 open 11/2 → 7,376.86 close 11/6, Gemini; closed ~3.98% below its 20-day SMA ≈7,682.85 — deeply oversold)* |
+| Trades taken | 0 (0 new buys, 0 closed) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no trades) |
+| Worst trade | N/A (no trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 0 fresh deterministic reads placed this week (no pre-market routine ran; only an EOD-only snapshot 11/6). Last `buy_gate.sh` read OFF (10/28 pre-market, −0.09%), carried stale all week. **Gemini's 11/6 read confirms the index ~3.98% BELOW its 20-day SMA → regime decisively OFF all 5 sessions** (and far more so than the −0.09% carried read implied). Effectively 5 OFF / 0 ON. |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week (last close was PLTR on 9/2, realized −$111.77). |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92).*
+
+### What Worked
+- **The regime filter earned its keep — concretely, for the first time in ~7 weeks.** The S&P fell −3.07% on the week and closed ~4% below its 20-day SMA (a >3-standard-deviation, deeply-oversold flush), while the book sat 100% cash. Being flat this week was a **real win**, not the opportunity-cost lag of the prior six up-market cash weeks — the single highest-priority rule (no longs below the 20-day SMA) kept the account out of a sharp decline.
+- **Capital fully preserved — zero drawdown, zero rule violations.** Equity flat (0.00%) with no losing trade, no stop breach, no gate violation; a clean risk record extends to a ninth straight week while the market took a −3% hit.
+- **No forced chase into a deteriorating tape.** No position meant no stops to defend, no earnings exits, no time-stop clocks — and nothing bought into a market rolling over. The discipline's job this week was simply to stay out, and it did.
+
+### What Didn't Work
+- **No pre-market routine ran all week — the regime read went stale (again).** Zero research-log entries 11/2–11/6; `buy_gate.sh` was last run 10/28. This time the stale OFF read happened to be *correct* (and Gemini confirms the market fell well below its SMA), so no harm resulted — but that is luck, not process. Sitting in cash on a six-session-stale read is the same silent failure mode flagged last week; it was vindicated by the market this time rather than by the routine.
+- **Cadence gaps are the worst on record.** Only **one** EOD snapshot committed for the entire week (11/6), with five uncommitted sessions behind it (10/30, 11/2–11/5). Equity was unchanged across every gap, but the audit trail — and the live regime signal — both have large holes. The prior week's #1 process-focus item ("run the pre-market routine every session; commit an EOD snapshot every session") was not acted on.
+- **Idea flow remains nil.** No name has cleared the full 11-check gate on judgment in ~9 weeks. This week the regime was decisively OFF so that is correct by rule — but the structural absence of a screening cadence means we would not reliably catch an ON flip or a qualifying breakout if one appeared.
+
+### Key Lessons
+- **A correct cash posture is not the same as a well-run one.** This week cash was both correct *and* rewarded (−3% market avoided), but it was again *assumed* from a stale OFF read, not *earned* by a fresh screen. The outcome flatters the process. Distinguish "the rule said OFF and we confirmed it today" from "we never looked and the stale read was OFF." The former is the strategy working; the latter is the strategy getting lucky.
+- **The regime filter's value is cyclical and just showed up.** Six weeks of flat-while-up made the cash stretch look like pure opportunity cost; one −3% week reframes it as the insurance it was designed to be. Do not over-correct toward forcing trades after a long cash run — the filter's whole point is to be out of weeks exactly like this one. Equally, do not let "cash is correct" excuse skipping the daily read.
+
+### Adjustments for Next Week
+- **No rule changes.** No rule has proven out for 2+ consecutive weeks or failed badly with data to justify a rulebook edit. If anything, the regime filter just demonstrated clear value (avoided a −3.07% week), reinforcing the current rulebook — so `TRADING-STRATEGY.md` is left **unchanged**.
+- **Process focus (unchanged and still binding):** (1) run the **pre-market routine every session** with a fresh deterministic `buy_gate.sh` regime read — do not carry a stale read; (2) commit an **EOD snapshot every session** to close the audit-trail gaps (this week only 1 of 5 was committed); (3) with the market deeply oversold and below its 20-day SMA, expect the regime to stay OFF near-term — stay flat, but confirm it each session rather than assuming it.
+- **Event-risk map:** CPI prints ~11/10 (per the prior logs' calendar) into a post-10/28 FOMC hold (funds 3.75–4.00%, "higher-for-longer"); the tape is in a sharp, oversold pullback. Do not try to catch a falling knife or anticipate an ON flip on a bounce — wait for SPY to reclaim its 20-day SMA on a fresh `buy_gate.sh` read before screening long ideas.
+- **Watchlist:** none actionable while the regime is OFF. Once a fresh read confirms the regime back ON, re-screen former leaders (NVDA/AMD, energy) for a *fresh* 3-month/52-week high on ≥1.5× 20-day volume with an orderly 3–8% pullback. Force nothing.
+
+### Grade: B-
+
+*(Up from C-/C in the prior cash weeks: the capital-preservation value finally showed up concretely — flat through a −3.07% market is exactly what the regime filter exists to deliver, and the account took zero damage. Held back from a higher grade by the persistent process failure: no pre-market routine ran, the regime read went six sessions stale, and only one of five EOD snapshots was committed. The right outcome, reached by a process that is still not being run as designed.)*
