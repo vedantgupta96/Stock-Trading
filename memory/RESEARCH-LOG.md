@@ -1855,3 +1855,47 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−1.23%).** SPY (752.72) is **below** its 20-day SMA (762.13) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip), and today it is a clear ~−1.2% break rather than the prior narrow crosses, with AI/semis selling off. Buy-gate #1 fails → no new longs today, by the strategy's highest-priority rule, and no ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. **October CPI prints at 8:30 AM ET today** (PPI Friday) — a two-sided inflation binary to sit out, not chase. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+## 2026-11-12 (Thu) — Pre-Market Routine
+
+**Decision: HOLD — no new trades; REGIME OFF (−0.06%), continuing — but now a near-touch recovery back to the line, not the prior clear break.** The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 759.8 vs 20-day SMA 760.23 → BELOW by −0.06%** → **REGIME OFF**. The regime has been OFF since the 10/15 ON→OFF flip; **no flip today (OFF→OFF), so no urgent Discord alert** (STEP 5). The character shifted the *other* way from Tuesday: SPY has rallied from 752.72 (11/10, −1.23%) back to 759.8, now effectively kissing its 20-day line (−0.06%, 85 bps of recovery). It is the closest to flipping ON since the band resolved lower — but still technically below, so buy-gate #1 **fails** and no new longs are permitted; STEP 4 generates no ideas when the regime is OFF. Book is **flat / 100% cash** — already the designed posture; nothing to hold, no sell-side review, no stop or time-stop maintenance. **October PPI prints TOMORROW (Fri 11/13, 8:30 AM ET)** — a live inflation binary into which the discipline (and the regime) forbids forcing anything.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS) — continuing (OFF since 10/15), now a near-touch recovery to the line
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 759.8 vs SMA20 760.23]` → **REGIME OFF (−0.06%)**. Governs per strategy.
+- **Gemini cross-check (Q1):** refused — returned a "cannot provide real-time/future market data" message (RC 0, no usable figure). The regime decision rests on the deterministic Alpaca read, not web/LLM data.
+- **State / trajectory:** 11/10 −1.23% (clear break lower) → 11/12 −0.06% (near-touch). SPY has climbed ~85 bps back toward the 20-day line in two sessions. This is the first read since the downside resolution that is within a whisker of flipping ON. Per strategy: no new buys while still below the line; do not close winners on the filter alone (none held); note status — done. A single firm up-day could flip the regime ON at the next read; that would be a STEP-5-alertable OFF→ON flip when it happens, not today.
+
+### Research-tooling note
+- **Gemini (`gemini.sh`) did not return usable data** on the regime query (it declined to provide real-time/future prices; exit 0, not the code-3 503 path). Per routine STEP 3, used **native WebSearch** for VIX / sectors / econ calendar / WTI. Those web macro figures are approximate (mostly undated snapshots) and flagged as unconfirmed below; the **regime decision rests entirely on the deterministic Alpaca read**.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-11-11
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity has printed the same $99,147.92 every session since that exit (nothing to mark; Day P&L $0.00 vs last_equity $99,147.92).
+- **New buys this week: 0/3** (week from Mon 11/9). Day-trade count 0/3. (All moot — regime OFF.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **MACRO — OCTOBER PPI TOMORROW (Fri 11/13, 8:30 AM ET), the week's remaining binary.** October CPI already printed Tue 11/10 (behind us). PPI is the last scheduled inflation print of the week and can re-price the rate path hard. **No major US macro release scheduled for today 11/12** (per BLS/weekly calendars). (Web fallback.)
+- **VIX — no clean Nov-12 print (unconfirmed).** Web fallback returned only undated snapshots; notable: a 11/5 piece flagged the **VIX jumping ~70% in a single session** (a rare volatility spike event earlier this month), consistent with the risk-off that drove the 11/10 regime break. No reliable Nov-12 level — treat as indicative; the regime read, not VIX, governs.
+- **WTI crude — no clean Nov-12 print (unconfirmed).** Fallback returned only undated/stale figures. Energy is not the clean momentum leader a long would need; reference only with a flat book.
+- **Earnings this week:** **Applied Materials (AMAT) reports today 11/12**; Cisco (CSCO) this week; **NVDA reports 11/17** (next week). Moot for the book (flat), but AI/semis headline risk is live right into any potential regime flip.
+
+### Sector Momentum
+- **Rotation / mixed — AI & semis lagging, Dow/cyclicals firmer; choppy tape.** Early-November reads describe the Dow leading while technology/semiconductors struggle to keep pace, with the S&P down ~2% on the month. No clean, durable momentum pocket; leadership is defensive/cyclical-tilted while AI/semis are the source of index weakness — consistent with SPY only just now clawing back to its 20-day line. No sector offers the orderly breakout-on-volume + 3–8% pullback a long would need. (Web fallback; undated.)
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.** (Reference only, no ideas generated with regime OFF: AMAT/CSCO this week, NVDA 11/17 — the semis earnings cluster would narrow any clean candidate set even were the regime ON.)
+
+### Trade Ideas
+- **None.** The market regime filter is **OFF** (buy-gate #1 fails), so no new longs are permitted and STEP 4 generates no ideas. Cash is the correct posture by the strategy's single highest-priority rule, not merely by setup quality. Even though SPY sits a hair below the line (−0.06%) and could flip ON on the next firm up-day, the rule is a hard threshold: below is below. Candidates will be re-evaluated only once a fresh read confirms the regime back ON *and* a leader clears the full 11-check gate on an orderly 3–8% pullback — and with AMAT tonight / NVDA 11/17 and PPI tomorrow, the near-term backdrop is event-heavy and gap-prone.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Moot: regime is OFF, so no buys today**, and any surfaced name would independently need to clear the full 11-check gate. Disclosures lag the actual trade by up to ~45 days, omit size/exits, and are frequently options (which we never trade). No gate impact; no names carried forward.
+
+### Risk Factors
+- **October PPI tomorrow (Fri 11/13, 8:30 AM ET).** An inflation surprise can whip equities and the rate path in seconds — exactly the two-sided event the discipline sits out; the regime forbids a new entry anyway.
+- **Regime is on a knife's edge (−0.06%).** A near-touch read is the most whipsaw-prone state: a flip ON followed by an immediate fade is precisely the false signal the filter is meant to survive — wait for a confirmed read, don't anticipate it.
+- **AI/semi earnings cluster into a fragile tape (AMAT tonight, NVDA 11/17).** The cohort that led the prior uptrend is still the source of weakness; any thin breakout here is low-conviction and gap-prone right as the regime tries to reclaim its line.
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−0.06%).** SPY (759.8) is **below** its 20-day SMA (760.23) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip), though today it is a near-touch recovery (−0.06%, up ~85 bps from Tuesday's −1.23% break) rather than a clear break. Buy-gate #1 fails → no new longs today, by the strategy's highest-priority rule, and no ideas are generated; "a hair below the line" is still below. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. **October PPI prints tomorrow at 8:30 AM ET** — a two-sided inflation binary to sit out, not chase; AMAT reports tonight, NVDA 11/17. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits a fresh pre-market read confirming the regime back ON and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
