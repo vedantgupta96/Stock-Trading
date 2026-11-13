@@ -209,3 +209,60 @@
 - **Watchlist:** re-screen the AI/semi leaders (NVDA/AMD) and any energy names for a *fresh* 3-month high on ≥1.5× 20-day volume with an orderly 3–8% pullback — but only after a fresh regime read confirms ON. Force nothing.
 
 ### Grade: C-
+
+---
+
+## Week of NOV 09 – NOV 13
+
+*Ninth consecutive flat / 100% cash week since the 9/2 PLTR trailing-stop exit — equity has printed the identical $99,147.92 every session for ~10 weeks. Unlike the 10/19–23 process-failure week, the regime posture this week was **earned, not assumed**: two fresh deterministic `buy_gate.sh` reads were placed (Tue 11/10 OFF −1.23%; Fri 11/13 OFF −0.31%), both confirming the regime OFF. Cadence still thin — only those two sessions ran the pre-market routine (11/9, 11/11, 11/12 carried the last-read OFF), and no EOD snapshot was committed this week (last EOD 11/6). Note: no Friday recap was committed for the two intervening weeks (10/26–30, 11/2–6); the account was flat and regime-OFF across both.*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(research-log balance_asof 11/9; unchanged since the 9/2 exit — no committed 11/9 open snapshot)* |
+| Ending equity (Fri close) | $99,147.92 *(live Alpaca, balance_asof 11/12; portfolio_value $99,147.92, 100% cash, 0 positions, 0 open orders)* |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | +2.51% *(7,549.94 Mon 11/9 → ~+2.51–2.52% for the week, Gemini; recovery that snapped a four-week losing streak)* |
+| Trades taken | 0 (0 new buys, 0 closed) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no trades) |
+| Worst trade | N/A (no trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | 5 OFF / 0 ON. Two fresh deterministic `buy_gate.sh` reads, both OFF (Tue 11/10 SPY 752.72 < 20d SMA 762.13, −1.23%; Fri 11/13 SPY 757.16 < 20d SMA 759.50, −0.31%); 11/9, 11/11, 11/12 carried the last-read OFF (no committed routine). Regime OFF continuously since the 10/15 ON→OFF flip. |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week (last close was PLTR on 9/2, realized −$111.77). |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92). Phase P&L −$852.08 (−0.85%) off the live $100k base.*
+
+### What Worked
+- **Capital fully preserved — zero drawdown, zero rule violations.** Equity flat (0.00%) with no losing trade, no stop breach, no gate violation; a clean risk record now holds for a ninth straight week.
+- **The regime posture was earned this week, not assumed.** The single biggest process failure flagged in the 10/19–23 review was a stale regime read. This week two fresh deterministic `buy_gate.sh` reads were actually placed (11/10, 11/13) and both returned OFF — so sitting in cash was a current, confirmed decision under the highest-priority rule, not a five-day-old carry. That is the specific fix from last review working.
+- **No forced chase into a two-sided, event-heavy tape.** The week straddled a **hot October CPI (Tue 11/10, +0.4% m/m headline / +0.3% core)** and **October PPI (Fri 11/13)**, with AI/semis selling off (NVDA reports 11/17) and leadership narrow/defensive-and-energy-tilted — exactly the conditions the discipline is built to sit out. Nothing was forced into the binaries.
+- **Flat book meant no sell-side exposure.** With 0 positions there were no stops to maintain, no earnings exits, no time-stop clocks — the account needed no defense and took none unnecessarily.
+
+### What Didn't Work
+- **Lagged a sharply up market — the recurring opportunity cost, and the largest gap yet.** The S&P rose **+2.51%** (its best week in over a month, snapping a four-week losing streak) while we sat 100% cash all five sessions. This is the biggest single-week lag of the nine-week cash stretch. It is defensible — SPY's +2.5% bounce came *off a low within a downtrend* and still closed the week **below** its (declining) 20-day SMA (757.16 < 759.50), so the regime filter correctly read it as an unconfirmed bear-market-rally bounce, not a trend reclaim — but the cost is real and worth naming plainly.
+- **Cadence gaps persist.** Only two of five sessions ran the pre-market routine (11/9, 11/11, 11/12 have no research-log entry), and **no EOD snapshot was committed this week** (last EOD 11/6). The two reads that mattered (regime) were fresh, but the audit trail still has holes, and two prior weekly recaps (10/26–30, 11/2–6) were never committed at all.
+- **Idea flow remains non-existent.** For ~10 weeks no name has cleared the full 11-check gate; with the regime OFF, STEP 4 generated no ideas at all this week. The binding constraint rotates (now regime-OFF + AI/semi weakness), but the net result is an unbroken cash position.
+
+### Key Lessons
+- **A +2.5% up-week with the regime OFF is the filter doing its job, not a miss to regret.** The whole point of the S&P-vs-20-day-SMA rule is to decline bear-market rallies: a sharp bounce that leaves price below a falling 20-day line is precisely the false-start the filter exists to reject. The lesson is to hold the line through the FOMO of a big green week, not to second-guess the rule because the tape popped.
+- **"Cash is correct" was *earned* this week — keep it that way.** The distinction drawn last review (screened-today-and-nothing-qualified vs didn't-screen) held up: fresh reads were placed and confirmed OFF. The remaining gap is pure cadence — commit an EOD snapshot every session and run the pre-market routine every session, so the audit trail matches the (now sound) decision quality.
+- **Watch for a genuine regime flip, not a narrow cross.** SPY firmed from −1.23% (Tue) to −0.31% (Fri) — the first prerequisite moving the right way — but a flip to ON requires a fresh read with SPY *closing above* ~759.50, ideally with the 20-day line itself turning up. Don't pre-position on a narrow sub-line cross.
+
+### Adjustments for Next Week
+- **No rule changes.** No rule has proven out for 2+ consecutive weeks or failed badly with data to justify a rulebook edit; the regime filter performed exactly as designed this week (keeping us out of an unconfirmed bounce that closed below a falling 20-day line), so `memory/TRADING-STRATEGY.md` is left unchanged. The nine-week cash stretch is a market-quality + regime outcome, not a rule failure.
+- **Process focus (the one binding issue):** (1) run the **pre-market routine every session** and place a fresh `buy_gate.sh` regime read — the fix from two reviews ago is working; keep it from slipping; (2) commit an **EOD snapshot every session** to close the audit-trail gaps (none committed this week); (3) the moment a fresh read shows SPY **closing above ~759.50**, run a full fresh gate screen rather than carrying the OFF posture.
+- **Event-risk map:** **NVDA reports Mon/Tue 11/17** — the single biggest AI/semi headline risk and a reason to keep conviction capped on semis even on a regime flip; **FOMC minutes (Oct 27–28) due Wed 11/18.** Sticky CPI/PPI keep the rate path two-sided. Do not force an entry into the NVDA print or the minutes.
+- **Watchlist:** energy (the week's only firm sector — XLE led 11/12) and any leader printing a *fresh* 3-month/52-week high on ≥1.5× 20-day volume with an orderly 3–8% pullback — but only after a fresh regime read confirms ON. Force nothing.
+
+### Grade: C
