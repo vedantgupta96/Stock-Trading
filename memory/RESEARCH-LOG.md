@@ -1940,3 +1940,46 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−0.63%).** SPY (754.27) is **below** its 20-day SMA (759.05) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip), slipping modestly from Friday's −0.31% cross but still mid-band, well off Tuesday's −1.23% break and not reclaiming the line. Buy-gate #1 fails → no new longs today, and no ideas are generated. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. **NVDA reports after the close Tue 11/17 and FOMC minutes land Wed 11/18** — two live two-sided events to sit out. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits a fresh read confirming the regime back ON (SPY > ~759.05) and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+## 2026-11-18 (Wed) — Market-Open Routine (pre-market entry missing → research run inline)
+
+**Decision: HOLD — no new trades; REGIME OFF (−2.98%), continuing and now DECISIVELY lower.** The pre-market routine did not log an entry for today, so research was run inline per market-open STEP 1. The authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 731.325 vs 20-day SMA 753.80 → BELOW by −2.98%** → **REGIME OFF**. This is the **deepest sub-SMA read of the entire OFF stretch** (prior extreme was 11/10's −1.23%), a clear break lower from Monday 11/16's −0.63% (754.27). The regime has been OFF since the 10/15 ON→OFF flip; today is **no flip (OFF→OFF), so no urgent Discord alert** (STEP 5) — but the character has changed from "choppy band around the line" to a decisive down-resolution. Buy-gate #1 fails → no new longs permitted regardless of candidate merit; STEP 4 generates no ideas when the regime is OFF. Book is **flat / 100% cash** — already the designed posture; nothing to hold, no sell-side review, no stop or time-stop maintenance.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS) — continuing (OFF since 10/15), now breaking DOWN
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 731.325 vs SMA20 753.80]` → **REGIME OFF (−2.98%)**. Governs per strategy. (bars_n 86; last-5 high 763.01 vs prior swing 781.59 — no index breakout; gate also FAILs #9 breakout and #10 volume.)
+- **State:** The choppy ±~1% band around the 20-day line has **broken down**. Track: 10/2 ON, 10/15 −0.13%, 10/28 −0.09%, 11/10 −1.23%, 11/13 −0.31%, 11/16 −0.63%, **11/18 −2.98%**. The index (S&P 500 cash ~7,340 on 11/17) closed at a **five-month low and broke below its 200-day moving average** on 11/17 — a meaningful technical deterioration, not just a sub-20-day cross. Per strategy: no new buys; do not close winners on the filter alone (none held); note status — done.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-11-17
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity unchanged at $99,147.92 (nothing to mark; Day P&L $0.00 vs last_equity $99,147.92).
+- **New buys this week: 0/3** (week Mon 11/16 – Fri 11/20). Day-trade count 0/3. (All moot — regime OFF.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **MACRO — NVDA beat, then HAWKISH FOMC minutes.** NVDA reported after the close Tue 11/17 and **crushed it** (EPS $2.68 vs $2.47 est; revenue $115.8B vs $109B est, +103% y/y; Q4 guide ~$130B well above). Triggered a ~5% after-hours / ~2–2.8% pre-market relief rally that lifted index futures into the 11/18 open. **But at 2:00 PM ET today the Oct 27–28 FOMC minutes landed "broadly hawkish"** — some participants favored a hike, several questioned whether policy is restrictive enough, citing tariff/energy price pressures, resilient growth and the AI buildout. A two-sided tape: AI-led relief vs a hawkish rate-path read.
+- **VIX ~23.6, elevated.** 23.62 on 11/18 (−7.19% on the day) after **spiking to 25.46 on 11/17** (+11%); 22.91 on 11/16. Off the lows of early last week — this is a genuine risk-off/fear read consistent with the index breaking its 200-day line, not the complacent sub-18 regime of a healthy uptrend.
+- **WTI crude ~$84–85, falling.** Down ~1–2% on the day (≈$84.3–85.3) from Tuesday's ~$86 settle, pressured by a larger-than-expected U.S. inventory build and global-surplus concerns, outweighing Middle East / tanker-attack risk bids. Energy not a durable leader.
+- **Earnings:** NVDA (11/17) now behind us. Retail cluster continues (WMT, BABA Thu 11/20). Moot for the book (flat).
+
+### Sector Momentum
+- **Broad risk-off — all 11 S&P sectors fell 11/17**, steepest in financials, utilities, real estate, technology. Leadership defensive/rotational at best; AI/semis volatile around the NVDA print. No clean, durable momentum pocket offering an orderly breakout-on-volume + 3–8% pullback a long would need — consistent with the index below both its 20-day and 200-day lines.
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.**
+
+### Trade Ideas
+- **None.** The market regime filter is **OFF** (buy-gate #1 fails), so no new longs are permitted and STEP 4 generates no ideas. Cash is the correct posture by the strategy's single highest-priority rule, not merely by setup quality — and with the index now breaking decisively below its 20-day (−2.98%) AND 200-day lines on elevated VIX, this is the strongest cash signal of the stretch, not a marginal cross. Candidates will be re-evaluated only once a fresh read confirms the regime back **ON** (SPY closing above ~753.80) *and* a leader clears the full 11-check gate on an orderly 3–8% pullback.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Moot: regime is OFF, so no buys today**, and any surfaced name would independently need to clear the full 11-check gate (disclosures lag ~45 days, omit size/exits, frequently options — which we never trade). No gate impact; no names carried forward.
+
+### Research-tooling note
+- Pre-market routine did not log a 11/18 entry; research run inline per market-open STEP 1. Gemini (`gemini.sh`) returned cleanly on VIX, market-reaction, WTI and econ-calendar queries this run. The **regime decision rests on the deterministic Alpaca read** (`buy_gate.sh`), which is unambiguous: SPY below SMA20 by −2.98%.
+
+### Risk Factors
+- **Index broke its 200-day MA to a 5-month low (11/17) + hawkish FOMC minutes (11/18).** The trendless band has resolved DOWN. This is the worst backdrop for momentum-breakout entries and precisely why the regime filter keeps us in cash.
+- **NVDA relief rally is a counter-trend bounce, not a regime flip.** A strong single-name print lifting futures does not reclaim the 20-day line (SPY would need to close back above ~753.80 from 731.325 — a ~3% move). Chasing the bounce is exactly what the discipline forbids.
+- **Elevated VIX (~23–25) signals broad participation in the risk-off.** Thin breakouts here are low-conviction and gap-prone.
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−2.98%).** SPY (731.325) is **decisively below** its 20-day SMA (753.80) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip) and has now broken to the deepest sub-SMA read of the stretch, with the cash index closing below its 200-day line at a 5-month low (11/17). Buy-gate #1 fails → no new longs today; STEP 4 generates no ideas. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. NVDA's strong print drove a pre-market relief bounce, but a counter-trend rally is not a regime flip, and the 11/18 FOMC minutes read hawkish. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Per market-open STEP 7, no commit (no trades placed). Cash awaits a fresh read confirming the regime back ON (SPY > ~753.80) and a leader offering a valid 3–8% pullback that clears the full 11-check gate. Force nothing.
