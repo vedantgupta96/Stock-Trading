@@ -266,3 +266,58 @@
 - **Watchlist:** energy (the week's only firm sector — XLE led 11/12) and any leader printing a *fresh* 3-month/52-week high on ≥1.5× 20-day volume with an orderly 3–8% pullback — but only after a fresh regime read confirms ON. Force nothing.
 
 ### Grade: C
+
+## Week of NOV 16 – NOV 20
+
+*Tenth consecutive flat / 100% cash week since the 9/2 PLTR trailing-stop exit — equity has printed the identical $99,147.92 every session for ~11 weeks. **This week the cash posture was not merely neutral — it avoided a market crash.** The S&P 500 / SPY fell **−8.43% Fri-to-Fri** (its worst week in ~18 months); being 100% cash under a correctly-read OFF regime meant 0.00% vs that ~−8.4%. The regime was OFF all week and deepened sharply — fresh deterministic `buy_gate.sh` reads at 11/16 (−0.63%), 11/18 (−2.98%) and 11/20 (−4.72%), the band that had chopped around the 20-day line since October resolving decisively DOWN through the 200-day line to a ~5-month low. Cadence improved vs recent weeks: EOD snapshots committed 11/18, 11/19, 11/20, and pre-market/market-open research on 11/16, 11/18, 11/20 (11/17 uncommitted; 11/18 ran market-open-inline because the pre-market entry was missing).*
+
+### Stats
+| Metric | Value |
+|--------|-------|
+| Starting equity (Mon open) | $99,147.92 *(unchanged since the 9/2 exit — no separate 11/16 open snapshot; carried value)* |
+| Ending equity (Fri close) | $99,147.92 *(live Alpaca, balance_asof 11/19; portfolio_value $99,147.92, 100% cash, 0 positions, 0 open orders; 11/20 all-cash so unchanged)* |
+| Week return | $0.00 (0.00%) |
+| S&P 500 week return | **−8.43%** *(SPY $754.27 close Fri 11/13 → $690.68 close Fri 11/20, Alpaca IEX daily bars; worst week in ~18 months)* |
+| Trades taken | 0 (0 new buys, 0 closed) |
+| Win / Loss / Open | W:0 L:0 O:0 |
+| Win rate (closed only) | N/A (no closed trades) |
+| Best trade | N/A (no trades) |
+| Worst trade | N/A (no trades) |
+| Profit factor | N/A (no closed trades) |
+| Regime filter days | **5 OFF / 0 ON.** Three fresh deterministic `buy_gate.sh` reads, all OFF and deepening (11/16 SPY 754.27 < 20d SMA 759.05, −0.63%; 11/18 SPY 731.325 < 753.80, −2.98%; 11/20 SPY 715.84 < 751.34, −4.72%), plus EOD reads 11/19 (−4.72%) and 11/20 (−4.72%). Regime OFF continuously since the 10/15 ON→OFF flip. |
+
+### Closed Trades This Week
+| Symbol | Entry | Exit | P&L | Reason |
+|--------|-------|------|-----|--------|
+| — | — | — | — | No trades closed this week (last close was PLTR on 9/2, realized −$111.77). |
+
+### Open Positions at Week End
+| Symbol | Entry | Current | Unreal. P&L | Stop |
+|--------|-------|---------|-------------|------|
+| — | — | — | — | — |
+
+*100% cash — zero open positions, zero open orders ($99,147.92). Phase P&L −$852.08 (−0.85%) off the live $100k base.*
+
+### What Worked
+- **The regime filter avoided a crash — this week it was a decisive win, not opportunity cost.** The S&P 500 fell **−8.43%** (its worst week in ~18 months) in a six-session losing streak that broke the index below its 200-day line to a ~5-month low. Sitting 100% cash under a correctly-read OFF regime returned **0.00% vs ~−8.4%** — roughly **+8.4% of relative outperformance / avoided drawdown**. Every prior review this year flagged cash as an opportunity-cost drag in up markets; this week the single-highest-priority rule did exactly the job it exists for and preserved the book through a sharp decline.
+- **The posture was earned and fresh, not assumed.** Three same-/prior-day deterministic `buy_gate.sh` reads were placed (11/16, 11/18, 11/20), each confirming OFF and tracking the deepening break (−0.63% → −2.98% → −4.72%). No stale carry governed the week — the fix from the 10/19–23 process-failure review continues to hold.
+- **Capital fully preserved — zero drawdown, zero rule violations, tenth straight clean week.** No losing trade, no stop breach, no gate violation; the account's risk record stays spotless.
+- **No forced chase into a two-sided, event-heavy, falling tape.** NVDA's strong 11/17 beat drove a counter-trend relief bounce, but the discipline correctly read it as a bounce, not a regime flip — and the 11/18 FOMC minutes landed hawkish. Nothing was forced into NVDA, the minutes, or Friday's OpEx.
+
+### What Didn't Work
+- **Cadence still has one hole.** 11/17 committed no snapshot and the 11/18 pre-market entry was missing (research run market-open-inline). Equity was unchanged across the gap and the three reads that mattered were fresh, but the audit trail is not yet gap-free. (This is a marked improvement over recent weeks, which committed few or no EOD snapshots.)
+- **Idea flow remains non-existent — correctly so.** For ~11 weeks no name has cleared the full 11-check gate; with the regime OFF (and now sharply so), STEP 4 generated no ideas. Not a failure this week — the backdrop (index below its 20-day AND 200-day lines, broad risk-off, elevated VIX ~23–25) is precisely when idea generation *should* be zero — but the cash stretch is now very long and worth naming.
+- **Two prior weekly recaps remain uncommitted** (10/26–30, 11/2–6) — a standing audit-trail gap from earlier weeks, not this week's doing.
+
+### Key Lessons
+- **"Cash is correct" paid off in hard dollars this week — the asymmetry is the whole point.** Ten weeks of flat cash looked like pure opportunity cost while the market ground higher; in a single −8.4% week it saved more than many up-weeks' worth of foregone gains. The regime filter's value shows up precisely in weeks like this, and the lesson is to keep holding the line (not lower the bar) through the long quiet stretches *because* this is the payoff they purchase.
+- **A hawkish-minutes + broken-200-day + elevated-VIX backdrop is the strongest cash signal of the stretch.** This is no longer a narrow sub-20-day cross (10/15–11/16 was ±~1% chop); the band has resolved decisively DOWN. Do not anticipate a flip — SPY must *close* back above ~751 (a ~8%+ move up from Friday's 690.68) to flip ON, and the gap has only widened. The next pre-market read governs any entry.
+- **Fresh reads continue to beat stale carries.** Three deterministic reads this week kept the decision current as the break deepened; keep placing them every session.
+
+### Adjustments for Next Week
+- **No rule changes.** The regime filter performed exactly as designed — it kept the book out of an ~8.4% weekly crash — so `memory/TRADING-STRATEGY.md` is left unchanged. No rule has proven out or failed in a way warranting an edit; the ten-week cash stretch was market-quality + regime, and this week vindicated it.
+- **Process focus (nearly closed):** (1) keep running the **pre-market routine every session** with a fresh `buy_gate.sh` read — working; don't let 11/17-style gaps recur; (2) commit an **EOD snapshot every session** (three of five this week — close the 11/17 hole); (3) the moment a fresh read shows SPY **closing back above ~751**, run a full fresh gate screen rather than carrying the OFF posture.
+- **Event-risk map:** **S&P Global flash PMIs land Mon 11/23** (not Fri 11/20, correcting an earlier routine note); the holiday-shortened Thanksgiving week follows (markets closed Thu 11/27, early close Fri 11/28 — thin, low-liquidity tape). Fed speakers continue to swing the rate path after hawkish 11/18 minutes. In a falling market on thin holiday liquidity, force nothing.
+- **Watchlist:** none actionable with the regime OFF and deepening. Re-screen leaders only after a fresh read confirms ON (SPY close > ~751) and a name offers an orderly 3–8% pullback on a fresh breakout with ≥1.5× 20-day volume. Energy, Utilities, Staples, Financials showed only *relative* (not absolute) strength in the sell-off — not momentum leadership. Force nothing.
+
+### Grade: A-
