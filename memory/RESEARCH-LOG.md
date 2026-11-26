@@ -2072,3 +2072,49 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; REGIME OFF (−3.27%).** SPY (718.91) is **decisively below** its 20-day SMA (743.21) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip). The sub-SMA gap narrowed vs 11/20's −4.72% (a modest bounce off last week's low), but SPY is still ~3.3% below the line and below its 200-day, with VIX elevated (~28.6) into a thin holiday week and a market-moving PCE/GDP print at 8:30 ET. Buy-gate #1 fails → no new longs today; STEP 4 generates no ideas. Book is **flat / 100% cash** ($99,147.92) — already the designed posture for an OFF regime; nothing to hold, no sell-side review, no stop or time-stop maintenance. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits a fresh read confirming the regime back ON (SPY > ~743) and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+## 2026-11-26 (Thu) — Pre-Market Routine — ⚠️ MARKET CLOSED (Thanksgiving)
+
+**Decision: HOLD — no new trades; MARKET CLOSED (Thanksgiving) + REGIME OFF (−3.20%).** Today is Thanksgiving Day: NYSE/Nasdaq are **closed** (confirmed via research; half-session Fri 11/27, 1:00 PM ET close). No orders can be placed regardless. On top of that, the authoritative deterministic Alpaca read (`buy_gate.sh`) returns **Regime FAIL: SPY 716.735 vs 20-day SMA 740.43 → BELOW by −3.20%** → **REGIME OFF**. Regime has been OFF since the 10/15 ON→OFF flip; today is **no flip (OFF→OFF), so no urgent Discord alert** (STEP 5). Buy-gate #1 fails → no new longs permitted; STEP 4 generates no ideas when the regime is OFF. Book is **flat / 100% cash** — already the designed posture; nothing to hold, no sell-side review, no stop or time-stop maintenance.
+
+### Market Regime Status — OFF (buy-gate #1 FAILS) — continuing (OFF since 10/15); gap still wide but narrowing
+- **Alpaca (deterministic, `buy_gate.sh`, authoritative):** `c1_regime: false [spy_close 716.735 vs spy_sma20 740.43]` → **REGIME OFF (−3.20%)**. Governs per strategy. (85 bars; last-5 high 739.77 vs prior swing 781.59 → no index breakout; gate also FAILs #8 catalyst and #9 breakout. c10 volume passes, but moot with regime OFF.) The 716.735 last bar reflects the Wed 11/25 close (today is a holiday, no new bar; balance_asof 2026-11-25).
+- **State:** The band around the 20-day line resolved DOWN in mid-November. Track: 10/2 ON, 10/15 −0.13%, 10/28 −0.09%, 11/10 −1.23%, 11/13 −0.31%, 11/16 −0.63%, 11/18 −2.98%, 11/19/20 −4.72% (deepest), 11/25 −3.27%, **11/26 −3.20%**. The gap continues to narrow modestly off last week's low (a relief bounce — SPX ~+4% on the week through Tue 11/24), but SPY still sits ~3.2% below a declining 20-day line and below its 200-day. A flip ON needs SPY to *close* above ~740.43 (a ~3.3% move up); not there. Per strategy: no new buys; do not close winners on the filter alone (none held); note status — done.
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) / RegT $198,295.84 | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | PDT: false | balance_asof 2026-11-25
+- Flat / 100% cash since the 9/2 PLTR trailing-stop exit. Phase P&L **−$852.08 (−0.85%)** off the live $100k base. Equity unchanged at $99,147.92 (nothing to mark; Day P&L $0.00 vs last_equity $99,147.92).
+- **New buys this week: 0/3** (holiday week Mon 11/23 – Fri 11/27; market closed Thu 11/26 Thanksgiving, half-day Fri 11/27). Day-trade count 0/3. (All moot — regime OFF + market closed.)
+- Risk budget (for reference): 1.5% × $99,147.92 = $1,487 → hard-capped at **$200 risk/trade** → $200 / 8% stop = **$2,500 max notional**.
+
+### Market Context
+- **MARKET CLOSED — Thanksgiving Day.** NYSE/Nasdaq closed all sessions today; bond market closed too. Fri 11/27 is a half-day (equities close 1:00 PM ET, bonds 2:00 PM ET) — thin, low-liquidity holiday tape. No economic releases today. This week's data (Case-Shiller/Consumer Confidence Tue; **Personal Income & Spending incl. October PCE, GDP 2nd est., Durable Goods, Beige Book Wed 11/25**) landed before the holiday; next FOMC **Dec 8–9**, next jobs report **Dec 4**.
+- **VIX ~26–28, elevated and choppy.** Sources ~26.6–28.3 (11/25 close 28.29). **Spiked to 35.89 on 11/20** (highest close since Apr 2025), then eased, but still well above the sub-18 of a healthy uptrend — a genuine risk-off read consistent with the index below both its 20-day and 200-day lines. Regime decision rests on the deterministic Alpaca read, not VIX.
+- **WTI crude ~$83–84** (Jan futures; sources $83.3–84.4), firmer vs the ~$81 read on 11/25 on Strait-of-Hormuz tension, attacks on Russian refineries, and OPEC+ 2027 policy talk. Energy not a durable momentum leader.
+- **Earnings:** Book is flat — moot. NVDA (11/17), WMT/BABA (11/20) behind us.
+
+### Sector Momentum
+- **Relief-bounce week, defensive-led — not durable momentum.** Through Tue 11/24 the tape bounced (SPX ~+4% on the week) with leadership in **Health Care (~+3%), Consumer Staples (~+1.7%), Real Estate (~+1.3%), Energy (~+1.0%), Financials (~+0.8%)**; tech was volatile (a sharp Monday AI bounce, Tuesday fade). This is relative strength within a still-risk-off tape below both the 20-day and 200-day index lines — not the clean breakout-on-volume + 3–8% pullback a momentum long needs. No actionable pocket.
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.**
+
+### Pre-market movers scan
+- **N/A — market closed (Thanksgiving).** No pre-market session today. Moot anyway with regime OFF.
+
+### Trade Ideas
+- **None.** Market is closed today AND the regime filter is **OFF** (buy-gate #1 fails) — no new longs permitted on either count, and STEP 4 generates no ideas. Cash is correct by the strategy's single highest-priority rule, not merely setup quality — the index remains ~3.2% below its 20-day AND below its 200-day on an elevated (~27) VIX. Candidates re-evaluated only once the market reopens, a fresh read confirms the regime back **ON** (SPY closing above ~740), *and* a leader clears the full 11-check gate on an orderly 3–8% pullback.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Moot: market closed + regime OFF, so no buys today.** No dedicated query run (no gate impact possible); any surfaced name would independently need to clear the full 11-check gate (disclosures lag ~45 days, omit size/exits, frequently options — which we never trade). No names carried forward.
+
+### Research-tooling note
+- Gemini (`gemini.sh`) returned clean usable text on VIX, sectors, WTI, and the market-holiday/econ-calendar queries this run — no fallback needed. The **regime decision rests on the deterministic Alpaca read** (`buy_gate.sh`): SPY below SMA20 by −3.20%.
+
+### Risk Factors
+- **Thin holiday liquidity into Fri 11/27 half-day.** Low-volume sessions around Thanksgiving are gap-prone and unreliable for breakout entries — exactly where thin moves fail. Irrelevant to a flat/cash book, but a reason not to chase any Friday pop.
+- **Index still below its 20-day AND 200-day lines; VIX ~27.** The mid-November breakdown has only partially stabilized. A multi-session bounce off the 11/20 low is not a regime flip — SPY must *close* back above ~740 to flip ON.
+- **Don't anticipate a flip.** The narrowing gap is encouraging but not a signal; act only on a confirmed close above the 20-day with a leader clearing the full gate.
+
+### Decision
+**HOLD — no new trades; MARKET CLOSED (Thanksgiving) + REGIME OFF (−3.20%).** Today is Thanksgiving — NYSE/Nasdaq closed, so no orders can be placed regardless; Fri 11/27 is a half-day. On top of that, SPY (716.735) is **decisively below** its 20-day SMA (740.43) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip). The sub-SMA gap narrowed vs 11/20's −4.72% (a relief bounce), but SPY is still ~3.2% below the line and below its 200-day, VIX elevated (~27). Buy-gate #1 fails → no new longs; STEP 4 generates no ideas. Book is **flat / 100% cash** ($99,147.92) — already the designed posture; nothing to hold, no sell-side review, no stop or time-stop maintenance. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits the market reopening, a fresh read confirming the regime back ON (SPY > ~740), and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
