@@ -2118,3 +2118,37 @@ Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) /
 
 ### Decision
 **HOLD — no new trades; MARKET CLOSED (Thanksgiving) + REGIME OFF (−3.20%).** Today is Thanksgiving — NYSE/Nasdaq closed, so no orders can be placed regardless; Fri 11/27 is a half-day. On top of that, SPY (716.735) is **decisively below** its 20-day SMA (740.43) on the authoritative deterministic `buy_gate.sh` read — the regime filter remains **OFF** (continuing from the 10/15 ON→OFF flip). The sub-SMA gap narrowed vs 11/20's −4.72% (a relief bounce), but SPY is still ~3.2% below the line and below its 200-day, VIX elevated (~27). Buy-gate #1 fails → no new longs; STEP 4 generates no ideas. Book is **flat / 100% cash** ($99,147.92) — already the designed posture; nothing to hold, no sell-side review, no stop or time-stop maintenance. New buys this week 0/3, day-trades 0/3. No urgent Discord alert (no regime flip, no positions). Cash awaits the market reopening, a fresh read confirming the regime back ON (SPY > ~740), and a leader offering a valid 3–8% pullback that clears the full 11-check gate on judgment as well as mechanically. Force nothing.
+
+## 2026-11-27 (Fri, half-day) — Market-Open Routine
+
+**Decision: HOLD — no new trades; REGIME OFF (−2.18%).** Authoritative deterministic Alpaca read (`buy_gate.sh`): **SPY 721.93 vs 20-day SMA 738.05 → BELOW by −2.18% → REGIME OFF**. Regime OFF since the 10/15 ON→OFF flip; today is no flip (OFF→OFF) → no urgent Discord alert, but the required decision summary is sent. Buy-gate #1 fails → no new longs; STEP 4 generates no ideas. Book **flat / 100% cash** ($99,147.92); 0 positions, 0 open orders — nothing to hold or maintain. Today's dedicated pre-market entry was missing (half-day Friday), so light inline research was run. (No git commit — no trades placed, per routine STEP 7.)
+
+### Market Regime Status — OFF (buy-gate #1 FAILS) — continuing; gap narrowing fastest of the stretch
+- **Alpaca (deterministic, authoritative):** `1. Regime (SPY > 20d SMA) FAIL [SPY 721.93 vs SMA20 738.05]` → **REGIME OFF (−2.18%)**. Gate also FAILs #9 breakout (last5 high 727.975 vs prior swing 781.59 → no index breakout); #10 volume now PASSES but moot with regime OFF. 85 bars; last bar = Wed 11/25 close basis + Fri half-session; balance_asof 2026-11-25.
+- **State:** Band resolved DOWN mid-November, now steadily reclaiming. Track: 10/15 −0.13%, 11/18 −2.98%, 11/19/20 −4.72% (deepest), 11/25 −3.27%, 11/26 −3.20%, **11/27 −2.18%**. The gap has narrowed to its smallest since the breakdown (relief bounce; Fri futures surged, Nasdaq ~+2.4% pre-market on an NVDA/AI rebound), but SPY still sits ~2.2% below a declining 20-day line and below its 200-day. A flip ON needs SPY to *close* above ~738 (a ~2.2% move); not there. No new buys; no winners to protect (flat).
+
+### Account Snapshot (live Alpaca, paper)
+Equity: **$99,147.92** | Cash: **$99,147.92** | Buying power: $396,591.68 (4x) | Positions: **0 (FLAT)** | Open orders: **0** | Day trades: **0/3** | balance_asof 2026-11-25
+- Flat / 100% cash since the 9/2 PLTR exit. Phase P&L −$852.08 (−0.85%) off the live $100k base. New buys this week **0/3**; day-trades 0/3. All moot — regime OFF.
+- Risk budget (reference): 1.5% × equity = $1,487 → hard-capped **$200 risk/trade** → $2,500 max notional.
+
+### Market Context
+- **VIX ~27 (↓ ~4–5% on the day).** Eased on the Friday bounce (26.8–27.2) but still elevated vs the ~18.6 2026 average and well above the sub-18 of a healthy uptrend — a genuine risk-off read. Regime decision rests on the deterministic Alpaca read, not VIX.
+- **Sectors:** Defensive-led November (Health Care, Staples, Utilities, Real Estate relatively strong; Tech −7% and Comm Services weak on AI-valuation concerns; Energy reversed lower late-month). Friday a tech relief bounce, not a durable momentum pocket. No orderly breakout-on-volume + 3–8% pullback for a long.
+- **Half-day:** NYSE/Nasdaq close 1:00 PM ET — thin, gap-prone holiday liquidity. No economic releases of note today; next FOMC Dec 8–9, next jobs report Dec 4.
+
+### Earnings Watch (held positions reporting within 10 trading days)
+- **None held — no exit flags, no stop maintenance, no time-stop clocks running.**
+
+### Trade Ideas
+- **None.** Regime filter OFF (buy-gate #1 fails) → no longs permitted; STEP 4 generates no ideas. Cash is correct by the single highest-priority rule, not merely setup quality, with the index still below its 20-day AND 200-day on an elevated (~27) VIX into a thin half-day. Re-evaluate only on a confirmed SPY close above ~738 (regime ON) with a leader clearing the full 11-check gate on an orderly 3–8% pullback.
+
+### STOCK Act scan (idea-generation only — never a buy reason)
+- **Moot: regime OFF, half-day → no buys.** Any surfaced name would independently need to clear the full 11-check gate (disclosures lag ~45 days, omit size/exits, frequently options — which we never trade). No names carried forward.
+
+### Risk Factors
+- **Index still below its 20-day AND 200-day; VIX ~27.** The narrowing gap is encouraging but a multi-session bounce is not a regime flip — SPY must *close* above ~738 to flip ON. Don't anticipate; chasing the Friday pop is what the discipline forbids.
+- **Thin half-day liquidity.** Low-volume holiday sessions are gap-prone and unreliable for breakout entries — a reason not to chase any Friday pop (moot to a flat/cash book).
+
+### Decision
+**HOLD — no new trades; REGIME OFF (−2.18%).** SPY (721.93) is below its 20-day SMA (738.05) on the authoritative deterministic `buy_gate.sh` read — regime filter remains **OFF** (continuing from 10/15). The sub-SMA gap narrowed to the smallest of the stretch (−2.18% vs 11/20's −4.72%) on a Friday relief bounce, but SPY is still ~2.2% below the line and below its 200-day, VIX ~27, into a thin half-day. Buy-gate #1 fails → no new longs; STEP 4 generates no ideas. Book **flat / 100% cash** ($99,147.92) — the designed OFF-regime posture; nothing to hold, no sell-side or stop maintenance. New buys 0/3, day-trades 0/3. No commit (no trades). Cash awaits a confirmed SPY close above ~738 and a leader clearing the full gate on a valid 3–8% pullback. Force nothing.
